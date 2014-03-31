@@ -1,0 +1,58 @@
+! URxvt*rxvt-unicode (urxvt) v9.19 - released: 2013-10-27
+! URxvt*options: perl,xft,styles,combining,blink,iso14755,unicode3,encodings=eu+vn+jp+jp-ext+kr+zh+zh-ext,fade,transparent,tint,pixbuf,XIM,frills,selectionscrolling,wheel,slipwheel,smart-resize,cursorBlink,pointerBlank,scrollbars=plain+rxvt+NeXT+xterm
+! URxvt*Usage: urxvt [options] [-e command args]
+URxvt*scrollBar:                      false
+URxvt*transparent: true
+URxvt*shading:                        10
+
+! terminal colors
+*background: #1D1D1D
+*foreground: #FFFFFF
+! Black (not tango) + DarkGrey
+*color0:  #000000
+*color8:  #555753
+! DarkRed + Red
+*color1:  #ff6565
+*color9:  #ff8d8d
+! DarkGreen + Green
+*color2:  #93d44f
+*color10: #c8e7a8
+! DarkYellow + Yellow
+*color3:  #eab93d
+*color11: #ffc123
+! DarkBlue + Blue
+*color4:  #204a87
+*color12: #3465a4
+! DarkMagenta + Magenta
+*color5:  #ce5c00
+*color13: #f57900
+!DarkCyan + Cyan (both not tango)
+*color6:  #89b6e2
+*color14: #46a4ff
+! LightGrey + White
+*color7:  #cccccc
+*color15: #ffffff
+! --- end of terminal colors section ---
+
+! fontconfigs and copy/paste with url launching
+URxvt*colorUL:                        #4682B4
+URxvt*font: 				-*-tamsyn-medium-*-*-*-16-*-*-*-*-*-*-*
+! URxvt*font:                           xft:AnonymousPro:pixelsize=15
+! URxvt*boldFont:                       xft:AnonymousProMinus:pixelsize=15
+URxvt*perl-ext-common:                default,matcher,clipboard
+URxvt*iso14755:                       false
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt*matcher.button:	1
+URxvt*url-launcher:                   /usr/bin/dwb
+
+Xft.authint:	0
+Xft.lcdfilter:	lcddefault
+Xft.hintstyle:	hintslight
+Xft.hinting: 	full
+Xft.antialias:  true	
+Xft.rgba:	rgb
+Xft.dpi:	96
+
+dzen2.font: 	-*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
+dzen2.foreground: rgb:ff/ff/ff
+dzen2.background: rgb:00/00/00

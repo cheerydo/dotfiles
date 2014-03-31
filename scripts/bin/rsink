@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rsync -avhP --exclude-from '/home/jared/exclude.list' --delete-after /home/jared/ /media/TOSHIBA\ EXT/CrunchbangBackups/
+
