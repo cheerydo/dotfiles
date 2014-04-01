@@ -23,6 +23,8 @@ alias paclocs='pacman -Qs'
 alias pacorf='pacman -Qtd'
 alias paclocii='pacman -Ql'
 
+alias fbox='ssh tornainbow@hermes.feralhosting.com'
+
 PS1='[\u@\h \W]\$ '
 
 if [ -f ~/.bash_aliases ]; then

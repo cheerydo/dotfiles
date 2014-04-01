@@ -907,3 +907,14 @@ Mar 31 13:20 : player: played "The Glitch Mob/Drink The Sea The Remixes Volume 1
 Mar 31 13:25 : player: played "The Glitch Mob/Drink The Sea The Remixes Volume 1 (v0)/12 - Drive It Like You Stole It (Pawn rmx).mp3"
 Mar 31 13:31 : player: played "The Glitch Mob/Drink the Sea/01 Animus Vox.mp3"
 Mar 31 13:38 : player: played "The Glitch Mob/Drink the Sea/02 Bad Wings.mp3"
+Mar 31 13:44 : player: played "The Glitch Mob/Drink the Sea/03 How To Be Eaten By A Woman.mp3"
+Mar 31 13:45 : player: played "The Glitch Mob/Drink the Sea/04 A Dream Within A Dream.mp3"
+Mar 31 14:34 : config: option 'mixer_device' on line 214 was not recognized
+Mar 31 14:34 : config: option 'mixer_control' on line 215 was not recognized
+Mar 31 14:34 : config: option 'mixer_index' on line 216 was not recognized
+Mar 31 14:37 : config: option 'mixer_device' on line 214 was not recognized
+Mar 31 14:37 : config: option 'mixer_control' on line 215 was not recognized
+Mar 31 14:37 : config: option 'mixer_index' on line 216 was not recognized
+Apr 01 10:52 : config: option 'mixer_device' on line 214 was not recognized
+Apr 01 10:52 : config: option 'mixer_control' on line 215 was not recognized
+Apr 01 10:52 : config: option 'mixer_index' on line 216 was not recognized

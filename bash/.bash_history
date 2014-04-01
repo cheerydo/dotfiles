@@ -1,286 +1,3 @@
-mutt
-tudu
-screenfetch 
-screenfetch 
-vim .spectrwm.conf 
-ranger
-screenfetch 
-htop
-ncmpcpp 
-convert -resize 250x250 2014-03-30-080209_1440x900_scrot.png dirty.png
-pacin imagemagick
-convert -resize 250x250 2014-03-30-080209_1440x900_scrot.png dirty.png
-htop
-convert -resize 250x250 2014-03-30-080215_1440x900_scrot.png clean.png
-htop 
-feh dirty.png 
-feh clean.png 
-atc
-atc
-atc -g OHare
-atc -g OHare
-atc -g OHare
-atc -g OHare
-atc -g OHare
-atc -g Killer
-atc -g Killer
-systemctl poweroff
-htop
-journalctl --since=today | grep mpdscribble
-cat .xinitrc 
-vim .config/fontconfig/fonts.conf 
-vim .Xresources 
-pacloc w3m
-paclocs w3m
-mutt
-vim .mutt/macros 
-vim .urlview
-mutt
-whereis ranger
-sudo find /usr/share -name ranger*
-man ranger
-man ranger
-cd /usr/share/doc/ranger/examples/
-ls
-cd ..
-ls
-cd config/
-ls
-cat scope.sh 
-ls
-cp rc.conf rifle.conf scope.sh ~/.config/ranger/
-cd ~/.config/ranger/
-ls
-ls -al
-vim rc.conf 
-vim rifle.conf 
-man chown
-sudo chown -R /mnt/blackusb
-sudo chown -R jared /mnt/blackusb
-man chown
-sudo chown jared:jared -R /mnt/blackusb/
-lsblk
-sudo mkdir /mnt/blackusb
-sudo mount /dev/sdb1 /mnt/blackusb/
-ranger
-sudo ranger
-sudo chown jared /mnt/blackusb/
-ranger
-sudo ranger
-sudo ranger
-ranger
-ranger
-sudo cp /mnt/blackusb/arch\ pictures/* /home/jared/pictures/
-ls -a
-ls -al pictures/
-sudo chown jared:jared pictures/*
-ls -al pictures/
-ls -al music/*
-sudo chown jared:jared music/*
-ls -al music/
-htop
-sudo umount /dev/sdb1
-sudo eject /dev/sdb1
-cd music/
-ls -al 
-cd Tallest\ Man\ On\ Earth\,\ The\ -\ Shallow\ Grave\ \[2008\]\ \[FLAC\]/
-ls
-sudo find / -name *Tallest*
-cd music/
-ls
-htop
-man cp
-cp -r /mnt/blackusb/arch\ music/* ~/music/
-ls -al /mnt/blackusb/arch\ music/Boxer/
-sudo chown -R jared:jared /mnt/blackusb/arch\ music/*
-ls -al /mnt/blackusb/arch\ music/Boxer/
-sudo cp -r /mnt/blackusb/arch\ music/* /home/jared/music/
-ncmpcpp 
-cd music/
-cd Boxer/
-ls
-ls -al
-sudo chown jared:jared ./*
-ls -al
-sudo chown -R jared:jared /home/jared/music/*
-ls -al ../Shallow\ Grave/
-ncmpcpp 
-ncmpcpp 
-ncmpcpp 
-ncmpcpp 
-ncmpcpp 
-ncmpcpp 
-ncmpcpp 
-ncmpcpp 
-ncmpcpp 
-htop
-cd pictures/
-ls
-feh ./
-mv screens/ ~/
-ls
-ls -a
-vim .bashr
-vim ../.bashrc 
-cd ..
-source .bashrc 
-ls pictures/
-ls -a
-irssi
-irssi
-htop
-systemctl poweroff
-sudo pacman -Sy
-pacman -Qu
-pacup
-screenfetch 
-ncmpcpp 
-pacin
-feh -z -bg-fill pictures/
-feh -z -bg-fill pictures/*
-man feh
-feh -z --bg-fill pictures/
-vim .xinitrc 
-w3m google.com
-sudo pacman -S --asdeps elinks
-elinks 
-alias
-pacloc w3m
-paclocs w3m
-paclocs lynx
-paclocii w3m
-w3m
-man 23m
-man w3m
-bin/dzen2/sysinfo_popup.sh 
-uptime
-date
-notify-send 
-man notify-send
-notify-send help
-notify-send "HI"
-bin/dzen2/sysinfo_popup.sh 
-bin/dzen2/sysinfo_popup.sh 
-bin/dzen2/sysinfo_popup.sh 
-vim .conkyrc 
-cd bin/
-mkdir dzen2
-cd dzen2/
-vim sysinfo_popup.sh
-chmod +x sysinfo_popup.sh 
-./sysinfo_popup.sh 
-./sysinfo_popup.sh 
-vim sysinfo_popup.sh 
-pacreps inxi
-pacin --asdeps inxi
-pacorf
-inxi
-inxi
-man inxi
-inxi --recommends
-pacrem inxi
-man acpi
-acpi -t
-acpi -b
- #/bin/bash
- #A simple popup showing system information
- HOST=$(uname -n)
- KERNEL=$(uname -r)
- UPTIME=$( uptime | sed 's/.* up //' | sed 's/[0-9]* us.*//' | sed 's/ day, /d /'\
-          | sed 's/ days, /d /' | sed 's/:/h /' | sed 's/ min//'\
-            |  sed 's/,/m/' | sed 's/  / /')
- PACKAGES=$(pacman -Q | wc -l)
- UPDATED=$(awk '/upgraded/ {line=$0;} END { $0=line; gsub(/[\[\]]/,"",$0); \
-          printf "%s %s",$1,$2;}' /var/log/pacman.log)
- (  echo "System Information" # Fist line goes to title  echo "Host: $HOST ";  echo "Kernel: $KERNEL";  echo "Uptime: $UPTIME ";  echo "Pacman: $PACKAGES packages";  echo "Last updated on: $UPDATED";  ) | dzen2 -p -x "500" -y "30" -w "220" -l "5" -sa 'l' -ta 'c'    -title-name 'popup_sysinfo' -e 'onstart=uncollapse;button1=exit;button3=exit'
-acpi -b | awk '{gsub(/%,/,""); print $4}' | sed 's/%//g'
-man elif
-elif 
-elif -h
-man core
-man corelist
-dzen2
-man ionice 
-htop
-alias pacrep
-pacreps aspci
-pacreps acpi
-pacor
-pacorf 
-pacrem elinks
-pacin acpi
-man acpi
-irssi
-man if
-atc -g OHare
-atc -g OHare
-atc -g OHare
-atc -g OHare
-atc -g OHare
-atc -g Killer
-atc -g game_2
-atc -g game_2
-man dzen2
-man dzen
-dzen -h
-dzen2 -h
-dzen2 --help
-vim .conkyrc 
-htop
-systemctl poweroff
-man trek
-man wall 
-man wall
-man talk
-talk jared
-ls -al ../Shallow\ Grave/
-pacman -Qm | column -t
-man column
-man net
-cat /etc/fstab | column -t
-cat /etc/fstab
-pacreps stow
-pacin stow
-cd test/
-htop
-ls
-mkdir -p 1/2/3
-cd 1
-ls
-cd 2
-ls
-touch {2.1,2.2,2.3}
-cd 3
-touch {3.1,3.3}
-cd ../../..
-ls
-ls -a
-ls -al
-cd 1
-ls -al
-cd 2
-ls -al
-ls
-ls -a
-cd ../..
-ls
-mkdir 1back
-ls
-cd 1back
-man stow
-stow ~/test/1 
-man sow
-man stow
-stow vim
-cd ..
-ls
-rm -rf ./*
-ls
-ls -a
-mv ~/.bashrc 
-mv ~/.bashrc ./
-ls
-ls -a
 stow bash
 mkdir bash/
 ls
@@ -498,3 +215,286 @@ cd dotfiles/
 stow irssi
 cd ~
 lal
+git config --global user.name "thetornainbow"
+git config --global user.email "jaredvanderview@gmail.com"
+ls
+mv .vim* dotfiles/vim/
+la
+mv .spectrwm.conf dotfiles/spectrwm/
+mkdir mutt
+mv mutt/ dotfiles/
+mv .mutt/ .urlview dotfiles/mutt/
+mkdir dotfiles/conky
+mv .conkyrc dotfiles/conky/
+mkdir dotfiles/ncmpcpp
+mkdir dotfiles/x
+mv .Xresources .xinitrc .xsession dotfiles/x
+mv .ncmpcpp/ dotfiles/ncmpcpp/
+la
+ll
+la
+mkdir dotfiles/mpd
+mv .mpd/ .mpdconf dotfiles/mpd
+ls
+la
+cd .config/
+ls
+colors
+mkdir -p ~/dotfiles/ranger/.config
+mv ranger/ ~/dotfiles/ranger/.config/
+cd ~/dotfiles/
+ls
+stow conky mpd mutt ncmpcpp ranger scripts spectrwm/ vim/ x/
+lal ~
+mkdir irssi
+lal ~/.config/
+source .bashrc
+source ~/.bashrc 
+mv ~/.irssi/ ./irssi/
+stow irssi
+cd ~
+cd dotfiles/
+git init
+git remote add origin https://thetornainbow@bitbucket.org/thetornainbow/dotfiles.git
+echo "# This is my README" >> README.md
+git add README.md 
+git commit -m "First commit. Adding a README."
+git push -u origin master
+git help
+git status
+git add bash/ conky/ irssi/ mpd/ mutt/ ncmpcpp/ ranger/ scripts/ spectrwm/ vim/ x/
+git status
+git help
+man git
+man git commit
+man git commit
+man git push
+git status
+git commit -m "Added my first directories for tracking :). Very cool"
+git push -u origin master
+cd ~
+lal
+vim dotfiles/README.md 
+git commit -m "Changed readme."
+cd dotfiles/
+git commit -m "Changed readme."
+man git add
+man git commit
+git commit -a -m "Changed readme."
+git status
+git push -u origin master
+git push -u origin master
+pacreps reptyr
+screenfetch 
+irssi
+ncmpcpp 
+htop
+colors
+colors
+cd bin/
+ls
+lal
+cd test
+la
+vim dzentest
+chmod +x dzentest 
+dzentest
+./dzentest 
+vim dzentest 
+./dzentest 
+./dzentest 
+./dzentest 
+vim dzentest 
+vim dzentest 
+cd bin/dzen2/
+./sysinfo_popup.sh 
+getcurpos
+vim bin/dzen2/sysinfo_popup.sh 
+expr (14+2
+expr 14+2
+
+expr $(14+2) 
+man expr
+cd bin/dzen2/
+vim sysinfo_popup.sh 
+vim sysinfo_popup.sh 
+vim sysinfo_popup.sh 
+man expr
+man xargs
+man xprop
+man xdotool
+xdotool getmouselocation
+xdotool getmouselocation
+xdotool getmouselocation
+xdotool getmouselocation
+man xdotool
+man cut
+xdotool getmouselocation | cut -c1-5
+xdotool getmouselocation | cut -c3-5
+xdotool getmouselocation | cut -c10-15
+xdotool getmouselocation | cut -c8-11
+xdotool getmouselocation | cut -c9-11
+xdotool getmouselocation | cut -c9-11
+xdotool getmouselocation | cut -c9-11
+xdotool getmouselocation | cut -c9-11
+xdotool getmouselocation | cut -c7-10
+xdotool getmouselocation | cut -c9-10
+xdotool getmouselocation | cut -c9-10
+xdotool getmouselocation | cut -c9-10
+xdotool getmouselocation | cut -c9-10
+xdotool getmouselocation | cut -c9-10 | xargs express $1 + 2
+xdotool getmouselocation | cut -c9-10 | expr $1 + 2
+xdotool getmouselocation | cut -c9-10 | expr + 2
+xdotool getmouselocation | cut -c9-10 | xargs expr + 2
+xdotool getmouselocation | cut -c9-10 < expr + 2
+xdotool getmouselocation | cut -c9-10 | expr $1 + 2
+xdotool getmouselocation | cut -c9-10 | expr $1+2
+xdotool getmouselocation | cut -c9-10 | expr $1
+xdotool getmouselocation | cut -c9-10 | echo
+xdotool getmouselocation | cut -c9-10 | echo $1
+xdotool getmouselocation | cut -c9-10
+xdotool getmouselocation | cut -c9-10 | expr $1 + 2 | echo $1
+xdotool getmouselocation | cut -c9-10 | expr "$1 + 2" | echo $1
+htop
+cd test/
+ls
+mkdir clones
+cd clones/
+git clone https://thetornainbow@bigbucket.org/thetornainbow/dotfiles
+git clone https://thetornainbow@biTbucket.org/thetornainbow/dotfiles
+git clone https://thetornainbow@biTbucket.org/thetornainbow/dotfiles
+git clone https://thetornainbow@biTbucket.org/thetornainbow/dotfiles
+ls
+cd dotfiles/
+ls
+la
+cd ..
+rm -rf dotfiles/
+ls
+la
+cd ..
+cd ..
+la
+sudo systemctl restart acpid.service 
+sudo find /etc -name acpi*
+sudo find /etc -name *acpi*
+pacreps xscreensaver
+man i3lock
+pacin xscreensaver
+pacin acpid
+journalctl -f
+acpi_listen
+sudo systemctl enable acpid.service
+sudo systemctl start acpid.service
+acpi_listen 
+sudo find /etc -name *acpi*
+cd /etc/acpi/events/
+ls
+cd ..
+la
+sudo vim handler.sh 
+sudo vim handler.sh 
+cd pictures/
+ls
+feh ./
+pwd
+lal
+i3lock -i /home/jared/pictures/gray-1440x900.png
+sudo vim /etc/acpi/handler.sh 
+sudo systemctl restart acpid.service 
+whereis i3lock
+sudo vim /etc/acpi/handler.sh 
+sudo systemctl restart acpid.service 
+htop
+sudo vim /etc/acpi/handler.sh 
+sudo vim /etc/acpi/handler.sh 
+sudo systemctl restart acpid.service 
+locale
+export LANG="en_US.UTF_8"
+locale
+envg
+env
+startx
+grep EE /var/log/Xorg.0.log
+localecheck 
+setfont Lat2-Terminus16
+localecheck
+sudo vim /etc/locale.gen 
+localecheck 
+sudo locale-gen
+localecheck 
+export LANG=en_US.UTF-8
+localechek
+localecheck 
+env
+sudo vim /etc/locale.conf 
+su
+locale
+su
+startx
+startx
+journalctl --since=today | grep pam
+sudo systemctl stop acpid.service 
+sudo systemctl disable acpid.service 
+reboot
+ls -a
+localecheck
+colors
+man cuy
+man cut
+man sed
+man let
+xdotool getmouselocation | cut -c9-10
+xdotool getmouselocation | cut -c9-10 | let i=$1+2 && echo i
+xdotool getmouselocation | cut -c9-10 | let i=$1+2 && echo $i
+cd test
+lal
+vim new1
+chmod +x new1
+./new1 
+./new1 
+vim new1 
+./new1 
+./new1 
+./new1 
+./new1 
+./new1 
+./new1 
+./new1 
+./new1 
+vim new1 
+./new1 
+./new1 
+./new1 
+./new1 
+./new1 
+./new1 
+xdotool getmouselocation
+xdotool getmouselocation
+xdotool getmouselocation
+xdotool getmouselocation
+xdotool getmouselocation
+xdotool getmouselocation
+xdotool getmouselocation
+xdotool getmouselocation
+xdotool getmouselocation
+xdotool getmouselocation
+xdotool getmouselocation
+./new1 
+./new1 
+./new1 
+./new1 
+./new1 
+./new1 
+vim new1 
+vim .xinitrc 
+vim .bash_profile 
+ping -c 3 google.com
+pacreps network-manager
+pacreps Networkmanager
+pacin networkmanager
+n
+ssh tornainbow@hermes.feralhosting.com
+irssi
+ping -c 3 google.com
+systemctl suspend 
