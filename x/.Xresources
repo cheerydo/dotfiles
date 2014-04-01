@@ -36,8 +36,8 @@ URxvt*shading:                        10
 
 ! fontconfigs and copy/paste with url launching
 URxvt*colorUL:                        #4682B4
-URxvt*font: 				-*-tamsyn-medium-*-*-*-16-*-*-*-*-*-*-*
-! URxvt*font:                           xft:AnonymousPro:pixelsize=15
+! URxvt*font: 				-*-tamsyn-medium-*-*-*-16-*-*-*-*-*-*-*
+URxvt*font:                           xft:BitstreamVeraSansMono:size=10
 ! URxvt*boldFont:                       xft:AnonymousProMinus:pixelsize=15
 URxvt*perl-ext-common:                default,matcher,clipboard
 URxvt*iso14755:                       false
@@ -47,8 +47,8 @@ URxvt*url-launcher:                   /usr/bin/dwb
 
 Xft.authint:	0
 Xft.lcdfilter:	lcddefault
-Xft.hintstyle:	hintslight
-Xft.hinting: 	full
+Xft.hintstyle:	hintfull
+Xft.hinting: 	slight
 Xft.antialias:  true	
 Xft.rgba:	rgb
 Xft.dpi:	96

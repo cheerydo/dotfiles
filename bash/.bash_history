@@ -1,156 +1,3 @@
-stow bash
-mkdir bash/
-ls
-mv .bashrc bash/
-ls
-stow bash
-cd ~
-ls
-ls -a
-ls -al .bashrc 
-vim .ncmpcpp/
-vim .ncmpcpp/config 
-htop
-screenfetch 
-man shopt
-man stow
-cd test/bash/
-ls
-ls -a
-cp .bashrc ~/.bashrc.bak
-cd ~
-ls
-rm -r .bashrc
-cd test/bash/
-ls -a
-cd ..
-cd ..
-ls -a
-ls -al
-ls -L
-man ls
-man ln
-ls -l -type l
-find ./ -type l
-man find
-find /home/jared -type l 
-cd .config/
-ls
-cd ..
-cd test/
-ls
-cd bash
-ls
-ls -a
-mv .bashrc ~/
-ls
-cd ..
-rmdir bash
-ls -a
-la
-ll
-vim .bashrc
-cd ..
-vim .bashrc
-source .bashrc
-la
-ll
-lal
-ls
-ls -a
-la
-ls
-la
-ll
-rm *.png
-ls
-ll
-find ~ -name .*
-find /home/jared -name .*
-find /home/jared -name ".*"
-la
-mkdir -p dotfiles/bash
-cd dotfiles/
-ls
-cd bash
-la ~
-rm ~/.bashrc.bak 
-mv .bash* ./
-mv ".bash*" ./
-find /home/jared -name .bash* | xargs mv ./
-find /home/jared -name .bash*
-cd ../../documents/
-ls
-ls -a
-vim .bashrc 
-rm ./.bashrc 
-ls
-ls -a
-vim .Xresources 
-rm .Xresources 
-ls -a
-la
-vimdiff .vimrc ~/.vimrc 
-vim .vimrc 
-rm .vimrc 
-la
-ll
-cd ~
-ls
-la
-man mv
-cp .bash* dotfiles/bash/
-la dotfiles/bash
-rm .bash*
-ls
-la
-cd dotfiles/bash
-ls
-la
-cd ..
-stow bash
-cd ~
-ls
-la
-ll
-lal
-mdkir dotfiles/{spectrwm,vim,scripts}
-mkdir dotfiles/{spectrwm,vim,scripts}
-mkdir dotfiles/scripts/bin
-mv bin/* dotfiles/scripts/bin/
-la bin
-cd dotfiles/
-stow scripts
-cd ..
-ls
-lal bin
-baraction.sh 
-colors
-showconsolefont 
-setfont Lat2-Terminus16
-cd bin/
-ls
-vim localecheck
-chmod +x localecheck 
-localecheck 
-sudo vim /etc/locale.gen 
-locale-gen
-sudo locale-gen
-localecheck 
-env
-echo LANG=en_US.UTF-8 > /etc/locale.conf
-sudo echo LANG=en_US.UTF-8 > /etc/locale.conf
-su
-env
-export LANG=en_US.UTF-8
-localecheck 
-vim .bashrc 
-locale
-sudo locale-gen
-locale
-locale-gen
-echo /etc/locale.conf
-cat /etc/locale.conf
 localectl 
 irssi
 killall conky
@@ -498,3 +345,156 @@ ssh tornainbow@hermes.feralhosting.com
 irssi
 ping -c 3 google.com
 systemctl suspend 
+fbox
+vim .bashrc 
+cd dotfiles/
+git status
+git commit -a -m "Added some aliases. Probably need to not link mpd's log. Another day perhaps."
+git push -u origin master
+git status
+pmrem acpid
+pacrem acpid
+screenfetch 
+pacman -Ql
+pacman -Q | wc -l
+xrdb .Xresources 
+ls -a
+xrdb .Xresources 
+ls -a
+xrdb .Xresources 
+ls -a
+ls -a
+ls a
+ls -a
+xrdb .Xresources 
+ls -a
+vim .Xresources 
+xrdb .Xresources 
+ls -a
+xrdb .Xresources 
+ls -a
+xrdb .Xresources 
+ls -a
+xrdb .Xresources 
+ls -a
+xrdb .Xresources 
+ls -a
+xrdb .Xresources 
+ls -a
+xrdb .Xresources 
+ls -a
+xrdb .Xresources 
+ls -a
+ls -a
+ls -a
+ls -a
+ls -a
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+ls- a
+ls -a
+la
+ls -a
+ls -a
+ls -a
+ls -a
+ls -a
+ls -a
+ls -a
+ls -a
+ls -a
+ls -a
+ls -a
+ls -a
+ls -a
+ls -a
+pacin ttf-bitstream-vera
+vim .Xresources 
+whereis anonymouspro
+sudo find / -name *Anony*
+fc-cache list
+fc-list
+fc-list | grep *Anony*
+fc-list
+cd /usr/share/fonts/TTF/
+ls
+sudo find / -name *Bit*
+sudo find / -name *Vera*
+sudo find / -name "*Vera*"
+ls -a
+vim .Xresources 
+xrdb .Xresources 
+vim .Xresources 
+xrdb .Xresources 
+ls -a
+ls -a
+ls -a
+ls -a
+ls -a
+ls -a
+cd ~
+cat .xinitrc 
+ls -a
+ls -a
+ls -a
+ls -a
+ls -a
+ls -a
+ls -a
+l s-a
+ls -a
+ls -a
+ls -a
+ls -a
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+xrdb .Xresources 
+env
+ls -a
+xrdb .Xresources 
+l s-a
+ls -a
+screenfetch 
+screenfetch 
+cat .xinitrc 
+ls -a
+cat .xinitrc 
+xrdb .Xresources 
+ls -a
+cat .xinitrc 
+ls -a
+cat .xinitrc 
+ls -a
+vim .Xresources 
+xrdb .Xresources 
