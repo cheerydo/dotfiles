@@ -7,6 +7,7 @@ alias lal='ls --color=auto -al'
 
 alias pacup='sudo pacman -Syu'
 alias pacin='sudo pacman -S'
+alias pachk='sudo pacman -Sy && pacman -Qu'
 alias pacrem='sudo pacman -Rns'
 alias pacrepi='pacman -Si'
 alias pacreps='pacman -Ss'

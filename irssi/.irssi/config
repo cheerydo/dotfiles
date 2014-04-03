@@ -110,15 +110,15 @@ chatnets = {
   };
   FN = {
     type = "IRC";
-    autosendcmd = "/nick thetornainbow; /msg Nickserv identify 1one; /wait 2000; /wc 3";
+    autosendcmd = "/nick thetornainbow;/msg Nickserv identify 1one;/wait 10000";
   };
 };
 
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
   { name = "silc"; chatnet = "silc"; autojoin = "No"; },
-  { name = "#crunchbang"; chatnet = "FN"; autojoin = "yes"; },
-  { name = "##crunchbang"; chatnet = "FN"; autojoin = "yes"; }
+  { name = "#crunchbang"; chatnet = "FN"; },
+  { name = "##crunchbang"; chatnet = "FN"; }
 );
 
 aliases = {
