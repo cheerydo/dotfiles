@@ -72,3 +72,4 @@ extract() {
     done
     return "$e"
 }
+source /etc/bash_completion.d/password-store

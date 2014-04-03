@@ -23,4 +23,4 @@ TEXT
   "$mpd_smart" |$endif\
  ^fg(\#99CCFF)^i(/usr/share/icons/stlarch_icons/batt10.xbm)^fg()\
  ${battery} |\
- ^fg(\#99CCFF)Weather is ^fg()${execi 3600 ~/bin/weatherget 37312}   ${time %A %B %e  %l:%M %p} 
+ ^fg(\#99CCFF)Weather is ^fg()${exec ~/bin/weatherget 37312}   ${time %A %B %e  %l:%M %p} 
