@@ -17,3 +17,4 @@ set certificate_file=~/.mutt/certificates
 
 set move=no
 set alias_file=~/.mutt/aliases
+source $alias_file

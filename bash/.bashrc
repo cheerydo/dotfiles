@@ -7,6 +7,7 @@
 
 export EDITOR=/usr/bin/vim
 export TERM=rxvt-unicode
+export GPGKEY=FBB0702A
 
 
 PS1='[\u@\h \W]\$ '

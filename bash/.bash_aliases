@@ -3,7 +3,7 @@
 alias ls='ls --color=auto'
 alias la='ls --color=auto -a'
 alias ll='ls --color=auto -l'
-alias lal='ls --color=auto -al'
+alias all='ls --color=auto -al'
 
 alias pacup='sudo pacman -Syu'
 alias pacin='sudo pacman -S'
