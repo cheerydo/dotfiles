@@ -17,3 +17,4 @@ alias pacorf='pacman -Qtd'
 alias paclocii='pacman -Ql'
 
 alias fbox='ssh tornainbow@hermes.feralhosting.com'
+alias hserv='ssh 192.241.173.213'

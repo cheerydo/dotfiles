@@ -168,6 +168,7 @@ aliases = {
   ATAG = "WINDOW SERVER";
   UNSET = "set -clear";
   RESET = "set -default";
+  wm = "/window name";
 };
 
 statusbar = {

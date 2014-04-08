@@ -6,14 +6,25 @@ set smtp_pass = "dgpnqvejmmkragvt"
 set from = "jaredvanderview@gmail.com"
 set realname = "Jared Hamilton"
 
-set folder = "imaps://imap.gmail.com:993"
+set folder = "imaps://imap.gmail.com/"
 set spoolfile = "+INBOX"
-set record = "+[Gmail]/Sent Mail"
-set postponed = "+[Gmail]/Drafts"
+set record = "imaps://imap.gmail.com/[Gmail]/Sent Mail"
+set postponed = "imaps://imap.gmail.com/[Gmail]/Drafts"
 
 set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
 set certificate_file=~/.mutt/certificates
+
+set sidebar_visible = yes
+
+# mutt sidebar settings
+macro index,pager B '<enter-command>toggle sidebar_visible<enter>'
+
+# Ctrl-n, Ctrl-p to select next, previous folder
+# Ctrl-o to open selected folder
+bind index,pager \CP sidebar-prev
+bind index,pager \CN sidebar-next
+bind index,pager \CO sidebar-open
 
 set move=no
 set alias_file=~/.mutt/aliases
