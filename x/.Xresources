@@ -36,9 +36,7 @@ URxvt*shading:                        10
 
 ! fontconfigs and copy/paste with url launching
 URxvt*colorUL:                        #4682B4
-! URxvt*font: 				-*-tamsyn-medium-*-*-*-16-*-*-*-*-*-*-*
 URxvt*font:                           xft:BitstreamVeraSansMono:size=10
-! URxvt*font:								xft:Consolas:size=10
 URxvt*perl-ext-common:                default,matcher,clipboard
 URxvt*iso14755:                       false
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste

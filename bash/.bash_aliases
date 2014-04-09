@@ -15,6 +15,10 @@ alias pacloc='pacman -Qi'
 alias paclocs='pacman -Qs'
 alias pacorf='pacman -Qtd'
 alias paclocii='pacman -Ql'
+alias try='sudo pacman -S --asdeps'
 
 alias fbox='ssh tornainbow@hermes.feralhosting.com'
 alias hserv='ssh 192.241.173.213'
+
+alias mnt='udiskie-mount'
+alias umnt='udiskie-umount'
