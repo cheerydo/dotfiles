@@ -3,7 +3,7 @@
 ! URxvt*Usage: urxvt [options] [-e command args]
 URxvt*scrollBar:                      false
 URxvt*transparent: true
-URxvt*shading:                        10
+URxvt*shading:                        30
 
 ! terminal colors
 *background: #1D1D1D
