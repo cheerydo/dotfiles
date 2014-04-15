@@ -46,7 +46,7 @@ background = #1d1d1d
 foreground = #FFFFFF
 
 # if unset, will reverse foreground and background
-highlight = #2f2f2f
+# highlight = #2f2f2f
 
 # These were the default colors
 # colors from color0 to color254 can be set

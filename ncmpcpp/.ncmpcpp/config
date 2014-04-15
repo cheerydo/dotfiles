@@ -273,7 +273,7 @@ selected_item_suffix = "$9"
 #
 #playlist_separate_albums = "no"
 #
-#playlist_display_mode = "classic" (classic/columns)
+playlist_display_mode = "columns" (classic/columns)
 #
 #browser_display_mode = "classic" (classic/columns)
 #
