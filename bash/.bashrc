@@ -6,8 +6,10 @@
 [[ $- != *i* ]] && return
 
 export EDITOR=/usr/bin/vim
-export TERM=rxvt-unicode
+#export TERM=rxvt-unicode
+export TERM=termite
 export GPGKEY=FBB0702A
+export LESSHISTFILE="/dev/null"
 
 
 PS1='[\u@\h \W]\$ '
