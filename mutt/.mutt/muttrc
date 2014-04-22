@@ -15,10 +15,13 @@ set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
 set certificate_file=~/.mutt/certificates
 
+mailboxes = "imaps://imap.gmail.com/[GMAIL]"
+
 set sidebar_visible = yes
 
 # mutt sidebar settings
-macro index,pager B '<enter-command>toggle sidebar_visible<enter>'
+macro index b '<enter-command>toggle sidebar_visible<enter>'
+macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
 
 # Ctrl-n, Ctrl-p to select next, previous folder
 # Ctrl-o to open selected folder

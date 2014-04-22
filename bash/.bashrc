@@ -7,7 +7,7 @@
 
 export EDITOR=/usr/bin/vim
 #export TERM=rxvt-unicode
-export TERM=termite
+export TERM=xterm-termite
 export GPGKEY=FBB0702A
 export LESSHISTFILE="/dev/null"
 
