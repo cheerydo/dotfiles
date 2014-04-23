@@ -15,8 +15,8 @@ export LESSHISTFILE="/dev/null"
 # PS1='[\u@\h \W]\$ '
 PS1='\[\033[0;36m\]╔═[\[\033[0m\033[0;36m\]\u\[\033[0m\]@\[\033[0;32m\]\h\[\033[0m\033[0;36m\]]────(\[\033[0m\]\t \d\[\033[0;36m\])────(\[\033[0m\]\W\[\033[0;36m\])\n\[\033[0;36m\]╚═══[\[\033[0m\033[0;36m\]\$\[\033[0m\033[0;36m\]]>\[\033[0m\] '
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
 fi
 
 if ! shopt -oq posix; then
