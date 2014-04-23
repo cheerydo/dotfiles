@@ -3,7 +3,7 @@
 ! URxvt*Usage: urxvt [options] [-e command args]
 URxvt*scrollBar:                      false
 URxvt*transparent: true
-URxvt*shading:                        30
+URxvt*shading:                        20
 
 ! terminal colors
 *background: #1D1D1D
@@ -36,7 +36,8 @@ URxvt*shading:                        30
 
 ! fontconfigs and copy/paste with url launching
 URxvt*colorUL:                        #4682B4
-URxvt*font:                           xft:BitstreamVeraSansMono:size=10
+! URxvt*font:                           xft:BitstreamVeraSansMono:size=10
+URxvt*font: 	xft:AnonymousPro:size=11
 URxvt*perl-ext-common:                default,matcher,clipboard
 URxvt*iso14755:                       false
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
@@ -45,8 +46,8 @@ URxvt*url-launcher:                   /usr/bin/dwb
 
 Xft.authint:	0
 Xft.lcdfilter:	lcddefault
-Xft.hintstyle:	hintfull
-Xft.hinting: 	slight
+Xft.hintstyle:	hintnone
+Xft.hinting: 	true
 Xft.antialias:  true	
 Xft.rgba:	rgb
 Xft.dpi:	96

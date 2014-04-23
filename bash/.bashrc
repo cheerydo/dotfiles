@@ -6,13 +6,14 @@
 [[ $- != *i* ]] && return
 
 export EDITOR=/usr/bin/vim
-#export TERM=rxvt-unicode
-export TERM=xterm-termite
+export TERM=rxvt-unicode
+#export TERM=xterm-termite
 export GPGKEY=FBB0702A
 export LESSHISTFILE="/dev/null"
 
 
-PS1='[\u@\h \W]\$ '
+# PS1='[\u@\h \W]\$ '
+PS1='\[\033[0;36m\]╔═[\[\033[0m\033[0;36m\]\u\[\033[0m\]@\[\033[0;32m\]\h\[\033[0m\033[0;36m\]]────(\[\033[0m\]\t \d\[\033[0;36m\])────(\[\033[0m\]\W\[\033[0;36m\])\n\[\033[0;36m\]╚═══[\[\033[0m\033[0;36m\]\$\[\033[0m\033[0;36m\]]>\[\033[0m\] '
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -75,3 +76,4 @@ extract() {
     done
     return "$e"
 }
+
