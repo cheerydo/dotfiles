@@ -22,3 +22,7 @@ alias hserv='ssh 192.241.173.213'
 
 alias mnt='udiskie-mount'
 alias umnt='udiskie-umount'
+
+alias wow='git status'
+alias such='git'
+alias very='git'
