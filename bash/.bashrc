@@ -6,8 +6,8 @@
 [[ $- != *i* ]] && return
 
 export EDITOR=/usr/bin/vim
-export TERM=rxvt-unicode
-#export TERM=xterm-termite
+#export TERM=rxvt-unicode
+export TERM=xterm-termite
 export GPGKEY=FBB0702A
 export LESSHISTFILE="/dev/null"
 
