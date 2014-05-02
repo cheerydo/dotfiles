@@ -4,4 +4,4 @@
 user=jared
 dir=test
 
-sudo pacman -Sy && pacman -Qu > /home/$user/$dir/updates
+pacman -Sy && pacman -Qu > /home/$user/$dir/updates

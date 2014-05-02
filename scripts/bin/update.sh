@@ -22,17 +22,17 @@ X=0
 Y=25
 
 #Variables
-#Where your updates file is
+#Where your updates file is in /home/onetwo
 dir=test
 
 #Where the rest of your scripts are
 scriptdir=test
 
 # Counts from each repo
-core=$(grep core ~/$dir/updates | wc -l)
-community=$(grep community ~/$dir/updates | wc -l)
-extra=$(grep extra ~/$dir/updates | wc -l)
-testing=$(grep testing ~/$dir/updates | wc -l)
+core=$(grep core /home/onetwo/$dir/updates | wc -l)
+community=$(grep community /home/onetwo/$dir/updates | wc -l)
+extra=$(grep extra /home/onetwo/$dir/updates | wc -l)
+testing=$(grep testing /home/onetwo/$dir/updates | wc -l)
 
 #Gets total number of upgradeable packages
 counts=$(pacman -Qu | wc -l)
@@ -52,11 +52,11 @@ count() {
   echo -n $counts
 }
 
-echo "^fg($RED)^ca(1,sh ~/$scriptdir/pacmanupdater.sh)\
-^ca(3,sh ~/$scriptdir/pacinfo.sh) PACMAN \
+echo "^fg($RED)^ca(1,sh /home/onetwo/$scriptdir/pacmanupdater.sh)\
+^ca(3,sh /home/onetwo/$scriptdir/pacinfo.sh) PACMAN \
 ^fg($FG) | \
-^fg($GREEN)$(count)  ^ca()^ca()" > ~/$dir/outputmain.txt
+^fg($GREEN)$(count)  ^ca()^ca()" > /home/onetwo/$dir/outputmain.txt
 
-cat ~/$dir/output.txt | dzen2 -p -ta r -bg $BG -x $X -y $Y -h $HEIGHT -expand r -fn $FONT -e 'onstart=uncollapse;key_Escape=ungrabkeys,exit'
+cat /home/onetwo/$dir/output.txt | dzen2 -p -ta r -bg $BG -x $X -y $Y -h $HEIGHT -expand r -fn $FONT -e 'onstart=uncollapse;key_Escape=ungrabkeys,exit'
 
 exit 0
