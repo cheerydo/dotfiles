@@ -17,18 +17,6 @@ set certificate_file=~/.mutt/certificates
 
 mailboxes = "imaps://imap.gmail.com/[GMAIL]"
 
-set sidebar_visible = yes
-
-# mutt sidebar settings
-macro index b '<enter-command>toggle sidebar_visible<enter>'
-macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
-
-# Ctrl-n, Ctrl-p to select next, previous folder
-# Ctrl-o to open selected folder
-bind index,pager \CP sidebar-prev
-bind index,pager \CN sidebar-next
-bind index,pager \CO sidebar-open
-
 set move=no
 set alias_file=~/.mutt/aliases
 source $alias_file

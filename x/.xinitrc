@@ -21,6 +21,8 @@ nitrogen --restore &
 thunar --daemon &
 urxvtd -q -f -o &
 
+sleep 2 && clipit &
+
 #/home/jared/bin/baraction.sh &
 #/home/jared/bin/baraction2.sh &
 
