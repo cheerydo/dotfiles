@@ -11,17 +11,22 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-xset +fp /usr/share/fonts/local/
-fc-cache
+xset b off
+setxkbmap -option caps:super
+xrandr --output VGA1 --left-of HDMI1 
+xrdb -load ~/.Xresources
+compton &
 
-xrdb ~/.Xresources
+nitrogen --restore &
+thunar --daemon &
+urxvtd -q -f -o &
 
-# exec gnome-session
-# exec startkde
-# exec startxfce4
-# ...or the Window Manager of your choice
+#/home/jared/bin/baraction.sh &
+#/home/jared/bin/baraction2.sh &
 
-mpdscribble
-feh -z --bg-fill /home/jared/pictures/
+xbindkeys
+
+#exec 2bwm &
+#exec termite
 
 exec spectrwm

@@ -5,7 +5,7 @@ ZSH=/usr/share/oh-my-zsh/
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bira"
+ZSH_THEME="jared"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -34,27 +34,4 @@ vimode=i
 # Remove default delay and set to 0.1s
 export KEYTIMEOUT=1
 
-# Handy extract function
-extract () {
-  if [ -f $1 ] ; then
-      case $1 in
-            *.tar.bz2)      tar xvjf $1   ;;
-            *.tar.gz)       tar xvzf $1   ;;
-		    *.tar.xz)       tar xvJf $1   ;;
-            *.bz2)          bunzip2 $1    ;;
-            *.rar)          unrar x $1    ;;
-            *.gz)           gunzip $1     ;;
-            *.tar)          tar xvf $1    ;;
-            *.tbz2)         tar xvjf $1   ;;
-            *.tgz)          tar xvzf $1   ;;
-		    *.txz)          tar xvJf $1   ;;
-            *.rar)          unrar $1      ;;
-            *.zip)          unzip $1      ;;
-            *.Z)            uncompress $1 ;;
-            *.7z)           7z e $1       ;;
-   	       *)           echo "don't know how to extract '$1'..." ;;
-      esac
-  else
-      echo "'$1' is not a valid file!"
-  fi
-}
+setopt NO_HUP

@@ -7,16 +7,16 @@
 # focus_close		= previous
 # focus_close_wrap	= 1
 # focus_default		= last
-# spawn_position	= next
+# spawn_position		= next
 
 # Window Decoration
 # border_width		= 1
-color_focus		= white
+color_focus		= yellow
 # color_focus_maximized	= yellow
 # color_unfocus		= rgb:88/88/88
 # color_unfocus_maximized	= rgb:88/88/00
 region_padding		= 5
-tile_gap			= 5
+tile_gap		= 5
 
 # Region containment
 # Distance window must be dragged/resized beyond the region edge before it is
@@ -33,8 +33,8 @@ bar_border_width	= 0
 # bar_border_unfocus[1]	= rgb:00/40/40
 # bar_color[1]		= black
 bar_font_color[1]	= rgb:ff/ff/ff
-bar_font			= -*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
-bar_action			= /home/jared/bin/baraction.sh
+bar_font		= -*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
+bar_action		= /home/jared/bin/baraction.sh
 # bar_justify		= left
 # bar_format		= +N:+I +S <+D>+4<%a %b %d %R %Z %Y+8<+A+4<+V
 # bar_at_bottom		= 1
@@ -51,6 +51,11 @@ clock_enabled		= 0
 # Dialog box size ratio when using TRANSSZ quirk; 0.3 < dialog_ratio <= 1.0
 # dialog_ratio		= 0.6
 
+# Split a non-RandR dual head setup into one region per monitor
+# (non-standard driver-based multihead is not seen by spectrwm)
+# region		= screen[1]:1440x900+0+40
+# region		= screen[1]:1280x1024+1280+0
+
 # Launch applications in a workspace of choice
 # autorun		= ws[10]:keepass /home/jared/documents/Jared.kdbx
 # autorun		= ws[2]:xombrero http://www.openbsd.org
@@ -60,7 +65,7 @@ layout		= ws[1]:0:0:0:0:horizontal
 layout		= ws[2]:0:0:0:0:horizontal
 layout		= ws[3]:0:0:0:0:horizontal
 layout		= ws[4]:0:0:0:0:horizontal
-layout		= ws[5]:0:0:0:0:horizontal
+# layout		= ws[5]:0:0:0:0:horizontal_flip
 
 # Set workspace name at start
 # name			= ws[1]:IRC
@@ -77,14 +82,21 @@ modkey = Mod4
 # PROGRAMS
 
 # Validated default programs:
-#program[lock]		= 
+program[lock]		= i3lock
 program[term]		= termite
 # program[menu]		= dmenu_run $dmenu_bottom -fn $bar_font -nb $bar_color -nf $bar_font_color -sb $bar_border -sf $bar_color
 
 # To disable validation of the above, free the respective binding(s):
-bind[]		= MOD+Shift+Delete	# disable lock
+# bind[]		= MOD+Shift+Delete	# disable lock
 # bind[]		= MOD+Shift+Enter	# disable term
 # bind[]		= MOD+p			# disable menu
+
+program[kbup]	= kbdlight up
+program[kbdown]	= kbdlight down
+program[kbdoff] = kbdlight off
+bind[kbup]		= XF86KbdBrightnessUp
+bind[kbdown] 	= XF86KbdBrightnessDown
+bind [kbdoff]	= XF86KbdLightOnOff
 
 program[volup]	= amixer -c 0 set Master 5+
 program[voldown]= amixer -c 0 set Master 5-
@@ -93,13 +105,13 @@ bind[volup]		= XF86AudioRaiseVolume
 bind[voldown]	= XF86AudioLowerVolume
 bind[volmute]	= XF86AudioMute
 
-program[music]	= termite -e ncmpcpp
+program[music] 	= termite -e ncmpcpp
 bind[music]		= MOD+Shift+m
 
 program[web]	= dwb
 bind[web]		= MOD+Shift+d
 
-program[file]	= thunar
+program[file]	= termite -e ranger
 bind[file]		= MOD+Shift+r
 
 program[passw]	= keepass --auto-type
@@ -110,20 +122,28 @@ program[windown]= winswitch down
 bind[winup]		= MOD+Shift+l
 bind[windown]	= MOD+Shift+h
 
-program[urxvt]	= urxvtc
-bind[urxvt]		= MOD+Shift+p
-
-bind[rg_next] 	= MOD+u
 # Optional default programs that will only be validated if you override:
 program[screenshot_all]	= /home/jared/bin/screenshot.sh full	# optional
 program[screenshot_wind]	= /home/jared/bin/screenshot.sh window	# optional
 # program[initscr]	= initscreen.sh			# optional
 
-quirk[Firefox:Dialog]						= FLOAT
-quirk[Thunar:thunar]						= FLOAT
-quirk[Keepass2:keepass2]					= FLOAT
-quirk[Lxappearance:lxappearance]			= FLOAT
-quirk[Thunderbird:Msgcompose]				= FLOAT
-quirk[Thunderbird:Thunderbird Preferences]	= FLOAT
-quirk[Open Database File:Open Database File]= FLOAT
-quirk[Galculator:galculator]				= FLOAT
+# EXAMPLE: Define 'firefox' action and bind to key.
+# program[firefox]	= firefox http://spectrwm.org/
+# bind[firefox]		= MOD+Shift+b
+
+# QUIRKS
+# Default quirks, remove with: quirk[class:name] = NONE
+# quirk[MPlayer:xv]			= FLOAT + FULLSCREEN + FOCUSPREV
+# quirk[OpenOffice.org 2.4:VCLSalFrame]	= FLOAT
+# quirk[OpenOffice.org 3.0:VCLSalFrame]	= FLOAT
+# quirk[OpenOffice.org 3.1:VCLSalFrame]	= FLOAT
+# quirk[Firefox-bin:firefox-bin]		= TRANSSZ
+# quirk[Firefox:Dialog]			= FLOAT
+# quirk[Gimp:gimp]			= FLOAT + ANYWHERE
+# quirk[XTerm:xterm]			= XTERM_FONTADJ
+# quirk[xine:Xine Window]			= FLOAT + ANYWHERE
+# quirk[Xitk:Xitk Combo]			= FLOAT + ANYWHERE
+# quirk[xine:xine Panel]			= FLOAT + ANYWHERE
+# quirk[Xitk:Xine Window]			= FLOAT + ANYWHERE
+# quirk[xine:xine Video Fullscreen Window] = FULLSCREEN + FLOAT
+# quirk[pcb:pcb]				= FLOAT

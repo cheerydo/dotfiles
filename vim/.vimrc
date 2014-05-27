@@ -11,6 +11,8 @@ set nocompatible                " Use Vim defaults instead of 100% vi compatibil
 set backspace=indent,eol,start  " more powerful backspacing
 set tabstop=4			" Number of space that a <Tab> in the file counts for
 set shiftwidth=4		" Number of spaces to use for each step of autoindent
+set nobackup
+set nowritebackup
 
 set smarttab
 
@@ -32,3 +34,4 @@ if has('gui_running')
   map! <S-Insert> <MiddleMouse>
 endif
 
+imap jj <Esc>

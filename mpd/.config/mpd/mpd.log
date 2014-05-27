@@ -1,0 +1,411 @@
+May 13 19:20 : config: option 'mixer_device' on line 214 was not recognized
+May 13 19:20 : config: option 'mixer_control' on line 215 was not recognized
+May 13 19:20 : config: option 'mixer_index' on line 216 was not recognized
+May 13 19:23 : player: played "Tallest Man On Earth, The/Shallow Grave/02 Pistol Dreams.mp3"
+May 13 19:23 : config: option 'mixer_device' on line 214 was not recognized
+May 13 19:23 : config: option 'mixer_control' on line 215 was not recognized
+May 13 19:23 : config: option 'mixer_index' on line 216 was not recognized
+May 13 19:24 : player: played "Tallest Man On Earth, The/Shallow Grave/02 Pistol Dreams.mp3"
+May 13 19:27 : player: played "Tallest Man On Earth, The/Shallow Grave/01 I Won't Be Found.mp3"
+May 13 19:28 : player: played "Tallest Man On Earth, The/Shallow Grave/02 Pistol Dreams.mp3"
+May 13 19:31 : player: played "Tallest Man On Earth, The/Shallow Grave/02 Pistol Dreams.mp3"
+May 13 19:33 : player: played "Tallest Man On Earth, The/Shallow Grave/03 Honey Won't You Let Me In.mp3"
+May 13 19:37 : player: played "Tallest Man On Earth, The/Shallow Grave/04 Shallow Grave.mp3"
+May 13 19:40 : player: played "Tallest Man On Earth, The/Shallow Grave/05 Where Do My Bluebird Fly.mp3"
+May 13 19:42 : player: played "Tallest Man On Earth, The/Shallow Grave/06 The Gardener.mp3"
+May 13 19:46 : player: played "Tallest Man On Earth, The/Shallow Grave/07 The Blizzard's Never Seen The Des.mp3"
+May 13 19:49 : player: played "Tallest Man On Earth, The/Shallow Grave/08 The Sparrow And The Medicine.mp3"
+May 13 19:52 : player: played "Tallest Man On Earth, The/Shallow Grave/09 Into The Stream.mp3"
+May 13 19:55 : player: played "Tallest Man On Earth, The/Shallow Grave/10 This Wind.mp3"
+May 13 20:00 : player: played "Tallest Man On Earth, The/Shallow Grave/10 This Wind.mp3"
+May 13 20:01 : player: played "Tallest Man On Earth, The/Shallow Grave/05 Where Do My Bluebird Fly.mp3"
+May 13 20:04 : player: played "Tallest Man On Earth, The/Shallow Grave/04 Shallow Grave.mp3"
+May 13 20:07 : player: played "Tallest Man On Earth, The/Shallow Grave/05 Where Do My Bluebird Fly.mp3"
+May 13 20:09 : player: played "Tallest Man On Earth, The/Shallow Grave/06 The Gardener.mp3"
+May 13 20:13 : player: played "Tallest Man On Earth, The/Shallow Grave/07 The Blizzard's Never Seen The Des.mp3"
+May 13 20:16 : player: played "Tallest Man On Earth, The/Shallow Grave/08 The Sparrow And The Medicine.mp3"
+May 13 20:19 : player: played "Tallest Man On Earth, The/Shallow Grave/09 Into The Stream.mp3"
+May 13 20:23 : player: played "Tallest Man On Earth, The/Shallow Grave/10 This Wind.mp3"
+May 14 02:10 : config: option 'mixer_device' on line 214 was not recognized
+May 14 02:10 : config: option 'mixer_control' on line 215 was not recognized
+May 14 02:10 : config: option 'mixer_index' on line 216 was not recognized
+May 14 02:10 : player: played "Tallest Man On Earth, The/Shallow Grave/01 I Won't Be Found.mp3"
+May 15 01:31 : config: option 'mixer_device' on line 214 was not recognized
+May 15 01:31 : config: option 'mixer_control' on line 215 was not recognized
+May 15 01:31 : config: option 'mixer_index' on line 216 was not recognized
+May 15 01:32 : player: played "Compilations/LiveLoveA$AP/01 Palace.mp3"
+May 15 01:33 : player: played "Compilations/LiveLoveA$AP/02 Peso.mp3"
+May 15 01:35 : player: played "Compilations/LiveLoveA$AP/02 Peso.mp3"
+May 15 01:36 : player: played "Compilations/LiveLoveA$AP/03 Bass.mp3"
+May 15 01:39 : player: played "Compilations/LiveLoveA$AP/03 Bass.mp3"
+May 15 01:53 : player: played "Compilations/LiveLoveA$AP/04 Wassup.mp3"
+May 15 01:54 : player: played "Cookie Monsta/Circus One (Presented By Doctor P and Fl/02 Blurgh!.mp3"
+May 15 01:56 : update: updating Cookie Monsta/Circus One (Presented By Doctor P and Fl/06 Bubble Trouble.mp3
+May 15 01:56 : update: updating Cookie Monsta/Circus One (Presented By Doctor P and Fl/02 Blurgh!.mp3
+May 15 01:56 : update: updating Cookie Monsta/Circus One (Presented By Doctor P and Fl/08 Mosh Pit.mp3
+May 15 01:57 : player: played "Cookie Monsta/Cookie Monsta/AntiChrist.mp3"
+May 15 01:58 : player: played "Vampire Weekend/Modern Vampires of the City/01 Obvious Bicycle.mp3"
+May 15 01:58 : update: updating Antony and the Johnsons/Live at Dalhalla/08 Crazy in Love (Beyonce Cover).mp3
+May 15 01:59 : update: updating Antony & The Johnsons/The Crying Light/02 Epilepsy Is Dancing.mp3
+May 15 01:59 : update: updating Antony & The Johnsons/The Crying Light/08 Aeon.mp3
+May 15 01:59 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: moov atom not found
+May 15 01:59 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: moov atom not found
+May 15 01:59 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: moov atom not found
+May 15 01:59 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: moov atom not found
+May 15 01:59 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: moov atom not found
+May 15 01:59 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: moov atom not found
+May 15 01:59 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: moov atom not found
+May 15 01:59 : update: updating Antony & The Johnsons/Another World/01 Another World.mp3
+May 15 01:59 : update: updating Antony & The Johnsons/I'm Not There OST/17 Knockin' On Heaven's Door.mp3
+May 15 02:00 : player: played "Antony and the Johnsons/Live at Dalhalla/08 Crazy in Love (Beyonce Cover).mp3"
+May 15 02:00 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+May 15 02:00 : player: played "Antoine Dodson & The Gregory Brothers/Bed Intruder Song (feat. Kelly Dodson) -/01 Bed Intruder Song (feat. Kelly Do.m4a"
+May 15 02:05 : alsa_output: Failed to open "My ALSA Device" [alsa]: Failed to open ALSA device "hw:0,0": Device or resource busy
+May 15 02:05 : player: played "Vampire Weekend/Modern Vampires of the City/01 Obvious Bicycle.mp3"
+May 15 18:14 : avahi: Client Disconnected, will reconnect shortly
+May 15 18:14 : avahi: Could not reconnect: An unexpected D-Bus error occured
+May 15 18:14 : config: option 'mixer_device' on line 214 was not recognized
+May 15 18:14 : config: option 'mixer_control' on line 215 was not recognized
+May 15 18:14 : config: option 'mixer_index' on line 216 was not recognized
+May 16 07:28 : player: played "Vampire Weekend/Modern Vampires of the City/01 Obvious Bicycle.mp3"
+May 16 07:31 : player: played "Vampire Weekend/Modern Vampires of the City/02 Unbelievers.mp3"
+May 16 07:36 : player: played "Vampire Weekend/Modern Vampires of the City/03 Step.mp3"
+May 16 07:38 : player: played "Vampire Weekend/Modern Vampires of the City/04 Diane Young.mp3"
+May 16 07:42 : player: played "Vampire Weekend/Modern Vampires of the City/05 Don't Lie.mp3"
+May 16 07:46 : player: played "Vampire Weekend/Modern Vampires of the City/06 Hannah Hunt.mp3"
+May 16 07:49 : player: played "Vampire Weekend/Modern Vampires of the City/07 Everlasting Arms.mp3"
+May 16 07:52 : player: played "Vampire Weekend/Modern Vampires of the City/08 Finger Back.mp3"
+May 16 07:56 : player: played "Vampire Weekend/Modern Vampires of the City/09 Worship You.mp3"
+May 16 08:01 : player: played "Vampire Weekend/Modern Vampires of the City/10 Ya Hey.mp3"
+May 16 08:02 : player: played "Vampire Weekend/Modern Vampires of the City/11 Hudson.mp3"
+May 16 08:02 : player: played "Vampire Weekend/Modern Vampires of the City/12 Young Lion.mp3"
+May 16 08:06 : player: played "A$AP Rocky/Long.Live.A$Ap/07 F__Kin' Problems.mp3"
+May 16 08:10 : player: played "A$AP Rocky/Long.Live.A$Ap/01 Long Live A$AP.mp3"
+May 16 08:16 : player: played "Kendrick Lamar - good kid, m.A.A.d city (2012) [V0]/02 - Bitch, Don’t Kill My Vibe.mp3"
+May 16 08:22 : player: played "Kendrick Lamar - good kid, m.A.A.d city (2012) [V0]/05 - Money Trees (Feat. Jay Rock).mp3"
+May 16 12:38 : player: played "A$AP Rocky/Long.Live.A$Ap/07 F__Kin' Problems.mp3"
+May 16 12:43 : player: played "A$AP Rocky/Long.Live.A$Ap/01 Long Live A$AP.mp3"
+May 16 12:48 : player: played "Kendrick Lamar - good kid, m.A.A.d city (2012) [V0]/02 - Bitch, Don’t Kill My Vibe.mp3"
+May 16 12:48 : player: played "Kendrick Lamar - good kid, m.A.A.d city (2012) [V0]/05 - Money Trees (Feat. Jay Rock).mp3"
+May 16 12:48 : player: played "Kendrick Lamar - good kid, m.A.A.d city (2012) [V0]/02 - Bitch, Don’t Kill My Vibe.mp3"
+May 16 12:49 : update: updating Kendrick Lamar - good kid, m.A.A.d city (2012) [V0]/04 - The Art of Peer Pressure.mp3
+May 16 12:49 : update: updating Kendrick Lamar - good kid, m.A.A.d city (2012) [V0]/12 - Compton (Feat. Dr. Dre).mp3
+May 16 12:49 : update: updating Kendrick Lamar - good kid, m.A.A.d city (2012) [V0]/11 - Real (Feat. Anna Wise).mp3
+May 16 12:49 : update: updating Kendrick Lamar - good kid, m.A.A.d city (2012) [V0]/06 - Poetic Justice (Feat. Drake).mp3
+May 16 12:49 : update: updating Kendrick Lamar - good kid, m.A.A.d city (2012) [V0]/08 - m.A.A.d city (Feat. MC Eiht).mp3
+May 16 12:49 : update: updating Kendrick Lamar - good kid, m.A.A.d city (2012) [V0]/02 - Bitch, Don’t Kill My Vibe.mp3
+May 16 12:49 : update: updating Kendrick Lamar - good kid, m.A.A.d city (2012) [V0]/03 - Backseat Freestyle.mp3
+May 16 12:49 : update: updating Kendrick Lamar - good kid, m.A.A.d city (2012) [V0]/05 - Money Trees (Feat. Jay Rock).mp3
+May 16 12:49 : update: updating Kendrick Lamar - good kid, m.A.A.d city (2012) [V0]/01 - Sherane a.k.a. Master Splinter’s Daughter.mp3
+May 16 12:49 : update: updating Kendrick Lamar - good kid, m.A.A.d city (2012) [V0]/09 - Swimming Pools (Drank) (Extended Version).mp3
+May 16 12:49 : update: updating Kendrick Lamar - good kid, m.A.A.d city (2012) [V0]/10 - Sing About Me , I’m Dying of Thirst.mp3
+May 16 12:49 : update: updating Kendrick Lamar - good kid, m.A.A.d city (2012) [V0]/07 - good kid.mp3
+May 16 12:49 : player: played "A$AP Rocky/Long.Live.A$Ap/07 F__Kin' Problems.mp3"
+May 16 12:54 : player: played "Kendrick Lamar - good kid, m.A.A.d city (2012) [V0]/02 - Bitch, Don’t Kill My Vibe.mp3"
+May 16 13:01 : player: played "Kendrick Lamar - good kid, m.A.A.d city (2012) [V0]/05 - Money Trees (Feat. Jay Rock).mp3"
+May 16 17:53 : player: played "A$AP Rocky/Long.Live.A$Ap/07 F__Kin' Problems.mp3"
+May 16 17:56 : player: played "A$AP Rocky/Long.Live.A$Ap/01 Long Live A$AP.mp3"
+May 16 19:11 : avahi: Client Disconnected, will reconnect shortly
+May 16 19:11 : avahi: Could not reconnect: An unexpected D-Bus error occured
+May 18 12:48 : config: option 'mixer_device' on line 214 was not recognized
+May 18 12:48 : config: option 'mixer_control' on line 215 was not recognized
+May 18 12:48 : config: option 'mixer_index' on line 216 was not recognized
+May 18 14:43 : player: played "A$AP Rocky/Long.Live.A$Ap/08 Wild For The Night.mp3"
+May 18 14:49 : player: played "A$AP Rocky/Long.Live.A$Ap/08 Wild For The Night.mp3"
+May 18 15:00 : update: removing A$AP Rocky/Long.Live.A$Ap/08 Wild For The Night.mp3
+May 18 15:00 : update: updating A$AP Rocky/Long.Live.A$Ap/09 1 Train.mp3
+May 18 15:02 : player: played "A$AP Rocky/Long.Live.A$Ap/10 Fashion Killa.mp3"
+May 19 03:10 : update: updating Cee-Lo Green/Unknown Album/Fuck You.mp3
+May 19 03:17 : player: played "Do Make Say Think/You, You're A History In Rust/04 A Tender History In Rust.mp3"
+May 19 03:21 : config: option 'mixer_device' on line 214 was not recognized
+May 19 03:21 : config: option 'mixer_control' on line 215 was not recognized
+May 19 03:21 : config: option 'mixer_index' on line 216 was not recognized
+May 19 03:21 : server_socket: bind to '0.0.0.0:8000' failed: Address already in use (continuing anyway, because binding to '[::]:8000' succeeded)
+May 19 03:22 : server_socket: bind to '0.0.0.0:8000' failed: Address already in use (continuing anyway, because binding to '[::]:8000' succeeded)
+May 19 03:28 : client: Max connections reached
+May 19 03:28 : client: Max connections reached
+May 19 03:28 : client: Max connections reached
+May 19 03:28 : player: played "Do Make Say Think/You, You're A History In Rust/04 A Tender History In Rust.mp3"
+May 19 03:28 : player: played "Compilations/A Masterpiece Collection/01 Asturias.mp3"
+May 19 03:28 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+May 19 03:31 : player: played "DJ Black/Best Of 36 Mafia & H.C.P_/07 Slob On My Knob.m4a"
+May 19 03:31 : client: Max connections reached
+May 19 03:31 : client: Max connections reached
+May 19 03:31 : client: Max connections reached
+May 19 03:31 : config: option 'mixer_device' on line 214 was not recognized
+May 19 03:31 : config: option 'mixer_control' on line 215 was not recognized
+May 19 03:31 : config: option 'mixer_index' on line 216 was not recognized
+May 19 03:31 : server_socket: bind to '0.0.0.0:8000' failed: Address already in use (continuing anyway, because binding to '[::]:8000' succeeded)
+May 19 03:32 : client: Max connections reached
+May 19 03:32 : client: Max connections reached
+May 19 03:33 : player: played "Jared Hamilton/Listening Exercises/Reachin'.m4a"
+May 19 03:33 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+May 19 03:33 : server_socket: bind to '0.0.0.0:8000' failed: Address already in use (continuing anyway, because binding to '[::]:8000' succeeded)
+May 19 03:33 : player: played "DJ Black/Best Of 36 Mafia & H.C.P_/07 Slob On My Knob.m4a"
+May 19 03:35 : update: updating Arcade Fie/Arcade Fire EP/11 Vampire Forest Fire.mp3
+May 19 03:35 : player: played "Jared Hamilton/Listening Exercises/Reachin'.m4a"
+May 19 03:36 : player: played "Jared Hamilton/Listening Exercises/Reachin'.m4a"
+May 19 03:40 : player: played "Totally Enormous Extinct Dinosaurs/Trouble/01 Promises.mp3"
+May 19 03:44 : player: played "Totally Enormous Extinct Dinosaurs/Trouble/02 Trouble.mp3"
+May 19 03:48 : player: played "Totally Enormous Extinct Dinosaurs/Trouble/03 Shimmer.mp3"
+May 19 19:52 : player: played "Totally Enormous Extinct Dinosaurs/Trouble/04 Household Goods.mp3"
+May 19 19:53 : player: played "Totally Enormous Extinct Dinosaurs/Trouble/03 Shimmer.mp3"
+May 19 19:58 : player: played "Totally Enormous Extinct Dinosaurs/Trouble/01 Promises.mp3"
+May 19 20:01 : player: played "Totally Enormous Extinct Dinosaurs/Trouble/02 Trouble.mp3"
+May 19 20:06 : player: played "Totally Enormous Extinct Dinosaurs/Trouble/03 Shimmer.mp3"
+May 19 20:09 : player: played "Totally Enormous Extinct Dinosaurs/Trouble/04 Household Goods.mp3"
+May 19 20:13 : player: played "Totally Enormous Extinct Dinosaurs/Trouble/05 Your Love.mp3"
+May 19 20:17 : player: played "Totally Enormous Extinct Dinosaurs/Trouble/06 You Need Me On My Own.mp3"
+May 19 20:23 : player: played "Totally Enormous Extinct Dinosaurs/Trouble/07 Panpipes.mp3"
+May 19 20:27 : player: played "Totally Enormous Extinct Dinosaurs/Trouble/08 Garden.mp3"
+May 19 20:33 : player: played "Totally Enormous Extinct Dinosaurs/Trouble/09 Solo.mp3"
+May 19 20:37 : player: played "Totally Enormous Extinct Dinosaurs/Trouble/10 Tapes & Money.mp3"
+May 19 20:42 : player: played "Totally Enormous Extinct Dinosaurs/Trouble/11 American Dream Part II.mp3"
+May 19 20:48 : player: played "Totally Enormous Extinct Dinosaurs/Trouble/12 Closer.mp3"
+May 19 20:51 : player: played "Totally Enormous Extinct Dinosaurs/Trouble/13 Fair.mp3"
+May 19 20:56 : player: played "Totally Enormous Extinct Dinosaurs/Trouble/14 Stronger.mp3"
+May 19 21:30 : player: played "James Blake - 2010 - CMYK EP - LAME MP3/01 CMYK.mp3"
+May 19 21:35 : player: played "James Blake - 2010 - CMYK EP - LAME MP3/02 Footnotes.mp3"
+May 19 21:38 : player: played "James Blake - 2010 - CMYK EP - LAME MP3/03 I'll Stay.mp3"
+May 19 21:42 : player: played "James Blake - 2010 - CMYK EP - LAME MP3/04 Postpone.mp3"
+May 19 21:47 : player: played "James Blake - Klavierwerke EP (V0)/01 - Klavierwerke.mp3"
+May 19 21:50 : player: played "James Blake - Klavierwerke EP (V0)/02 - Tell Her Safe.mp3"
+May 19 21:55 : player: played "James Blake - Klavierwerke EP (V0)/03 - I Only Know (What I Know Now).mp3"
+May 19 21:58 : player: played "James Blake - Klavierwerke EP (V0)/04 - Don't You Think I Do.mp3"
+May 19 22:01 : player: played "James Blake/James Blake/01 Unluck.mp3"
+May 19 22:06 : player: played "James Blake/James Blake/02 The Wilhelm Scream.mp3"
+May 19 22:06 : player: played "James Blake/James Blake/03 I Never Learnt To Share.mp3"
+May 19 22:09 : player: played "Unknown Artist/Unknown Album/OpeningMenu.mp3"
+May 19 22:10 : player: played "Compilations/Avenue Q/13 There's a Fine, Fine Line.mp3"
+May 19 22:13 : player: played "Compilations/Avenue Q/03 If You Were Gay.mp3"
+May 19 22:18 : player: played "Compilations/Avenue Q/16 Schadenfreude.mp3"
+May 19 22:19 : update: updating The XX/Coexist/02 Chained.mp3
+May 19 22:19 : update: updating The XX/Coexist/10 Swept Away.mp3
+May 19 22:19 : update: updating The XX/Coexist/03 Fiction.mp3
+May 19 22:19 : update: updating The XX/Coexist/01 Angels.mp3
+May 19 22:19 : update: updating The XX/Coexist/05 Reunion.mp3
+May 19 22:19 : update: updating The XX/Coexist/04 Try.mp3
+May 19 22:19 : update: updating The XX/Coexist/06 Sunset.mp3
+May 19 22:19 : update: updating The XX/Coexist/11 Our Song.mp3
+May 19 22:19 : update: updating The XX/Coexist/07 Missing.mp3
+May 19 22:19 : update: updating The XX/Coexist/09 Unfold.mp3
+May 19 22:19 : update: updating The XX/Coexist/08 Tides.mp3
+May 19 22:20 : update: updating Yo-Yo Ma, Stuart Duncan, Edgar Meyer and/The Goat Rodeo Sessions/02 Quarter Chicken Dark.mp3
+May 19 22:20 : update: updating Yo-Yo Ma, Stuart Duncan, Edgar Meyer and/The Goat Rodeo Sessions/05 Here and Heaven.mp3
+May 19 22:20 : update: updating Yo-Yo Ma, Stuart Duncan, Edgar Meyer and/The Goat Rodeo Sessions/08 Hill Justice.mp3
+May 19 22:20 : update: updating Yo-Yo Ma, Stuart Duncan, Edgar Meyer and/The Goat Rodeo Sessions/09 No One But You.mp3
+May 19 22:20 : update: updating Yo-Yo Ma, Stuart Duncan, Edgar Meyer and/The Goat Rodeo Sessions/01 Attaboy.mp3
+May 19 22:20 : update: updating Yo-Yo Ma, Stuart Duncan, Edgar Meyer and/The Goat Rodeo Sessions/02 Quarter Chicken Dark.mp3
+May 19 22:20 : update: updating Yo-Yo Ma, Stuart Duncan, Edgar Meyer and/The Goat Rodeo Sessions/03 Helping Hand.mp3
+May 19 22:20 : update: updating Yo-Yo Ma, Stuart Duncan, Edgar Meyer and/The Goat Rodeo Sessions/07 Less is Moi.mp3
+May 19 22:20 : update: updating Yo-Yo Ma, Stuart Duncan, Edgar Meyer and/The Goat Rodeo Sessions/06 Franz And The Eagle.mp3
+May 19 22:20 : update: updating Yo-Yo Ma, Stuart Duncan, Edgar Meyer and/The Goat Rodeo Sessions/10 13_8.mp3
+May 19 22:20 : update: updating Yo-Yo Ma, Stuart Duncan, Edgar Meyer and/The Goat Rodeo Sessions/11 Goat Rodeo.mp3
+May 19 22:20 : update: updating Yo-Yo Ma, Stuart Duncan, Edgar Meyer and/The Goat Rodeo Sessions/04 Where's My Bow.mp3
+May 19 22:21 : player: played "Sir Mix A Lot/Charlies Angels Soundtrack/Baby Got Back.MP3"
+May 19 22:22 : update: updating Spoon/Transference/05 Written In Reverse.m4a
+May 19 22:22 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+May 19 22:22 : update: updating Spoon/Transference/05 Written In Reverse.m4a
+May 19 22:22 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+May 19 22:23 : player: played "Sugar Ray/Floored/04 Fly [Explicit].mp3"
+May 19 22:24 : player: played "Compilations/Musical Bar-B-Que/07 Hero In His Own Mind (Part 1).m4a"
+May 19 22:24 : player: played "Compilations/Musical Bar-B-Que/08 Don't Touch Me.m4a"
+May 19 22:25 : player: played "Compilations/Musical Bar-B-Que/09 Ordinary Guy.m4a"
+May 19 22:26 : player: played "Compilations/Musical Bar-B-Que/12 Minkey Boodle.m4a"
+May 19 22:27 : player: played "Compilations/Musical Bar-B-Que/04 I Love You, Baby.m4a"
+May 19 22:28 : player: played "Compilations/Musical Bar-B-Que/19 Oh Fun Key Bay Bee.m4a"
+May 19 22:30 : player: played "Compilations/Musical Bar-B-Que/11 I Love Beans.m4a"
+May 20 09:01 : player: played "Compilations/Musical Bar-B-Que/21 Hoodleehoo.m4a"
+May 20 20:20 : avahi: Client Disconnected, will reconnect shortly
+May 20 20:20 : avahi: Could not reconnect: An unexpected D-Bus error occured
+May 20 20:21 : config: option 'mixer_device' on line 214 was not recognized
+May 20 20:21 : config: option 'mixer_control' on line 215 was not recognized
+May 20 20:21 : config: option 'mixer_index' on line 216 was not recognized
+May 20 20:39 : player: played "James Blake - 2010 - CMYK EP - LAME MP3/03 I'll Stay.mp3"
+May 20 20:42 : player: played "James Blake - 2010 - CMYK EP - LAME MP3/04 Postpone.mp3"
+May 20 20:47 : player: played "James Blake - Klavierwerke EP (V0)/01 - Klavierwerke.mp3"
+May 20 20:49 : player: played "James Blake - Klavierwerke EP (V0)/02 - Tell Her Safe.mp3"
+May 20 23:45 : alsa_output: Failed to open "My ALSA Device" [alsa]: Failed to open ALSA device "hw:0,0": Device or resource busy
+May 20 23:46 : alsa_output: Failed to open "My ALSA Device" [alsa]: Failed to open ALSA device "hw:0,0": Device or resource busy
+May 20 23:46 : alsa_output: Failed to open "My ALSA Device" [alsa]: Failed to open ALSA device "hw:0,0": Device or resource busy
+May 20 23:46 : alsa_output: Failed to open "My ALSA Device" [alsa]: Failed to open ALSA device "hw:0,0": Device or resource busy
+May 20 23:46 : alsa_output: Failed to open "My ALSA Device" [alsa]: Failed to open ALSA device "hw:0,0": Device or resource busy
+May 20 23:46 : alsa_output: Failed to open "My ALSA Device" [alsa]: Failed to open ALSA device "hw:0,0": Device or resource busy
+May 20 23:46 : alsa_output: Failed to open "My ALSA Device" [alsa]: Failed to open ALSA device "hw:0,0": Device or resource busy
+May 20 23:47 : alsa_output: Failed to open "My ALSA Device" [alsa]: Failed to open ALSA device "hw:0,0": Device or resource busy
+May 20 23:47 : alsa_output: Failed to open "My ALSA Device" [alsa]: Failed to open ALSA device "hw:0,0": Device or resource busy
+May 20 23:47 : player: played "James Blake - 2010 - CMYK EP - LAME MP3/01 CMYK.mp3"
+May 21 01:42 : player: played "James Blake/Overgrown/02 I Am Sold.mp3"
+May 21 01:46 : player: played "James Blake/Overgrown/03 Life Round Here.mp3"
+May 21 01:49 : player: played "James Blake/Overgrown/04 Take A Fall For Me.mp3"
+May 21 01:53 : player: played "James Blake/Overgrown/05 Retrograde.mp3"
+May 21 01:55 : player: played "James Blake/Overgrown/06 Dlm.mp3"
+May 21 01:56 : player: played "James Blake/Overgrown/07 Digital Lion.mp3"
+May 21 23:27 : player: played "James Blake - 2010 - CMYK EP - LAME MP3/01 CMYK.mp3"
+May 21 23:32 : player: played "James Blake - 2010 - CMYK EP - LAME MP3/02 Footnotes.mp3"
+May 21 23:36 : player: played "James Blake - 2010 - CMYK EP - LAME MP3/03 I'll Stay.mp3"
+May 21 23:39 : player: played "James Blake - 2010 - CMYK EP - LAME MP3/04 Postpone.mp3"
+May 21 23:45 : player: played "James Blake - Klavierwerke EP (V0)/01 - Klavierwerke.mp3"
+May 21 23:48 : player: played "James Blake - Klavierwerke EP (V0)/02 - Tell Her Safe.mp3"
+May 21 23:53 : player: played "James Blake - Klavierwerke EP (V0)/03 - I Only Know (What I Know Now).mp3"
+May 21 23:56 : player: played "James Blake - Klavierwerke EP (V0)/04 - Don't You Think I Do.mp3"
+May 22 00:01 : player: played "James Blake/Overgrown/01 Overgrown.mp3"
+May 22 00:05 : player: played "James Blake/Overgrown/02 I Am Sold.mp3"
+May 22 00:09 : player: played "James Blake/Overgrown/03 Life Round Here.mp3"
+May 22 00:12 : player: played "James Blake/Overgrown/04 Take A Fall For Me.mp3"
+May 22 00:16 : player: played "James Blake/Overgrown/05 Retrograde.mp3"
+May 22 00:19 : player: played "James Blake/Overgrown/06 Dlm.mp3"
+May 22 00:23 : player: played "James Blake/Overgrown/07 Digital Lion.mp3"
+May 22 00:28 : player: played "James Blake/Overgrown/08 Voyeur.mp3"
+May 22 00:32 : player: played "James Blake/Overgrown/09 To The Last.mp3"
+May 22 00:36 : player: played "James Blake/Overgrown/10 Our Love Comes Back.mp3"
+May 22 00:54 : avahi: Client Disconnected, will reconnect shortly
+May 22 00:54 : avahi: Could not reconnect: An unexpected D-Bus error occured
+May 22 01:33 : config: option 'mixer_device' on line 214 was not recognized
+May 22 01:33 : config: option 'mixer_control' on line 215 was not recognized
+May 22 01:33 : config: option 'mixer_index' on line 216 was not recognized
+May 22 01:40 : avahi: Client Disconnected, will reconnect shortly
+May 22 01:40 : avahi: Could not reconnect: An unexpected D-Bus error occured
+May 22 01:44 : config: option 'mixer_device' on line 214 was not recognized
+May 22 01:44 : config: option 'mixer_control' on line 215 was not recognized
+May 22 01:44 : config: option 'mixer_index' on line 216 was not recognized
+May 22 01:54 : server_socket: bind to '0.0.0.0:8000' failed: Address already in use (continuing anyway, because binding to '[::]:8000' succeeded)
+May 22 01:57 : player: played "James Blake - 2010 - CMYK EP - LAME MP3/01 CMYK.mp3"
+May 22 02:02 : player: played "James Blake - 2010 - CMYK EP - LAME MP3/02 Footnotes.mp3"
+May 22 02:06 : player: played "James Blake - 2010 - CMYK EP - LAME MP3/03 I'll Stay.mp3"
+May 22 02:10 : player: played "James Blake - 2010 - CMYK EP - LAME MP3/04 Postpone.mp3"
+May 22 02:15 : player: played "James Blake - Klavierwerke EP (V0)/01 - Klavierwerke.mp3"
+May 22 02:18 : player: played "James Blake - Klavierwerke EP (V0)/02 - Tell Her Safe.mp3"
+May 22 02:23 : player: played "James Blake - Klavierwerke EP (V0)/03 - I Only Know (What I Know Now).mp3"
+May 22 02:26 : player: played "James Blake - Klavierwerke EP (V0)/04 - Don't You Think I Do.mp3"
+May 22 02:31 : player: played "James Blake/Overgrown/01 Overgrown.mp3"
+May 22 02:35 : player: played "James Blake/Overgrown/02 I Am Sold.mp3"
+May 22 02:39 : player: played "James Blake/Overgrown/03 Life Round Here.mp3"
+May 22 02:43 : player: played "James Blake/Overgrown/04 Take A Fall For Me.mp3"
+May 22 02:44 : player: played "James Blake/Overgrown/05 Retrograde.mp3"
+May 23 00:50 : avahi: Client Disconnected, will reconnect shortly
+May 23 00:50 : avahi: Could not reconnect: An unexpected D-Bus error occured
+May 23 07:54 : config: option 'mixer_device' on line 214 was not recognized
+May 23 07:54 : config: option 'mixer_control' on line 215 was not recognized
+May 23 07:54 : config: option 'mixer_index' on line 216 was not recognized
+May 23 07:54 : server_socket: bind to '0.0.0.0:8000' failed: Address already in use (continuing anyway, because binding to '[::]:8000' succeeded)
+May 23 07:57 : avahi: Client Disconnected, will reconnect shortly
+May 23 07:57 : avahi: Could not reconnect: An unexpected D-Bus error occured
+May 23 18:40 : config: option 'mixer_device' on line 214 was not recognized
+May 23 18:40 : config: option 'mixer_control' on line 215 was not recognized
+May 23 18:40 : config: option 'mixer_index' on line 216 was not recognized
+May 23 18:40 : server_socket: bind to '0.0.0.0:8000' failed: Address already in use (continuing anyway, because binding to '[::]:8000' succeeded)
+May 24 13:26 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+May 24 13:28 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+May 24 13:28 : player: played "The Shouting Matches/Grownass Man/01 Avery Hill.m4a"
+May 24 13:33 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+May 24 13:34 : player: played "The Shouting Matches/Grownass Man/02 Gallup, Nm.m4a"
+May 24 13:37 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+May 24 13:37 : player: played "The Shouting Matches/Grownass Man/03 Heaven Knows.m4a"
+May 24 13:39 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+May 24 13:40 : player: played "The Shouting Matches/Grownass Man/04 Mother, When_.m4a"
+May 24 13:42 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+May 24 13:42 : player: played "The Shouting Matches/Grownass Man/05 Seven Sisters.m4a"
+May 24 13:45 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+May 24 13:46 : player: played "The Shouting Matches/Grownass Man/06 Milkman.m4a"
+May 24 13:46 : server_socket: bind to '0.0.0.0:8000' failed: Address already in use (continuing anyway, because binding to '[::]:8000' succeeded)
+May 24 13:49 : server_socket: bind to '0.0.0.0:8000' failed: Address already in use (continuing anyway, because binding to '[::]:8000' succeeded)
+May 24 13:50 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+May 24 13:50 : player: played "The Shouting Matches/Grownass Man/07 New Theme.m4a"
+May 24 13:52 : server_socket: bind to '0.0.0.0:8000' failed: Address already in use (continuing anyway, because binding to '[::]:8000' succeeded)
+May 24 13:52 : player: played "The Shouting Matches/Grownass Man/08 Three Dollar Bill.m4a"
+May 24 13:52 : server_socket: bind to '0.0.0.0:8000' failed: Address already in use (continuing anyway, because binding to '[::]:8000' succeeded)
+May 24 13:52 : config: option 'mixer_device' on line 214 was not recognized
+May 24 13:52 : config: option 'mixer_control' on line 215 was not recognized
+May 24 13:52 : config: option 'mixer_index' on line 216 was not recognized
+May 24 13:52 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+May 24 13:53 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+May 24 13:53 : player: played "The Shouting Matches/Grownass Man/08 Three Dollar Bill.m4a"
+May 24 13:53 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+May 24 13:56 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+May 24 13:57 : player: played "The Shouting Matches/Grownass Man/08 Three Dollar Bill.m4a"
+May 24 13:59 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+May 24 13:59 : player: played "The Shouting Matches/Grownass Man/09 I'll Be True.m4a"
+May 24 14:05 : player: played "The Shouting Matches/Grownass Man/10 I Need a Change.m4a"
+May 24 14:41 : avahi: Client Disconnected, will reconnect shortly
+May 24 14:42 : avahi: Could not reconnect: An unexpected D-Bus error occured
+May 24 15:45 : config: option 'mixer_device' on line 214 was not recognized
+May 24 15:45 : config: option 'mixer_control' on line 215 was not recognized
+May 24 15:45 : config: option 'mixer_index' on line 216 was not recognized
+May 24 15:45 : server_socket: bind to '0.0.0.0:8000' failed: Address already in use (continuing anyway, because binding to '[::]:8000' succeeded)
+May 24 15:46 : avahi: Client Disconnected, will reconnect shortly
+May 24 15:46 : avahi: Could not reconnect: An unexpected D-Bus error occured
+May 25 14:24 : config: option 'mixer_device' on line 214 was not recognized
+May 25 14:24 : config: option 'mixer_control' on line 215 was not recognized
+May 25 14:24 : config: option 'mixer_index' on line 216 was not recognized
+May 25 14:24 : server_socket: bind to '0.0.0.0:8000' failed: Address already in use (continuing anyway, because binding to '[::]:8000' succeeded)
+May 25 14:30 : player: played "Girl Talk/All Day/01 Oh No.mp3"
+May 25 14:37 : player: played "Girl Talk/All Day/02 Let It Out.mp3"
+May 25 14:42 : player: played "Girl Talk/All Day/03 That's Right.mp3"
+May 25 14:49 : player: played "Girl Talk/All Day/04 Jump on Stage.mp3"
+May 25 14:55 : player: played "Girl Talk/All Day/05 This Is the Remix.mp3"
+May 25 15:00 : player: played "Girl Talk/All Day/06 On and On.mp3"
+May 25 15:05 : player: played "Girl Talk/All Day/07 Get It Get It.mp3"
+May 25 15:12 : player: played "Girl Talk/All Day/08 Down for the Count.mp3"
+May 25 15:18 : player: played "Girl Talk/All Day/09 Make Me Wanna.mp3"
+May 25 15:24 : player: played "Girl Talk/All Day/10 Steady Shock.mp3"
+May 25 15:31 : player: played "Girl Talk/All Day/11 Triple Double.mp3"
+May 25 15:36 : player: played "Girl Talk/All Day/12 Every Day.mp3"
+May 25 15:41 : player: played "Girl Talk/Feed The Animals/01 Play Your Part (Pt. 1).mp3"
+May 25 15:44 : player: played "Girl Talk/Feed The Animals/02 Shut The Club Down.mp3"
+May 25 15:48 : player: played "Girl Talk/Feed The Animals/03 Still Here.mp3"
+May 25 15:52 : player: played "Girl Talk/Feed The Animals/04 What It's All About.mp3"
+May 25 15:56 : player: played "Girl Talk/Feed The Animals/05 Set It Off.mp3"
+May 25 15:59 : player: played "Girl Talk/Feed The Animals/06 No Pause.mp3"
+May 25 16:02 : player: played "Girl Talk/Feed The Animals/07 Like This.mp3"
+May 25 16:06 : player: played "Girl Talk/Feed The Animals/08 Give Me A Beat.mp3"
+May 25 16:11 : player: played "Girl Talk/Feed The Animals/09 Hands In The Air.mp3"
+May 25 16:14 : player: played "Girl Talk/Feed The Animals/10 In Step.mp3"
+May 25 16:18 : player: played "Girl Talk/Feed The Animals/11 Let Me See You.mp3"
+May 25 16:23 : player: played "Girl Talk/Feed The Animals/12 Here's The Thing.mp3"
+May 25 16:26 : player: played "Girl Talk/Feed The Animals/13 Don't Stop.mp3"
+May 25 16:29 : player: played "Girl Talk/Feed The Animals/14 Play Your Part (Pt. 2).mp3"
+May 25 16:32 : player: played "Girl Talk/Night Ripper/01 Once Again.mp3"
+May 25 16:34 : player: played "Girl Talk/Night Ripper/02 That's My DJ.mp3"
+May 25 16:37 : player: played "Girl Talk/Night Ripper/03 Hold Up.mp3"
+May 25 16:39 : player: played "Girl Talk/Night Ripper/04 Too Deep.mp3"
+May 25 16:42 : player: played "Girl Talk/Night Ripper/05 Smash Your Head.mp3"
+May 25 16:46 : player: played "Girl Talk/Night Ripper/06 Minute by Minute.mp3"
+May 25 16:48 : player: played "Girl Talk/Night Ripper/07 Ask About Me.mp3"
+May 25 16:50 : player: played "Girl Talk/Night Ripper/08 Summer Smoke.mp3"
+May 25 16:54 : player: played "Girl Talk/Night Ripper/09 Friday Night.mp3"
+May 25 16:56 : player: played "Girl Talk/Night Ripper/10 Hand Clap.mp3"
+May 25 16:58 : player: played "Girl Talk/Night Ripper/11 Give and Go.mp3"
+May 25 17:02 : player: played "Girl Talk/Night Ripper/12 Bounce That.mp3"
+May 25 17:04 : player: played "Girl Talk/Night Ripper/13 Warm It Up.mp3"
+May 25 17:06 : player: played "Girl Talk/Night Ripper/14 Double Pump.mp3"
+May 25 17:08 : player: played "Girl Talk/Night Ripper/15 Overtime.mp3"
+May 25 17:11 : player: played "Girl Talk/Night Ripper/16 Peak Out.mp3"
+May 25 19:04 : avahi: Client Disconnected, will reconnect shortly
+May 25 19:04 : avahi: Could not reconnect: An unexpected D-Bus error occured
+May 25 21:35 : config: option 'mixer_device' on line 214 was not recognized
+May 25 21:35 : config: option 'mixer_control' on line 215 was not recognized
+May 25 21:35 : config: option 'mixer_index' on line 216 was not recognized
+May 26 12:02 : player: played "Charles Mingus/The Complete 1959 Columbia Recordings/01 Better Git It In Your Soul.mp3"
+May 26 12:08 : player: played "Charles Mingus/The Complete 1959 Columbia Recordings/02 Goodbye Pork Pie Hat.mp3"
+May 26 12:13 : player: played "Charles Mingus/The Complete 1959 Columbia Recordings/03 Boogie Stop Shuffle.mp3"
+May 26 12:16 : player: played "Charles Mingus/The Complete 1959 Columbia Recordings/04 Self-Portrait In Three Colors.mp3"
+May 26 12:22 : player: played "Charles Mingus/The Complete 1959 Columbia Recordings/05 Open Letter To Duke.mp3"
+May 26 12:28 : player: played "Charles Mingus/The Complete 1959 Columbia Recordings/06 Bird Calls.mp3"
+May 26 12:36 : player: played "Charles Mingus/The Complete 1959 Columbia Recordings/07 Fables Of Faubus.mp3"
+May 26 12:45 : player: played "Charles Mingus/The Complete 1959 Columbia Recordings/08 Pussy Cat Dues.mp3"
+May 26 12:52 : player: played "Charles Mingus/The Complete 1959 Columbia Recordings/09 Jelly Roll.mp3"
+May 26 12:58 : player: played "Charles Mingus/The Complete 1959 Columbia Recordings/10 Pedal Point Blues.mp3"
+May 26 13:03 : player: played "Charles Mingus/The Complete 1959 Columbia Recordings/11 GG Train.mp3"
+May 26 13:07 : player: played "Charles Mingus/The Complete 1959 Columbia Recordings/12 Girl Of My Dreams.mp3"
+May 27 07:16 : player: played "Deer Tick/Divine Providence/01 The Bump.mp3"
+May 27 07:21 : player: played "Deer Tick/Divine Providence/02 Funny Word.mp3"
+May 27 07:24 : player: played "Deer Tick/Divine Providence/03 Let's All Go To The Bar.mp3"
+May 27 07:29 : player: played "Deer Tick/Divine Providence/04 Clownin Around.mp3"
+May 27 07:33 : player: played "Deer Tick/Divine Providence/05 Main Street.mp3"
+May 27 07:36 : player: played "Deer Tick/Divine Providence/06 Chevy Express.mp3"
+May 27 07:39 : player: played "Deer Tick/Divine Providence/07 Something To Brag About.mp3"
+May 27 07:42 : player: played "Deer Tick/Divine Providence/08 Walkin Out The Door.mp3"
+May 27 07:46 : player: played "Deer Tick/Divine Providence/09 Make Believe.mp3"
+May 27 07:50 : player: played "Deer Tick/Divine Providence/10 Now It's Your Turn.mp3"
+May 27 07:55 : player: played "Deer Tick/Divine Providence/11 Electric.mp3"

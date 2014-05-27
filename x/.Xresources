@@ -1,9 +1,9 @@
 ! URxvt*rxvt-unicode (urxvt) v9.19 - released: 2013-10-27
 ! URxvt*options: perl,xft,styles,combining,blink,iso14755,unicode3,encodings=eu+vn+jp+jp-ext+kr+zh+zh-ext,fade,transparent,tint,pixbuf,XIM,frills,selectionscrolling,wheel,slipwheel,smart-resize,cursorBlink,pointerBlank,scrollbars=plain+rxvt+NeXT+xterm
 ! URxvt*Usage: urxvt [options] [-e command args]
-URxvt*scrollBar:                      false
-URxvt*transparent: true
-URxvt*shading:                        20
+URxvt*scrollBar: 	false
+URxvt*transparent: 	true
+URxvt*shading:      40
 
 ! terminal colors
 *background: #1D1D1D
@@ -35,22 +35,24 @@ URxvt*shading:                        20
 ! --- end of terminal colors section ---
 
 ! fontconfigs and copy/paste with url launching
-URxvt*colorUL:                        #4682B4
-! URxvt*font:                           xft:BitstreamVeraSansMono:size=10
-URxvt*font: 	xft:AnonymousPro:size=11
-URxvt*perl-ext-common:                default,matcher,clipboard
-URxvt*iso14755:                       false
-URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt*colorUL:          #4682B4
+!URxvt*font:             xft:BitstreamVeraSansMono:size=11
+!URxvt*font: 			xft:AnonymousProMinus:size=12
+URxvt*font: 			xft:Inconsolata-zi4:size=12
+!URxvt*letterSpace: -3
+URxvt*perl-ext-common:  default,matcher,clipboard
+URxvt*iso14755:         false
+URxvt.keysym.Shift-Control-V: perl:clipboard
 URxvt*matcher.button:	1
-URxvt*url-launcher:                   /usr/bin/dwb
+URxvt*url-launcher:		/usr/bin/dwb
 
-Xft.authint:	0
+Xft.authint:	False
 Xft.lcdfilter:	lcddefault
-Xft.hintstyle:	hintnone
-Xft.hinting: 	true
-Xft.antialias:  true	
-Xft.rgba:	rgb
-Xft.dpi:	96
+Xft.hintstyle:	hintfull
+Xft.hinting: 	True
+Xft.antialias:  True
+Xft.rgba:		rgb
+Xft.dpi:		96
 
 dzen2.font: 	-*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
 dzen2.foreground: rgb:ff/ff/ff

@@ -9,9 +9,8 @@ allow_bold = true
 dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
-#font = Bitstream Vera Sans Mono 10
-#font = Anonymous Pro Minus 12
-font = Inconsolatazi4 12
+# font = Bitstream Vera Sans Mono 10
+font = Anonymous Pro 11
 scrollback_lines = 1000
 search_wrap = true
 #icon_name = terminal
@@ -19,7 +18,6 @@ search_wrap = true
 
 # "system", "on" or "off"
 cursor_blink = system
-
 
 # "block", "underline" or "ibeam"
 cursor_shape = block
@@ -39,14 +37,13 @@ browser = /usr/bin/dwb
 
 [colors]
 #foreground = #dcdccc
-#foreground_bold = #ffffff
+foreground_bold = #ffffff
 #foreground_dim = #888888
 #background = #3f3f3f
 #cursor = #dcdccc
 
 # Imported from Xresources
-# background = #1d1d1d
-background = #2b2827
+background = #1d1d1d
 foreground = #FFFFFF
 
 # if unset, will reverse foreground and background
@@ -71,7 +68,6 @@ foreground = #FFFFFF
 #color14 = #93e0e3
 #color15 = #ffffff
 
-#-------------------
 # Black + DarkGrey
 color0 = #000000
 color8 = #555753
@@ -96,33 +92,7 @@ color14 = #46a4ff
 # LightGrey + White
 color7 = #cccccc
 color15 = #ffffff
-#---------------------
 
-#=====================
-#BLK
-#color0 = #383332
-#color8 = #4B483F
-#RED
-#color1 = #745E54
-#color9 = #B0998E
-#GRN
-#color2 = #54745E
-#color10 = #8EB099
-#YLW
-#color3 = #746E54
-#color1 = #b0AA8E
-#BLE
-#color4 = #5E5474
-#color12 = #998EB0
-#MAG
-#color5 = #6E5474
-#color13 = #AA8EB0
-#CYN
-#color6 = #54746E
-#color14 = #8EB0AA
-#WHT
-#color7 = #918B88
-#color15 = #C7C1BD
 
 [hints]
 #font = Monospace 12

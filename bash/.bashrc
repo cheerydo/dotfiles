@@ -5,42 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export EDITOR=/usr/bin/vim
-#export TERM=rxvt-unicode
-export TERM=xterm-termite
-export GPGKEY=FBB0702A
-export LESSHISTFILE="/dev/null"
-
-
-# PS1='[\u@\h \W]\$ '
-PS1='\[\033[0;36m\]╔═[\[\033[0m\033[0;36m\]\u\[\033[0m\]@\[\033[0;32m\]\h\[\033[0m\033[0;36m\]]────(\[\033[0m\]\t \d\[\033[0;36m\])────(\[\033[0m\]\W\[\033[0;36m\])\n\[\033[0;36m\]╚═══[\[\033[0m\033[0;36m\]\$\[\033[0m\033[0;36m\]]>\[\033[0m\] '
-
-if [ -f ~/.aliases ]; then
-    . ~/.aliases
-fi
-
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-	. /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-	. /etc/bash_completion
-  fi
-fi
-
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-# include sbin in PATH
-if [ -d "/sbin" ] ; then
-    PATH="/sbin:$PATH"
-fi
-if [ -d "/usr/sbin" ] ; then
-    PATH="/usr/sbin:$PATH"
-fi
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
+PS1='[\u@\h \W]\$ '
+# PS1='\[\033[0;36m\]╔═[\[\033[0m\033[0;36m\]\u\[\033[0m\]@\[\033[0;32m\]\h\[\033[0m\033[0;36m\]]────(\[\033[0m\]\t \d\[\033[0;36m\])────(\[\033[0m\]\w\[\033[0;36m\])\n\[\033[0;36m\]╚═══[\[\033[0m\033[0;36m\]\$\[\033[0m\033[0;36m\]]>\[\033[0m\] '
 
 extract() {
     local c e i
@@ -76,4 +42,3 @@ extract() {
     done
     return "$e"
 }
-
