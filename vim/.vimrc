@@ -14,6 +14,8 @@ set shiftwidth=4		" Number of spaces to use for each step of autoindent
 set nobackup
 set nowritebackup
 
+set background=dark
+
 set smarttab
 
 set number

@@ -22,6 +22,7 @@ thunar --daemon &
 urxvtd -q -f -o &
 
 sleep 2 && clipit &
+volumeicon &
 
 #/home/jared/bin/baraction.sh &
 #/home/jared/bin/baraction2.sh &

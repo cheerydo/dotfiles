@@ -39,9 +39,6 @@
 
 # Examples of commands:
 
-"xbindkeys_show" 
-  control+shift + q
-
 "amixer -c 0 set Master 5+ && notify-send `amixer get Master -M | grep -oE "[[:digit:]]*%"`"
   XF86AudioRaiseVolume
 
@@ -54,7 +51,7 @@
 "thunar"
   XF86HomePage
 
-"thunderbird"
+"sylpheed"
   XF86Mail
 
 "galculator"

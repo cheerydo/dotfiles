@@ -22,5 +22,4 @@ TEXT
  ${if_up tun0}^fg(green)Up^fg()${else}^fg(red)Down^fg()$endif |\
  $if_mpd_playing^fg(\#99CCFF)^i(/usr/share/icons/stlarch_icons/headphone1.xbm)^fg()\
   "$mpd_smart" |$endif\
- Volume: ${exec amixer get Master -M | grep -oE "[[:digit:]]*%"} |\
  ^fg(\#99CCFF)Weather is ^fg()${exec ~/bin/weatherget 37312}   ${time %A %B %e  %l:%M %p} 
