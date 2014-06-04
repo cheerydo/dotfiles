@@ -21,6 +21,8 @@ nitrogen --restore &
 thunar --daemon &
 urxvtd -q -f -o &
 
+stalonetray & 
+
 sleep 2 && clipit &
 volumeicon &
 
@@ -33,3 +35,4 @@ xbindkeys
 #exec termite
 
 exec spectrwm
+#exec startxfce4
