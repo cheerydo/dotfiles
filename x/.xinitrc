@@ -26,13 +26,15 @@ stalonetray &
 sleep 2 && xfce4-clipman &
 volumeicon &
 
-#/home/jared/bin/baraction.sh &
-#/home/jared/bin/baraction2.sh &
+/home/jared/bin/baraction.sh &
+/home/jared/bin/baraction2.sh &
 
 xbindkeys
 numlockx & 
 
-#exec 2bwm &
-#exec termite
+xsetroot -cursor_name top_left_arrow
 
-exec spectrwm
+exec 2bwm &
+exec termite
+
+#exec spectrwm
