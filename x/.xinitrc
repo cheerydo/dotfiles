@@ -26,15 +26,19 @@ stalonetray &
 sleep 2 && xfce4-clipman &
 volumeicon &
 
-/home/jared/bin/baraction.sh &
-/home/jared/bin/baraction2.sh &
+#/home/jared/bin/baraction.sh &
+#/home/jared/bin/baraction2.sh &
 
 xbindkeys
 numlockx & 
 
-xsetroot -cursor_name top_left_arrow
+eval $(gpg-agent --daemon) &
 
-exec 2bwm &
-exec termite
+#xsetroot -cursor_name top_left_arrow
 
-#exec spectrwm
+#exec 2bwm &
+#exec termite
+
+#exec openbox-session
+exec spectrwm
+#exec dwm
