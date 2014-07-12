@@ -1,3 +1,1 @@
 macro pager \cb <pipe-enty>'urlview'<enter> 'Follow links with urlview'
-macro index b '<enter-command>toggle sidebar_visible<enter>'
-macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'

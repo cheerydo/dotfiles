@@ -32,7 +32,7 @@ volumeicon &
 xbindkeys
 numlockx & 
 
-eval $(gpg-agent --daemon) &
+eval $(gpg-agent --daemon) 
 
 #xsetroot -cursor_name top_left_arrow
 
