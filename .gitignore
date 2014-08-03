@@ -8,6 +8,7 @@ mpd/.config/mpd/playlists
 zsh/.zcomp*
 irssi/.irssi/away.log
 ncmpcpp/.ncmpcpp/error.log
+ncmpcpp/.ncmpcpp/artists
 vim/.viminfo
 mutt/.mutt/cache/*
 mutt/.mutt/muttrc

@@ -21,9 +21,11 @@ nitrogen --restore &
 thunar --daemon &
 urxvtd -q -f -o &
 
-stalonetray & 
+tint2 &
 
-sleep 2 && xfce4-clipman &
+#stalonetray & 
+
+xfce4-clipman &
 volumeicon &
 
 #/home/jared/bin/baraction.sh &
@@ -40,5 +42,6 @@ eval $(gpg-agent --daemon)
 #exec termite
 
 #exec openbox-session
-exec spectrwm
+#exec spectrwm
 #exec dwm
+exec startxfce4
