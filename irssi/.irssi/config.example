@@ -109,7 +109,7 @@ chatnets = {
   };
   FN = {
     type = "IRC";
-    autosendcmd = "/nick thetornainbow;/msg Nickserv identify 1one;/wait 10000";
+    autosendcmd = "/nick <yournick>;/msg Nickserv identify <your-password>;/wait 10000";
   };
 };
 

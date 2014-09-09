@@ -27,6 +27,8 @@ source $HOME/.aliases
 
 # Vi mode engage!
 bindkey -v
+# History search
+bindkey '^R' history-incremental-search-backward
 
 # Initialize vimode to insert mode
 vimode=i

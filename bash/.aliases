@@ -31,3 +31,5 @@ alias very='git'
 
 alias FTL='cd .steam/root/SteamApps/common/FTL\ Faster\ Than\ Light/data/ && ./FTL'
 alias hide='sudo openvpn /etc/openvpn/client.conf'
+
+alias refresh='killall -SIGUSR1'

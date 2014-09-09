@@ -13,20 +13,18 @@ fi
 
 xset b off
 setxkbmap -option caps:super
-xrandr --output VGA1 --left-of HDMI1 
 xrdb -load ~/.Xresources
 compton &
 
-nitrogen --restore &
-thunar --daemon &
-urxvtd -q -f -o &
+#nitrogen --restore &
+#thunar --daemon &
+#urxvtd -q -f -o &
 
-tint2 &
+#tint2 &
 
-#stalonetray & 
-
-xfce4-clipman &
-volumeicon &
+#stalonetray &
+#xfce4-clipman &
+#volumeicon &
 
 #/home/jared/bin/baraction.sh &
 #/home/jared/bin/baraction2.sh &
@@ -36,12 +34,14 @@ numlockx &
 
 eval $(gpg-agent --daemon) 
 
+
 #xsetroot -cursor_name top_left_arrow
-
-#exec 2bwm &
+#xrandr --output VGA1 --left-of HDMI1
+#exec 2bwm
 #exec termite
+conky -c ~/.conky.conf
 
-#exec openbox-session
 #exec spectrwm
 #exec dwm
 exec startxfce4
+#exec openbox-session

@@ -72,6 +72,17 @@
 "ncmpcpp prev"
   Control + Home
  
+"termite -e ncmpcpp"
+  Alt + m
+
+"keepass --auto-type"
+  Mod4 + Shift + v
+
+#"dwb"
+#  Mod4 + W
+#
+"firefox"
+   Alt + W
 ##################################
 # End of xbindkeys configuration #
 ##################################

@@ -2,11 +2,13 @@
 ! URxvt*options: perl,xft,styles,combining,blink,iso14755,unicode3,encodings=eu+vn+jp+jp-ext+kr+zh+zh-ext,fade,transparent,tint,pixbuf,XIM,frills,selectionscrolling,wheel,slipwheel,smart-resize,cursorBlink,pointerBlank,scrollbars=plain+rxvt+NeXT+xterm
 ! URxvt*Usage: urxvt [options] [-e command args]
 URxvt*scrollBar: 	false
-URxvt*transparent: 	true
+URxvt*transparent: 	false
 URxvt*shading:      40
+URxvt*depth:		32
 
 ! terminal colors
 *background: #1D1D1D
+!*background: rgba:1111/1111/1111/aaaa
 *foreground: #FFFFFF
 ! Black (not tango) + DarkGrey
 *color0:  #000000
@@ -38,8 +40,8 @@ URxvt*shading:      40
 URxvt*colorUL:          #4682B4
 !URxvt*font:             xft:BitstreamVeraSansMono:size=11
 !URxvt*font: 			xft:AnonymousProMinus:size=12
-URxvt*font: 			xft:Inconsolata-zi4:size=12
-!URxvt*letterSpace: -3
+URxvt*font: 			xft:Inconsolatazi4:pixelsize=14
+URxvt*letterSpace: -1
 URxvt*perl-ext-common:  default,matcher,clipboard
 URxvt*iso14755:         false
 URxvt.keysym.Shift-Control-V: perl:clipboard
