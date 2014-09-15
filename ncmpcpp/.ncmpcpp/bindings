@@ -1,0 +1,20 @@
+def_key "k"
+	scroll_up
+
+def_key "j"
+	scroll_down
+
+#key_next_found_position = 'n'
+#key_prev_found_position = 'N'
+#key_prev_column = 260 'h'
+def_key "h"
+	previous_column
+
+def_key "l"
+	next_column
+#key_next_column = 261 'l'
+#key_lyrics = '.'
+#key_home = 262 'g'
+#key_end = 360 'G'
+#key_apply_filter = 'F'
+#key_toggle_fetching_lyrics_for_current_song_in_background = '_'
