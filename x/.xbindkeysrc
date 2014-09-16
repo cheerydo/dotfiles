@@ -63,15 +63,6 @@
 "scrot -m -e 'mv $f ~/screens/'"
   Print
 
-"ncmpcpp toggle"
-  Control + Shift + p
-
-"ncmpcpp next"
-  Control + End
-
-"ncmpcpp prev"
-  Control + Home
- 
 "termite -e ncmpcpp"
   Alt + m
 
