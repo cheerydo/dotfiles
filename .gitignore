@@ -1,5 +1,6 @@
 **/*history
 **/*logout
+mpd/.mpd/
 mpd/.config/mpd/mpd.log
 mpd/.config/mpd/mpd.db
 mpd/.config/mpd/mpd.pid
@@ -7,9 +8,12 @@ mpd/.config/mpd/mpdstate
 mpd/.config/mpd/playlists
 zsh/.zcomp*
 irssi/.irssi/away.log
+irssi/.irssi/config
 ncmpcpp/.ncmpcpp/error.log
 ncmpcpp/.ncmpcpp/artists
 vim/.viminfo
 mutt/.mutt/cache/*
+mutt/.mutt/certificates
 mutt/.mutt/muttrc
 mutt/.mutt/sample.muttrc
+ranger/.config/ranger/bookmarks
