@@ -1,5 +1,5 @@
 # General settings
-browser dwb %u 
+browser ilinks %u 
 display-article-progress yes
 goto-next-feed no
 save-path ~/documents/newsbeuters/

@@ -11,12 +11,13 @@ set nocompatible                " Use Vim defaults instead of 100% vi compatibil
 set backspace=indent,eol,start  " more powerful backspacing
 set tabstop=4			" Number of space that a <Tab> in the file counts for
 set shiftwidth=4		" Number of spaces to use for each step of autoindent
+set smarttab
 set nobackup
 set nowritebackup
 
 set background=dark
 
-set smarttab
+set modeline
 
 set number
 syntax on
