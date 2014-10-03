@@ -1,0 +1,65 @@
+2014-05-22 23:47:43	-->	torna1nbow (~jared@71-87-242-27.dhcp.jcsn.tn.charter.com) has joined ##crunchbang
+2014-05-22 23:47:43	--	Topic for ##crunchbang is "official unofficial offtopic channel | support in #crunchbang | Please don't spam/flood PASTE: http://pastie.org/ | Don't cause trouble. THANKS."
+2014-05-22 23:47:43	--	Topic set by Halts (~Halts@unaffiliated/halts) on Fri, 18 Apr 2014 09:15:43
+2014-05-22 23:47:43	--	Channel ##crunchbang: 44 nicks (1 op, 0 voices, 43 normals)
+2014-05-22 23:47:45	--	Mode ##crunchbang [+cnt]
+2014-05-22 23:47:45	--	Channel created on Fri, 01 Nov 2013 22:19:28
+2014-05-22 23:47:46	grepidemic	you should prefer arch
+2014-05-22 23:47:48	torna1nbow	hey dudes
+2014-05-22 23:48:01	torna1nbow	don't know what's going on, but i agree with grepidemic 
+2014-05-22 23:48:17	Darryl	I like Arch :)
+2014-05-22 23:48:21	torna1nbow	i've been playing around with weechat. it's actually pretty nice
+2014-05-22 23:48:43	Darryl	I am planning to reinstall Arch Linux with Herbstluftwm.
+2014-05-22 23:48:44	-->	sheap (~sean@unaffiliated/sheap) has joined ##crunchbang
+2014-05-22 23:48:46	torna1nbow	nice window/buffer management.
+2014-05-22 23:49:08	torna1nbow	extra fancy scripts. it feels a lot saner than irssi i think
+2014-05-22 23:49:10	torna1nbow	me likey
+2014-05-22 23:49:44	Darryl	Does anyone know of a good tiling window manager? not i3. If it is a manual tiling Window manager I have no probem :)
+2014-05-22 23:49:47	xskoulax	yep wee feels nice, though i haven't meessed with scripts or anything
+2014-05-22 23:50:18	Darryl	xskoulax: You are using herbstluftwm?
+2014-05-22 23:50:20	torna1nbow	xskoulax: yeah grep.py to search through logs and scrollback is fantastic. binding keys is much saner. and i like the iset script that configs
+2014-05-22 23:50:32	torna1nbow	Darryl: i really love spectrwm
+2014-05-22 23:50:40	torna1nbow	as far as tiling wms go
+2014-05-22 23:50:43	Darryl	I will try that out :)
+2014-05-22 23:50:54	torna1nbow	definitely. :) let me know what you think
+2014-05-22 23:51:06	xskoulax	i3 Darryl
+2014-05-22 23:51:14	Darryl	:)
+2014-05-22 23:51:22	torna1nbow	and, one of the biggest things about irssi, having to fifo a nicklist. weechat comes with it OOTB!
+2014-05-22 23:51:29	torna1nbow	i could get used to this
+2014-05-22 23:51:51	torna1nbow	mouse support, mmhmmm
+2014-05-22 23:52:06	torna1nbow	welp. i believe i'm sold gentlemen
+2014-05-22 23:52:37	xskoulax	only 3 easy payments of 19.99
+2014-05-22 23:52:42	xskoulax	;p
+2014-05-22 23:52:53	torna1nbow	but what do i get if i order now!?
+2014-05-22 23:53:07	xskoulax	i'm glad you asked i was just about to get to that
+2014-05-22 23:54:24	torna1nbow	go on then
+2014-05-22 23:54:26	xskoulax	ugh freenode
+2014-05-22 23:54:36	xskoulax	it stole my /sales voice
+2014-05-22 23:55:20	 *	xskoulax takes a minute to remember the thunder
+2014-05-22 23:55:43	torna1nbow	haha. i don't think i'll be ordering your products
+2014-05-22 23:57:08	xskoulax	<sales voice> If you order now we'll throw in a free tmux. If you decide that weechat is not for you just return it withing 30 days for a full refund, and keep the tmux just for trying weechat
+2014-05-22 23:57:22	Varrash	anyone up for some cards against humanity? http://cah.gaben.xxx jump in and join our game guise
+2014-05-22 23:57:24	sitobot	Title: Pretend You're Xyzzy (at cah.gaben.xxx)
+2014-05-22 23:57:36	xskoulax	the first spin of that was superior but irc ruined it
+2014-05-22 23:58:27	Darryl	thetornainbow: Does spectrwm tile in  the same fasion?
+2014-05-22 23:58:36	torna1nbow	same fashion as what?
+2014-05-22 23:58:42	xskoulax	</sales voice>, if you order now you'll get a free tmux, and if you dislike the weechat for any reason just return it within 30 days for a full refund and keep the tmux as our gift to you for trying weechat.
+2014-05-22 23:58:57	 *	xskoulax is an idiot for not remembering he can recall a line
+2014-05-22 23:59:20	torna1nbow	but i've already got a tmux!
+2014-05-22 23:59:31	xskoulax	well give tmux to a friend
+2014-05-22 23:59:31	Darryl	thetornainbow: I mean does it tile in the same order or does it have many other mays to tile. I mean one big window on the left and small window in the right :)
+2014-05-22 23:59:50	xskoulax	not like we can have an unlimited supply of different free treats
+2014-05-23 00:00:28	xskoulax	ohhh wait a minute i have a cookie jar, i'll make an exception in you case and throw in the cookie jar. but don't forget to share
+2014-05-23 00:00:33	xskoulax	your*
+2014-05-23 00:01:09	<--	sheap (~sean@unaffiliated/sheap) has quit (Quit: Lost terminal)
+2014-05-23 00:04:02	torna1nbow	well actually, if you've ever used dwm or xmonad, it's tiling scheme is the exact same. primary window tiles to 50% of the screen, while all other windows opened on a desktop tile in the secondary 50% portion. although that 50/50 ratio can be changed with MOD+h/l
+2014-05-23 00:08:26	torna1nbow	the 50/50 split can be horizontal/vertical. 
+2014-05-23 00:08:27	ParkerR	"onetwo_> I am a total scrub, so no." senpai! say it aint so
+2014-05-23 00:08:32	torna1nbow	or fullscreen mode of course
+2014-05-23 00:09:49	torna1nbow	and the config file is plain text, like i3, which is a huge plus for me
+2014-05-23 00:13:08	torna1nbow	you guys really should get in on this cards against humanity game
+2014-05-23 00:25:26	<--	Varrash (~Varrash@unaffiliated/mindlessjohnny) has quit (Quit: Goodbye Everybody!)
+2014-05-23 00:25:30	onetwo_	ParkerR: I'm afraid so, senpai.
+2014-05-23 00:25:55	torna1nbow	all right dudes. hitting the hay. good night!
+2014-05-23 00:26:05	xskoulax	gn torna1nbow
+2014-05-23 00:26:14	onetwo_	Night

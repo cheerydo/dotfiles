@@ -1,0 +1,364 @@
+2014-05-25 22:47:54	-->	tornainbow (~jared@71-87-242-27.dhcp.jcsn.tn.charter.com) has joined #archlinux
+2014-05-25 22:47:54	--	Topic for #archlinux is "Welcome to Arch Linux World Domination, Inc. <☃ > Remember, Arch doesn't like being neglected <❤> https://i.imgur.com/s1EFMCY.jpg <+> GHC 7.8.2 is now in [extra], please read the news <+> Due to spam problems, you must be registered and identified to join this channel <+> Gotten an insulting Private Message? PM a channel op; find one with /msg chanserv access #archlinux list"
+2014-05-25 22:47:54	--	Topic set by tigrmesh on Sun, 11 May 2014 03:18:52
+2014-05-25 22:47:55	--	Channel #archlinux: 1138 nicks (1 op, 0 voices, 1137 normals)
+2014-05-25 22:47:56	--	Mode #archlinux [+Cnrt]
+2014-05-25 22:47:57	--	Channel created on Sun, 15 Feb 2004 00:08:31
+2014-05-25 22:48:47	-->	boboysdadda (~boboysdad@cpe-173-175-138-118.elp.res.rr.com) has joined #archlinux
+2014-05-25 22:49:07	tornainbow	what's up boboysdadda?
+2014-05-25 22:49:13	boboysdadda	hey tornainbow 
+2014-05-25 22:49:22	boboysdadda	just did a fresh install on my media server
+2014-05-25 22:49:29	boboysdadda	trying to get everything set up
+2014-05-25 22:49:33	tornainbow	nice
+2014-05-25 22:50:27	boboysdadda	ahhh sickbeard isn't in community?
+2014-05-25 22:50:41	<--	sertsa (~sertsa@69.39.10.209) has quit (Ping timeout: 264 seconds)
+2014-05-25 22:50:41	tornainbow	i suppose not
+2014-05-25 22:50:51	spychalski	no, aur
+2014-05-25 22:51:09	bwayne	popsch: did you add those there yourself?
+2014-05-25 22:51:43	 *	boboysdadda hasn't learned this AUR yet?
+2014-05-25 22:51:43	popsch	bwayne, yes. and I now copied it into /usr/share/applications, but that didn't help
+2014-05-25 22:51:46	boboysdadda	trying to figure it out
+2014-05-25 22:51:54	popsch	there must be a cache built in somewhere
+2014-05-25 22:53:10	bwayne	popsch: try 'update-desktop-database -v ~/.local/usr/share/applications'
+2014-05-25 22:54:19	<--	cgegner (~Mog@c-76-104-12-106.hsd1.va.comcast.net) has quit (Ping timeout: 240 seconds)
+2014-05-25 22:54:38	tornainbow	boboysdadda: it's pretty simple. i have a dir in ~ called builds. you can use wget, curl or whatever to download package from aur. makepkg -s (for deps) and -i to install
+2014-05-25 22:54:46	popsch	... lacks MimeType key
+2014-05-25 22:55:07	popsch	interesting. the developer documentation in gnome doesn't mention anything regarding MimeType
+2014-05-25 22:55:30	tornainbow	although i really love to use cower. really simple aur helper with switches to search, download, and update packages from aur
+2014-05-25 22:55:50	-->	bocaneri (~bocaneri_@about/linux/staff/sauvin) has joined #archlinux
+2014-05-25 22:56:13	bwayne	popsch: yeah, add MimeType= lines which correspond to their function.
+2014-05-25 22:56:41	-->	Arkaniad (~Arkaniad@2600:1014:b117:9ec1:ee55:f9ff:fe89:65fc) has joined #archlinux
+2014-05-25 22:57:09	-->	D3f0 (~defo@10-200-245-190.fibertel.com.ar) has joined #archlinux
+2014-05-25 22:58:03	-->	kreiGT (~kreig@190.149.66.164) has joined #archlinux
+2014-05-25 22:58:16	boboysdadda	tornainbow: what archive manager to install, using xfce if it matters
+2014-05-25 22:58:22	boboysdadda	used to linux's that come with it
+2014-05-25 22:59:09	tornainbow	boboysdadda: archive manager? i like fileroller or xarchive for GUI.
+2014-05-25 22:59:43	boboysdadda	ty
+2014-05-25 22:59:50	popsch	bwayne, added application/pdf and it's still now shown (after update)
+2014-05-25 23:00:00	popsch	bwayne,  update doesn't complain anymore
+2014-05-25 23:00:07	tornainbow	boboysdadda: np
+2014-05-25 23:00:15	<--	tigranes (~tigranes@205.175.97.105) has quit (Quit: leaving)
+2014-05-25 23:00:26	spychalski	it is now may 26th
+2014-05-25 23:00:29	spychalski	aka monday =(
+2014-05-25 23:00:55	bwayne	popsch: update-mime-datebase ~/.local/share/applications
+2014-05-25 23:00:57	<--	Greylocks (~greylocks@66-87-94-68.pools.spcsdns.net) has quit (Quit: Leaving)
+2014-05-25 23:01:16	<--	Christoff522 (~Christoff@cpc14-stok15-2-0-cust89.1-4.cable.virginm.net) has quit (Ping timeout: 276 seconds)
+2014-05-25 23:01:47	-->	xificurC (~xificurC@chello085216176057.chello.sk) has joined #archlinux
+2014-05-25 23:02:00	popsch	update-mime-database... command not found
+2014-05-25 23:02:07	popsch	I did an update-desktop-database
+2014-05-25 23:02:59	bwayne	popsch: pacman -Qo update-mime-database
+2014-05-25 23:03:18	<--	mixomathoze (~mixomatho@89.82-243-81.adsl-dyn.isp.belgacom.be) has quit (Ping timeout: 240 seconds)
+2014-05-25 23:04:11	pehden	O.O
+2014-05-25 23:04:33	boboysdadda	tornainbow: does makepkg require root?
+2014-05-25 23:04:42	archpc	no
+2014-05-25 23:04:46	popsch	it gets weirder: Directory '~/.local/share/applications/packages' does not exist!
+2014-05-25 23:04:47	boboysdadda	thanks archpc 
+2014-05-25 23:05:05	tornainbow	boboysdadda: no, makepkg uses fakeroot for building
+2014-05-25 23:05:19	-->	HVG_Opaque (~IceChat9@cpe-74-132-36-59.swo.res.rr.com) has joined #archlinux
+2014-05-25 23:05:22	-->	chandan (~chandan@122.248.161.59) has joined #archlinux
+2014-05-25 23:05:22	--	TheReverend403 is now known as Rev|SleepingFox
+2014-05-25 23:05:35	tornainbow	it's never a good idea to build packages with root. in fact, i think if you run makepkg with sudo it will give a warning and exit
+2014-05-25 23:05:41	pehden	boboysdadda('< Its actually recommended against making anything with with root.
+2014-05-25 23:05:50	archpc	^
+2014-05-25 23:05:56	<--	ex-parrot (~ex-parrot@2401:f000:8000:0:7c84:8c69:af16:b8a5) has quit (Quit: Leaving.)
+2014-05-25 23:05:59	boboysdadda	sounds good. thats why i ask
+2014-05-25 23:06:16	pehden	i decided to attempt to install vlc from source
+2014-05-25 23:06:22	boboysdadda	so all makepkg install under the user then?
+2014-05-25 23:06:29	<--	breeko (~a@50-47-25-83.evrt.wa.frontiernet.net) has quit (Quit: Leaving)
+2014-05-25 23:06:35	popsch	bwayne, created that directory and ran it. didn't help (nautilus -q, nautilus .; still not in the list for pdfs; not even in the general list)
+2014-05-25 23:06:50	pehden	yes boboysdadda 
+2014-05-25 23:07:09	pehden	wait
+2014-05-25 23:07:51	bwayne	popsch: sorry. try 'update-mime-database usr/share/mime'
+2014-05-25 23:07:58	pehden	you make as user then you have to run sudo pacman -U *tar.xc or somthing, you will know when its done what i am talking about 
+2014-05-25 23:08:00		[tornainbow away: all]
+2014-05-27 10:15:56	-->	thetornainbow (~jared@71-87-242-27.dhcp.jcsn.tn.charter.com) has joined #archlinux
+2014-05-27 10:15:56	--	Topic for #archlinux is "Welcome to Arch Linux World Domination, Inc. <☃ > Remember, Arch doesn't like being neglected <❤> https://i.imgur.com/s1EFMCY.jpg <+> GHC 7.8.2 is now in [extra], please read the news <+> Due to spam problems, you must be registered and identified to join this channel <+> Gotten an insulting Private Message? PM a channel op; find one with /msg chanserv access #archlinux list"
+2014-05-27 10:15:56	--	Topic set by tigrmesh on Sun, 11 May 2014 03:18:52
+2014-05-27 10:15:56	--	Channel #archlinux: 1225 nicks (1 op, 0 voices, 1224 normals)
+2014-05-27 10:15:58	--	Mode #archlinux [+Cnrt]
+2014-05-27 10:15:58	--	Channel created on Sun, 15 Feb 2004 00:08:31
+2014-05-27 10:15:59	saptech	ok
+2014-05-27 10:16:19	-->	krabador (~krabador@unaffiliated/krabador) has joined #archlinux
+2014-05-27 10:16:22	Earnestly	The thing is, if no breaking news has happened, then you can even update froma a year ago
+2014-05-27 10:16:22	<--	w66 (~jst@cpe-31-15-138-19.cable.telemach.net) has quit (Ping timeout: 276 seconds)
+2014-05-27 10:16:35	Earnestly	I've updated machines which were months old just fine
+2014-05-27 10:16:41	wasamasa	^
+2014-05-27 10:16:59	Chais	you can update even when breaking news happened. it's just more of a hassle ^^
+2014-05-27 10:17:15	saptech	ok. I thought rolling releases need updating often though
+2014-05-27 10:17:35	Chais	saptech: it saves you much headache
+2014-05-27 10:17:39	keenerd	They don't need it, but they do reward you for it.
+2014-05-27 10:17:42	Earnestly	saptech: Well, *you* use rolling release because you *want* updates often
+2014-05-27 10:17:43	<--	mithsv (~mithsv@145.89.87.223) has quit
+2014-05-27 10:17:54	<--	geek (~killown@unaffiliated/geek) has quit (Remote host closed the connection)
+2014-05-27 10:18:23	saptech	well I had ran debian testing for awhile and then stop using it, came back some months later, it broke into a 100 pieces
+2014-05-27 10:18:25	Earnestly	That's kind of the point
+2014-05-27 10:18:46	saptech	Earnestly, yes you're right 
+2014-05-27 10:19:17	<--	Cirrus_Minor (~Cirrus_Mi@CAcert/Cirrus-Minor) has quit (Ping timeout: 252 seconds)
+2014-05-27 10:19:33	-->	snyp (~snyp@223.29.204.2) has joined #archlinux
+2014-05-27 10:19:37	-->	dutis (~dutis@ip137-68-211-87.adsl2.static.versatel.nl) has joined #archlinux
+2014-05-27 10:20:01	-->	holomorph (~holomorph@unaffiliated/holomorph) has joined #archlinux
+2014-05-27 10:20:31	<--	MariachiAC (~lina@cpe-68-206-114-187.stx.res.rr.com) has quit (Quit: leaving)
+2014-05-27 10:20:31	saptech	are it may have been Sid at the time, I can't remember things anymore
+2014-05-27 10:20:54	-->	AlexRussia (~manjaro@unaffiliated/alexrussia) has joined #archlinux
+2014-05-27 10:21:22	<--	yesco (~ethan@c-50-176-199-60.hsd1.nh.comcast.net) has left #archlinux
+2014-05-27 10:22:01	-->	Yage (~emurphy@107-0-85-186-ip-static.hfc.comcastbusiness.net) has joined #archlinux
+2014-05-27 10:23:38	<--	lnxslck (~lnxslck@194.65.138.120) has quit (Ping timeout: 255 seconds)
+2014-05-27 10:24:06	-->	szt (~pi.znc@p4FD5E04B.dip0.t-ipconnect.de) has joined #archlinux
+2014-05-27 10:24:27	-->	chavezgu (~chavezgu@as66-186.tontut.fi) has joined #archlinux
+2014-05-27 10:25:41	-->	lnxslck (~lnxslck@194.65.138.120) has joined #archlinux
+2014-05-27 10:25:46	<--	Yage (~emurphy@107-0-85-186-ip-static.hfc.comcastbusiness.net) has quit (Read error: Connection reset by peer)
+2014-05-27 10:25:52		[thetornainbow away: all]
+2014-05-27 10:26:26	-->	Yage (~emurphy@107-0-85-186-ip-static.hfc.comcastbusiness.net) has joined #archlinux
+2014-05-27 10:28:19	-->	boboysdadda (~boboysdad@cpe-173-175-138-118.elp.res.rr.com) has joined #archlinux
+2014-05-27 10:28:37		[thetornainbow back: gone 00:02:45]
+2014-05-27 10:28:49	boboysdadda	anyone with experience with nzbget ever have download failures because it can't create a directory?
+2014-05-27 10:30:41	--	rejuvyesh[away] is now known as rejuvyesh
+2014-05-27 10:31:23	-->	dvx (~dvx@igw.obsm.cz) has joined #archlinux
+2014-05-27 10:31:47	-->	dutis_ (~dutis@ip137-68-211-87.adsl2.static.versatel.nl) has joined #archlinux
+2014-05-27 10:31:59	-->	Technicus (~Technicus@75-128-248-139.dhcp.mdsn.wi.charter.com) has joined #archlinux
+2014-05-27 10:32:12	<--	dutis (~dutis@ip137-68-211-87.adsl2.static.versatel.nl) has quit (Ping timeout: 240 seconds)
+2014-05-27 10:32:37	<--	ISF (~ivan@201.82.72.64) has quit (Ping timeout: 240 seconds)
+2014-05-27 10:32:51	-->	loungin (~loungin@65.112.207.3) has joined #archlinux
+2014-05-27 10:32:55	<--	krabador (~krabador@unaffiliated/krabador) has quit (Ping timeout: 260 seconds)
+2014-05-27 10:32:58	-->	axyridis (~axyridis@wireless1x-155-41-89-201.bu.edu) has joined #archlinux
+2014-05-27 10:33:41	-->	Cirrus_Minor (~Cirrus_Mi@CAcert/Cirrus-Minor) has joined #archlinux
+2014-05-27 10:33:41	-->	fatalhalt (~fatalhalt@64.245.224.162) has joined #archlinux
+2014-05-27 10:34:35	<--	tlvb (~Leo@c-2ec393ee-74736162.cust.telenor.se) has quit (Ping timeout: 258 seconds)
+2014-05-27 10:34:41	-->	earsplit (~sunn@pool-72-69-37-92.nycmny.fios.verizon.net) has joined #archlinux
+2014-05-27 10:35:11	<--	halosghost (halosghost@rouk.org) has quit (Quit: rouk.org)
+2014-05-27 10:35:11	<--	Roukoswarf (admin@rouk.org) has quit (Quit: rouk.org)
+2014-05-27 10:35:13	<--	TylerDurden36 (~TylerDurd@unaffiliated/tylerdurden36) has quit (Quit: TylerDurden36)
+2014-05-27 10:35:56	-->	carbon_monoxide (~Carbon@058176022144.ctinets.com) has joined #archlinux
+2014-05-27 10:35:58	<--	absynthe_faery (~absynthe_@unaffiliated/absynthe-faery/x-6447756) has quit (Ping timeout: 240 seconds)
+2014-05-27 10:36:28	-->	Roukoswarf (admin@rouk.org) has joined #archlinux
+2014-05-27 10:36:43	-->	krabador (~krabador@unaffiliated/krabador) has joined #archlinux
+2014-05-27 10:36:48	-->	tlvb (~Leo@c-2ec33e28-74736162.cust.telenor.se) has joined #archlinux
+2014-05-27 10:37:30	<--	v{}id (~david@muna-s-156-242.rz.uni-augsburg.de) has quit (Quit: WeeChat 0.4.3)
+2014-05-27 10:37:44	-->	halosghost (halosghost@rouk.org) has joined #archlinux
+2014-05-27 10:37:58	<--	_D_ (~dennis@131.155.237.195) has quit (Quit: leaving)
+2014-05-27 10:38:23	-->	hiptobecubic (~john@unaffiliated/hiptobecubic) has joined #archlinux
+2014-05-27 10:38:28	<--	djanos (~djanos@cannelle.tetaneutral.net) has quit (Ping timeout: 276 seconds)
+2014-05-27 10:39:07	<--	kgadek (~kgadek@nat3.kt.agh.edu.pl) has quit (Quit: kgadek)
+2014-05-27 10:39:58	-->	djanos (~djanos@cannelle.tetaneutral.net) has joined #archlinux
+2014-05-27 10:40:06	<--	Cirrus_Minor (~Cirrus_Mi@CAcert/Cirrus-Minor) has quit (Quit: ◀▬▬ ••••••ᗣ••••••ᗧ•ᗣᗣ••••◀▬▬   We Love You)
+2014-05-27 10:40:40	-->	bin_bash (~Anon7@unaffiliated/bin-bash/x-0273453) has joined #archlinux
+2014-05-27 10:40:42	-->	dik_dak (~dik_dak@216.194.27.154) has joined #archlinux
+2014-05-27 10:41:00	<--	brandonw (~brandonw@71-10-225-48.dhcp.oxfr.ma.charter.com) has quit (Ping timeout: 240 seconds)
+2014-05-27 10:41:45	snyp	how much should be the full 100% load temperature on a 4 core laptop?
+2014-05-27 10:42:37	Chais	I'd guess around 70-80°C
+2014-05-27 10:42:41	-->	Cirrus_Minor (~Cirrus_Mi@CAcert/Cirrus-Minor) has joined #archlinux
+2014-05-27 10:42:42	sheep	it depends on the laptop and the cpu
+2014-05-27 10:42:47	numeral	Earnestly: I don't see how it will replace python, python is more scripting
+2014-05-27 10:43:10	numeral	Earnestly: but definitely replace java and .net hell yeah
+2014-05-27 10:43:12	-->	brandonw (~brandonw@71-10-225-48.dhcp.oxfr.ma.charter.com) has joined #archlinux
+2014-05-27 10:43:20	Earnestly	numeral: python is used for a great deal of server/command line programs, e.g. openstack; almost all of their tools are python
+2014-05-27 10:43:31	Earnestly	numeral: such things would be better suited for Go
+2014-05-27 10:43:38	Earnestly	E.g. etcd, fleetctl, etc.
+2014-05-27 10:43:44	Chais	snyp: but sheep is right. largely depends on the laptop. dedicated graphics existent and active? ventilation working properly? hdd running like hell?
+2014-05-27 10:43:54	snyp	Chais, i am getting 76-77 degrees
+2014-05-27 10:44:02	snyp	all 4 cores 100%
+2014-05-27 10:44:10	Earnestly	numeral: Julia would probably be better for more scientific aspects
+2014-05-27 10:44:11	<--	gnubien (~e@unaffiliated/gnubien) has quit (Quit: WeeChat 0.4.3)
+2014-05-27 10:44:12	snyp	is this ok?
+2014-05-27 10:44:24	sheep	that's somewhat low for some laptops
+2014-05-27 10:44:25	numeral	Earnestly: I never got into Julia, I think python works well for those types of projects
+2014-05-27 10:44:26	snyp	how long can i keep urunning like thois?
+2014-05-27 10:44:27	<--	sou_ (~oy@112.230.243.212) has quit (Remote host closed the connection)
+2014-05-27 10:44:34	Chais	snyp: real cores or threads on a dual core?
+2014-05-27 10:44:36	sheep	it depends on your laptop
+2014-05-27 10:44:37	numeral	but yeah you can replace certain python roles with golang sure
+2014-05-27 10:44:45	Earnestly	then again, lisp still has more features than most of thse higher level languages and we still haven't caught up
+2014-05-27 10:44:46	snyp	Chais, 2 real cores. with hyper threading
+2014-05-27 10:44:49	sheep	some are able to handle those temperatures for a long time
+2014-05-27 10:44:51	-->	palasso (~palasso@palassopoulosge.ath.forthnet.gr) has joined #archlinux
+2014-05-27 10:45:18	Earnestly	numeral: Julia is targetted as scientific programming, as a replacement of python
+2014-05-27 10:45:18	Chais	snyp: usually the CPU will emergency shutdown if it's getting too hot. mine bails out at 100° I think
+2014-05-27 10:45:24	Earnestly	In that aspect
+2014-05-27 10:45:26	<--	zatricky (~zatricky@wbld-cr1-nat1.wa.co.za) has quit (Quit: Leaving.)
+2014-05-27 10:45:26	<--	Cirrus_Minor (~Cirrus_Mi@CAcert/Cirrus-Minor) has quit (Client Quit)
+2014-05-27 10:45:30	snyp	i see Chais 
+2014-05-27 10:45:31	<--	dik_dak (~dik_dak@216.194.27.154) has quit (Ping timeout: 240 seconds)
+2014-05-27 10:45:51	-->	Cirrus_Minor (~Cirrus_Mi@CAcert/Cirrus-Minor) has joined #archlinux
+2014-05-27 10:46:01	keenerd	Earnestly: It is really hard to beat Numpy+Scipy.
+2014-05-27 10:46:10	Earnestly	It is, yeah
+2014-05-27 10:46:17	Earnestly	numpy is all fast C
+2014-05-27 10:46:31	keenerd	I think Julia seems to be trying to take on R at the moment.
+2014-05-27 10:46:33	-->	ISF (~ivan@201.82.72.64) has joined #archlinux
+2014-05-27 10:46:40	Earnestly	Ah, is that it, hmm.
+2014-05-27 10:46:50	sudokode	Cccccccccccccccccc
+2014-05-27 10:46:53	Earnestly	keenerd: I do really like how Julia handles pipes btw, when you "shell out"
+2014-05-27 10:47:04	berceanu	hi guys
+2014-05-27 10:47:09	Earnestly	keenerd: |> "foo" |> "bar" where you can actually catch errors in foo etc.
+2014-05-27 10:47:14	<--	sebastianlutter (~sebastian@pd95cdee4.dip0.t-ipconnect.de) has quit (Ping timeout: 255 seconds)
+2014-05-27 10:47:27	berceanu	im doing a full system upgrade and pacman is asking me
+2014-05-27 10:47:30	berceanu	Replace twisted with extra/python2-twisted?
+2014-05-27 10:47:34	Earnestly	Yes
+2014-05-27 10:47:38	berceanu	i never saw this befoe
+2014-05-27 10:47:46	berceanu	before
+2014-05-27 10:48:01	snyp	now u have seen.
+2014-05-27 10:48:05	berceanu	heck im not even sure what twisted is :)
+2014-05-27 10:48:06	sudokode	so no game of thrones this past sunday
+2014-05-27 10:48:09	sudokode	I'm kinda sad
+2014-05-27 10:48:12	berceanu	so what should i reply
+2014-05-27 10:48:21	-->	LongCatTH (~LongCatTH@ppp-115-87-11-200.revip4.asianet.co.th) has joined #archlinux
+2014-05-27 10:48:24	berceanu	sudokode: yea, gotta wait another week :(
+2014-05-27 10:48:29	sudokode	I sat down last night and was like... what is there to catch up on... OMG GOT WTF
+2014-05-27 10:48:30	Earnestly	berceanu: What do you think it means?
+2014-05-27 10:48:44	sudokode	and then discovered there wasn't one
+2014-05-27 10:48:45	snyp	berceanu, yes. always yes.
+2014-05-27 10:49:01	Earnestly	snyp: Good job
+2014-05-27 10:49:08	berceanu	Earnestly: i think it wants to replace a python 3 library with its python 2 version
+2014-05-27 10:49:11	berceanu	not sure why though
+2014-05-27 10:49:19	Earnestly	berceanu: twisted in not python 3
+2014-05-27 10:49:24	sudokode	it can be
+2014-05-27 10:49:30	Earnestly	It's not in the repos
+2014-05-27 10:49:32	sudokode	!aurpkg twisted3
+2014-05-27 10:49:33	phrik	https://aur.archlinux.org/packages/twisted3
+2014-05-27 10:49:35	Chais	but python2-twisted isn't
+2014-05-27 10:49:42	sudokode	it's not stable
+2014-05-27 10:49:44	<--	djanos (~djanos@cannelle.tetaneutral.net) has quit (Ping timeout: 255 seconds)
+2014-05-27 10:49:48	berceanu	if its not then how can it 'replace it'?!
+2014-05-27 10:49:49	Earnestly	berceanu: So given that "twisted" was not python3, what do you think it means?
+2014-05-27 10:50:00	<--	JohnDory (~john@ppp-58-9-31-106.revip2.asianet.co.th) has quit (Quit: WeeChat 0.4.3)
+2014-05-27 10:50:04	sudokode	I actually orphaned cause I stopped caring, but it's just a matter of tweaking like a configure option
+2014-05-27 10:50:04	-->	djanos (~djanos@cannelle.tetaneutral.net) has joined #archlinux
+2014-05-27 10:50:07	Earnestly	berceanu: Is twisted a library or a program?
+2014-05-27 10:50:09	-->	divansantana (~divan@41.183.10.155) has joined #archlinux
+2014-05-27 10:50:10	<--	LongCatTH (~LongCatTH@ppp-115-87-11-200.revip4.asianet.co.th) has quit (Max SendQ exceeded)
+2014-05-27 10:50:11	-->	sd1001 (~siad@dhcp-5-103-167-60.seas-nve.net) has joined #archlinux
+2014-05-27 10:50:18	sudokode	they're in the process of converting it to 3
+2014-05-27 10:50:27	berceanu	Earnestly: i thought it was a library
+2014-05-27 10:50:30	sudokode	a lib
+2014-05-27 10:50:49	-->	vendion (~vendion@host-108-174-102-238.MIDOLT5.epbfi.com) has joined #archlinux
+2014-05-27 10:50:57	berceanu	actually one of the major ones which is still holding back people from moving to python 3
+2014-05-27 10:50:57	Earnestly	berceanu: Okay, so in Arch, it is policy that all python libraries are called "python-libfoo" or "python2-libfoo" if it's python2
+2014-05-27 10:51:10	Earnestly	berceanu: So, with this information, what do you think the message means?
+2014-05-27 10:51:22	berceanu	ok, so its trying to replace a program
+2014-05-27 10:51:27	snyp	omg.. they are not 'libraries'.. they are modules.
+2014-05-27 10:51:28	berceanu	with a python 2 library
+2014-05-27 10:51:29	Earnestly	It's not replacing anything
+2014-05-27 10:51:42	<--	mijicd (~mijicd@cable-188-246-52-178.dynamic.kdsinter.net) has quit (Remote host closed the connection)
+2014-05-27 10:51:42	Earnestly	berceanu: It's renaming the package
+2014-05-27 10:51:43	-->	BlankVerse (uid21459@gateway/web/irccloud.com/x-hcbqczgttrhwdzoo) has joined #archlinux
+2014-05-27 10:51:47	berceanu	snyp: library, module, same thing
+2014-05-27 10:52:13	<--	Cirrus_Minor (~Cirrus_Mi@CAcert/Cirrus-Minor) has quit (Ping timeout: 265 seconds)
+2014-05-27 10:52:15	berceanu	well it could say so then, couldnt it
+2014-05-27 10:52:21	berceanu	instead of 'replace'
+2014-05-27 10:52:22	Earnestly	berceanu: No it can't
+2014-05-27 10:52:24	berceanu	'rename'
+2014-05-27 10:52:26	-->	kshlm (~kaushal@unaffiliated/kaushal-/x-9344841) has joined #archlinux
+2014-05-27 10:52:39	Earnestly	pacman doesn't track that useless information
+2014-05-27 10:53:00	berceanu	ok and why does it want to rename it then
+2014-05-27 10:53:12	Earnestly	berceanu: Because 'twisted' doesn't follow Arch naming policy
+2014-05-27 10:53:30	berceanu	yea but how did it get to be called that in the first place
+2014-05-27 10:53:38	-->	cfricke (~cfricke@96.45.197.22) has joined #archlinux
+2014-05-27 10:53:41	<--	Greylocks_ (~greylocks@66-87-95-78.pools.spcsdns.net) has quit (Ping timeout: 264 seconds)
+2014-05-27 10:53:42	berceanu	i mean, someone must have uploaded a package
+2014-05-27 10:53:47	berceanu	called twisted
+2014-05-27 10:53:49	Earnestly	Because it was
+2014-05-27 10:53:56	berceanu	and it was accepted
+2014-05-27 10:54:08	berceanu	even though it didnt follow the name consensus that you refer to
+2014-05-27 10:54:19	Earnestly	Mistakes happen
+2014-05-27 10:54:22	holomorph	surprise, maintainers make mistakes
+2014-05-27 10:54:32	Earnestly	Maybe it was not obvious
+2014-05-27 10:54:40	Earnestly	Maybe twisted contains both libraries and programs
+2014-05-27 10:55:36	<--	krz (~foo@unaffiliated/krz) has quit (Quit: WeeChat 0.4.3)
+2014-05-27 10:55:42	Earnestly	berceanu: Here's the commit: (also yay screenshots of text) http://a.pomf.se/tmvurv.png
+2014-05-27 10:55:56	<--	oozbooz (~ocherno@23-25-55-156-static.hfc.comcastbusiness.net) has left #archlinux ("Leaving")
+2014-05-27 10:56:05	Earnestly	sudokode: ^ looks like they added python-twisted
+2014-05-27 10:56:48	-->	Cirrus_Minor (~Cirrus_Mi@CAcert/Cirrus-Minor) has joined #archlinux
+2014-05-27 10:57:09	berceanu	i see
+2014-05-27 10:57:16	berceanu	they added the python 3 version
+2014-05-27 10:57:23	sudokode	Earnestly: orly
+2014-05-27 10:57:29	Earnestly	yarly
+2014-05-27 10:57:33	berceanu	and renamed the python 2 version to python2-twisted
+2014-05-27 10:57:43	Earnestly	berceanu: Yep
+2014-05-27 10:57:56	berceanu	cos before there was only 'twisted', being the python 2 one
+2014-05-27 10:58:05	sudokode	heh. well, upstream provided it already, it was just a matter of tweaking 1-2 chars in your package
+2014-05-27 10:58:07	berceanu	Earnestly: ok, all clear now, ty!
+2014-05-27 10:58:13	<--	le_tropico (~le_tropic@nat/cisco/x-boqvphuscwlsihdl) has quit (Ping timeout: 240 seconds)
+2014-05-27 10:58:24	-->	dik_dak (~dik_dak@216.194.27.154) has joined #archlinux
+2014-05-27 10:58:25	sudokode	I just did it cause I wanted to mess with it and ended up putting it on the aur
+2014-05-27 10:58:51	-->	heavytull (1000@wifi-eduroam-etud-153-91.unilim.fr) has joined #archlinux
+2014-05-27 10:58:52	sudokode	there were some missing features/packages, but maybe that's been resolved by now
+2014-05-27 10:59:40	-->	Talryn (~Talryn@unaffiliated/talryn) has joined #archlinux
+2014-05-27 10:59:41	Earnestly	sudokode: Perhaps it was fixed up for the 14 release
+2014-05-27 10:59:41	<--	flexiondotorg (~flexiondo@archlinux/trusteduser/flexiondotorg) has quit (Ping timeout: 264 seconds)
+2014-05-27 10:59:53	sudokode	perhaps
+2014-05-27 11:00:10	Earnestly	grawity: ping
+2014-05-27 11:00:33	<--	Cirrus_Minor (~Cirrus_Mi@CAcert/Cirrus-Minor) has quit (Client Quit)
+2014-05-27 11:01:49	<--	emlow (~emlow@unaffiliated/emlow) has quit (Quit: WeeChat 0.3.8)
+2014-05-27 11:02:32	<--	wych (~wych@76.164.199.11) has left #archlinux
+2014-05-27 11:02:41	sudokode	hm. my finger is a slightly different color and sort of bigger than the other
+2014-05-27 11:02:52	<--	tier (~tier@68.170.18.121) has quit (Remote host closed the connection)
+2014-05-27 11:02:55	sudokode	perhaps that requires some prefacing
+2014-05-27 11:03:04	-->	kgadek (~kgadek@nat3.kt.agh.edu.pl) has joined #archlinux
+2014-05-27 11:03:33	<--	slesa (~jpreiss@152-210-018-212.ip-addr.vsenet.de) has quit (Quit: Leaving.)
+2014-05-27 11:03:41	sudokode	I was attempting to fix a big ass dolly yesterday and clearly did it wrong. so I cranked up the platform and let the handle go
+2014-05-27 11:03:56	sudokode	well, it started falling... and the handle started spinning really fast
+2014-05-27 11:04:16	sudokode	and obviously my first reaction was to try to catch it, so I tried to grab the handle... bam
+2014-05-27 11:04:28	<--	StarBrilliant (~proxy@unaffiliated/starbrilliant) has quit (Ping timeout: 276 seconds)
+2014-05-27 11:04:31	<--	kgadek (~kgadek@nat3.kt.agh.edu.pl) has quit (Client Quit)
+2014-05-27 11:04:40	sudokode	didn't hurt really, then I look down at my hand and I thought my finger was broken cause it's just blue and swollen
+2014-05-27 11:05:01	-->	moted (~anonymous@c-71-193-182-37.hsd1.wa.comcast.net) has joined #archlinux
+2014-05-27 11:05:09	sudokode	I'm like fuuuuuuck. thankfully putting ice on it immediately brought the swelling down pretty quick
+2014-05-27 11:05:19	sudokode	doesn't even really hurt, but goddamn it looked nasty yesterday
+2014-05-27 11:05:42	-->	tier (~tier@68.170.18.121) has joined #archlinux
+2014-05-27 11:06:06	<--	dmi3y (~dmi3y@194.105.145.69) has quit (Read error: Connection reset by peer)
+2014-05-27 11:06:37	-->	polyzen (~poly@unaffiliated/polyzen) has joined #archlinux
+2014-05-27 11:06:45	felixonmars	sudokode: well, there are still missing features/packages in the 14 release, but the 14 release is the first release that is installable
+2014-05-27 11:06:49	-->	Greylocks_ (~greylocks@66-87-89-182.pools.spcsdns.net) has joined #archlinux
+2014-05-27 11:07:00	sudokode	13 was installable
+2014-05-27 11:07:10	felixonmars	:/ really?
+2014-05-27 11:07:11	sudokode	see aur/twisted3
+2014-05-27 11:07:26	-->	flexiondotorg (~flexiondo@archlinux/trusteduser/flexiondotorg) has joined #archlinux
+2014-05-27 11:07:38	sudokode	I just removed the python2 deps, replaced them with any available python3 deps and used the setup3.py script
+2014-05-27 11:07:40	felixonmars	they added that on 14 changelog
+2014-05-27 11:07:45	sudokode	per their website
+2014-05-27 11:07:47	d1zzYLuLz	 /join #BSPWM
+2014-05-27 11:07:49	felixonmars	i see
+2014-05-27 11:07:53	d1zzYLuLz	oops sorry
+2014-05-27 11:07:59	wasamasa	!give d1zzYLuLz rong
+2014-05-27 11:08:00	phrik	d1zzYLuLz: URDOINITRONG
+2014-05-27 11:08:07	felixonmars	so they mean the separate setup3.py is not needed
+2014-05-27 11:08:14	d1zzYLuLz	lol
+2014-05-27 11:08:28	sudokode	oic
+2014-05-27 11:08:30	<--	Greylocks_ (~greylocks@66-87-89-182.pools.spcsdns.net) has quit (Client Quit)
+2014-05-27 11:08:32	-->	free_beard (~mircea@unaffiliated/free-beard/x-6152516) has joined #archlinux
+2014-05-27 11:08:34	d1zzYLuLz	http://imgur.com/YMPccVv
+2014-05-27 11:08:35	phrik	Title: imgur: the simple image sharer (at imgur.com)
+2014-05-27 11:08:36	d1zzYLuLz	maybe someone can help me
+2014-05-27 11:08:45	d1zzYLuLz	why does my panel look like that? lol
+2014-05-27 11:08:46	<--	Excorio (~excorio@37.74.114.76) has quit (Remote host closed the connection)
+2014-05-27 11:08:53	d1zzYLuLz	i'm just trying to get any panel to show up and this is the first one that showed SOMETHING
+2014-05-27 11:09:18	thetornainbow	d1zzYLuLz: perhaps try typing /join #bspwm again and asking there
+2014-05-27 11:09:30	d1zzYLuLz	yeah i did
+2014-05-27 11:09:43	d1zzYLuLz	figured i'd try though
+2014-05-27 11:10:03	thetornainbow	!next
+2014-05-27 11:10:03	phrik	Another satisfied customer! NEXT!
+2014-05-27 11:11:16	-->	gnubien (~e@unaffiliated/gnubien) has joined #archlinux
+2014-05-27 11:11:32	<--	Auv (~jack@unaffiliated/auv5) has quit (Ping timeout: 245 seconds)
+2014-05-27 11:11:42	felixonmars	anyway, i'd like to encourage the move to python 3 :P
+2014-05-27 11:11:52	<--	GCN (~GCN@unaffiliated/gcn) has quit (Quit: WeeChat 0.4.3)
+2014-05-27 11:11:55	holomorph	yay
+2014-05-27 11:13:13	<--	KannOx (~KannOx@c-68-81-100-148.hsd1.pa.comcast.net) has quit (Quit: I bless the gods, the child, the earth and bomb the rest.)
+2014-05-27 11:13:37	-->	spectromas (~spectroma@186.177.144.33) has joined #archlinux
+2014-05-27 11:13:49	-->	absynthe_faery (~absynthe_@unaffiliated/absynthe-faery/x-6447756) has joined #archlinux
+2014-05-27 11:14:01	berceanu	ok, seems like the twisted adventure continues 
+2014-05-27 11:14:02	berceanu	python2-twisted: /usr/lib/python2.7/site-packages/twisted/plugins/dropin.cache exists in filesystem
+2014-05-27 11:14:15	<--	Chilledheart (~chilledhe@60.182.69.81) has quit (Quit: leaving)
+2014-05-27 11:14:19	berceanu	Errors occurred, no packages were upgraded.
+2014-05-27 11:14:31	sudokode	just remove it
+2014-05-27 11:14:47	Earnestly	(The commit message sort of explained this)
+2014-05-27 11:15:13	felixonmars	yeah, that file was generated during check()
+2014-05-27 11:15:50	<--	spectromas (~spectroma@186.177.144.33) has left #archlinux
+2014-05-27 11:15:55	--	ljbo_avatar is now known as ljbo
+2014-05-27 11:16:42	saptech	why can't I stop these messages in console, 'timer: connect/disconnect timeout'?
+2014-05-27 11:17:18	sudokode	what'd you do
+2014-05-27 11:17:49	-->	masterslave89 (~belial@37.212.48.212) has joined #archlinux
+2014-05-27 11:17:52	-->	wmunny (~wmunny@179.154.123.129) has joined #archlinux
+2014-05-27 11:17:56	-->	munumnu (~munumnunu@brln-4db95926.pool.mediaWays.net) has joined #archlinux
+2014-05-27 11:18:02	gnubien	saptech: systemd timer?
+2014-05-27 11:18:02	saptech	I have to type 'rmmod mei_me and it stops
+2014-05-27 11:18:44	saptech	if I reboot I have to type the command again to stop it
+2014-05-27 11:19:02	saptech	mei_me 0000:00:03.0: timer: connect/disconnect timeout is what it show

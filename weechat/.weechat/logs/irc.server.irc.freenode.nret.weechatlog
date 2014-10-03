@@ -1,0 +1,18 @@
+2014-05-22 23:11:58	--	irc: connecting to server irc.freenode.nret/6667...
+2014-05-22 23:11:58	=!=	irc: address "irc.freenode.nret" not found
+2014-05-22 23:11:58	=!=	irc: error: Name or service not known
+2014-05-22 23:11:58	--	irc: reconnecting to server in 10 seconds
+2014-05-22 23:12:08	--	irc: reconnecting to server...
+2014-05-22 23:12:08	--	irc: connecting to server irc.freenode.nret/6667...
+2014-05-22 23:12:08	=!=	irc: address "irc.freenode.nret" not found
+2014-05-22 23:12:08	=!=	irc: error: Name or service not known
+2014-05-22 23:12:08	--	irc: reconnecting to server in 20 seconds
+2014-05-22 23:12:28	--	irc: reconnecting to server...
+2014-05-22 23:12:28	--	irc: connecting to server irc.freenode.nret/6667...
+2014-05-22 23:12:28	=!=	irc: address "irc.freenode.nret" not found
+2014-05-22 23:12:28	=!=	irc: error: Name or service not known
+2014-05-22 23:12:28	--	irc: reconnecting to server in 40 seconds
+2014-05-22 23:12:51		irc: auto-reconnection is cancelled
+2014-05-22 23:12:51	--	irc: disconnected from server
+2014-05-22 23:31:02	=!=	irc: not connected to server "irc.freenode.nret"!
+2014-05-22 23:32:46	=!=	irc: this buffer is not a channel!

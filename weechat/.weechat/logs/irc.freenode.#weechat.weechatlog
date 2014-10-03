@@ -1,0 +1,48 @@
+2014-05-27 11:47:02	-->	tornainbow (~jared@71-87-242-27.dhcp.jcsn.tn.charter.com) has joined #weechat
+2014-05-27 11:47:02	--	Topic for #weechat is "http://weechat.org/ | Latest stable version: 0.4.3 | English support channel, *ONLY* about WeeChat software | Please read docs before asking! | Bug reports are welcome ONLY for latest stable or devel | Off-topic chan: #weechat-offtopic | Fingerprint for gpg key used to sign packages: A9AB 5AB7 78FA 5C35 22FD 0378 F82F 4B16 DEC4 08F8"
+2014-05-27 11:47:02	--	Topic set by FlashCode (~FlashCode@weechat.org) on Sun, 09 Feb 2014 04:57:06
+2014-05-27 11:47:02	--	Channel #weechat: 515 nicks (4 ops, 1 voice, 510 normals)
+2014-05-27 11:47:02	--	PvNotice(ChanServ): Welcome to WeeChat english support channel. IMPORTANT: you *MUST* have read docs and FAQ before asking something on this channel! Read them at: http://weechat.org/doc/
+2014-05-27 11:47:02	--	URL for #weechat: http://www.weechat.org/
+2014-05-27 11:47:04	--	Mode #weechat [+cnt]
+2014-05-27 11:47:04	--	Channel created on Sun, 26 Nov 2006 01:42:51
+2014-05-27 11:47:22	tornainbow	hey what's up everybody. is there a way to get more verbose output from errors?
+2014-05-27 11:47:58	tornainbow	i'm trying to get weechat set up on a server of mine, but for some reason the connection to irc.freenode.net is being refused, but i need a little more info to go on
+2014-05-27 11:49:08	gb	what error do you get presently?
+2014-05-27 11:49:39	gb	and how are you trying to connect to freenode?
+2014-05-27 11:50:13	gb	there are many different reasons a connection might fail but usually it is due to you having set something incorrectly
+2014-05-27 11:50:49	gb	so tell us what you did to arrive in this mess :)
+2014-05-27 11:51:25	tornainbow	well, i connect with "/connect chat.freenode.net/6667" as usual
+2014-05-27 11:52:00	gb	did you set a nick?
+2014-05-27 11:52:16	gb	i often got the could not connect because no nick was set error
+2014-05-27 11:52:21	-->	ferreum768 (~ferreus@x2f6fdf3.dyn.telefonica.de) has joined #weechat
+2014-05-27 11:52:40	<--	diegoviola (~diego@unaffiliated/diegoviola) has quit (Quit: WeeChat 0.4.3)
+2014-05-27 11:52:41	<--	ferreum158 (~ferreus@x2f02724.dyn.telefonica.de) has quit (Ping timeout: 252 seconds)
+2014-05-27 11:52:52	tornainbow	and it just gives irc: connecting to server chat.freenode.net/6667 (IPv6)...
+2014-05-27 11:52:59	tornainbow	irc: connection refused
+2014-05-27 11:53:03	tornainbow	then it tries reconn
+2014-05-27 11:53:09	Kays	try with ipv4. Maybe you don't have ipv6 set up properly
+2014-05-27 11:53:18	Kays	/connect -ipv4 chat.freenode.net/6667
+2014-05-27 11:53:24	gb	ahh that is why that lil bit after (IPv6)
+2014-05-27 11:53:24	grawity	if it says "connection _refused_", it quite sounds like a firewall is blocking it
+2014-05-27 11:53:48	grawity	IPv6 misconfiguration, on the other hand, usually results in long delays or "No route to host"
+2014-05-27 11:54:04	Kays	grawity: hmm from the host or freenode?
+2014-05-27 11:54:14	gb	i do know if you wish to use ip6 there are dedicated ipv6 freenode servers
+2014-05-27 11:54:23	grawity	Kays: where – the firewall?
+2014-05-27 11:54:34	grawity	Kays: could be anywhere between, really.
+2014-05-27 11:54:44	gb	are you intending to connect via ipv6?
+2014-05-27 11:54:45	tornainbow	that's what i thought too, but forcing the ipv4 switch gives exact same error
+2014-05-27 11:54:49	tornainbow	gb: nope
+2014-05-27 11:55:47	gb	what version?
+2014-05-27 11:55:51	-->	Auv (~jack@unaffiliated/auv5) has joined #weechat
+2014-05-27 11:56:29	tornainbow	0.3.8 debian stable
+2014-05-27 11:57:09	gb	hmm i vaguelly recall experiencing same with .3.2 years ago
+2014-05-27 11:57:20	<--	ron_o (~yah@unaffiliated/ron-o/x-8242187) has quit (Quit: WeeChat 5.7)
+2014-05-27 11:57:20	gb	.4.3 is latest stable
+2014-05-27 11:57:35	gb	i suggest try upgrading wee first
+2014-05-27 11:57:42	<--	semeion (~semeion@unaffiliated/semeion) has quit (Quit: WeeChat 0.4.3)
+2014-05-27 11:57:48	tornainbow	yeah, i'll try it. thanks all
+2014-05-27 11:57:49	gb	it could possibly be a bug that has been fixed
+2014-05-27 11:58:18	Kays	if you're going to build it, may as well go for 1.0-de
+2014-05-27 11:58:21	Kays	dev*
+2014-05-27 12:05:44	--	irc: disconnected from server

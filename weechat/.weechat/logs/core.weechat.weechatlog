@@ -1,0 +1,2906 @@
+2014-05-22 21:12:13	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-05-22 21:12:13	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-05-22 21:12:13		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, script, xfer
+2014-05-22 23:09:47	 !	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-05-22 23:09:47	 !	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-05-22 23:09:47		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, script, xfer
+2014-05-22 23:09:50	 !	You can not write text in this buffer
+2014-05-22 23:10:06		irc: server irc.freenode.net created (temporary server, NOT SAVED!)
+2014-05-22 23:11:46	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-05-22 23:11:46	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-05-22 23:11:46		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, script, xfer
+2014-05-22 23:11:58		irc: server irc.freenode.nret created (temporary server, NOT SAVED!)
+2014-05-22 23:12:04	=!=	Error: unknown command "rmreconns" (type /help for help)
+2014-05-22 23:13:10		irc: server irc.freenode.net created (temporary server, NOT SAVED!)
+2014-05-22 23:14:27		script: downloading list of scripts...
+2014-05-22 23:14:28		script: 279 scripts for WeeChat 0.4.3
+2014-05-22 23:14:28		script: script "iset" not found
+2014-05-22 23:14:42		perl: loading script "/home/jared/.weechat/perl/iset.pl"
+2014-05-22 23:14:42		perl: registered script "iset", version 3.4 (Interactive Set for configuration options)
+2014-05-22 23:14:42		New key binding (context "mouse"): @chat(perl.iset):button1 => hsignal:iset_mouse
+2014-05-22 23:14:42		New key binding (context "mouse"): @chat(perl.iset):button2* => hsignal:iset_mouse
+2014-05-22 23:14:42		New key binding (context "mouse"): @chat(perl.iset):wheeldown => /repeat 5 /iset **down
+2014-05-22 23:14:42		New key binding (context "mouse"): @chat(perl.iset):wheelup => /repeat 5 /iset **up
+2014-05-22 23:14:59	=!=	Error: can not merge windows, there's no other window with same size near current one
+2014-05-22 23:15:07	=!=	Error: unknown option for "window" command
+2014-05-22 23:16:16		[perl/iset]  /iset  f <file>
+2014-05-22 23:16:16		                    s <section>
+2014-05-22 23:16:16		                    [=][=]<text>
+2014-05-22 23:16:16		Interactive set
+2014-05-22 23:16:16		f file   : show options for a file
+2014-05-22 23:16:16		s section: show options for a section
+2014-05-22 23:16:16		text     : show options with 'text' in name
+2014-05-22 23:16:16		=text    : show options with 'text' in value
+2014-05-22 23:16:16		==text   : show options with exact 'text' in value
+2014-05-22 23:16:16		Keys for iset buffer:
+2014-05-22 23:16:16		f11,f12        : move iset content left/right
+2014-05-22 23:16:16		up,down        : move one option up/down
+2014-05-22 23:16:16		pgup,pdwn      : move one page up/down
+2014-05-22 23:16:16		home,end       : move to first/last option
+2014-05-22 23:16:16		ctrl+'L'       : refresh options and screen
+2014-05-22 23:16:16		alt+space      : toggle boolean on/off
+2014-05-22 23:16:16		alt+'+'        : increase value (for integer or color)
+2014-05-22 23:16:16		alt+'-'        : decrease value (for integer or color)
+2014-05-22 23:16:16		alt+'i',alt+'r': reset value of option
+2014-05-22 23:16:16		alt+'i',alt+'u': unset option
+2014-05-22 23:16:16		alt+enter      : set new value for option (edit it with command line)
+2014-05-22 23:16:16		text,enter     : set a new filter using command line (use '*' to see all options)
+2014-05-22 23:16:16		alt+'v'        : toggle help bar on/off
+2014-05-22 23:16:16		alt+'p'        : toggle option "show_plugin_description" on/off
+2014-05-22 23:16:16		Mouse actions:
+2014-05-22 23:16:16		wheel up/down                 : move cursor up/down
+2014-05-22 23:16:16		left button                   : select an option from list
+2014-05-22 23:16:16		right button                  : toggle boolean (on/off) or set a new value for option (edit it with command line)
+2014-05-22 23:16:16		right button + drag left/right: increase/decrease value (for integer or color)
+2014-05-22 23:16:16		Examples:
+2014-05-22 23:16:16		  show options for file 'weechat'
+2014-05-22 23:16:16		    /iset f weechat
+2014-05-22 23:16:16		  show options for file 'irc'
+2014-05-22 23:16:16		    /iset f irc
+2014-05-22 23:16:16		  show options for section 'look'
+2014-05-22 23:16:16		    /iset s look
+2014-05-22 23:16:16		  show all options with text 'nicklist' in name
+2014-05-22 23:16:16		    /iset nicklist
+2014-05-22 23:16:16		  show all values which contain 'red'. ('=' is a trigger char).
+2014-05-22 23:16:16		    /iset =red
+2014-05-22 23:16:16		  show all values which hit 'off'. ('==' is a trigger char).
+2014-05-22 23:16:16		    /iset ==off
+2014-05-22 23:16:16		  show options for file 'weechat' which contains value 'off'
+2014-05-22 23:16:16		    /iset f weechat =off
+2014-05-22 23:17:01		Option changed: alias.cmd.UMODE = "mode $nick"
+2014-05-22 23:18:20		Option changed: weechat.look.color_inactive_time = off
+2014-05-22 23:19:05		Option changed: weechat.look.mouse = on  (default: off)
+2014-05-22 23:19:26		Option changed: weechat.look.mouse = on  (default: off)
+2014-05-22 23:22:38	=!=	Error: unknown command "qc" (type /help for help)
+2014-05-22 23:22:55		[alias]  /WC  
+2014-05-22 23:22:55		window merge
+2014-05-22 23:23:02		[alias]  /CLOSE  
+2014-05-22 23:23:02		buffer close
+2014-05-22 23:23:14		[alias]  /C  
+2014-05-22 23:23:14		buffer clear
+2014-05-22 23:23:17	=!=	Error: unknown command "clear" (type /help for help)
+2014-05-22 23:23:21	=!=	No help available, "clear" is not a command or an option
+2014-05-22 23:23:25		[core]  /buffer  list
+2014-05-22 23:23:25		                 clear [<number>|<name>|-merged|-all]
+2014-05-22 23:23:25		                 move|merge <number>
+2014-05-22 23:23:25		                 swap <number1>|<name1> [<number2>|<name2>]
+2014-05-22 23:23:25		                 unmerge [<number>|-all]
+2014-05-22 23:23:25		                 renumber [<number1> [<number2> [<start>]]]
+2014-05-22 23:23:25		                 close [<n1>[-<n2>]|<name>]
+2014-05-22 23:23:25		                 notify <level>
+2014-05-22 23:23:25		                 localvar
+2014-05-22 23:23:25		                 set <property> <value>
+2014-05-22 23:23:25		                 get <property>
+2014-05-22 23:23:25		                 <number>|<name>
+2014-05-22 23:23:25		manage buffers
+2014-05-22 23:23:25		    list: list buffers (without argument, this list is displayed)
+2014-05-22 23:23:25		   clear: clear buffer content (number for a buffer, -merged for merged buffers, -all for all buffers, or nothing for current buffer)
+2014-05-22 23:23:25		    move: move buffer in the list (may be relative, for example -1)
+2014-05-22 23:23:25		    swap: swap two buffers (swap with current buffer if only one number/name given)
+2014-05-22 23:23:25		   merge: merge current buffer to another buffer (chat area will be mix of both buffers)
+2014-05-22 23:23:25		          (by default ctrl-x switches between merged buffers)
+2014-05-22 23:23:25		 unmerge: unmerge buffer from other buffers which have same number
+2014-05-22 23:23:25		renumber: renumber buffers (works only if option weechat.look.buffer_auto_renumber is off)
+2014-05-22 23:23:25		   close: close buffer (number/range or name is optional)
+2014-05-22 23:23:25		  notify: set notify level for current buffer: this level determines whether buffer will be added to hotlist or not:
+2014-05-22 23:23:25		               none: never
+2014-05-22 23:23:25		          highlight: for highlights only
+2014-05-22 23:23:25		            message: for messages from users + highlights
+2014-05-22 23:23:25		                all: all messages
+2014-05-22 23:23:25		              reset: reset to default value (all)
+2014-05-22 23:23:25		localvar: display local variables for current buffer
+2014-05-22 23:23:25		     set: set a property for current buffer
+2014-05-22 23:23:25		     get: display a property of current buffer
+2014-05-22 23:23:25		  number: jump to buffer by number, possible prefix:
+2014-05-22 23:23:25		          '+': relative jump, add number to current
+2014-05-22 23:23:25		          '-': relative jump, sub number to current
+2014-05-22 23:23:25		          '*': jump to number, using option "weechat.look.jump_current_to_previous_buffer"
+2014-05-22 23:23:25		    name: jump to buffer by (partial) name
+2014-05-22 23:23:25		Examples:
+2014-05-22 23:23:25		  clear current buffer:
+2014-05-22 23:23:25		    /buffer clear
+2014-05-22 23:23:25		  move buffer to number 5:
+2014-05-22 23:23:25		    /buffer move 5
+2014-05-22 23:23:25		  swap buffer 1 with 3:
+2014-05-22 23:23:25		    /buffer swap 1 3
+2014-05-22 23:23:25		  swap buffer #weechat with current buffer:
+2014-05-22 23:23:25		    /buffer swap #weechat
+2014-05-22 23:23:25		  merge with core buffer:
+2014-05-22 23:23:25		    /buffer merge 1
+2014-05-22 23:23:25		  unmerge buffer:
+2014-05-22 23:23:25		    /buffer unmerge
+2014-05-22 23:23:25		  close current buffer:
+2014-05-22 23:23:25		    /buffer close
+2014-05-22 23:23:25		  close buffers 5 to 7:
+2014-05-22 23:23:25		    /buffer close 5-7
+2014-05-22 23:23:25		  jump to #weechat:
+2014-05-22 23:23:25		    /buffer #weechat
+2014-05-22 23:23:25		  jump to next buffer:
+2014-05-22 23:23:25		    /buffer +1
+2014-05-22 23:25:10		List of aliases:
+2014-05-22 23:25:10		  AAWAY => allserv /away
+2014-05-22 23:25:10		  AME => allchan /me
+2014-05-22 23:25:10		  AMSG => allchan /msg *
+2014-05-22 23:25:10		  ANICK => allserv /nick
+2014-05-22 23:25:10		  BEEP => print -stderr \a
+2014-05-22 23:25:10		  BYE => quit
+2014-05-22 23:25:10		  C => buffer clear
+2014-05-22 23:25:10		  CHAT => dcc chat
+2014-05-22 23:25:10		  CL => buffer clear
+2014-05-22 23:25:10		  CLOSE => buffer close
+2014-05-22 23:25:10		  EXIT => quit
+2014-05-22 23:25:10		  IG => ignore
+2014-05-22 23:25:10		  J => join
+2014-05-22 23:25:10		  K => kick
+2014-05-22 23:25:10		  KB => kickban
+2014-05-22 23:25:10		  LEAVE => part
+2014-05-22 23:25:10		  M => msg
+2014-05-22 23:25:10		  MUB => unban *
+2014-05-22 23:25:10		  N => names
+2014-05-22 23:25:10		  Q => query
+2014-05-22 23:25:10		  REDRAW => window refresh
+2014-05-22 23:25:10		  SAY => msg *
+2014-05-22 23:25:10		  SIGNOFF => quit
+2014-05-22 23:25:10		  T => topic
+2014-05-22 23:25:10		  UB => unban
+2014-05-22 23:25:10		  UMODE => mode $nick
+2014-05-22 23:25:10		  V => command core version
+2014-05-22 23:25:10		  W => who
+2014-05-22 23:25:10		  WC => window merge
+2014-05-22 23:25:10		  WI => whois
+2014-05-22 23:25:10		  WII => whois $1 $1
+2014-05-22 23:25:10		  WW => whowas
+2014-05-22 23:25:33		Alias "cl" => "/buffer close" created
+2014-05-22 23:25:40		List of aliases:
+2014-05-22 23:25:40		  AAWAY => allserv /away
+2014-05-22 23:25:40		  AME => allchan /me
+2014-05-22 23:25:40		  AMSG => allchan /msg *
+2014-05-22 23:25:40		  ANICK => allserv /nick
+2014-05-22 23:25:40		  BEEP => print -stderr \a
+2014-05-22 23:25:40		  BYE => quit
+2014-05-22 23:25:40		  C => buffer clear
+2014-05-22 23:25:40		  CHAT => dcc chat
+2014-05-22 23:25:40		  cl => /buffer close
+2014-05-22 23:25:40		  CLOSE => buffer close
+2014-05-22 23:25:40		  EXIT => quit
+2014-05-22 23:25:40		  IG => ignore
+2014-05-22 23:25:40		  J => join
+2014-05-22 23:25:40		  K => kick
+2014-05-22 23:25:40		  KB => kickban
+2014-05-22 23:25:40		  LEAVE => part
+2014-05-22 23:25:40		  M => msg
+2014-05-22 23:25:40		  MUB => unban *
+2014-05-22 23:25:40		  N => names
+2014-05-22 23:25:40		  Q => query
+2014-05-22 23:25:40		  REDRAW => window refresh
+2014-05-22 23:25:40		  SAY => msg *
+2014-05-22 23:25:40		  SIGNOFF => quit
+2014-05-22 23:25:40		  T => topic
+2014-05-22 23:25:40		  UB => unban
+2014-05-22 23:25:40		  UMODE => mode $nick
+2014-05-22 23:25:40		  V => command core version
+2014-05-22 23:25:40		  W => who
+2014-05-22 23:25:40		  WC => window merge
+2014-05-22 23:25:40		  WI => whois
+2014-05-22 23:25:40		  WII => whois $1 $1
+2014-05-22 23:25:40		  WW => whowas
+2014-05-22 23:25:52		Alias "CL" => "/buffer close" created
+2014-05-22 23:25:54		List of aliases:
+2014-05-22 23:25:54		  AAWAY => allserv /away
+2014-05-22 23:25:54		  AME => allchan /me
+2014-05-22 23:25:54		  AMSG => allchan /msg *
+2014-05-22 23:25:54		  ANICK => allserv /nick
+2014-05-22 23:25:54		  BEEP => print -stderr \a
+2014-05-22 23:25:54		  BYE => quit
+2014-05-22 23:25:54		  C => buffer clear
+2014-05-22 23:25:54		  CHAT => dcc chat
+2014-05-22 23:25:54		  CL => /buffer close
+2014-05-22 23:25:54		  CLOSE => buffer close
+2014-05-22 23:25:54		  EXIT => quit
+2014-05-22 23:25:54		  IG => ignore
+2014-05-22 23:25:54		  J => join
+2014-05-22 23:25:54		  K => kick
+2014-05-22 23:25:54		  KB => kickban
+2014-05-22 23:25:54		  LEAVE => part
+2014-05-22 23:25:54		  M => msg
+2014-05-22 23:25:54		  MUB => unban *
+2014-05-22 23:25:54		  N => names
+2014-05-22 23:25:54		  Q => query
+2014-05-22 23:25:54		  REDRAW => window refresh
+2014-05-22 23:25:54		  SAY => msg *
+2014-05-22 23:25:54		  SIGNOFF => quit
+2014-05-22 23:25:54		  T => topic
+2014-05-22 23:25:54		  UB => unban
+2014-05-22 23:25:54		  UMODE => mode $nick
+2014-05-22 23:25:54		  V => command core version
+2014-05-22 23:25:54		  W => who
+2014-05-22 23:25:54		  WC => window merge
+2014-05-22 23:25:54		  WI => whois
+2014-05-22 23:25:54		  WII => whois $1 $1
+2014-05-22 23:25:54		  WW => whowas
+2014-05-22 23:26:06		[core]  /window  list
+2014-05-22 23:26:06		                 -1|+1|b#|up|down|left|right [-window <number>]
+2014-05-22 23:26:06		                 <number>
+2014-05-22 23:26:06		                 splith|splitv [-window <number>] [<pct>]
+2014-05-22 23:26:06		                 resize [-window <number>] [+/-]<pct>
+2014-05-22 23:26:06		                 balance
+2014-05-22 23:26:06		                 merge [-window <number>] [all]
+2014-05-22 23:26:06		                 page_up|page_down [-window <number>]
+2014-05-22 23:26:06		                 refresh
+2014-05-22 23:26:06		                 scroll [-window <number>] [+/-]<value>[s|m|h|d|M|y]
+2014-05-22 23:26:06		                 scroll_horiz [-window <number>] [+/-]<value>[%]
+2014-05-22 23:26:06		                 scroll_up|scroll_down|scroll_top|scroll_bottom|scroll_beyond_end|scroll_previous_highlight|scroll_next_highlight|scroll_unread [-window <number>]
+2014-05-22 23:26:06		                 swap [-window <number>] [up|down|left|right]
+2014-05-22 23:26:06		                 zoom[-window <number>]
+2014-05-22 23:26:06		manage windows
+2014-05-22 23:26:06		         list: list opened windows (without argument, this list is displayed)
+2014-05-22 23:26:06		           -1: jump to previous window
+2014-05-22 23:26:06		           +1: jump to next window
+2014-05-22 23:26:06		           b#: jump to next window displaying buffer number #
+2014-05-22 23:26:06		           up: switch to window above current one
+2014-05-22 23:26:06		         down: switch to window below current one
+2014-05-22 23:26:06		         left: switch to window on the left
+2014-05-22 23:26:06		        right: switch to window on the right
+2014-05-22 23:26:06		       number: window number (see /window list)
+2014-05-22 23:26:06		       splith: split current window horizontally
+2014-05-22 23:26:06		       splitv: split current window vertically
+2014-05-22 23:26:06		       resize: resize window size, new size is <pct> percentage of parent window
+2014-05-22 23:26:06		      balance: balance the sizes of all windows
+2014-05-22 23:26:06		        merge: merge window with another (all = keep only one window)
+2014-05-22 23:26:06		      page_up: scroll one page up
+2014-05-22 23:26:06		    page_down: scroll one page down
+2014-05-22 23:26:06		      refresh: refresh screen
+2014-05-22 23:26:06		       scroll: scroll a number of lines (+/-N) or with time: s=seconds, m=minutes, h=hours, d=days, M=months, y=years
+2014-05-22 23:26:06		 scroll_horiz: scroll horizontally a number of columns (+/-N) or percentage of window size (this scrolling is possible only on buffers with free content)
+2014-05-22 23:26:06		    scroll_up: scroll a few lines up
+2014-05-22 23:26:06		  scroll_down: scroll a few lines down
+2014-05-22 23:26:06		   scroll_top: scroll to top of buffer
+2014-05-22 23:26:06		scroll_bottom: scroll to bottom of buffer
+2014-05-22 23:26:06		scroll_beyond_end: scroll beyond the end of buffer
+2014-05-22 23:26:06		scroll_previous_highlight: scroll to previous highlight
+2014-05-22 23:26:06		scroll_next_highlight: scroll to next highlight
+2014-05-22 23:26:06		scroll_unread: scroll to unread marker
+2014-05-22 23:26:06		         swap: swap buffers of two windows (with optional direction for target window)
+2014-05-22 23:26:06		         zoom: zoom on window
+2014-05-22 23:26:06		For splith and splitv, pct is a percentage which represents size of new window, computed with current window as size reference. For example 25 means create a new window with size = current_size / 4
+2014-05-22 23:26:06		Examples:
+2014-05-22 23:26:06		  jump to window displaying buffer #1:
+2014-05-22 23:26:06		    /window b1
+2014-05-22 23:26:06		  scroll 2 lines up:
+2014-05-22 23:26:06		    /window scroll -2
+2014-05-22 23:26:06		  scroll 2 days up:
+2014-05-22 23:26:06		    /window scroll -2d
+2014-05-22 23:26:06		  scroll to beginning of current day:
+2014-05-22 23:26:06		    /window scroll -d
+2014-05-22 23:26:06		  zoom on window #2:
+2014-05-22 23:26:06		    /window zoom -window 2
+2014-05-22 23:26:38		Windows list:
+2014-05-22 23:26:38		[1] (0:0;225x51) 
+2014-05-22 23:27:26		List of aliases:
+2014-05-22 23:27:26		  AAWAY => allserv /away
+2014-05-22 23:27:26		  AME => allchan /me
+2014-05-22 23:27:26		  AMSG => allchan /msg *
+2014-05-22 23:27:26		  ANICK => allserv /nick
+2014-05-22 23:27:26		  BEEP => print -stderr \a
+2014-05-22 23:27:26		  BYE => quit
+2014-05-22 23:27:26		  C => buffer clear
+2014-05-22 23:27:26		  CHAT => dcc chat
+2014-05-22 23:27:26		  CL => /buffer close
+2014-05-22 23:27:26		  CLOSE => buffer close
+2014-05-22 23:27:26		  EXIT => quit
+2014-05-22 23:27:26		  IG => ignore
+2014-05-22 23:27:26		  J => join
+2014-05-22 23:27:26		  K => kick
+2014-05-22 23:27:26		  KB => kickban
+2014-05-22 23:27:26		  LEAVE => part
+2014-05-22 23:27:26		  M => msg
+2014-05-22 23:27:26		  MUB => unban *
+2014-05-22 23:27:26		  N => names
+2014-05-22 23:27:26		  Q => query
+2014-05-22 23:27:26		  REDRAW => window refresh
+2014-05-22 23:27:26		  SAY => msg *
+2014-05-22 23:27:26		  SIGNOFF => quit
+2014-05-22 23:27:26		  T => topic
+2014-05-22 23:27:26		  UB => unban
+2014-05-22 23:27:26		  UMODE => mode $nick
+2014-05-22 23:27:26		  V => command core version
+2014-05-22 23:27:26		  W => who
+2014-05-22 23:27:26		  WC => window merge
+2014-05-22 23:27:26		  WI => whois
+2014-05-22 23:27:26		  WII => whois $1 $1
+2014-05-22 23:27:26		  WW => whowas
+2014-05-22 23:30:28	=!=	Error: unknown command "scripts" (type /help for help)
+2014-05-22 23:30:35		perl: loading script "/home/jared/.weechat/perl/buffers.pl"
+2014-05-22 23:30:35		perl: registered script "buffers", version 4.6 (Sidebar with list of buffers)
+2014-05-22 23:30:35		New key binding (context "mouse"): @item(buffers):button2* => hsignal:buffers_mouse
+2014-05-22 23:30:35		New key binding (context "mouse"): @item(buffers):button1* => hsignal:buffers_mouse
+2014-05-22 23:31:02	=!=	Error with command "disconnect" (try /help disconnect)
+2014-05-22 23:31:10		[irc]  /disconnect  [<server>|-all|-pending [<reason>]]
+2014-05-22 23:31:10		disconnect from one or all IRC servers
+2014-05-22 23:31:10		  server: server name to disconnect
+2014-05-22 23:31:10		    -all: disconnect from all servers
+2014-05-22 23:31:10		-pending: cancel auto-reconnection on servers currently reconnecting
+2014-05-22 23:31:10		  reason: reason for quit
+2014-05-22 23:32:53	=!=	You can not write text in this buffer
+2014-05-22 23:32:59	=!=	irc: command "lusers" must be executed on irc buffer (server or channel)
+2014-05-22 23:34:25		irc: server irc.freenode.nret has been deleted
+2014-05-22 23:36:13		232 key bindings for context "default":
+2014-05-22 23:36:13		  ctrl-? => /input delete_previous_char
+2014-05-22 23:36:13		  ctrl-A => /input move_beginning_of_line
+2014-05-22 23:36:13		  ctrl-B => /input move_previous_char
+2014-05-22 23:36:13		  ctrl-C_ => /input insert \x1F
+2014-05-22 23:36:13		  ctrl-Cb => /input insert \x02
+2014-05-22 23:36:13		  ctrl-Cc => /input insert \x03
+2014-05-22 23:36:13		  ctrl-Ci => /input insert \x1D
+2014-05-22 23:36:13		  ctrl-Co => /input insert \x0F
+2014-05-22 23:36:13		  ctrl-Cv => /input insert \x16
+2014-05-22 23:36:13		  ctrl-D => /input delete_next_char
+2014-05-22 23:36:13		  ctrl-E => /input move_end_of_line
+2014-05-22 23:36:13		  ctrl-F => /input move_next_char
+2014-05-22 23:36:13		  ctrl-H => /input delete_previous_char
+2014-05-22 23:36:13		  ctrl-I => /input complete_next
+2014-05-22 23:36:13		  ctrl-J => /input return
+2014-05-22 23:36:13		  ctrl-K => /input delete_end_of_line
+2014-05-22 23:36:13		  ctrl-L => /window refresh
+2014-05-22 23:36:13		  ctrl-M => /input return
+2014-05-22 23:36:13		  ctrl-N => /buffer +1
+2014-05-22 23:36:13		  ctrl-P => /buffer -1
+2014-05-22 23:36:13		  ctrl-R => /input search_text
+2014-05-22 23:36:13		  ctrl-Sctrl-U => /input set_unread
+2014-05-22 23:36:13		  ctrl-T => /input transpose_chars
+2014-05-22 23:36:13		  ctrl-U => /input delete_beginning_of_line
+2014-05-22 23:36:13		  ctrl-W => /input delete_previous_word
+2014-05-22 23:36:13		  ctrl-X => /input switch_active_buffer
+2014-05-22 23:36:13		  ctrl-Y => /input clipboard_paste
+2014-05-22 23:36:13		  meta-meta2-1~ => /window scroll_top
+2014-05-22 23:36:13		  meta-meta2-23~ => /bar scroll nicklist * b
+2014-05-22 23:36:13		  meta-meta2-24~ => /bar scroll nicklist * e
+2014-05-22 23:36:13		  meta-meta2-4~ => /window scroll_bottom
+2014-05-22 23:36:13		  meta-meta2-5~ => /window scroll_up
+2014-05-22 23:36:13		  meta-meta2-6~ => /window scroll_down
+2014-05-22 23:36:13		  meta-meta2-7~ => /window scroll_top
+2014-05-22 23:36:13		  meta-meta2-8~ => /window scroll_bottom
+2014-05-22 23:36:13		  meta-meta2-A => /buffer -1
+2014-05-22 23:36:13		  meta-meta2-B => /buffer +1
+2014-05-22 23:36:13		  meta-meta2-C => /buffer +1
+2014-05-22 23:36:13		  meta-meta2-D => /buffer -1
+2014-05-22 23:36:13		  meta-/ => /input jump_last_buffer_displayed
+2014-05-22 23:36:13		  meta-0 => /buffer *10
+2014-05-22 23:36:13		  meta-1 => /buffer *1
+2014-05-22 23:36:13		  meta-2 => /buffer *2
+2014-05-22 23:36:13		  meta-3 => /buffer *3
+2014-05-22 23:36:13		  meta-4 => /buffer *4
+2014-05-22 23:36:13		  meta-5 => /buffer *5
+2014-05-22 23:36:13		  meta-6 => /buffer *6
+2014-05-22 23:36:13		  meta-7 => /buffer *7
+2014-05-22 23:36:13		  meta-8 => /buffer *8
+2014-05-22 23:36:13		  meta-9 => /buffer *9
+2014-05-22 23:36:13		  meta-< => /input jump_previously_visited_buffer
+2014-05-22 23:36:13		  meta-= => /filter toggle
+2014-05-22 23:36:13		  meta-> => /input jump_next_visited_buffer
+2014-05-22 23:36:13		  meta-OA => /input history_global_previous
+2014-05-22 23:36:13		  meta-OB => /input history_global_next
+2014-05-22 23:36:13		  meta-OC => /input move_next_word
+2014-05-22 23:36:13		  meta-OD => /input move_previous_word
+2014-05-22 23:36:13		  meta-OF => /input move_end_of_line
+2014-05-22 23:36:13		  meta-OH => /input move_beginning_of_line
+2014-05-22 23:36:13		  meta-Oa => /input history_global_previous
+2014-05-22 23:36:13		  meta-Ob => /input history_global_next
+2014-05-22 23:36:13		  meta-Oc => /input move_next_word
+2014-05-22 23:36:13		  meta-Od => /input move_previous_word
+2014-05-22 23:36:13		  meta2-15~ => /buffer -1
+2014-05-22 23:36:13		  meta2-17~ => /buffer +1
+2014-05-22 23:36:13		  meta2-18~ => /window -1
+2014-05-22 23:36:13		  meta2-19~ => /window +1
+2014-05-22 23:36:13		  meta2-1;3A => /buffer -1
+2014-05-22 23:36:13		  meta2-1;3B => /buffer +1
+2014-05-22 23:36:13		  meta2-1;3C => /buffer +1
+2014-05-22 23:36:13		  meta2-1;3D => /buffer -1
+2014-05-22 23:36:13		  meta2-1;3F => /window scroll_bottom
+2014-05-22 23:36:13		  meta2-1;3H => /window scroll_top
+2014-05-22 23:36:13		  meta2-1;5A => /input history_global_previous
+2014-05-22 23:36:13		  meta2-1;5B => /input history_global_next
+2014-05-22 23:36:13		  meta2-1;5C => /input move_next_word
+2014-05-22 23:36:13		  meta2-1;5D => /input move_previous_word
+2014-05-22 23:36:13		  meta2-1~ => /input move_beginning_of_line
+2014-05-22 23:36:13		  meta2-200~ => /input paste_start
+2014-05-22 23:36:13		  meta2-201~ => /input paste_stop
+2014-05-22 23:36:13		  meta2-20~ => /bar scroll title * -30%
+2014-05-22 23:36:13		  meta2-21~ => /bar scroll title * +30%
+2014-05-22 23:36:13		  meta2-23;3~ => /bar scroll nicklist * b
+2014-05-22 23:36:13		  meta2-23~ => /bar scroll nicklist * -100%
+2014-05-22 23:36:13		  meta2-24;3~ => /bar scroll nicklist * e
+2014-05-22 23:36:13		  meta2-24~ => /bar scroll nicklist * +100%
+2014-05-22 23:36:13		  meta2-3~ => /input delete_next_char
+2014-05-22 23:36:13		  meta2-4~ => /input move_end_of_line
+2014-05-22 23:36:13		  meta2-5;3~ => /window scroll_up
+2014-05-22 23:36:13		  meta2-5~ => /window page_up
+2014-05-22 23:36:13		  meta2-6;3~ => /window scroll_down
+2014-05-22 23:36:13		  meta2-6~ => /window page_down
+2014-05-22 23:36:13		  meta2-7~ => /input move_beginning_of_line
+2014-05-22 23:36:13		  meta2-8~ => /input move_end_of_line
+2014-05-22 23:36:13		  meta2-A => /input history_previous
+2014-05-22 23:36:13		  meta2-B => /input history_next
+2014-05-22 23:36:13		  meta2-C => /input move_next_char
+2014-05-22 23:36:13		  meta2-D => /input move_previous_char
+2014-05-22 23:36:13		  meta2-F => /input move_end_of_line
+2014-05-22 23:36:13		  meta2-G => /window page_down
+2014-05-22 23:36:13		  meta2-H => /input move_beginning_of_line
+2014-05-22 23:36:13		  meta2-I => /window page_up
+2014-05-22 23:36:13		  meta2-Z => /input complete_previous
+2014-05-22 23:36:13		  meta2-[E => /buffer -1
+2014-05-22 23:36:13		  meta-_ => /input redo
+2014-05-22 23:36:13		  meta-a => /input jump_smart
+2014-05-22 23:36:13		  meta-b => /input move_previous_word
+2014-05-22 23:36:13		  meta-d => /input delete_next_word
+2014-05-22 23:36:13		  meta-f => /input move_next_word
+2014-05-22 23:36:13		  meta-h => /input hotlist_clear
+2014-05-22 23:36:13		  meta-jmeta-l => /input jump_last_buffer
+2014-05-22 23:36:13		  meta-jmeta-r => /server raw
+2014-05-22 23:36:13		  meta-jmeta-s => /server jump
+2014-05-22 23:36:13		  meta-j01 => /buffer 1
+2014-05-22 23:36:13		  meta-j02 => /buffer 2
+2014-05-22 23:36:13		  meta-j03 => /buffer 3
+2014-05-22 23:36:13		  meta-j04 => /buffer 4
+2014-05-22 23:36:13		  meta-j05 => /buffer 5
+2014-05-22 23:36:13		  meta-j06 => /buffer 6
+2014-05-22 23:36:13		  meta-j07 => /buffer 7
+2014-05-22 23:36:13		  meta-j08 => /buffer 8
+2014-05-22 23:36:13		  meta-j09 => /buffer 9
+2014-05-22 23:36:13		  meta-j10 => /buffer 10
+2014-05-22 23:36:13		  meta-j11 => /buffer 11
+2014-05-22 23:36:13		  meta-j12 => /buffer 12
+2014-05-22 23:36:13		  meta-j13 => /buffer 13
+2014-05-22 23:36:13		  meta-j14 => /buffer 14
+2014-05-22 23:36:13		  meta-j15 => /buffer 15
+2014-05-22 23:36:13		  meta-j16 => /buffer 16
+2014-05-22 23:36:13		  meta-j17 => /buffer 17
+2014-05-22 23:36:13		  meta-j18 => /buffer 18
+2014-05-22 23:36:13		  meta-j19 => /buffer 19
+2014-05-22 23:36:13		  meta-j20 => /buffer 20
+2014-05-22 23:36:13		  meta-j21 => /buffer 21
+2014-05-22 23:36:13		  meta-j22 => /buffer 22
+2014-05-22 23:36:13		  meta-j23 => /buffer 23
+2014-05-22 23:36:13		  meta-j24 => /buffer 24
+2014-05-22 23:36:13		  meta-j25 => /buffer 25
+2014-05-22 23:36:13		  meta-j26 => /buffer 26
+2014-05-22 23:36:13		  meta-j27 => /buffer 27
+2014-05-22 23:36:13		  meta-j28 => /buffer 28
+2014-05-22 23:36:13		  meta-j29 => /buffer 29
+2014-05-22 23:36:13		  meta-j30 => /buffer 30
+2014-05-22 23:36:13		  meta-j31 => /buffer 31
+2014-05-22 23:36:13		  meta-j32 => /buffer 32
+2014-05-22 23:36:13		  meta-j33 => /buffer 33
+2014-05-22 23:36:13		  meta-j34 => /buffer 34
+2014-05-22 23:36:13		  meta-j35 => /buffer 35
+2014-05-22 23:36:13		  meta-j36 => /buffer 36
+2014-05-22 23:36:13		  meta-j37 => /buffer 37
+2014-05-22 23:36:13		  meta-j38 => /buffer 38
+2014-05-22 23:36:13		  meta-j39 => /buffer 39
+2014-05-22 23:36:13		  meta-j40 => /buffer 40
+2014-05-22 23:36:13		  meta-j41 => /buffer 41
+2014-05-22 23:36:13		  meta-j42 => /buffer 42
+2014-05-22 23:36:13		  meta-j43 => /buffer 43
+2014-05-22 23:36:13		  meta-j44 => /buffer 44
+2014-05-22 23:36:13		  meta-j45 => /buffer 45
+2014-05-22 23:36:13		  meta-j46 => /buffer 46
+2014-05-22 23:36:13		  meta-j47 => /buffer 47
+2014-05-22 23:36:13		  meta-j48 => /buffer 48
+2014-05-22 23:36:13		  meta-j49 => /buffer 49
+2014-05-22 23:36:13		  meta-j50 => /buffer 50
+2014-05-22 23:36:13		  meta-j51 => /buffer 51
+2014-05-22 23:36:13		  meta-j52 => /buffer 52
+2014-05-22 23:36:13		  meta-j53 => /buffer 53
+2014-05-22 23:36:13		  meta-j54 => /buffer 54
+2014-05-22 23:36:13		  meta-j55 => /buffer 55
+2014-05-22 23:36:13		  meta-j56 => /buffer 56
+2014-05-22 23:36:13		  meta-j57 => /buffer 57
+2014-05-22 23:36:13		  meta-j58 => /buffer 58
+2014-05-22 23:36:13		  meta-j59 => /buffer 59
+2014-05-22 23:36:13		  meta-j60 => /buffer 60
+2014-05-22 23:36:13		  meta-j61 => /buffer 61
+2014-05-22 23:36:13		  meta-j62 => /buffer 62
+2014-05-22 23:36:13		  meta-j63 => /buffer 63
+2014-05-22 23:36:13		  meta-j64 => /buffer 64
+2014-05-22 23:36:13		  meta-j65 => /buffer 65
+2014-05-22 23:36:13		  meta-j66 => /buffer 66
+2014-05-22 23:36:13		  meta-j67 => /buffer 67
+2014-05-22 23:36:13		  meta-j68 => /buffer 68
+2014-05-22 23:36:13		  meta-j69 => /buffer 69
+2014-05-22 23:36:13		  meta-j70 => /buffer 70
+2014-05-22 23:36:13		  meta-j71 => /buffer 71
+2014-05-22 23:36:13		  meta-j72 => /buffer 72
+2014-05-22 23:36:13		  meta-j73 => /buffer 73
+2014-05-22 23:36:13		  meta-j74 => /buffer 74
+2014-05-22 23:36:13		  meta-j75 => /buffer 75
+2014-05-22 23:36:13		  meta-j76 => /buffer 76
+2014-05-22 23:36:13		  meta-j77 => /buffer 77
+2014-05-22 23:36:13		  meta-j78 => /buffer 78
+2014-05-22 23:36:13		  meta-j79 => /buffer 79
+2014-05-22 23:36:13		  meta-j80 => /buffer 80
+2014-05-22 23:36:13		  meta-j81 => /buffer 81
+2014-05-22 23:36:13		  meta-j82 => /buffer 82
+2014-05-22 23:36:13		  meta-j83 => /buffer 83
+2014-05-22 23:36:13		  meta-j84 => /buffer 84
+2014-05-22 23:36:13		  meta-j85 => /buffer 85
+2014-05-22 23:36:13		  meta-j86 => /buffer 86
+2014-05-22 23:36:13		  meta-j87 => /buffer 87
+2014-05-22 23:36:13		  meta-j88 => /buffer 88
+2014-05-22 23:36:13		  meta-j89 => /buffer 89
+2014-05-22 23:36:13		  meta-j90 => /buffer 90
+2014-05-22 23:36:13		  meta-j91 => /buffer 91
+2014-05-22 23:36:13		  meta-j92 => /buffer 92
+2014-05-22 23:36:13		  meta-j93 => /buffer 93
+2014-05-22 23:36:13		  meta-j94 => /buffer 94
+2014-05-22 23:36:13		  meta-j95 => /buffer 95
+2014-05-22 23:36:13		  meta-j96 => /buffer 96
+2014-05-22 23:36:13		  meta-j97 => /buffer 97
+2014-05-22 23:36:13		  meta-j98 => /buffer 98
+2014-05-22 23:36:13		  meta-j99 => /buffer 99
+2014-05-22 23:36:13		  meta-k => /input grab_key_command
+2014-05-22 23:36:13		  meta-m => /mute mouse toggle
+2014-05-22 23:36:13		  meta-n => /window scroll_next_highlight
+2014-05-22 23:36:13		  meta-p => /window scroll_previous_highlight
+2014-05-22 23:36:13		  meta-r => /input delete_line
+2014-05-22 23:36:13		  meta-s => /mute aspell toggle
+2014-05-22 23:36:13		  meta-u => /window scroll_unread
+2014-05-22 23:36:13		  meta-wmeta-meta2-A => /window up
+2014-05-22 23:36:13		  meta-wmeta-meta2-B => /window down
+2014-05-22 23:36:13		  meta-wmeta-meta2-C => /window right
+2014-05-22 23:36:13		  meta-wmeta-meta2-D => /window left
+2014-05-22 23:36:13		  meta-wmeta2-1;3A => /window up
+2014-05-22 23:36:13		  meta-wmeta2-1;3B => /window down
+2014-05-22 23:36:13		  meta-wmeta2-1;3C => /window right
+2014-05-22 23:36:13		  meta-wmeta2-1;3D => /window left
+2014-05-22 23:36:13		  meta-wmeta-b => /window balance
+2014-05-22 23:36:13		  meta-wmeta-s => /window swap
+2014-05-22 23:36:13		  meta-x => /input zoom_merged_buffer
+2014-05-22 23:36:13		  meta-z => /window zoom
+2014-05-22 23:36:13		  ctrl-_ => /input undo
+2014-05-22 23:36:13		7 key bindings for context "search":
+2014-05-22 23:36:13		  ctrl-I => /input search_switch_where
+2014-05-22 23:36:13		  ctrl-J => /input search_stop
+2014-05-22 23:36:13		  ctrl-M => /input search_stop
+2014-05-22 23:36:13		  ctrl-R => /input search_switch_regex
+2014-05-22 23:36:13		  meta2-A => /input search_previous
+2014-05-22 23:36:13		  meta2-B => /input search_next
+2014-05-22 23:36:13		  meta-c => /input search_switch_case
+2014-05-22 23:36:13		22 key bindings for context "cursor":
+2014-05-22 23:36:13		  ctrl-J => /cursor stop
+2014-05-22 23:36:13		  ctrl-M => /cursor stop
+2014-05-22 23:36:13		  meta-meta2-A => /cursor move area_up
+2014-05-22 23:36:13		  meta-meta2-B => /cursor move area_down
+2014-05-22 23:36:13		  meta-meta2-C => /cursor move area_right
+2014-05-22 23:36:13		  meta-meta2-D => /cursor move area_left
+2014-05-22 23:36:13		  meta2-1;3A => /cursor move area_up
+2014-05-22 23:36:13		  meta2-1;3B => /cursor move area_down
+2014-05-22 23:36:13		  meta2-1;3C => /cursor move area_right
+2014-05-22 23:36:13		  meta2-1;3D => /cursor move area_left
+2014-05-22 23:36:13		  meta2-A => /cursor move up
+2014-05-22 23:36:13		  meta2-B => /cursor move down
+2014-05-22 23:36:13		  meta2-C => /cursor move right
+2014-05-22 23:36:13		  meta2-D => /cursor move left
+2014-05-22 23:36:13		  @item(buffer_nicklist):K => /window ${_window_number};/kickban ${nick}
+2014-05-22 23:36:13		  @item(buffer_nicklist):b => /window ${_window_number};/ban ${nick}
+2014-05-22 23:36:13		  @item(buffer_nicklist):k => /window ${_window_number};/kick ${nick}
+2014-05-22 23:36:13		  @item(buffer_nicklist):q => /window ${_window_number};/query ${nick};/cursor stop
+2014-05-22 23:36:13		  @item(buffer_nicklist):w => /window ${_window_number};/whois ${nick}
+2014-05-22 23:36:13		  @chat:Q => hsignal:chat_quote_time_prefix_message;/cursor stop
+2014-05-22 23:36:13		  @chat:m => hsignal:chat_quote_message;/cursor stop
+2014-05-22 23:36:13		  @chat:q => hsignal:chat_quote_prefix_message;/cursor stop
+2014-05-22 23:36:13		32 key bindings for context "mouse":
+2014-05-22 23:36:13		  @bar(input):button2 => /input grab_mouse_area
+2014-05-22 23:36:13		  @bar(nicklist):button1-gesture-down => /bar scroll nicklist ${_window_number} +100%
+2014-05-22 23:36:13		  @bar(nicklist):button1-gesture-down-long => /bar scroll nicklist ${_window_number} e
+2014-05-22 23:36:13		  @bar(nicklist):button1-gesture-up => /bar scroll nicklist ${_window_number} -100%
+2014-05-22 23:36:13		  @bar(nicklist):button1-gesture-up-long => /bar scroll nicklist ${_window_number} b
+2014-05-22 23:36:13		  @chat(perl.iset):button1 => hsignal:iset_mouse
+2014-05-22 23:36:13		  @chat(perl.iset):button2* => hsignal:iset_mouse
+2014-05-22 23:36:13		  @chat(perl.iset):wheeldown => /repeat 5 /iset **down
+2014-05-22 23:36:13		  @chat(perl.iset):wheelup => /repeat 5 /iset **up
+2014-05-22 23:36:13		  @chat(script.scripts):button1 => /window ${_window_number};/script go ${_chat_line_y}
+2014-05-22 23:36:13		  @chat(script.scripts):button2 => /window ${_window_number};/script go ${_chat_line_y};/script installremove -q ${script_name_with_extension}
+2014-05-22 23:36:13		  @chat(script.scripts):wheeldown => /script down 5
+2014-05-22 23:36:13		  @chat(script.scripts):wheelup => /script up 5
+2014-05-22 23:36:13		  @item(buffer_nicklist):button1 => /window ${_window_number};/query ${nick}
+2014-05-22 23:36:13		  @item(buffer_nicklist):button1-gesture-left => /window ${_window_number};/kick ${nick}
+2014-05-22 23:36:13		  @item(buffer_nicklist):button1-gesture-left-long => /window ${_window_number};/kickban ${nick}
+2014-05-22 23:36:13		  @item(buffer_nicklist):button2 => /window ${_window_number};/whois ${nick}
+2014-05-22 23:36:13		  @item(buffer_nicklist):button2-gesture-left => /window ${_window_number};/ban ${nick}
+2014-05-22 23:36:13		  @item(buffers):button1* => hsignal:buffers_mouse
+2014-05-22 23:36:13		  @item(buffers):button2* => hsignal:buffers_mouse
+2014-05-22 23:36:13		  @bar:wheeldown => /bar scroll ${_bar_name} ${_window_number} +20%
+2014-05-22 23:36:13		  @bar:wheelup => /bar scroll ${_bar_name} ${_window_number} -20%
+2014-05-22 23:36:13		  @chat:button1 => /window ${_window_number}
+2014-05-22 23:36:13		  @chat:button1-gesture-left => /window ${_window_number};/buffer -1
+2014-05-22 23:36:13		  @chat:button1-gesture-left-long => /window ${_window_number};/buffer 1
+2014-05-22 23:36:13		  @chat:button1-gesture-right => /window ${_window_number};/buffer +1
+2014-05-22 23:36:13		  @chat:button1-gesture-right-long => /window ${_window_number};/input jump_last_buffer
+2014-05-22 23:36:13		  @chat:ctrl-wheeldown => /window scroll_horiz -window ${_window_number} +10%
+2014-05-22 23:36:13		  @chat:ctrl-wheelup => /window scroll_horiz -window ${_window_number} -10%
+2014-05-22 23:36:13		  @chat:wheeldown => /window scroll_down -window ${_window_number}
+2014-05-22 23:36:13		  @chat:wheelup => /window scroll_up -window ${_window_number}
+2014-05-22 23:36:13		  @*:button3 => /cursor go ${_x},${_y}
+2014-05-22 23:38:51		[core]  /window  list
+2014-05-22 23:38:51		                 -1|+1|b#|up|down|left|right [-window <number>]
+2014-05-22 23:38:51		                 <number>
+2014-05-22 23:38:51		                 splith|splitv [-window <number>] [<pct>]
+2014-05-22 23:38:51		                 resize [-window <number>] [+/-]<pct>
+2014-05-22 23:38:51		                 balance
+2014-05-22 23:38:51		                 merge [-window <number>] [all]
+2014-05-22 23:38:51		                 page_up|page_down [-window <number>]
+2014-05-22 23:38:51		                 refresh
+2014-05-22 23:38:51		                 scroll [-window <number>] [+/-]<value>[s|m|h|d|M|y]
+2014-05-22 23:38:51		                 scroll_horiz [-window <number>] [+/-]<value>[%]
+2014-05-22 23:38:51		                 scroll_up|scroll_down|scroll_top|scroll_bottom|scroll_beyond_end|scroll_previous_highlight|scroll_next_highlight|scroll_unread [-window <number>]
+2014-05-22 23:38:51		                 swap [-window <number>] [up|down|left|right]
+2014-05-22 23:38:51		                 zoom[-window <number>]
+2014-05-22 23:38:51		manage windows
+2014-05-22 23:38:51		         list: list opened windows (without argument, this list is displayed)
+2014-05-22 23:38:51		           -1: jump to previous window
+2014-05-22 23:38:51		           +1: jump to next window
+2014-05-22 23:38:51		           b#: jump to next window displaying buffer number #
+2014-05-22 23:38:51		           up: switch to window above current one
+2014-05-22 23:38:51		         down: switch to window below current one
+2014-05-22 23:38:51		         left: switch to window on the left
+2014-05-22 23:38:51		        right: switch to window on the right
+2014-05-22 23:38:51		       number: window number (see /window list)
+2014-05-22 23:38:51		       splith: split current window horizontally
+2014-05-22 23:38:51		       splitv: split current window vertically
+2014-05-22 23:38:51		       resize: resize window size, new size is <pct> percentage of parent window
+2014-05-22 23:38:51		      balance: balance the sizes of all windows
+2014-05-22 23:38:51		        merge: merge window with another (all = keep only one window)
+2014-05-22 23:38:51		      page_up: scroll one page up
+2014-05-22 23:38:51		    page_down: scroll one page down
+2014-05-22 23:38:51		      refresh: refresh screen
+2014-05-22 23:38:51		       scroll: scroll a number of lines (+/-N) or with time: s=seconds, m=minutes, h=hours, d=days, M=months, y=years
+2014-05-22 23:38:51		 scroll_horiz: scroll horizontally a number of columns (+/-N) or percentage of window size (this scrolling is possible only on buffers with free content)
+2014-05-22 23:38:51		    scroll_up: scroll a few lines up
+2014-05-22 23:38:51		  scroll_down: scroll a few lines down
+2014-05-22 23:38:51		   scroll_top: scroll to top of buffer
+2014-05-22 23:38:51		scroll_bottom: scroll to bottom of buffer
+2014-05-22 23:38:51		scroll_beyond_end: scroll beyond the end of buffer
+2014-05-22 23:38:51		scroll_previous_highlight: scroll to previous highlight
+2014-05-22 23:38:51		scroll_next_highlight: scroll to next highlight
+2014-05-22 23:38:51		scroll_unread: scroll to unread marker
+2014-05-22 23:38:51		         swap: swap buffers of two windows (with optional direction for target window)
+2014-05-22 23:38:51		         zoom: zoom on window
+2014-05-22 23:38:51		For splith and splitv, pct is a percentage which represents size of new window, computed with current window as size reference. For example 25 means create a new window with size = current_size / 4
+2014-05-22 23:38:51		Examples:
+2014-05-22 23:38:51		  jump to window displaying buffer #1:
+2014-05-22 23:38:51		    /window b1
+2014-05-22 23:38:51		  scroll 2 lines up:
+2014-05-22 23:38:51		    /window scroll -2
+2014-05-22 23:38:51		  scroll 2 days up:
+2014-05-22 23:38:51		    /window scroll -2d
+2014-05-22 23:38:51		  scroll to beginning of current day:
+2014-05-22 23:38:51		    /window scroll -d
+2014-05-22 23:38:51		  zoom on window #2:
+2014-05-22 23:38:51		    /window zoom -window 2
+2014-05-22 23:39:37		New key binding (context "default"): meta-j => /window -1
+2014-05-22 23:40:14		Key "meta-j" unbound (context: "default")
+2014-05-22 23:40:34		Key "meta-h" unbound (context: "default")
+2014-05-22 23:40:34		New key binding (context "default"): meta-h => /window -1
+2014-05-22 23:40:50		New key binding (context "default"): meta-l => /window +1
+2014-05-22 23:41:35		New key binding (context "default"): meta-ctrl-I => /input grab_key_command
+2014-05-22 23:42:04		[core]  /buffer  list
+2014-05-22 23:42:04		                 clear [<number>|<name>|-merged|-all]
+2014-05-22 23:42:04		                 move|merge <number>
+2014-05-22 23:42:04		                 swap <number1>|<name1> [<number2>|<name2>]
+2014-05-22 23:42:04		                 unmerge [<number>|-all]
+2014-05-22 23:42:04		                 renumber [<number1> [<number2> [<start>]]]
+2014-05-22 23:42:04		                 close [<n1>[-<n2>]|<name>]
+2014-05-22 23:42:04		                 notify <level>
+2014-05-22 23:42:04		                 localvar
+2014-05-22 23:42:04		                 set <property> <value>
+2014-05-22 23:42:04		                 get <property>
+2014-05-22 23:42:04		                 <number>|<name>
+2014-05-22 23:42:04		manage buffers
+2014-05-22 23:42:04		    list: list buffers (without argument, this list is displayed)
+2014-05-22 23:42:04		   clear: clear buffer content (number for a buffer, -merged for merged buffers, -all for all buffers, or nothing for current buffer)
+2014-05-22 23:42:04		    move: move buffer in the list (may be relative, for example -1)
+2014-05-22 23:42:04		    swap: swap two buffers (swap with current buffer if only one number/name given)
+2014-05-22 23:42:04		   merge: merge current buffer to another buffer (chat area will be mix of both buffers)
+2014-05-22 23:42:04		          (by default ctrl-x switches between merged buffers)
+2014-05-22 23:42:04		 unmerge: unmerge buffer from other buffers which have same number
+2014-05-22 23:42:04		renumber: renumber buffers (works only if option weechat.look.buffer_auto_renumber is off)
+2014-05-22 23:42:04		   close: close buffer (number/range or name is optional)
+2014-05-22 23:42:04		  notify: set notify level for current buffer: this level determines whether buffer will be added to hotlist or not:
+2014-05-22 23:42:04		               none: never
+2014-05-22 23:42:04		          highlight: for highlights only
+2014-05-22 23:42:04		            message: for messages from users + highlights
+2014-05-22 23:42:04		                all: all messages
+2014-05-22 23:42:04		              reset: reset to default value (all)
+2014-05-22 23:42:04		localvar: display local variables for current buffer
+2014-05-22 23:42:04		     set: set a property for current buffer
+2014-05-22 23:42:04		     get: display a property of current buffer
+2014-05-22 23:42:04		  number: jump to buffer by number, possible prefix:
+2014-05-22 23:42:04		          '+': relative jump, add number to current
+2014-05-22 23:42:04		          '-': relative jump, sub number to current
+2014-05-22 23:42:04		          '*': jump to number, using option "weechat.look.jump_current_to_previous_buffer"
+2014-05-22 23:42:04		    name: jump to buffer by (partial) name
+2014-05-22 23:42:04		Examples:
+2014-05-22 23:42:04		  clear current buffer:
+2014-05-22 23:42:04		    /buffer clear
+2014-05-22 23:42:04		  move buffer to number 5:
+2014-05-22 23:42:04		    /buffer move 5
+2014-05-22 23:42:04		  swap buffer 1 with 3:
+2014-05-22 23:42:04		    /buffer swap 1 3
+2014-05-22 23:42:04		  swap buffer #weechat with current buffer:
+2014-05-22 23:42:04		    /buffer swap #weechat
+2014-05-22 23:42:04		  merge with core buffer:
+2014-05-22 23:42:04		    /buffer merge 1
+2014-05-22 23:42:04		  unmerge buffer:
+2014-05-22 23:42:04		    /buffer unmerge
+2014-05-22 23:42:04		  close current buffer:
+2014-05-22 23:42:04		    /buffer close
+2014-05-22 23:42:04		  close buffers 5 to 7:
+2014-05-22 23:42:04		    /buffer close 5-7
+2014-05-22 23:42:04		  jump to #weechat:
+2014-05-22 23:42:04		    /buffer #weechat
+2014-05-22 23:42:04		  jump to next buffer:
+2014-05-22 23:42:04		    /buffer +1
+2014-05-22 23:43:27		New key binding (context "default"): meta-j => /buffer -1
+2014-05-22 23:43:42		Key "meta-k" unbound (context: "default")
+2014-05-22 23:43:42		New key binding (context "default"): meta-k => /buffer +1
+2014-05-22 23:44:03		New key binding (context "default"): meta-K => /buffer move +1
+2014-05-22 23:44:17		New key binding (context "default"): meta-J => /buffer move -1
+2014-05-22 23:44:22		Options saved to sec.conf
+2014-05-22 23:44:22		Options saved to weechat.conf
+2014-05-22 23:44:22		Options saved to plugins.conf
+2014-05-22 23:44:22		Options saved to irc.conf
+2014-05-22 23:44:22		Options saved to alias.conf
+2014-05-22 23:44:22		Options saved to charset.conf
+2014-05-22 23:44:22		Options saved to rmodifier.conf
+2014-05-22 23:44:22		Options saved to script.conf
+2014-05-22 23:44:22		Options saved to relay.conf
+2014-05-22 23:44:22		Options saved to aspell.conf
+2014-05-22 23:44:22		Options saved to logger.conf
+2014-05-22 23:44:22		Options saved to xfer.conf
+2014-05-22 23:44:22		Options saved to iset.conf
+2014-05-22 23:44:22		Options saved to buffers.conf
+2014-05-22 23:44:39	=!=	Error: buffer number 0 is out of range (it must be between 1 and 2147473647)
+2014-05-22 23:44:49	=!=	Error: buffer number 0 is out of range (it must be between 1 and 2147473647)
+2014-05-22 23:45:36	=!=	Error: unknown option for "window" command
+2014-05-22 23:46:04		[core]  /window  list
+2014-05-22 23:46:04		                 -1|+1|b#|up|down|left|right [-window <number>]
+2014-05-22 23:46:04		                 <number>
+2014-05-22 23:46:04		                 splith|splitv [-window <number>] [<pct>]
+2014-05-22 23:46:04		                 resize [-window <number>] [+/-]<pct>
+2014-05-22 23:46:04		                 balance
+2014-05-22 23:46:04		                 merge [-window <number>] [all]
+2014-05-22 23:46:04		                 page_up|page_down [-window <number>]
+2014-05-22 23:46:04		                 refresh
+2014-05-22 23:46:04		                 scroll [-window <number>] [+/-]<value>[s|m|h|d|M|y]
+2014-05-22 23:46:04		                 scroll_horiz [-window <number>] [+/-]<value>[%]
+2014-05-22 23:46:04		                 scroll_up|scroll_down|scroll_top|scroll_bottom|scroll_beyond_end|scroll_previous_highlight|scroll_next_highlight|scroll_unread [-window <number>]
+2014-05-22 23:46:04		                 swap [-window <number>] [up|down|left|right]
+2014-05-22 23:46:04		                 zoom[-window <number>]
+2014-05-22 23:46:04		manage windows
+2014-05-22 23:46:04		         list: list opened windows (without argument, this list is displayed)
+2014-05-22 23:46:04		           -1: jump to previous window
+2014-05-22 23:46:04		           +1: jump to next window
+2014-05-22 23:46:04		           b#: jump to next window displaying buffer number #
+2014-05-22 23:46:04		           up: switch to window above current one
+2014-05-22 23:46:04		         down: switch to window below current one
+2014-05-22 23:46:04		         left: switch to window on the left
+2014-05-22 23:46:04		        right: switch to window on the right
+2014-05-22 23:46:04		       number: window number (see /window list)
+2014-05-22 23:46:04		       splith: split current window horizontally
+2014-05-22 23:46:04		       splitv: split current window vertically
+2014-05-22 23:46:04		       resize: resize window size, new size is <pct> percentage of parent window
+2014-05-22 23:46:04		      balance: balance the sizes of all windows
+2014-05-22 23:46:04		        merge: merge window with another (all = keep only one window)
+2014-05-22 23:46:04		      page_up: scroll one page up
+2014-05-22 23:46:04		    page_down: scroll one page down
+2014-05-22 23:46:04		      refresh: refresh screen
+2014-05-22 23:46:04		       scroll: scroll a number of lines (+/-N) or with time: s=seconds, m=minutes, h=hours, d=days, M=months, y=years
+2014-05-22 23:46:04		 scroll_horiz: scroll horizontally a number of columns (+/-N) or percentage of window size (this scrolling is possible only on buffers with free content)
+2014-05-22 23:46:04		    scroll_up: scroll a few lines up
+2014-05-22 23:46:04		  scroll_down: scroll a few lines down
+2014-05-22 23:46:04		   scroll_top: scroll to top of buffer
+2014-05-22 23:46:04		scroll_bottom: scroll to bottom of buffer
+2014-05-22 23:46:04		scroll_beyond_end: scroll beyond the end of buffer
+2014-05-22 23:46:04		scroll_previous_highlight: scroll to previous highlight
+2014-05-22 23:46:04		scroll_next_highlight: scroll to next highlight
+2014-05-22 23:46:04		scroll_unread: scroll to unread marker
+2014-05-22 23:46:04		         swap: swap buffers of two windows (with optional direction for target window)
+2014-05-22 23:46:04		         zoom: zoom on window
+2014-05-22 23:46:04		For splith and splitv, pct is a percentage which represents size of new window, computed with current window as size reference. For example 25 means create a new window with size = current_size / 4
+2014-05-22 23:46:04		Examples:
+2014-05-22 23:46:04		  jump to window displaying buffer #1:
+2014-05-22 23:46:04		    /window b1
+2014-05-22 23:46:04		  scroll 2 lines up:
+2014-05-22 23:46:04		    /window scroll -2
+2014-05-22 23:46:04		  scroll 2 days up:
+2014-05-22 23:46:04		    /window scroll -2d
+2014-05-22 23:46:04		  scroll to beginning of current day:
+2014-05-22 23:46:04		    /window scroll -d
+2014-05-22 23:46:04		  zoom on window #2:
+2014-05-22 23:46:04		    /window zoom -window 2
+2014-05-22 23:47:16	=!=	irc: command "nick" must be executed on irc buffer (server or channel)
+2014-05-22 23:54:02		Option changed: weechat.bar.status.color_bg = black  (default: blue)
+2014-05-22 23:54:31		[bar] (weechat.conf)
+2014-05-22 23:54:31		  weechat.bar.status.color_bg = black  (default: blue)
+2014-05-22 23:54:31		1 option (matching with "weechat.bar.status.color_bg")
+2014-05-22 23:54:51	=!=	Error: failed to set option "weechat.bar.status.color_bg"
+2014-05-22 23:55:05		Option changed: weechat.bar.status.color_bg = gray  (default: blue)
+2014-05-22 23:55:14		Option changed: weechat.bar.status.color_bg = white  (default: blue)
+2014-05-22 23:55:52		Option changed: weechat.bar.status.color_bg = default  (default: blue)
+2014-05-23 00:19:34	=!=	Error: can not merge windows, there's no other window with same size near current one
+2014-05-23 00:26:29	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-05-23 00:26:29	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-05-23 00:26:29		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, script, xfer
+2014-05-23 00:26:30		script: 279 scripts for WeeChat 0.4.3
+2014-05-23 00:26:36		Scripts loaded:
+2014-05-23 00:26:36		 * ia   buffers.pl 4.6 (Sidebar with list of buffers)
+2014-05-23 00:26:36		 * ia   iset.pl 3.4 (Interactive Set for configuration options)
+2014-05-25 21:40:05	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-05-25 21:40:05	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-05-25 21:40:05		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, script, xfer
+2014-05-25 21:40:07		script: 279 scripts for WeeChat 0.4.3
+2014-05-25 21:40:15		All servers:
+2014-05-25 21:40:15		   freenode
+2014-05-25 21:40:24		[irc]  /server  list|listfull [<server>]
+2014-05-25 21:40:24		                add <server> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2014-05-25 21:40:24		                copy|rename <server> <new_name>
+2014-05-25 21:40:24		                del|keep <server>
+2014-05-25 21:40:24		                deloutq|jump|raw
+2014-05-25 21:40:24		list, add or remove IRC servers
+2014-05-25 21:40:24		    list: list servers (without argument, this list is displayed)
+2014-05-25 21:40:24		listfull: list servers with detailed info for each server
+2014-05-25 21:40:24		     add: create a new server
+2014-05-25 21:40:24		  server: server name, for internal and display use
+2014-05-25 21:40:24		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2014-05-25 21:40:24		    temp: create temporary server (not saved)
+2014-05-25 21:40:24		  option: set option for server (for boolean option, value can be omitted)
+2014-05-25 21:40:24		nooption: set boolean option to 'off' (for example: -nossl)
+2014-05-25 21:40:24		    copy: duplicate a server
+2014-05-25 21:40:24		  rename: rename a server
+2014-05-25 21:40:24		    keep: keep server in config file (for temporary servers only)
+2014-05-25 21:40:24		     del: delete a server
+2014-05-25 21:40:24		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2014-05-25 21:40:24		    jump: jump to server buffer
+2014-05-25 21:40:24		     raw: open buffer with raw IRC data
+2014-05-25 21:40:24		Examples:
+2014-05-25 21:40:24		  /server listfull
+2014-05-25 21:40:24		  /server add oftc irc.oftc.net/6697 -ssl -autoconnect
+2014-05-25 21:40:24		  /server add oftc6 irc6.oftc.net/6697 -ipv6 -ssl
+2014-05-25 21:40:24		  /server add freenode2 chat.eu.freenode.net/6667,chat.us.freenode.net/6667
+2014-05-25 21:40:24		  /server add freenode3 irc.freenode.net -password=mypass
+2014-05-25 21:40:24		  /server copy oftc oftcbis
+2014-05-25 21:40:24		  /server rename oftc newoftc
+2014-05-25 21:40:24		  /server del freenode
+2014-05-25 21:40:24		  /server deloutq
+2014-05-25 21:40:57	=!=	irc: unknown option for "server" command
+2014-05-25 21:41:45		irc: server chat created
+2014-05-25 21:42:26	=!=	irc: server "chat" already exists, can't create it!
+2014-05-25 21:42:47	=!=	irc: unknown option for "server" command
+2014-05-25 21:46:12		Option changed: irc.server.chat.command = "/msg &bitlbee identify 1phlegm"  (default: (undefined))
+2014-05-25 21:46:13		Options saved to sec.conf
+2014-05-25 21:46:13		Options saved to weechat.conf
+2014-05-25 21:46:13		Options saved to plugins.conf
+2014-05-25 21:46:13		Options saved to buffers.conf
+2014-05-25 21:46:13		Options saved to iset.conf
+2014-05-25 21:46:13		Options saved to irc.conf
+2014-05-25 21:46:13		Options saved to alias.conf
+2014-05-25 21:46:13		Options saved to charset.conf
+2014-05-25 21:46:13		Options saved to rmodifier.conf
+2014-05-25 21:46:13		Options saved to script.conf
+2014-05-25 21:46:13		Options saved to relay.conf
+2014-05-25 21:46:13		Options saved to aspell.conf
+2014-05-25 21:46:13		Options saved to logger.conf
+2014-05-25 21:46:13		Options saved to xfer.conf
+2014-05-25 21:46:36	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-05-25 21:46:36	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-05-25 21:46:36		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, script, xfer
+2014-05-25 21:47:12		Option changed: irc.server.chat.command = "/msg &bitlbee identify 1one"  (default: (undefined))
+2014-05-25 21:47:14		Options saved to sec.conf
+2014-05-25 21:47:14		Options saved to weechat.conf
+2014-05-25 21:47:14		Options saved to plugins.conf
+2014-05-25 21:47:14		Options saved to buffers.conf
+2014-05-25 21:47:14		Options saved to iset.conf
+2014-05-25 21:47:14		Options saved to irc.conf
+2014-05-25 21:47:14		Options saved to alias.conf
+2014-05-25 21:47:14		Options saved to charset.conf
+2014-05-25 21:47:14		Options saved to rmodifier.conf
+2014-05-25 21:47:14		Options saved to script.conf
+2014-05-25 21:47:14		Options saved to relay.conf
+2014-05-25 21:47:14		Options saved to aspell.conf
+2014-05-25 21:47:14		Options saved to logger.conf
+2014-05-25 21:47:14		Options saved to xfer.conf
+2014-05-25 21:47:25	=!=	Error: unknown command "scripts" (type /help for help)
+2014-05-25 21:47:30		script: script "iset.py" not found
+2014-05-25 21:47:32		script: script "ise" not found
+2014-05-25 21:47:34		script: script "iset" not found
+2014-05-25 21:47:37		script: script "iset.pl" is already installed and up-to-date
+2014-05-25 21:48:37		List of aliases:
+2014-05-25 21:48:37		  AAWAY => allserv /away
+2014-05-25 21:48:37		  AME => allchan /me
+2014-05-25 21:48:37		  AMSG => allchan /msg *
+2014-05-25 21:48:37		  ANICK => allserv /nick
+2014-05-25 21:48:37		  BEEP => print -stderr \a
+2014-05-25 21:48:37		  BYE => quit
+2014-05-25 21:48:37		  C => buffer clear
+2014-05-25 21:48:37		  CHAT => dcc chat
+2014-05-25 21:48:37		  CL => /buffer close
+2014-05-25 21:48:37		  CLOSE => buffer close
+2014-05-25 21:48:37		  EXIT => quit
+2014-05-25 21:48:37		  IG => ignore
+2014-05-25 21:48:37		  J => join
+2014-05-25 21:48:37		  K => kick
+2014-05-25 21:48:37		  KB => kickban
+2014-05-25 21:48:37		  LEAVE => part
+2014-05-25 21:48:37		  M => msg
+2014-05-25 21:48:37		  MUB => unban *
+2014-05-25 21:48:37		  N => names
+2014-05-25 21:48:37		  Q => query
+2014-05-25 21:48:37		  REDRAW => window refresh
+2014-05-25 21:48:37		  SAY => msg *
+2014-05-25 21:48:37		  SIGNOFF => quit
+2014-05-25 21:48:37		  T => topic
+2014-05-25 21:48:37		  UB => unban
+2014-05-25 21:48:37		  UMODE => mode $nick
+2014-05-25 21:48:37		  V => command core version
+2014-05-25 21:48:37		  W => who
+2014-05-25 21:48:37		  WC => window merge
+2014-05-25 21:48:37		  WI => whois
+2014-05-25 21:48:37		  WII => whois $1 $1
+2014-05-25 21:48:37		  WW => whowas
+2014-05-25 21:48:44	=!=	Error: unknown command "bind" (type /help for help)
+2014-05-25 21:49:21	=!=	No help available, "bind" is not a command or an option
+2014-05-25 21:52:31		237 key bindings for context "default":
+2014-05-25 21:52:31		  ctrl-? => /input delete_previous_char
+2014-05-25 21:52:31		  ctrl-A => /input move_beginning_of_line
+2014-05-25 21:52:31		  ctrl-B => /input move_previous_char
+2014-05-25 21:52:31		  ctrl-C_ => /input insert \x1F
+2014-05-25 21:52:31		  ctrl-Cb => /input insert \x02
+2014-05-25 21:52:31		  ctrl-Cc => /input insert \x03
+2014-05-25 21:52:31		  ctrl-Ci => /input insert \x1D
+2014-05-25 21:52:31		  ctrl-Co => /input insert \x0F
+2014-05-25 21:52:31		  ctrl-Cv => /input insert \x16
+2014-05-25 21:52:31		  ctrl-D => /input delete_next_char
+2014-05-25 21:52:31		  ctrl-E => /input move_end_of_line
+2014-05-25 21:52:31		  ctrl-F => /input move_next_char
+2014-05-25 21:52:31		  ctrl-H => /input delete_previous_char
+2014-05-25 21:52:31		  ctrl-I => /input complete_next
+2014-05-25 21:52:31		  ctrl-J => /input return
+2014-05-25 21:52:31		  ctrl-K => /input delete_end_of_line
+2014-05-25 21:52:31		  ctrl-L => /window refresh
+2014-05-25 21:52:31		  ctrl-M => /input return
+2014-05-25 21:52:31		  ctrl-N => /buffer +1
+2014-05-25 21:52:31		  ctrl-P => /buffer -1
+2014-05-25 21:52:31		  ctrl-R => /input search_text
+2014-05-25 21:52:31		  ctrl-Sctrl-U => /input set_unread
+2014-05-25 21:52:31		  ctrl-T => /input transpose_chars
+2014-05-25 21:52:31		  ctrl-U => /input delete_beginning_of_line
+2014-05-25 21:52:31		  ctrl-W => /input delete_previous_word
+2014-05-25 21:52:31		  ctrl-X => /input switch_active_buffer
+2014-05-25 21:52:31		  ctrl-Y => /input clipboard_paste
+2014-05-25 21:52:31		  meta-ctrl-I => /input grab_key_command
+2014-05-25 21:52:31		  meta-meta2-1~ => /window scroll_top
+2014-05-25 21:52:31		  meta-meta2-23~ => /bar scroll nicklist * b
+2014-05-25 21:52:31		  meta-meta2-24~ => /bar scroll nicklist * e
+2014-05-25 21:52:31		  meta-meta2-4~ => /window scroll_bottom
+2014-05-25 21:52:31		  meta-meta2-5~ => /window scroll_up
+2014-05-25 21:52:31		  meta-meta2-6~ => /window scroll_down
+2014-05-25 21:52:31		  meta-meta2-7~ => /window scroll_top
+2014-05-25 21:52:31		  meta-meta2-8~ => /window scroll_bottom
+2014-05-25 21:52:31		  meta-meta2-A => /buffer -1
+2014-05-25 21:52:31		  meta-meta2-B => /buffer +1
+2014-05-25 21:52:31		  meta-meta2-C => /buffer +1
+2014-05-25 21:52:31		  meta-meta2-D => /buffer -1
+2014-05-25 21:52:31		  meta-/ => /input jump_last_buffer_displayed
+2014-05-25 21:52:31		  meta-0 => /buffer *10
+2014-05-25 21:52:31		  meta-1 => /buffer *1
+2014-05-25 21:52:31		  meta-2 => /buffer *2
+2014-05-25 21:52:31		  meta-3 => /buffer *3
+2014-05-25 21:52:31		  meta-4 => /buffer *4
+2014-05-25 21:52:31		  meta-5 => /buffer *5
+2014-05-25 21:52:31		  meta-6 => /buffer *6
+2014-05-25 21:52:31		  meta-7 => /buffer *7
+2014-05-25 21:52:31		  meta-8 => /buffer *8
+2014-05-25 21:52:31		  meta-9 => /buffer *9
+2014-05-25 21:52:31		  meta-< => /input jump_previously_visited_buffer
+2014-05-25 21:52:31		  meta-= => /filter toggle
+2014-05-25 21:52:31		  meta-> => /input jump_next_visited_buffer
+2014-05-25 21:52:31		  meta-J => /buffer move -1
+2014-05-25 21:52:31		  meta-K => /buffer move +1
+2014-05-25 21:52:31		  meta-OA => /input history_global_previous
+2014-05-25 21:52:31		  meta-OB => /input history_global_next
+2014-05-25 21:52:31		  meta-OC => /input move_next_word
+2014-05-25 21:52:31		  meta-OD => /input move_previous_word
+2014-05-25 21:52:31		  meta-OF => /input move_end_of_line
+2014-05-25 21:52:31		  meta-OH => /input move_beginning_of_line
+2014-05-25 21:52:31		  meta-Oa => /input history_global_previous
+2014-05-25 21:52:31		  meta-Ob => /input history_global_next
+2014-05-25 21:52:31		  meta-Oc => /input move_next_word
+2014-05-25 21:52:31		  meta-Od => /input move_previous_word
+2014-05-25 21:52:31		  meta2-15~ => /buffer -1
+2014-05-25 21:52:31		  meta2-17~ => /buffer +1
+2014-05-25 21:52:31		  meta2-18~ => /window -1
+2014-05-25 21:52:31		  meta2-19~ => /window +1
+2014-05-25 21:52:31		  meta2-1;3A => /buffer -1
+2014-05-25 21:52:31		  meta2-1;3B => /buffer +1
+2014-05-25 21:52:31		  meta2-1;3C => /buffer +1
+2014-05-25 21:52:31		  meta2-1;3D => /buffer -1
+2014-05-25 21:52:31		  meta2-1;3F => /window scroll_bottom
+2014-05-25 21:52:31		  meta2-1;3H => /window scroll_top
+2014-05-25 21:52:31		  meta2-1;5A => /input history_global_previous
+2014-05-25 21:52:31		  meta2-1;5B => /input history_global_next
+2014-05-25 21:52:31		  meta2-1;5C => /input move_next_word
+2014-05-25 21:52:31		  meta2-1;5D => /input move_previous_word
+2014-05-25 21:52:31		  meta2-1~ => /input move_beginning_of_line
+2014-05-25 21:52:31		  meta2-200~ => /input paste_start
+2014-05-25 21:52:31		  meta2-201~ => /input paste_stop
+2014-05-25 21:52:31		  meta2-20~ => /bar scroll title * -30%
+2014-05-25 21:52:31		  meta2-21~ => /bar scroll title * +30%
+2014-05-25 21:52:31		  meta2-23;3~ => /bar scroll nicklist * b
+2014-05-25 21:52:31		  meta2-23~ => /bar scroll nicklist * -100%
+2014-05-25 21:52:31		  meta2-24;3~ => /bar scroll nicklist * e
+2014-05-25 21:52:31		  meta2-24~ => /bar scroll nicklist * +100%
+2014-05-25 21:52:31		  meta2-3~ => /input delete_next_char
+2014-05-25 21:52:31		  meta2-4~ => /input move_end_of_line
+2014-05-25 21:52:31		  meta2-5;3~ => /window scroll_up
+2014-05-25 21:52:31		  meta2-5~ => /window page_up
+2014-05-25 21:52:31		  meta2-6;3~ => /window scroll_down
+2014-05-25 21:52:31		  meta2-6~ => /window page_down
+2014-05-25 21:52:31		  meta2-7~ => /input move_beginning_of_line
+2014-05-25 21:52:31		  meta2-8~ => /input move_end_of_line
+2014-05-25 21:52:31		  meta2-A => /input history_previous
+2014-05-25 21:52:31		  meta2-B => /input history_next
+2014-05-25 21:52:31		  meta2-C => /input move_next_char
+2014-05-25 21:52:31		  meta2-D => /input move_previous_char
+2014-05-25 21:52:31		  meta2-F => /input move_end_of_line
+2014-05-25 21:52:31		  meta2-G => /window page_down
+2014-05-25 21:52:31		  meta2-H => /input move_beginning_of_line
+2014-05-25 21:52:31		  meta2-I => /window page_up
+2014-05-25 21:52:31		  meta2-Z => /input complete_previous
+2014-05-25 21:52:31		  meta2-[E => /buffer -1
+2014-05-25 21:52:31		  meta-_ => /input redo
+2014-05-25 21:52:31		  meta-a => /input jump_smart
+2014-05-25 21:52:31		  meta-b => /input move_previous_word
+2014-05-25 21:52:31		  meta-d => /input delete_next_word
+2014-05-25 21:52:31		  meta-f => /input move_next_word
+2014-05-25 21:52:31		  meta-h => /window -1
+2014-05-25 21:52:31		  meta-j => /buffer -1
+2014-05-25 21:52:31		  meta-jmeta-l => /input jump_last_buffer
+2014-05-25 21:52:31		  meta-jmeta-r => /server raw
+2014-05-25 21:52:31		  meta-jmeta-s => /server jump
+2014-05-25 21:52:31		  meta-j01 => /buffer 1
+2014-05-25 21:52:31		  meta-j02 => /buffer 2
+2014-05-25 21:52:31		  meta-j03 => /buffer 3
+2014-05-25 21:52:31		  meta-j04 => /buffer 4
+2014-05-25 21:52:31		  meta-j05 => /buffer 5
+2014-05-25 21:52:31		  meta-j06 => /buffer 6
+2014-05-25 21:52:31		  meta-j07 => /buffer 7
+2014-05-25 21:52:31		  meta-j08 => /buffer 8
+2014-05-25 21:52:31		  meta-j09 => /buffer 9
+2014-05-25 21:52:31		  meta-j10 => /buffer 10
+2014-05-25 21:52:31		  meta-j11 => /buffer 11
+2014-05-25 21:52:31		  meta-j12 => /buffer 12
+2014-05-25 21:52:31		  meta-j13 => /buffer 13
+2014-05-25 21:52:31		  meta-j14 => /buffer 14
+2014-05-25 21:52:31		  meta-j15 => /buffer 15
+2014-05-25 21:52:31		  meta-j16 => /buffer 16
+2014-05-25 21:52:31		  meta-j17 => /buffer 17
+2014-05-25 21:52:31		  meta-j18 => /buffer 18
+2014-05-25 21:52:31		  meta-j19 => /buffer 19
+2014-05-25 21:52:31		  meta-j20 => /buffer 20
+2014-05-25 21:52:31		  meta-j21 => /buffer 21
+2014-05-25 21:52:31		  meta-j22 => /buffer 22
+2014-05-25 21:52:31		  meta-j23 => /buffer 23
+2014-05-25 21:52:31		  meta-j24 => /buffer 24
+2014-05-25 21:52:31		  meta-j25 => /buffer 25
+2014-05-25 21:52:31		  meta-j26 => /buffer 26
+2014-05-25 21:52:31		  meta-j27 => /buffer 27
+2014-05-25 21:52:31		  meta-j28 => /buffer 28
+2014-05-25 21:52:31		  meta-j29 => /buffer 29
+2014-05-25 21:52:31		  meta-j30 => /buffer 30
+2014-05-25 21:52:31		  meta-j31 => /buffer 31
+2014-05-25 21:52:31		  meta-j32 => /buffer 32
+2014-05-25 21:52:31		  meta-j33 => /buffer 33
+2014-05-25 21:52:31		  meta-j34 => /buffer 34
+2014-05-25 21:52:31		  meta-j35 => /buffer 35
+2014-05-25 21:52:31		  meta-j36 => /buffer 36
+2014-05-25 21:52:31		  meta-j37 => /buffer 37
+2014-05-25 21:52:31		  meta-j38 => /buffer 38
+2014-05-25 21:52:31		  meta-j39 => /buffer 39
+2014-05-25 21:52:31		  meta-j40 => /buffer 40
+2014-05-25 21:52:31		  meta-j41 => /buffer 41
+2014-05-25 21:52:31		  meta-j42 => /buffer 42
+2014-05-25 21:52:31		  meta-j43 => /buffer 43
+2014-05-25 21:52:31		  meta-j44 => /buffer 44
+2014-05-25 21:52:31		  meta-j45 => /buffer 45
+2014-05-25 21:52:31		  meta-j46 => /buffer 46
+2014-05-25 21:52:31		  meta-j47 => /buffer 47
+2014-05-25 21:52:31		  meta-j48 => /buffer 48
+2014-05-25 21:52:31		  meta-j49 => /buffer 49
+2014-05-25 21:52:31		  meta-j50 => /buffer 50
+2014-05-25 21:52:31		  meta-j51 => /buffer 51
+2014-05-25 21:52:31		  meta-j52 => /buffer 52
+2014-05-25 21:52:31		  meta-j53 => /buffer 53
+2014-05-25 21:52:31		  meta-j54 => /buffer 54
+2014-05-25 21:52:31		  meta-j55 => /buffer 55
+2014-05-25 21:52:31		  meta-j56 => /buffer 56
+2014-05-25 21:52:31		  meta-j57 => /buffer 57
+2014-05-25 21:52:31		  meta-j58 => /buffer 58
+2014-05-25 21:52:31		  meta-j59 => /buffer 59
+2014-05-25 21:52:31		  meta-j60 => /buffer 60
+2014-05-25 21:52:31		  meta-j61 => /buffer 61
+2014-05-25 21:52:31		  meta-j62 => /buffer 62
+2014-05-25 21:52:31		  meta-j63 => /buffer 63
+2014-05-25 21:52:31		  meta-j64 => /buffer 64
+2014-05-25 21:52:31		  meta-j65 => /buffer 65
+2014-05-25 21:52:31		  meta-j66 => /buffer 66
+2014-05-25 21:52:31		  meta-j67 => /buffer 67
+2014-05-25 21:52:31		  meta-j68 => /buffer 68
+2014-05-25 21:52:31		  meta-j69 => /buffer 69
+2014-05-25 21:52:31		  meta-j70 => /buffer 70
+2014-05-25 21:52:31		  meta-j71 => /buffer 71
+2014-05-25 21:52:31		  meta-j72 => /buffer 72
+2014-05-25 21:52:31		  meta-j73 => /buffer 73
+2014-05-25 21:52:31		  meta-j74 => /buffer 74
+2014-05-25 21:52:31		  meta-j75 => /buffer 75
+2014-05-25 21:52:31		  meta-j76 => /buffer 76
+2014-05-25 21:52:31		  meta-j77 => /buffer 77
+2014-05-25 21:52:31		  meta-j78 => /buffer 78
+2014-05-25 21:52:31		  meta-j79 => /buffer 79
+2014-05-25 21:52:31		  meta-j80 => /buffer 80
+2014-05-25 21:52:31		  meta-j81 => /buffer 81
+2014-05-25 21:52:31		  meta-j82 => /buffer 82
+2014-05-25 21:52:31		  meta-j83 => /buffer 83
+2014-05-25 21:52:31		  meta-j84 => /buffer 84
+2014-05-25 21:52:31		  meta-j85 => /buffer 85
+2014-05-25 21:52:31		  meta-j86 => /buffer 86
+2014-05-25 21:52:31		  meta-j87 => /buffer 87
+2014-05-25 21:52:31		  meta-j88 => /buffer 88
+2014-05-25 21:52:31		  meta-j89 => /buffer 89
+2014-05-25 21:52:31		  meta-j90 => /buffer 90
+2014-05-25 21:52:31		  meta-j91 => /buffer 91
+2014-05-25 21:52:31		  meta-j92 => /buffer 92
+2014-05-25 21:52:31		  meta-j93 => /buffer 93
+2014-05-25 21:52:31		  meta-j94 => /buffer 94
+2014-05-25 21:52:31		  meta-j95 => /buffer 95
+2014-05-25 21:52:31		  meta-j96 => /buffer 96
+2014-05-25 21:52:31		  meta-j97 => /buffer 97
+2014-05-25 21:52:31		  meta-j98 => /buffer 98
+2014-05-25 21:52:31		  meta-j99 => /buffer 99
+2014-05-25 21:52:31		  meta-k => /buffer +1
+2014-05-25 21:52:31		  meta-l => /window +1
+2014-05-25 21:52:31		  meta-m => /mute mouse toggle
+2014-05-25 21:52:31		  meta-n => /window scroll_next_highlight
+2014-05-25 21:52:31		  meta-p => /window scroll_previous_highlight
+2014-05-25 21:52:31		  meta-r => /input delete_line
+2014-05-25 21:52:31		  meta-s => /mute aspell toggle
+2014-05-25 21:52:31		  meta-u => /window scroll_unread
+2014-05-25 21:52:31		  meta-wmeta-meta2-A => /window up
+2014-05-25 21:52:31		  meta-wmeta-meta2-B => /window down
+2014-05-25 21:52:31		  meta-wmeta-meta2-C => /window right
+2014-05-25 21:52:31		  meta-wmeta-meta2-D => /window left
+2014-05-25 21:52:31		  meta-wmeta2-1;3A => /window up
+2014-05-25 21:52:31		  meta-wmeta2-1;3B => /window down
+2014-05-25 21:52:31		  meta-wmeta2-1;3C => /window right
+2014-05-25 21:52:31		  meta-wmeta2-1;3D => /window left
+2014-05-25 21:52:31		  meta-wmeta-b => /window balance
+2014-05-25 21:52:31		  meta-wmeta-s => /window swap
+2014-05-25 21:52:31		  meta-x => /input zoom_merged_buffer
+2014-05-25 21:52:31		  meta-z => /window zoom
+2014-05-25 21:52:31		  ctrl-_ => /input undo
+2014-05-25 21:52:31		7 key bindings for context "search":
+2014-05-25 21:52:31		  ctrl-I => /input search_switch_where
+2014-05-25 21:52:31		  ctrl-J => /input search_stop
+2014-05-25 21:52:31		  ctrl-M => /input search_stop
+2014-05-25 21:52:31		  ctrl-R => /input search_switch_regex
+2014-05-25 21:52:31		  meta2-A => /input search_previous
+2014-05-25 21:52:31		  meta2-B => /input search_next
+2014-05-25 21:52:31		  meta-c => /input search_switch_case
+2014-05-25 21:52:31		22 key bindings for context "cursor":
+2014-05-25 21:52:31		  ctrl-J => /cursor stop
+2014-05-25 21:52:31		  ctrl-M => /cursor stop
+2014-05-25 21:52:31		  meta-meta2-A => /cursor move area_up
+2014-05-25 21:52:31		  meta-meta2-B => /cursor move area_down
+2014-05-25 21:52:31		  meta-meta2-C => /cursor move area_right
+2014-05-25 21:52:31		  meta-meta2-D => /cursor move area_left
+2014-05-25 21:52:31		  meta2-1;3A => /cursor move area_up
+2014-05-25 21:52:31		  meta2-1;3B => /cursor move area_down
+2014-05-25 21:52:31		  meta2-1;3C => /cursor move area_right
+2014-05-25 21:52:31		  meta2-1;3D => /cursor move area_left
+2014-05-25 21:52:31		  meta2-A => /cursor move up
+2014-05-25 21:52:31		  meta2-B => /cursor move down
+2014-05-25 21:52:31		  meta2-C => /cursor move right
+2014-05-25 21:52:31		  meta2-D => /cursor move left
+2014-05-25 21:52:31		  @item(buffer_nicklist):K => /window ${_window_number};/kickban ${nick}
+2014-05-25 21:52:31		  @item(buffer_nicklist):b => /window ${_window_number};/ban ${nick}
+2014-05-25 21:52:31		  @item(buffer_nicklist):k => /window ${_window_number};/kick ${nick}
+2014-05-25 21:52:31		  @item(buffer_nicklist):q => /window ${_window_number};/query ${nick};/cursor stop
+2014-05-25 21:52:31		  @item(buffer_nicklist):w => /window ${_window_number};/whois ${nick}
+2014-05-25 21:52:31		  @chat:Q => hsignal:chat_quote_time_prefix_message;/cursor stop
+2014-05-25 21:52:31		  @chat:m => hsignal:chat_quote_message;/cursor stop
+2014-05-25 21:52:31		  @chat:q => hsignal:chat_quote_prefix_message;/cursor stop
+2014-05-25 21:52:31		32 key bindings for context "mouse":
+2014-05-25 21:52:31		  @bar(input):button2 => /input grab_mouse_area
+2014-05-25 21:52:31		  @bar(nicklist):button1-gesture-down => /bar scroll nicklist ${_window_number} +100%
+2014-05-25 21:52:31		  @bar(nicklist):button1-gesture-down-long => /bar scroll nicklist ${_window_number} e
+2014-05-25 21:52:31		  @bar(nicklist):button1-gesture-up => /bar scroll nicklist ${_window_number} -100%
+2014-05-25 21:52:31		  @bar(nicklist):button1-gesture-up-long => /bar scroll nicklist ${_window_number} b
+2014-05-25 21:52:31		  @chat(perl.iset):button1 => hsignal:iset_mouse
+2014-05-25 21:52:31		  @chat(perl.iset):button2* => hsignal:iset_mouse
+2014-05-25 21:52:31		  @chat(perl.iset):wheeldown => /repeat 5 /iset **down
+2014-05-25 21:52:31		  @chat(perl.iset):wheelup => /repeat 5 /iset **up
+2014-05-25 21:52:31		  @chat(script.scripts):button1 => /window ${_window_number};/script go ${_chat_line_y}
+2014-05-25 21:52:31		  @chat(script.scripts):button2 => /window ${_window_number};/script go ${_chat_line_y};/script installremove -q ${script_name_with_extension}
+2014-05-25 21:52:31		  @chat(script.scripts):wheeldown => /script down 5
+2014-05-25 21:52:31		  @chat(script.scripts):wheelup => /script up 5
+2014-05-25 21:52:31		  @item(buffer_nicklist):button1 => /window ${_window_number};/query ${nick}
+2014-05-25 21:52:31		  @item(buffer_nicklist):button1-gesture-left => /window ${_window_number};/kick ${nick}
+2014-05-25 21:52:31		  @item(buffer_nicklist):button1-gesture-left-long => /window ${_window_number};/kickban ${nick}
+2014-05-25 21:52:31		  @item(buffer_nicklist):button2 => /window ${_window_number};/whois ${nick}
+2014-05-25 21:52:31		  @item(buffer_nicklist):button2-gesture-left => /window ${_window_number};/ban ${nick}
+2014-05-25 21:52:31		  @item(buffers):button1* => hsignal:buffers_mouse
+2014-05-25 21:52:31		  @item(buffers):button2* => hsignal:buffers_mouse
+2014-05-25 21:52:31		  @bar:wheeldown => /bar scroll ${_bar_name} ${_window_number} +20%
+2014-05-25 21:52:31		  @bar:wheelup => /bar scroll ${_bar_name} ${_window_number} -20%
+2014-05-25 21:52:31		  @chat:button1 => /window ${_window_number}
+2014-05-25 21:52:31		  @chat:button1-gesture-left => /window ${_window_number};/buffer -1
+2014-05-25 21:52:31		  @chat:button1-gesture-left-long => /window ${_window_number};/buffer 1
+2014-05-25 21:52:31		  @chat:button1-gesture-right => /window ${_window_number};/buffer +1
+2014-05-25 21:52:31		  @chat:button1-gesture-right-long => /window ${_window_number};/input jump_last_buffer
+2014-05-25 21:52:31		  @chat:ctrl-wheeldown => /window scroll_horiz -window ${_window_number} +10%
+2014-05-25 21:52:31		  @chat:ctrl-wheelup => /window scroll_horiz -window ${_window_number} -10%
+2014-05-25 21:52:31		  @chat:wheeldown => /window scroll_down -window ${_window_number}
+2014-05-25 21:52:31		  @chat:wheelup => /window scroll_up -window ${_window_number}
+2014-05-25 21:52:31		  @*:button3 => /cursor go ${_x},${_y}
+2014-05-25 21:53:25	=!=	Error: unknown option for "key" command
+2014-05-25 21:53:44		List of aliases:
+2014-05-25 21:53:44		  C => buffer clear
+2014-05-25 21:53:50		List of aliases:
+2014-05-25 21:53:50		  CL => /buffer close
+2014-05-25 22:09:11	=!=	Error: unknown option for "key" command
+2014-05-25 22:09:16	=!=	Error: unknown option for "key" command
+2014-05-25 22:09:18		237 key bindings for context "default":
+2014-05-25 22:09:18		  ctrl-? => /input delete_previous_char
+2014-05-25 22:09:18		  ctrl-A => /input move_beginning_of_line
+2014-05-25 22:09:18		  ctrl-B => /input move_previous_char
+2014-05-25 22:09:18		  ctrl-C_ => /input insert \x1F
+2014-05-25 22:09:18		  ctrl-Cb => /input insert \x02
+2014-05-25 22:09:18		  ctrl-Cc => /input insert \x03
+2014-05-25 22:09:18		  ctrl-Ci => /input insert \x1D
+2014-05-25 22:09:18		  ctrl-Co => /input insert \x0F
+2014-05-25 22:09:18		  ctrl-Cv => /input insert \x16
+2014-05-25 22:09:18		  ctrl-D => /input delete_next_char
+2014-05-25 22:09:18		  ctrl-E => /input move_end_of_line
+2014-05-25 22:09:18		  ctrl-F => /input move_next_char
+2014-05-25 22:09:18		  ctrl-H => /input delete_previous_char
+2014-05-25 22:09:18		  ctrl-I => /input complete_next
+2014-05-25 22:09:18		  ctrl-J => /input return
+2014-05-25 22:09:18		  ctrl-K => /input delete_end_of_line
+2014-05-25 22:09:18		  ctrl-L => /window refresh
+2014-05-25 22:09:18		  ctrl-M => /input return
+2014-05-25 22:09:18		  ctrl-N => /buffer +1
+2014-05-25 22:09:18		  ctrl-P => /buffer -1
+2014-05-25 22:09:18		  ctrl-R => /input search_text
+2014-05-25 22:09:18		  ctrl-Sctrl-U => /input set_unread
+2014-05-25 22:09:18		  ctrl-T => /input transpose_chars
+2014-05-25 22:09:18		  ctrl-U => /input delete_beginning_of_line
+2014-05-25 22:09:18		  ctrl-W => /input delete_previous_word
+2014-05-25 22:09:18		  ctrl-X => /input switch_active_buffer
+2014-05-25 22:09:18		  ctrl-Y => /input clipboard_paste
+2014-05-25 22:09:18		  meta-ctrl-I => /input grab_key_command
+2014-05-25 22:09:18		  meta-meta2-1~ => /window scroll_top
+2014-05-25 22:09:18		  meta-meta2-23~ => /bar scroll nicklist * b
+2014-05-25 22:09:18		  meta-meta2-24~ => /bar scroll nicklist * e
+2014-05-25 22:09:18		  meta-meta2-4~ => /window scroll_bottom
+2014-05-25 22:09:18		  meta-meta2-5~ => /window scroll_up
+2014-05-25 22:09:18		  meta-meta2-6~ => /window scroll_down
+2014-05-25 22:09:18		  meta-meta2-7~ => /window scroll_top
+2014-05-25 22:09:18		  meta-meta2-8~ => /window scroll_bottom
+2014-05-25 22:09:18		  meta-meta2-A => /buffer -1
+2014-05-25 22:09:18		  meta-meta2-B => /buffer +1
+2014-05-25 22:09:18		  meta-meta2-C => /buffer +1
+2014-05-25 22:09:18		  meta-meta2-D => /buffer -1
+2014-05-25 22:09:18		  meta-/ => /input jump_last_buffer_displayed
+2014-05-25 22:09:18		  meta-0 => /buffer *10
+2014-05-25 22:09:18		  meta-1 => /buffer *1
+2014-05-25 22:09:18		  meta-2 => /buffer *2
+2014-05-25 22:09:18		  meta-3 => /buffer *3
+2014-05-25 22:09:18		  meta-4 => /buffer *4
+2014-05-25 22:09:18		  meta-5 => /buffer *5
+2014-05-25 22:09:18		  meta-6 => /buffer *6
+2014-05-25 22:09:18		  meta-7 => /buffer *7
+2014-05-25 22:09:18		  meta-8 => /buffer *8
+2014-05-25 22:09:18		  meta-9 => /buffer *9
+2014-05-25 22:09:18		  meta-< => /input jump_previously_visited_buffer
+2014-05-25 22:09:18		  meta-= => /filter toggle
+2014-05-25 22:09:18		  meta-> => /input jump_next_visited_buffer
+2014-05-25 22:09:18		  meta-J => /buffer move -1
+2014-05-25 22:09:18		  meta-K => /buffer move +1
+2014-05-25 22:09:18		  meta-OA => /input history_global_previous
+2014-05-25 22:09:18		  meta-OB => /input history_global_next
+2014-05-25 22:09:18		  meta-OC => /input move_next_word
+2014-05-25 22:09:18		  meta-OD => /input move_previous_word
+2014-05-25 22:09:18		  meta-OF => /input move_end_of_line
+2014-05-25 22:09:18		  meta-OH => /input move_beginning_of_line
+2014-05-25 22:09:18		  meta-Oa => /input history_global_previous
+2014-05-25 22:09:18		  meta-Ob => /input history_global_next
+2014-05-25 22:09:18		  meta-Oc => /input move_next_word
+2014-05-25 22:09:18		  meta-Od => /input move_previous_word
+2014-05-25 22:09:18		  meta2-15~ => /buffer -1
+2014-05-25 22:09:18		  meta2-17~ => /buffer +1
+2014-05-25 22:09:18		  meta2-18~ => /window -1
+2014-05-25 22:09:18		  meta2-19~ => /window +1
+2014-05-25 22:09:18		  meta2-1;3A => /buffer -1
+2014-05-25 22:09:18		  meta2-1;3B => /buffer +1
+2014-05-25 22:09:18		  meta2-1;3C => /buffer +1
+2014-05-25 22:09:18		  meta2-1;3D => /buffer -1
+2014-05-25 22:09:18		  meta2-1;3F => /window scroll_bottom
+2014-05-25 22:09:18		  meta2-1;3H => /window scroll_top
+2014-05-25 22:09:18		  meta2-1;5A => /input history_global_previous
+2014-05-25 22:09:18		  meta2-1;5B => /input history_global_next
+2014-05-25 22:09:18		  meta2-1;5C => /input move_next_word
+2014-05-25 22:09:18		  meta2-1;5D => /input move_previous_word
+2014-05-25 22:09:18		  meta2-1~ => /input move_beginning_of_line
+2014-05-25 22:09:18		  meta2-200~ => /input paste_start
+2014-05-25 22:09:18		  meta2-201~ => /input paste_stop
+2014-05-25 22:09:18		  meta2-20~ => /bar scroll title * -30%
+2014-05-25 22:09:18		  meta2-21~ => /bar scroll title * +30%
+2014-05-25 22:09:18		  meta2-23;3~ => /bar scroll nicklist * b
+2014-05-25 22:09:18		  meta2-23~ => /bar scroll nicklist * -100%
+2014-05-25 22:09:18		  meta2-24;3~ => /bar scroll nicklist * e
+2014-05-25 22:09:18		  meta2-24~ => /bar scroll nicklist * +100%
+2014-05-25 22:09:18		  meta2-3~ => /input delete_next_char
+2014-05-25 22:09:18		  meta2-4~ => /input move_end_of_line
+2014-05-25 22:09:18		  meta2-5;3~ => /window scroll_up
+2014-05-25 22:09:18		  meta2-5~ => /window page_up
+2014-05-25 22:09:18		  meta2-6;3~ => /window scroll_down
+2014-05-25 22:09:18		  meta2-6~ => /window page_down
+2014-05-25 22:09:18		  meta2-7~ => /input move_beginning_of_line
+2014-05-25 22:09:18		  meta2-8~ => /input move_end_of_line
+2014-05-25 22:09:18		  meta2-A => /input history_previous
+2014-05-25 22:09:18		  meta2-B => /input history_next
+2014-05-25 22:09:18		  meta2-C => /input move_next_char
+2014-05-25 22:09:18		  meta2-D => /input move_previous_char
+2014-05-25 22:09:18		  meta2-F => /input move_end_of_line
+2014-05-25 22:09:18		  meta2-G => /window page_down
+2014-05-25 22:09:18		  meta2-H => /input move_beginning_of_line
+2014-05-25 22:09:18		  meta2-I => /window page_up
+2014-05-25 22:09:18		  meta2-Z => /input complete_previous
+2014-05-25 22:09:18		  meta2-[E => /buffer -1
+2014-05-25 22:09:18		  meta-_ => /input redo
+2014-05-25 22:09:18		  meta-a => /input jump_smart
+2014-05-25 22:09:18		  meta-b => /input move_previous_word
+2014-05-25 22:09:18		  meta-d => /input delete_next_word
+2014-05-25 22:09:18		  meta-f => /input move_next_word
+2014-05-25 22:09:18		  meta-h => /window -1
+2014-05-25 22:09:18		  meta-j => /buffer -1
+2014-05-25 22:09:18		  meta-jmeta-l => /input jump_last_buffer
+2014-05-25 22:09:18		  meta-jmeta-r => /server raw
+2014-05-25 22:09:18		  meta-jmeta-s => /server jump
+2014-05-25 22:09:18		  meta-j01 => /buffer 1
+2014-05-25 22:09:18		  meta-j02 => /buffer 2
+2014-05-25 22:09:18		  meta-j03 => /buffer 3
+2014-05-25 22:09:18		  meta-j04 => /buffer 4
+2014-05-25 22:09:18		  meta-j05 => /buffer 5
+2014-05-25 22:09:18		  meta-j06 => /buffer 6
+2014-05-25 22:09:18		  meta-j07 => /buffer 7
+2014-05-25 22:09:18		  meta-j08 => /buffer 8
+2014-05-25 22:09:18		  meta-j09 => /buffer 9
+2014-05-25 22:09:18		  meta-j10 => /buffer 10
+2014-05-25 22:09:18		  meta-j11 => /buffer 11
+2014-05-25 22:09:18		  meta-j12 => /buffer 12
+2014-05-25 22:09:18		  meta-j13 => /buffer 13
+2014-05-25 22:09:18		  meta-j14 => /buffer 14
+2014-05-25 22:09:18		  meta-j15 => /buffer 15
+2014-05-25 22:09:18		  meta-j16 => /buffer 16
+2014-05-25 22:09:18		  meta-j17 => /buffer 17
+2014-05-25 22:09:18		  meta-j18 => /buffer 18
+2014-05-25 22:09:18		  meta-j19 => /buffer 19
+2014-05-25 22:09:18		  meta-j20 => /buffer 20
+2014-05-25 22:09:18		  meta-j21 => /buffer 21
+2014-05-25 22:09:18		  meta-j22 => /buffer 22
+2014-05-25 22:09:18		  meta-j23 => /buffer 23
+2014-05-25 22:09:18		  meta-j24 => /buffer 24
+2014-05-25 22:09:18		  meta-j25 => /buffer 25
+2014-05-25 22:09:18		  meta-j26 => /buffer 26
+2014-05-25 22:09:18		  meta-j27 => /buffer 27
+2014-05-25 22:09:18		  meta-j28 => /buffer 28
+2014-05-25 22:09:18		  meta-j29 => /buffer 29
+2014-05-25 22:09:18		  meta-j30 => /buffer 30
+2014-05-25 22:09:18		  meta-j31 => /buffer 31
+2014-05-25 22:09:18		  meta-j32 => /buffer 32
+2014-05-25 22:09:18		  meta-j33 => /buffer 33
+2014-05-25 22:09:18		  meta-j34 => /buffer 34
+2014-05-25 22:09:18		  meta-j35 => /buffer 35
+2014-05-25 22:09:18		  meta-j36 => /buffer 36
+2014-05-25 22:09:18		  meta-j37 => /buffer 37
+2014-05-25 22:09:18		  meta-j38 => /buffer 38
+2014-05-25 22:09:18		  meta-j39 => /buffer 39
+2014-05-25 22:09:18		  meta-j40 => /buffer 40
+2014-05-25 22:09:18		  meta-j41 => /buffer 41
+2014-05-25 22:09:18		  meta-j42 => /buffer 42
+2014-05-25 22:09:18		  meta-j43 => /buffer 43
+2014-05-25 22:09:18		  meta-j44 => /buffer 44
+2014-05-25 22:09:18		  meta-j45 => /buffer 45
+2014-05-25 22:09:18		  meta-j46 => /buffer 46
+2014-05-25 22:09:18		  meta-j47 => /buffer 47
+2014-05-25 22:09:18		  meta-j48 => /buffer 48
+2014-05-25 22:09:18		  meta-j49 => /buffer 49
+2014-05-25 22:09:18		  meta-j50 => /buffer 50
+2014-05-25 22:09:18		  meta-j51 => /buffer 51
+2014-05-25 22:09:18		  meta-j52 => /buffer 52
+2014-05-25 22:09:18		  meta-j53 => /buffer 53
+2014-05-25 22:09:18		  meta-j54 => /buffer 54
+2014-05-25 22:09:18		  meta-j55 => /buffer 55
+2014-05-25 22:09:18		  meta-j56 => /buffer 56
+2014-05-25 22:09:18		  meta-j57 => /buffer 57
+2014-05-25 22:09:18		  meta-j58 => /buffer 58
+2014-05-25 22:09:18		  meta-j59 => /buffer 59
+2014-05-25 22:09:18		  meta-j60 => /buffer 60
+2014-05-25 22:09:18		  meta-j61 => /buffer 61
+2014-05-25 22:09:18		  meta-j62 => /buffer 62
+2014-05-25 22:09:18		  meta-j63 => /buffer 63
+2014-05-25 22:09:18		  meta-j64 => /buffer 64
+2014-05-25 22:09:18		  meta-j65 => /buffer 65
+2014-05-25 22:09:18		  meta-j66 => /buffer 66
+2014-05-25 22:09:18		  meta-j67 => /buffer 67
+2014-05-25 22:09:18		  meta-j68 => /buffer 68
+2014-05-25 22:09:18		  meta-j69 => /buffer 69
+2014-05-25 22:09:18		  meta-j70 => /buffer 70
+2014-05-25 22:09:18		  meta-j71 => /buffer 71
+2014-05-25 22:09:18		  meta-j72 => /buffer 72
+2014-05-25 22:09:18		  meta-j73 => /buffer 73
+2014-05-25 22:09:18		  meta-j74 => /buffer 74
+2014-05-25 22:09:18		  meta-j75 => /buffer 75
+2014-05-25 22:09:18		  meta-j76 => /buffer 76
+2014-05-25 22:09:18		  meta-j77 => /buffer 77
+2014-05-25 22:09:18		  meta-j78 => /buffer 78
+2014-05-25 22:09:18		  meta-j79 => /buffer 79
+2014-05-25 22:09:18		  meta-j80 => /buffer 80
+2014-05-25 22:09:18		  meta-j81 => /buffer 81
+2014-05-25 22:09:18		  meta-j82 => /buffer 82
+2014-05-25 22:09:18		  meta-j83 => /buffer 83
+2014-05-25 22:09:18		  meta-j84 => /buffer 84
+2014-05-25 22:09:18		  meta-j85 => /buffer 85
+2014-05-25 22:09:18		  meta-j86 => /buffer 86
+2014-05-25 22:09:18		  meta-j87 => /buffer 87
+2014-05-25 22:09:18		  meta-j88 => /buffer 88
+2014-05-25 22:09:18		  meta-j89 => /buffer 89
+2014-05-25 22:09:18		  meta-j90 => /buffer 90
+2014-05-25 22:09:18		  meta-j91 => /buffer 91
+2014-05-25 22:09:18		  meta-j92 => /buffer 92
+2014-05-25 22:09:18		  meta-j93 => /buffer 93
+2014-05-25 22:09:18		  meta-j94 => /buffer 94
+2014-05-25 22:09:18		  meta-j95 => /buffer 95
+2014-05-25 22:09:18		  meta-j96 => /buffer 96
+2014-05-25 22:09:18		  meta-j97 => /buffer 97
+2014-05-25 22:09:18		  meta-j98 => /buffer 98
+2014-05-25 22:09:18		  meta-j99 => /buffer 99
+2014-05-25 22:09:18		  meta-k => /buffer +1
+2014-05-25 22:09:18		  meta-l => /window +1
+2014-05-25 22:09:18		  meta-m => /mute mouse toggle
+2014-05-25 22:09:18		  meta-n => /window scroll_next_highlight
+2014-05-25 22:09:18		  meta-p => /window scroll_previous_highlight
+2014-05-25 22:09:18		  meta-r => /input delete_line
+2014-05-25 22:09:18		  meta-s => /mute aspell toggle
+2014-05-25 22:09:18		  meta-u => /window scroll_unread
+2014-05-25 22:09:18		  meta-wmeta-meta2-A => /window up
+2014-05-25 22:09:18		  meta-wmeta-meta2-B => /window down
+2014-05-25 22:09:18		  meta-wmeta-meta2-C => /window right
+2014-05-25 22:09:18		  meta-wmeta-meta2-D => /window left
+2014-05-25 22:09:18		  meta-wmeta2-1;3A => /window up
+2014-05-25 22:09:18		  meta-wmeta2-1;3B => /window down
+2014-05-25 22:09:18		  meta-wmeta2-1;3C => /window right
+2014-05-25 22:09:18		  meta-wmeta2-1;3D => /window left
+2014-05-25 22:09:18		  meta-wmeta-b => /window balance
+2014-05-25 22:09:18		  meta-wmeta-s => /window swap
+2014-05-25 22:09:18		  meta-x => /input zoom_merged_buffer
+2014-05-25 22:09:18		  meta-z => /window zoom
+2014-05-25 22:09:18		  ctrl-_ => /input undo
+2014-05-25 22:09:18		7 key bindings for context "search":
+2014-05-25 22:09:18		  ctrl-I => /input search_switch_where
+2014-05-25 22:09:18		  ctrl-J => /input search_stop
+2014-05-25 22:09:18		  ctrl-M => /input search_stop
+2014-05-25 22:09:18		  ctrl-R => /input search_switch_regex
+2014-05-25 22:09:18		  meta2-A => /input search_previous
+2014-05-25 22:09:18		  meta2-B => /input search_next
+2014-05-25 22:09:18		  meta-c => /input search_switch_case
+2014-05-25 22:09:18		22 key bindings for context "cursor":
+2014-05-25 22:09:18		  ctrl-J => /cursor stop
+2014-05-25 22:09:18		  ctrl-M => /cursor stop
+2014-05-25 22:09:18		  meta-meta2-A => /cursor move area_up
+2014-05-25 22:09:18		  meta-meta2-B => /cursor move area_down
+2014-05-25 22:09:18		  meta-meta2-C => /cursor move area_right
+2014-05-25 22:09:18		  meta-meta2-D => /cursor move area_left
+2014-05-25 22:09:18		  meta2-1;3A => /cursor move area_up
+2014-05-25 22:09:18		  meta2-1;3B => /cursor move area_down
+2014-05-25 22:09:18		  meta2-1;3C => /cursor move area_right
+2014-05-25 22:09:18		  meta2-1;3D => /cursor move area_left
+2014-05-25 22:09:18		  meta2-A => /cursor move up
+2014-05-25 22:09:18		  meta2-B => /cursor move down
+2014-05-25 22:09:18		  meta2-C => /cursor move right
+2014-05-25 22:09:18		  meta2-D => /cursor move left
+2014-05-25 22:09:18		  @item(buffer_nicklist):K => /window ${_window_number};/kickban ${nick}
+2014-05-25 22:09:18		  @item(buffer_nicklist):b => /window ${_window_number};/ban ${nick}
+2014-05-25 22:09:18		  @item(buffer_nicklist):k => /window ${_window_number};/kick ${nick}
+2014-05-25 22:09:18		  @item(buffer_nicklist):q => /window ${_window_number};/query ${nick};/cursor stop
+2014-05-25 22:09:18		  @item(buffer_nicklist):w => /window ${_window_number};/whois ${nick}
+2014-05-25 22:09:18		  @chat:Q => hsignal:chat_quote_time_prefix_message;/cursor stop
+2014-05-25 22:09:18		  @chat:m => hsignal:chat_quote_message;/cursor stop
+2014-05-25 22:09:18		  @chat:q => hsignal:chat_quote_prefix_message;/cursor stop
+2014-05-25 22:09:18		32 key bindings for context "mouse":
+2014-05-25 22:09:18		  @bar(input):button2 => /input grab_mouse_area
+2014-05-25 22:09:18		  @bar(nicklist):button1-gesture-down => /bar scroll nicklist ${_window_number} +100%
+2014-05-25 22:09:18		  @bar(nicklist):button1-gesture-down-long => /bar scroll nicklist ${_window_number} e
+2014-05-25 22:09:18		  @bar(nicklist):button1-gesture-up => /bar scroll nicklist ${_window_number} -100%
+2014-05-25 22:09:18		  @bar(nicklist):button1-gesture-up-long => /bar scroll nicklist ${_window_number} b
+2014-05-25 22:09:18		  @chat(perl.iset):button1 => hsignal:iset_mouse
+2014-05-25 22:09:18		  @chat(perl.iset):button2* => hsignal:iset_mouse
+2014-05-25 22:09:18		  @chat(perl.iset):wheeldown => /repeat 5 /iset **down
+2014-05-25 22:09:18		  @chat(perl.iset):wheelup => /repeat 5 /iset **up
+2014-05-25 22:09:18		  @chat(script.scripts):button1 => /window ${_window_number};/script go ${_chat_line_y}
+2014-05-25 22:09:18		  @chat(script.scripts):button2 => /window ${_window_number};/script go ${_chat_line_y};/script installremove -q ${script_name_with_extension}
+2014-05-25 22:09:18		  @chat(script.scripts):wheeldown => /script down 5
+2014-05-25 22:09:18		  @chat(script.scripts):wheelup => /script up 5
+2014-05-25 22:09:18		  @item(buffer_nicklist):button1 => /window ${_window_number};/query ${nick}
+2014-05-25 22:09:18		  @item(buffer_nicklist):button1-gesture-left => /window ${_window_number};/kick ${nick}
+2014-05-25 22:09:18		  @item(buffer_nicklist):button1-gesture-left-long => /window ${_window_number};/kickban ${nick}
+2014-05-25 22:09:18		  @item(buffer_nicklist):button2 => /window ${_window_number};/whois ${nick}
+2014-05-25 22:09:18		  @item(buffer_nicklist):button2-gesture-left => /window ${_window_number};/ban ${nick}
+2014-05-25 22:09:18		  @item(buffers):button1* => hsignal:buffers_mouse
+2014-05-25 22:09:18		  @item(buffers):button2* => hsignal:buffers_mouse
+2014-05-25 22:09:18		  @bar:wheeldown => /bar scroll ${_bar_name} ${_window_number} +20%
+2014-05-25 22:09:18		  @bar:wheelup => /bar scroll ${_bar_name} ${_window_number} -20%
+2014-05-25 22:09:18		  @chat:button1 => /window ${_window_number}
+2014-05-25 22:09:18		  @chat:button1-gesture-left => /window ${_window_number};/buffer -1
+2014-05-25 22:09:18		  @chat:button1-gesture-left-long => /window ${_window_number};/buffer 1
+2014-05-25 22:09:18		  @chat:button1-gesture-right => /window ${_window_number};/buffer +1
+2014-05-25 22:09:18		  @chat:button1-gesture-right-long => /window ${_window_number};/input jump_last_buffer
+2014-05-25 22:09:18		  @chat:ctrl-wheeldown => /window scroll_horiz -window ${_window_number} +10%
+2014-05-25 22:09:18		  @chat:ctrl-wheelup => /window scroll_horiz -window ${_window_number} -10%
+2014-05-25 22:09:18		  @chat:wheeldown => /window scroll_down -window ${_window_number}
+2014-05-25 22:09:18		  @chat:wheelup => /window scroll_up -window ${_window_number}
+2014-05-25 22:09:18		  @*:button3 => /cursor go ${_x},${_y}
+2014-05-25 22:10:36	=!=	Error: unknown option for "key" command
+2014-05-25 22:10:47	=!=	Error: unknown option for "key" command
+2014-05-25 22:10:50		[core]  /key  list|listdefault|listdiff [<context>]
+2014-05-25 22:10:50		              bind <key> [<command> [<args>]]
+2014-05-25 22:10:50		              bindctxt <context> <key> [<command> [<args>]]
+2014-05-25 22:10:50		              unbind <key>
+2014-05-25 22:10:50		              unbindctxt <context> <key>
+2014-05-25 22:10:50		              reset <key>
+2014-05-25 22:10:50		              resetctxt <context> <key>
+2014-05-25 22:10:50		              resetall -yes [<context>]
+2014-05-25 22:10:50		              missing [<context>]
+2014-05-25 22:10:50		bind/unbind keys
+2014-05-25 22:10:50		       list: list all current keys (without argument, this list is displayed)
+2014-05-25 22:10:50		listdefault: list default keys
+2014-05-25 22:10:50		   listdiff: list differences between current and default keys (keys added, redefined or deleted)
+2014-05-25 22:10:50		    context: name of context ("default" or "search")
+2014-05-25 22:10:50		       bind: bind a command to a key or display command bound to key (for context "default")
+2014-05-25 22:10:50		   bindctxt: bind a command to a key or display command bound to key, for given context
+2014-05-25 22:10:50		    command: command (many commands can be separated by semicolons)
+2014-05-25 22:10:50		     unbind: remove a key binding (for context "default")
+2014-05-25 22:10:50		 unbindctxt: remove a key binding for given context
+2014-05-25 22:10:50		      reset: reset a key to default binding (for context "default")
+2014-05-25 22:10:50		  resetctxt: reset a key to default binding, for given context
+2014-05-25 22:10:50		   resetall: restore bindings to the default values and delete ALL personal bindings (use carefully!)
+2014-05-25 22:10:50		    missing: add missing keys (using default bindings), useful after installing new WeeChat version
+2014-05-25 22:10:50		When binding a command to a key, it is recommended to use key alt+k (or Esc then k), and then press the key to bind: this will insert key code in command line.
+2014-05-25 22:10:50		For context "mouse" (possible in context "cursor" too), key has format: "@area:key" or "@area1>area2:key" where area can be:
+2014-05-25 22:10:50		          *: any area on screen
+2014-05-25 22:10:50		       chat: chat area (any buffer)
+2014-05-25 22:10:50		  chat(xxx): char area for buffer with name "xxx" (full name including plugin)
+2014-05-25 22:10:50		     bar(*): any bar
+2014-05-25 22:10:50		   bar(xxx): bar "xxx"
+2014-05-25 22:10:50		    item(*): any bar item
+2014-05-25 22:10:50		  item(xxx): bar item "xxx"
+2014-05-25 22:10:50		The key can start or end with '*' to match many mouse events.
+2014-05-25 22:10:50		A special value for command with format "hsignal:name" can be used for context mouse, this will send the hsignal "name" with the focus hashtable as argument.
+2014-05-25 22:10:50		Another special value "-" can be used to disable key (it will be ignored when looking for keys).
+2014-05-25 22:10:50		Examples:
+2014-05-25 22:10:50		  key alt-x to toggle nicklist bar:
+2014-05-25 22:10:50		    /key bind meta-x /bar toggle nicklist
+2014-05-25 22:10:50		  key alt-r to jump to #weechat IRC channel:
+2014-05-25 22:10:50		    /key bind meta-r /buffer #weechat
+2014-05-25 22:10:50		  restore default binding for key alt-r:
+2014-05-25 22:10:50		    /key reset meta-r
+2014-05-25 22:10:50		  key "tab" to stop search in buffer:
+2014-05-25 22:10:50		    /key bindctxt search ctrl-I /input search_stop
+2014-05-25 22:10:50		  middle button of mouse on a nick to retrieve info on nick:
+2014-05-25 22:10:50		    /key bindctxt mouse @item(buffer_nicklist):button3 /msg nickserv info ${nick}
+2014-05-25 22:11:02		Key "meta-k" unbound (context: "default")
+2014-05-25 22:11:02		New key binding (context "default"): meta-k => /buffer -1
+2014-05-25 22:11:14		Key "meta-j" unbound (context: "default")
+2014-05-25 22:11:14		New key binding (context "default"): meta-j => /buffer +1
+2014-05-25 22:11:20		Options saved to sec.conf
+2014-05-25 22:11:20		Options saved to weechat.conf
+2014-05-25 22:11:20		Options saved to plugins.conf
+2014-05-25 22:11:20		Options saved to buffers.conf
+2014-05-25 22:11:20		Options saved to iset.conf
+2014-05-25 22:11:20		Options saved to irc.conf
+2014-05-25 22:11:20		Options saved to alias.conf
+2014-05-25 22:11:20		Options saved to charset.conf
+2014-05-25 22:11:20		Options saved to rmodifier.conf
+2014-05-25 22:11:20		Options saved to script.conf
+2014-05-25 22:11:20		Options saved to relay.conf
+2014-05-25 22:11:20		Options saved to aspell.conf
+2014-05-25 22:11:20		Options saved to logger.conf
+2014-05-25 22:11:20		Options saved to xfer.conf
+2014-05-25 22:11:29		All servers:
+2014-05-25 22:11:29		   freenode
+2014-05-25 22:11:29		 * chat [connected], 1 channel, 0 pv
+2014-05-25 22:11:41		List of aliases:
+2014-05-25 22:11:41		  N => names
+2014-05-25 22:11:43	=!=	irc: command "names" must be executed on irc buffer (server or channel)
+2014-05-25 22:12:09		All servers:
+2014-05-25 22:12:09		   freenode
+2014-05-25 22:12:09		 * chat [connected], 1 channel, 0 pv
+2014-05-25 22:12:17		All servers:
+2014-05-25 22:12:17		Server: freenode [not connected]
+2014-05-25 22:12:17		  addresses. . . . . . : 'chat.freenode.net/6667'
+2014-05-25 22:12:17		  proxy. . . . . . . . :   ('')
+2014-05-25 22:12:17		  ipv6 . . . . . . . . :   (on)
+2014-05-25 22:12:17		  ssl. . . . . . . . . :   (off)
+2014-05-25 22:12:17		  ssl_cert . . . . . . :   ('')
+2014-05-25 22:12:17		  ssl_priorities . . . :   ('NORMAL')
+2014-05-25 22:12:17		  ssl_dhkey_size . . . :   (2048)
+2014-05-25 22:12:17		  ssl_fingerprint. . . :   ('')
+2014-05-25 22:12:17		  ssl_verify . . . . . :   (on)
+2014-05-25 22:12:17		  password . . . . . . :   (hidden)
+2014-05-25 22:12:17		  capabilities . . . . :   ('')
+2014-05-25 22:12:17		  sasl_mechanism . . . :   ('plain')
+2014-05-25 22:12:17		  sasl_username. . . . :   ('')
+2014-05-25 22:12:17		  sasl_password. . . . :   (hidden)
+2014-05-25 22:12:17		  autoconnect. . . . . :   (off)
+2014-05-25 22:12:17		  autoreconnect. . . . :   (on)
+2014-05-25 22:12:17		  autoreconnect_delay. :   (10 seconds)
+2014-05-25 22:12:17		  nicks. . . . . . . . :   ('jared,jared1,jared2,jared3,jared4')
+2014-05-25 22:12:17		  username . . . . . . :   ('jared')
+2014-05-25 22:12:17		  realname . . . . . . :   ('')
+2014-05-25 22:12:17		  local_hostname . . . :   ('')
+2014-05-25 22:12:17		  command. . . . . . . :   ('')
+2014-05-25 22:12:17		  command_delay. . . . :   (0 seconds)
+2014-05-25 22:12:17		  autojoin . . . . . . :   ('')
+2014-05-25 22:12:17		  autorejoin . . . . . :   (off)
+2014-05-25 22:12:17		  autorejoin_delay . . :   (30 seconds)
+2014-05-25 22:12:17		  connection_timeout . :   (60 seconds)
+2014-05-25 22:12:17		  anti_flood_prio_high :   (2 seconds)
+2014-05-25 22:12:17		  anti_flood_prio_low. :   (2 seconds)
+2014-05-25 22:12:17		  away_check . . . . . :   (0 minutes)
+2014-05-25 22:12:17		  away_check_max_nicks :   (25)
+2014-05-25 22:12:17		  default_msg_kick . . :   ('')
+2014-05-25 22:12:17		  default_msg_part . . :   ('WeeChat %v')
+2014-05-25 22:12:17		  default_msg_quit . . :   ('WeeChat %v')
+2014-05-25 22:12:17		Server: chat [connected]
+2014-05-25 22:12:17		  addresses. . . . . . : 'localhost'
+2014-05-25 22:12:17		  proxy. . . . . . . . :   ('')
+2014-05-25 22:12:17		  ipv6 . . . . . . . . :   (on)
+2014-05-25 22:12:17		  ssl. . . . . . . . . :   (off)
+2014-05-25 22:12:17		  ssl_cert . . . . . . :   ('')
+2014-05-25 22:12:17		  ssl_priorities . . . :   ('NORMAL')
+2014-05-25 22:12:17		  ssl_dhkey_size . . . :   (2048)
+2014-05-25 22:12:17		  ssl_fingerprint. . . :   ('')
+2014-05-25 22:12:17		  ssl_verify . . . . . :   (on)
+2014-05-25 22:12:17		  password . . . . . . :   (hidden)
+2014-05-25 22:12:17		  capabilities . . . . :   ('')
+2014-05-25 22:12:17		  sasl_mechanism . . . :   ('plain')
+2014-05-25 22:12:17		  sasl_username. . . . :   ('')
+2014-05-25 22:12:17		  sasl_password. . . . :   (hidden)
+2014-05-25 22:12:17		  autoconnect. . . . . : on
+2014-05-25 22:12:17		  autoreconnect. . . . :   (on)
+2014-05-25 22:12:17		  autoreconnect_delay. :   (10 seconds)
+2014-05-25 22:12:17		  nicks. . . . . . . . :   ('jared,jared1,jared2,jared3,jared4')
+2014-05-25 22:12:17		  username . . . . . . :   ('jared')
+2014-05-25 22:12:17		  realname . . . . . . :   ('')
+2014-05-25 22:12:17		  local_hostname . . . :   ('')
+2014-05-25 22:12:17		  command. . . . . . . : '/msg &bitlbee identify 1one'
+2014-05-25 22:12:17		  command_delay. . . . :   (0 seconds)
+2014-05-25 22:12:17		  autojoin . . . . . . :   ('')
+2014-05-25 22:12:17		  autorejoin . . . . . :   (off)
+2014-05-25 22:12:17		  autorejoin_delay . . :   (30 seconds)
+2014-05-25 22:12:17		  connection_timeout . :   (60 seconds)
+2014-05-25 22:12:17		  anti_flood_prio_high :   (2 seconds)
+2014-05-25 22:12:17		  anti_flood_prio_low. :   (2 seconds)
+2014-05-25 22:12:17		  away_check . . . . . :   (0 minutes)
+2014-05-25 22:12:17		  away_check_max_nicks :   (25)
+2014-05-25 22:12:17		  default_msg_kick . . :   ('')
+2014-05-25 22:12:17		  default_msg_part . . :   ('WeeChat %v')
+2014-05-25 22:12:17		  default_msg_quit . . :   ('WeeChat %v')
+2014-05-25 22:12:30	=!=	No help available, "channel" is not a command or an option
+2014-05-25 22:13:55		Option changed: weechat.look.item_time_format = "%l:%M"  (default: "%H:%M")
+2014-05-25 22:14:40		Option changed: weechat.look.buffer_time_format = "%l:%M"  (default: "%H:%M:%S")
+2014-05-25 22:14:44		Options saved to sec.conf
+2014-05-25 22:14:44		Options saved to weechat.conf
+2014-05-25 22:14:44		Options saved to plugins.conf
+2014-05-25 22:14:44		Options saved to buffers.conf
+2014-05-25 22:14:44		Options saved to iset.conf
+2014-05-25 22:14:44		Options saved to irc.conf
+2014-05-25 22:14:44		Options saved to alias.conf
+2014-05-25 22:14:44		Options saved to charset.conf
+2014-05-25 22:14:44		Options saved to rmodifier.conf
+2014-05-25 22:14:44		Options saved to script.conf
+2014-05-25 22:14:44		Options saved to relay.conf
+2014-05-25 22:14:44		Options saved to aspell.conf
+2014-05-25 22:14:44		Options saved to logger.conf
+2014-05-25 22:14:44		Options saved to xfer.conf
+2014-05-25 22:15:52		Option changed: weechat.bar.input.items = "`-[input_prompt]+(away),[input_search],[input_paste],input_text"  (default: "[input_prompt]+(away),[input_search],[input_paste],input_text")
+2014-05-25 22:15:56		Options saved to sec.conf
+2014-05-25 22:15:56		Options saved to weechat.conf
+2014-05-25 22:15:56		Options saved to plugins.conf
+2014-05-25 22:15:56		Options saved to buffers.conf
+2014-05-25 22:15:56		Options saved to iset.conf
+2014-05-25 22:15:56		Options saved to irc.conf
+2014-05-25 22:15:56		Options saved to alias.conf
+2014-05-25 22:15:56		Options saved to charset.conf
+2014-05-25 22:15:56		Options saved to rmodifier.conf
+2014-05-25 22:15:56		Options saved to script.conf
+2014-05-25 22:15:56		Options saved to relay.conf
+2014-05-25 22:15:56		Options saved to aspell.conf
+2014-05-25 22:15:56		Options saved to logger.conf
+2014-05-25 22:15:56		Options saved to xfer.conf
+2014-05-25 22:16:51	=!=	irc: server "freenode" already exists, can't create it!
+2014-05-25 22:16:58	=!=	irc: unknown option for "server" command
+2014-05-25 22:17:01		[irc]  /server  list|listfull [<server>]
+2014-05-25 22:17:01		                add <server> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2014-05-25 22:17:01		                copy|rename <server> <new_name>
+2014-05-25 22:17:01		                del|keep <server>
+2014-05-25 22:17:01		                deloutq|jump|raw
+2014-05-25 22:17:01		list, add or remove IRC servers
+2014-05-25 22:17:01		    list: list servers (without argument, this list is displayed)
+2014-05-25 22:17:01		listfull: list servers with detailed info for each server
+2014-05-25 22:17:01		     add: create a new server
+2014-05-25 22:17:01		  server: server name, for internal and display use
+2014-05-25 22:17:01		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2014-05-25 22:17:01		    temp: create temporary server (not saved)
+2014-05-25 22:17:01		  option: set option for server (for boolean option, value can be omitted)
+2014-05-25 22:17:01		nooption: set boolean option to 'off' (for example: -nossl)
+2014-05-25 22:17:01		    copy: duplicate a server
+2014-05-25 22:17:01		  rename: rename a server
+2014-05-25 22:17:01		    keep: keep server in config file (for temporary servers only)
+2014-05-25 22:17:01		     del: delete a server
+2014-05-25 22:17:01		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2014-05-25 22:17:01		    jump: jump to server buffer
+2014-05-25 22:17:01		     raw: open buffer with raw IRC data
+2014-05-25 22:17:01		Examples:
+2014-05-25 22:17:01		  /server listfull
+2014-05-25 22:17:01		  /server add oftc irc.oftc.net/6697 -ssl -autoconnect
+2014-05-25 22:17:01		  /server add oftc6 irc6.oftc.net/6697 -ipv6 -ssl
+2014-05-25 22:17:01		  /server add freenode2 chat.eu.freenode.net/6667,chat.us.freenode.net/6667
+2014-05-25 22:17:01		  /server add freenode3 irc.freenode.net -password=mypass
+2014-05-25 22:17:01		  /server copy oftc oftcbis
+2014-05-25 22:17:01		  /server rename oftc newoftc
+2014-05-25 22:17:01		  /server del freenode
+2014-05-25 22:17:01		  /server deloutq
+2014-05-25 22:17:17	=!=	Error: unknown command "listfull" (type /help for help)
+2014-05-25 22:17:20		All servers:
+2014-05-25 22:17:20		Server: freenode [connected]
+2014-05-25 22:17:20		  addresses. . . . . . : 'chat.freenode.net/6667'
+2014-05-25 22:17:20		  proxy. . . . . . . . :   ('')
+2014-05-25 22:17:20		  ipv6 . . . . . . . . :   (on)
+2014-05-25 22:17:20		  ssl. . . . . . . . . :   (off)
+2014-05-25 22:17:20		  ssl_cert . . . . . . :   ('')
+2014-05-25 22:17:20		  ssl_priorities . . . :   ('NORMAL')
+2014-05-25 22:17:20		  ssl_dhkey_size . . . :   (2048)
+2014-05-25 22:17:20		  ssl_fingerprint. . . :   ('')
+2014-05-25 22:17:20		  ssl_verify . . . . . :   (on)
+2014-05-25 22:17:20		  password . . . . . . :   (hidden)
+2014-05-25 22:17:20		  capabilities . . . . :   ('')
+2014-05-25 22:17:20		  sasl_mechanism . . . :   ('plain')
+2014-05-25 22:17:20		  sasl_username. . . . :   ('')
+2014-05-25 22:17:20		  sasl_password. . . . :   (hidden)
+2014-05-25 22:17:20		  autoconnect. . . . . :   (off)
+2014-05-25 22:17:20		  autoreconnect. . . . :   (on)
+2014-05-25 22:17:20		  autoreconnect_delay. :   (10 seconds)
+2014-05-25 22:17:20		  nicks. . . . . . . . :   ('jared,jared1,jared2,jared3,jared4')
+2014-05-25 22:17:20		  username . . . . . . :   ('jared')
+2014-05-25 22:17:20		  realname . . . . . . :   ('')
+2014-05-25 22:17:20		  local_hostname . . . :   ('')
+2014-05-25 22:17:20		  command. . . . . . . :   ('')
+2014-05-25 22:17:20		  command_delay. . . . :   (0 seconds)
+2014-05-25 22:17:20		  autojoin . . . . . . :   ('')
+2014-05-25 22:17:20		  autorejoin . . . . . :   (off)
+2014-05-25 22:17:20		  autorejoin_delay . . :   (30 seconds)
+2014-05-25 22:17:20		  connection_timeout . :   (60 seconds)
+2014-05-25 22:17:20		  anti_flood_prio_high :   (2 seconds)
+2014-05-25 22:17:20		  anti_flood_prio_low. :   (2 seconds)
+2014-05-25 22:17:20		  away_check . . . . . :   (0 minutes)
+2014-05-25 22:17:20		  away_check_max_nicks :   (25)
+2014-05-25 22:17:20		  default_msg_kick . . :   ('')
+2014-05-25 22:17:20		  default_msg_part . . :   ('WeeChat %v')
+2014-05-25 22:17:20		  default_msg_quit . . :   ('WeeChat %v')
+2014-05-25 22:17:20		Server: chat [connected]
+2014-05-25 22:17:20		  addresses. . . . . . : 'localhost'
+2014-05-25 22:17:20		  proxy. . . . . . . . :   ('')
+2014-05-25 22:17:20		  ipv6 . . . . . . . . :   (on)
+2014-05-25 22:17:20		  ssl. . . . . . . . . :   (off)
+2014-05-25 22:17:20		  ssl_cert . . . . . . :   ('')
+2014-05-25 22:17:20		  ssl_priorities . . . :   ('NORMAL')
+2014-05-25 22:17:20		  ssl_dhkey_size . . . :   (2048)
+2014-05-25 22:17:20		  ssl_fingerprint. . . :   ('')
+2014-05-25 22:17:20		  ssl_verify . . . . . :   (on)
+2014-05-25 22:17:20		  password . . . . . . :   (hidden)
+2014-05-25 22:17:20		  capabilities . . . . :   ('')
+2014-05-25 22:17:20		  sasl_mechanism . . . :   ('plain')
+2014-05-25 22:17:20		  sasl_username. . . . :   ('')
+2014-05-25 22:17:20		  sasl_password. . . . :   (hidden)
+2014-05-25 22:17:20		  autoconnect. . . . . : on
+2014-05-25 22:17:20		  autoreconnect. . . . :   (on)
+2014-05-25 22:17:20		  autoreconnect_delay. :   (10 seconds)
+2014-05-25 22:17:20		  nicks. . . . . . . . :   ('jared,jared1,jared2,jared3,jared4')
+2014-05-25 22:17:20		  username . . . . . . :   ('jared')
+2014-05-25 22:17:20		  realname . . . . . . :   ('')
+2014-05-25 22:17:20		  local_hostname . . . :   ('')
+2014-05-25 22:17:20		  command. . . . . . . : '/msg &bitlbee identify 1one'
+2014-05-25 22:17:20		  command_delay. . . . :   (0 seconds)
+2014-05-25 22:17:20		  autojoin . . . . . . :   ('')
+2014-05-25 22:17:20		  autorejoin . . . . . :   (off)
+2014-05-25 22:17:20		  autorejoin_delay . . :   (30 seconds)
+2014-05-25 22:17:20		  connection_timeout . :   (60 seconds)
+2014-05-25 22:17:20		  anti_flood_prio_high :   (2 seconds)
+2014-05-25 22:17:20		  anti_flood_prio_low. :   (2 seconds)
+2014-05-25 22:17:20		  away_check . . . . . :   (0 minutes)
+2014-05-25 22:17:20		  away_check_max_nicks :   (25)
+2014-05-25 22:17:20		  default_msg_kick . . :   ('')
+2014-05-25 22:17:20		  default_msg_part . . :   ('WeeChat %v')
+2014-05-25 22:17:20		  default_msg_quit . . :   ('WeeChat %v')
+2014-05-25 22:17:58		[irc]  /server  list|listfull [<server>]
+2014-05-25 22:17:58		                add <server> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2014-05-25 22:17:58		                copy|rename <server> <new_name>
+2014-05-25 22:17:58		                del|keep <server>
+2014-05-25 22:17:58		                deloutq|jump|raw
+2014-05-25 22:17:58		list, add or remove IRC servers
+2014-05-25 22:17:58		    list: list servers (without argument, this list is displayed)
+2014-05-25 22:17:58		listfull: list servers with detailed info for each server
+2014-05-25 22:17:58		     add: create a new server
+2014-05-25 22:17:58		  server: server name, for internal and display use
+2014-05-25 22:17:58		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2014-05-25 22:17:58		    temp: create temporary server (not saved)
+2014-05-25 22:17:58		  option: set option for server (for boolean option, value can be omitted)
+2014-05-25 22:17:58		nooption: set boolean option to 'off' (for example: -nossl)
+2014-05-25 22:17:58		    copy: duplicate a server
+2014-05-25 22:17:58		  rename: rename a server
+2014-05-25 22:17:58		    keep: keep server in config file (for temporary servers only)
+2014-05-25 22:17:58		     del: delete a server
+2014-05-25 22:17:58		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2014-05-25 22:17:58		    jump: jump to server buffer
+2014-05-25 22:17:58		     raw: open buffer with raw IRC data
+2014-05-25 22:17:58		Examples:
+2014-05-25 22:17:58		  /server listfull
+2014-05-25 22:17:58		  /server add oftc irc.oftc.net/6697 -ssl -autoconnect
+2014-05-25 22:17:58		  /server add oftc6 irc6.oftc.net/6697 -ipv6 -ssl
+2014-05-25 22:17:58		  /server add freenode2 chat.eu.freenode.net/6667,chat.us.freenode.net/6667
+2014-05-25 22:17:58		  /server add freenode3 irc.freenode.net -password=mypass
+2014-05-25 22:17:58		  /server copy oftc oftcbis
+2014-05-25 22:17:58		  /server rename oftc newoftc
+2014-05-25 22:17:58		  /server del freenode
+2014-05-25 22:17:58		  /server deloutq
+2014-05-25 22:18:31		Servers with "freenode":
+2014-05-25 22:18:31		 * freenode [connected], 0 channels, 0 pv
+2014-05-25 22:18:40	=!=	irc: unknown option for "server" command
+2014-05-25 22:18:55	=!=	irc: you can not delete server "freenode" because you are connected to. Try "/disconnect freenode" before.
+2014-05-25 22:19:04		irc: server freenode has been deleted
+2014-05-25 22:20:22		irc: server freenode created
+2014-05-25 22:20:57		Option changed: irc.server.freenode.nicks = "thetornainbow"  (default: (undefined))
+2014-05-25 22:21:59		Option changed: irc.server.freenode.command = "/msg Nickserv identify 1phlegm"  (default: (undefined))
+2014-05-25 22:22:01		Options saved to sec.conf
+2014-05-25 22:22:01		Options saved to weechat.conf
+2014-05-25 22:22:01		Options saved to plugins.conf
+2014-05-25 22:22:01		Options saved to buffers.conf
+2014-05-25 22:22:01		Options saved to iset.conf
+2014-05-25 22:22:01		Options saved to irc.conf
+2014-05-25 22:22:01		Options saved to alias.conf
+2014-05-25 22:22:01		Options saved to charset.conf
+2014-05-25 22:22:01		Options saved to rmodifier.conf
+2014-05-25 22:22:01		Options saved to script.conf
+2014-05-25 22:22:01		Options saved to relay.conf
+2014-05-25 22:22:01		Options saved to aspell.conf
+2014-05-25 22:22:01		Options saved to logger.conf
+2014-05-25 22:22:01		Options saved to xfer.conf
+2014-05-25 22:23:58		Option changed: irc.server.freenode.nicks = "thetornainbow"  (default: (undefined))
+2014-05-25 22:32:07		Option changed: irc.server.freenode.nicks = ""  (default: (undefined))
+2014-05-25 22:32:09		Options saved to sec.conf
+2014-05-25 22:32:09		Options saved to weechat.conf
+2014-05-25 22:32:09		Options saved to plugins.conf
+2014-05-25 22:32:09		Options saved to buffers.conf
+2014-05-25 22:32:09		Options saved to iset.conf
+2014-05-25 22:32:09		Options saved to irc.conf
+2014-05-25 22:32:09		Options saved to alias.conf
+2014-05-25 22:32:09		Options saved to charset.conf
+2014-05-25 22:32:09		Options saved to rmodifier.conf
+2014-05-25 22:32:09		Options saved to script.conf
+2014-05-25 22:32:09		Options saved to relay.conf
+2014-05-25 22:32:09		Options saved to aspell.conf
+2014-05-25 22:32:09		Options saved to logger.conf
+2014-05-25 22:32:09		Options saved to xfer.conf
+2014-05-25 22:32:24	=!=	Error: can not merge windows, there's no other window with same size near current one
+2014-05-25 22:32:39	=!=	Error with command "disconnect" (try /help disconnect)
+2014-05-25 22:33:09		[server] (irc.conf)
+2014-05-25 22:33:09		  irc.server.freenode.nicks = ""  (default: (undefined))
+2014-05-25 22:33:09		1 option (matching with "irc.server.freenode.nicks")
+2014-05-25 22:33:17		Option changed: irc.server.freenode.nicks = "thetornainbow"  (default: (undefined))
+2014-05-25 22:35:27	=!=	No help available, "channel" is not a command or an option
+2014-05-25 22:35:31	=!=	No help available, "commands" is not a command or an option
+2014-05-25 22:35:34		[core]  /command  <plugin> <command>
+2014-05-25 22:35:34		launch explicit WeeChat or plugin command
+2014-05-25 22:35:34		 plugin: plugin name ('weechat' for WeeChat internal command)
+2014-05-25 22:35:34		command: command to execute (a '/' is automatically added if not found at beginning of command)
+2014-05-25 22:36:29		[core]
+2014-05-25 22:36:29		  away     buffer   command  debug    filter   history  key      mouse    plugin   proxy    reload   save     set      upgrade  version  window 
+2014-05-25 22:36:29		  bar      color    cursor   eval     help     input    layout   mute     print    quit     repeat   secure   unset    uptime   wait   
+2014-05-25 22:36:29		[perl]
+2014-05-25 22:36:29		  buffers_detach  buffers_whitelist  iset  perl
+2014-05-25 22:36:29		[irc]
+2014-05-25 22:36:29		  admin       ctcp        devoice     info        kickban     map         names       oper        quiet       sajoin      server      stats       unban       wallchops 
+2014-05-25 22:36:29		  allchan     cycle       die         invite      kill        me          nick        part        quote       samode      service     summon      userhost    wallops   
+2014-05-25 22:36:29		  allserv     dcc         disconnect  ison        links       mode        notice      ping        reconnect   sanick      servlist    time        users       who       
+2014-05-25 22:36:29		  ban         dehalfop    halfop      join        list        motd        notify      pong        rehash      sapart      squery      topic       version     whois     
+2014-05-25 22:36:29		  connect     deop        ignore      kick        lusers      msg         op          query       restart     saquit      squit       trace       voice       whowas    
+2014-05-25 22:36:29		[alias]
+2014-05-25 22:36:29		  AAWAY    AME      ANICK    BYE      CHAT     CLOSE    IG       K        LEAVE    MUB      Q        SAY      T        UMODE    V        WC       WII    
+2014-05-25 22:36:29		  alias    AMSG     BEEP     C        CL       EXIT     J        KB       M        N        REDRAW   SIGNOFF  UB       unalias  W        WI       WW     
+2014-05-25 22:36:29		[charset]
+2014-05-25 22:36:29		  charset
+2014-05-25 22:36:29		[python]
+2014-05-25 22:36:29		  python
+2014-05-25 22:36:29		[rmodifier]
+2014-05-25 22:36:29		  rmodifier
+2014-05-25 22:36:29		[script]
+2014-05-25 22:36:29		  script
+2014-05-25 22:36:29		[lua]
+2014-05-25 22:36:29		  lua
+2014-05-25 22:36:29		[relay]
+2014-05-25 22:36:29		  relay
+2014-05-25 22:36:29		[aspell]
+2014-05-25 22:36:29		  aspell
+2014-05-25 22:36:29		[guile]
+2014-05-25 22:36:29		  guile
+2014-05-25 22:36:29		[logger]
+2014-05-25 22:36:29		  logger
+2014-05-25 22:36:29		[xfer]
+2014-05-25 22:36:29		  me  xfer
+2014-05-25 22:44:20		Option changed: irc.server.freenode.autojoin = "#crunchbang,##crunchbang,#archlinux,#crux"  (default: (undefined))
+2014-05-25 22:44:22		Options saved to sec.conf
+2014-05-25 22:44:22		Options saved to weechat.conf
+2014-05-25 22:44:22		Options saved to plugins.conf
+2014-05-25 22:44:22		Options saved to buffers.conf
+2014-05-25 22:44:22		Options saved to iset.conf
+2014-05-25 22:44:22		Options saved to irc.conf
+2014-05-25 22:44:22		Options saved to alias.conf
+2014-05-25 22:44:22		Options saved to charset.conf
+2014-05-25 22:44:22		Options saved to rmodifier.conf
+2014-05-25 22:44:22		Options saved to script.conf
+2014-05-25 22:44:22		Options saved to relay.conf
+2014-05-25 22:44:22		Options saved to aspell.conf
+2014-05-25 22:44:22		Options saved to logger.conf
+2014-05-25 22:44:22		Options saved to xfer.conf
+2014-05-25 22:44:30	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-05-25 22:44:30	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-05-25 22:44:30		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, script, xfer
+2014-05-25 22:44:32		script: 279 scripts for WeeChat 0.4.3
+2014-05-25 22:44:59		[server] (irc.conf)
+2014-05-25 22:44:59		  irc.server.freenode.autoconnect
+2014-05-25 22:44:59		1 option (matching with "irc.server.freenode.autoconnect")
+2014-05-25 22:45:21		Option changed: irc.server.freenode.autoconnect = on  (default: (undefined))
+2014-05-25 22:45:24		Options saved to sec.conf
+2014-05-25 22:45:24		Options saved to weechat.conf
+2014-05-25 22:45:24		Options saved to plugins.conf
+2014-05-25 22:45:24		Options saved to buffers.conf
+2014-05-25 22:45:24		Options saved to iset.conf
+2014-05-25 22:45:24		Options saved to irc.conf
+2014-05-25 22:45:24		Options saved to alias.conf
+2014-05-25 22:45:24		Options saved to charset.conf
+2014-05-25 22:45:24		Options saved to rmodifier.conf
+2014-05-25 22:45:24		Options saved to script.conf
+2014-05-25 22:45:24		Options saved to relay.conf
+2014-05-25 22:45:24		Options saved to aspell.conf
+2014-05-25 22:45:24		Options saved to logger.conf
+2014-05-25 22:45:24		Options saved to xfer.conf
+2014-05-25 22:45:31	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-05-25 22:45:31	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-05-25 22:45:31		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, script, xfer
+2014-05-25 22:46:18		Option changed: irc.server.freenode.nicks = "tornainbow"  (default: (undefined))
+2014-05-25 22:46:27		Options saved to sec.conf
+2014-05-25 22:46:27		Options saved to weechat.conf
+2014-05-25 22:46:27		Options saved to plugins.conf
+2014-05-25 22:46:27		Options saved to buffers.conf
+2014-05-25 22:46:27		Options saved to iset.conf
+2014-05-25 22:46:27		Options saved to irc.conf
+2014-05-25 22:46:27		Options saved to alias.conf
+2014-05-25 22:46:27		Options saved to charset.conf
+2014-05-25 22:46:27		Options saved to rmodifier.conf
+2014-05-25 22:46:27		Options saved to script.conf
+2014-05-25 22:46:27		Options saved to relay.conf
+2014-05-25 22:46:27		Options saved to aspell.conf
+2014-05-25 22:46:27		Options saved to logger.conf
+2014-05-25 22:46:27		Options saved to xfer.conf
+2014-05-25 22:46:33	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-05-25 22:46:33	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-05-25 22:46:33		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, script, xfer
+2014-05-25 22:50:26		Option changed: weechat.bar.status.items = "                 [time],[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll"  (default: "[time],[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll")
+2014-05-25 22:50:58		Option changed: weechat.bar.status.separator = off  (default: on)
+2014-05-25 22:52:10		Option changed: weechat.bar.status.items = "time,buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll"  (default: "[time],[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll")
+2014-05-25 22:56:15		Option changed: weechat.bar.status.items = "time,-(buffer_number)-+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll"  (default: "[time],[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll")
+2014-05-25 22:56:36		Option changed: weechat.bar.status.items = "time,(buffer_number)+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll"  (default: "[time],[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll")
+2014-05-25 22:56:53		Option changed: weechat.bar.status.items = "time,:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll"  (default: "[time],[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll")
+2014-05-25 22:57:04		Option changed: weechat.bar.status.items = "time,+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll"  (default: "[time],[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll")
+2014-05-25 22:57:12		Option changed: weechat.bar.status.items = "time,-(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll"  (default: "[time],[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll")
+2014-05-25 22:57:22		Option changed: weechat.bar.status.items = "time,+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll"  (default: "[time],[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll")
+2014-05-25 22:57:32		Option changed: weechat.bar.status.items = "time,-(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll"  (default: "[time],[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll")
+2014-05-25 22:58:27		Option changed: weechat.bar.status.items = "time,+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll"  (default: "[time],[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll")
+2014-05-25 23:01:25	=!=	irc: command "list" must be executed on irc buffer (server or channel)
+2014-05-25 23:01:34		Plugins loaded:
+2014-05-25 23:01:34		  perl: Support of perl scripts
+2014-05-25 23:01:34		  irc: IRC (Internet Relay Chat) protocol
+2014-05-25 23:01:34		  alias: Alias commands
+2014-05-25 23:01:34		  charset: Charset conversions
+2014-05-25 23:01:34		  python: Support of python scripts
+2014-05-25 23:01:34		  rmodifier: String modifier with regular expressions
+2014-05-25 23:01:34		  script: Scripts manager
+2014-05-25 23:01:34		  lua: Support of lua scripts
+2014-05-25 23:01:34		  relay: Relay WeeChat data to remote application (irc/weechat protocols)
+2014-05-25 23:01:34		  aspell: Spell checker for input (with Aspell)
+2014-05-25 23:01:34		  fifo: FIFO pipe for remote control
+2014-05-25 23:01:34		  guile: Support of scheme scripts (with Guile)
+2014-05-25 23:01:34		  logger: Log buffers to files
+2014-05-25 23:01:34		  xfer: DCC file transfer and direct chat
+2014-05-25 23:01:51		python: loading script "/home/jared/.weechat/python/grep.py"
+2014-05-25 23:01:51		python: registered script "grep", version 0.7.3 (Search in buffers and logs)
+2014-05-25 23:01:57		Options saved to sec.conf
+2014-05-25 23:01:57		Options saved to weechat.conf
+2014-05-25 23:01:57		Options saved to plugins.conf
+2014-05-25 23:01:57		Options saved to buffers.conf
+2014-05-25 23:01:57		Options saved to iset.conf
+2014-05-25 23:01:57		Options saved to irc.conf
+2014-05-25 23:01:57		Options saved to alias.conf
+2014-05-25 23:01:57		Options saved to charset.conf
+2014-05-25 23:01:57		Options saved to rmodifier.conf
+2014-05-25 23:01:57		Options saved to script.conf
+2014-05-25 23:01:57		Options saved to relay.conf
+2014-05-25 23:01:57		Options saved to aspell.conf
+2014-05-25 23:01:57		Options saved to logger.conf
+2014-05-25 23:01:57		Options saved to xfer.conf
+2014-05-25 23:02:23		[python/grep]  /grep  [log <file> | buffer <name> | stop] [-a|--all] [-b|--buffer] [-c|--count] [-m|--matchcase] [-H|--hilight] [-o|--only-match] [-i|-v|--invert] [(-h|--head)|(-t|--tail) [-n|--number <n>]] [-A|--after-context <n>] [-B|--before-context <n>] [-C|--context <n> ] <expression>
+2014-05-25 23:02:23		Search in buffers and logs.
+2014-05-25 23:02:23		     log <file>: Search in one log that matches <file> in the logger path.
+2014-05-25 23:02:23		                 Use '*' and '?' as wildcards.
+2014-05-25 23:02:23		  buffer <name>: Search in buffer <name>, if there's no buffer with <name> it will
+2014-05-25 23:02:23		                 try to search for a log file.
+2014-05-25 23:02:23		           stop: Stops a currently running search.
+2014-05-25 23:02:23		       -a --all: Search in all open buffers.
+2014-05-25 23:02:23		                 If used with 'log <file>' search in all logs that matches <file>.
+2014-05-25 23:02:23		    -b --buffer: Search only in buffers, not in file logs.
+2014-05-25 23:02:23		     -c --count: Just count the number of matched lines instead of showing them.
+2014-05-25 23:02:23		 -m --matchcase: Don't do case insensible search.
+2014-05-25 23:02:23		   -H --hilight: Colour exact matches in output buffer.
+2014-05-25 23:02:23		-o --only-match: Print only the matching part of the line (unique matches).
+2014-05-25 23:02:23		 -v -i --invert: Print lines that don't match the regular expression.
+2014-05-25 23:02:23		      -t --tail: Print the last 10 matching lines.
+2014-05-25 23:02:23		      -h --head: Print the first 10 matching lines.
+2014-05-25 23:02:23		-n --number <n>: Overrides default number of lines for --tail or --head.
+2014-05-25 23:02:23		-A --after-context <n>: Shows <n> lines of trailing context after matching lines.
+2014-05-25 23:02:23		-B --before-context <n>: Shows <n> lines of leading context before matching lines.
+2014-05-25 23:02:23		-C --context <n>: Same as using both --after-context and --before-context simultaneously.
+2014-05-25 23:02:23		  <expression>: Expression to search.
+2014-05-25 23:02:23		Grep buffer:
+2014-05-25 23:02:23		  Input line accepts most arguments of /grep, it'll repeat last search using the new
+2014-05-25 23:02:23		  arguments provided. You can't search in different logs from the buffer's input.
+2014-05-25 23:02:23		  Boolean arguments like --count, --tail, --head, --hilight, ... are toggleable
+2014-05-25 23:02:23		Python regular expression syntax:
+2014-05-25 23:02:23		  See http://docs.python.org/lib/re-syntax.html
+2014-05-25 23:02:23		Grep Templates:
+2014-05-25 23:02:23		     %{url [text]}: Matches anything like an url, or an url with text.
+2014-05-25 23:02:23		             %{ip}: Matches anything that looks like an ip.
+2014-05-25 23:02:23		         %{domain}: Matches anything like a domain.
+2014-05-25 23:02:23		    %{escape text}: Escapes text in pattern.
+2014-05-25 23:02:23		 %{simple pattern}: Converts a pattern with '*' and '?' wildcards into a regexp.
+2014-05-25 23:02:23		Examples:
+2014-05-25 23:02:23		  Search for urls with the word 'weechat' said by 'nick'
+2014-05-25 23:02:23		    /grep nick\t.*%{url weechat}
+2014-05-25 23:02:23		  Search for '*.*' string
+2014-05-25 23:02:23		    /grep %{escape *.*}
+2014-05-25 23:03:09		[python/grep]  /grep  [log <file> | buffer <name> | stop] [-a|--all] [-b|--buffer] [-c|--count] [-m|--matchcase] [-H|--hilight] [-o|--only-match] [-i|-v|--invert] [(-h|--head)|(-t|--tail) [-n|--number <n>]] [-A|--after-context <n>] [-B|--before-context <n>] [-C|--context <n> ] <expression>
+2014-05-25 23:03:09		Search in buffers and logs.
+2014-05-25 23:03:09		     log <file>: Search in one log that matches <file> in the logger path.
+2014-05-25 23:03:09		                 Use '*' and '?' as wildcards.
+2014-05-25 23:03:09		  buffer <name>: Search in buffer <name>, if there's no buffer with <name> it will
+2014-05-25 23:03:09		                 try to search for a log file.
+2014-05-25 23:03:09		           stop: Stops a currently running search.
+2014-05-25 23:03:09		       -a --all: Search in all open buffers.
+2014-05-25 23:03:09		                 If used with 'log <file>' search in all logs that matches <file>.
+2014-05-25 23:03:09		    -b --buffer: Search only in buffers, not in file logs.
+2014-05-25 23:03:09		     -c --count: Just count the number of matched lines instead of showing them.
+2014-05-25 23:03:09		 -m --matchcase: Don't do case insensible search.
+2014-05-25 23:03:09		   -H --hilight: Colour exact matches in output buffer.
+2014-05-25 23:03:09		-o --only-match: Print only the matching part of the line (unique matches).
+2014-05-25 23:03:09		 -v -i --invert: Print lines that don't match the regular expression.
+2014-05-25 23:03:09		      -t --tail: Print the last 10 matching lines.
+2014-05-25 23:03:09		      -h --head: Print the first 10 matching lines.
+2014-05-25 23:03:09		-n --number <n>: Overrides default number of lines for --tail or --head.
+2014-05-25 23:03:09		-A --after-context <n>: Shows <n> lines of trailing context after matching lines.
+2014-05-25 23:03:09		-B --before-context <n>: Shows <n> lines of leading context before matching lines.
+2014-05-25 23:03:09		-C --context <n>: Same as using both --after-context and --before-context simultaneously.
+2014-05-25 23:03:09		  <expression>: Expression to search.
+2014-05-25 23:03:09		Grep buffer:
+2014-05-25 23:03:09		  Input line accepts most arguments of /grep, it'll repeat last search using the new
+2014-05-25 23:03:09		  arguments provided. You can't search in different logs from the buffer's input.
+2014-05-25 23:03:09		  Boolean arguments like --count, --tail, --head, --hilight, ... are toggleable
+2014-05-25 23:03:09		Python regular expression syntax:
+2014-05-25 23:03:09		  See http://docs.python.org/lib/re-syntax.html
+2014-05-25 23:03:09		Grep Templates:
+2014-05-25 23:03:09		     %{url [text]}: Matches anything like an url, or an url with text.
+2014-05-25 23:03:09		             %{ip}: Matches anything that looks like an ip.
+2014-05-25 23:03:09		         %{domain}: Matches anything like a domain.
+2014-05-25 23:03:09		    %{escape text}: Escapes text in pattern.
+2014-05-25 23:03:09		 %{simple pattern}: Converts a pattern with '*' and '?' wildcards into a regexp.
+2014-05-25 23:03:09		Examples:
+2014-05-25 23:03:09		  Search for urls with the word 'weechat' said by 'nick'
+2014-05-25 23:03:09		    /grep nick\t.*%{url weechat}
+2014-05-25 23:03:09		  Search for '*.*' string
+2014-05-25 23:03:09		    /grep %{escape *.*}
+2014-05-25 23:03:22		Options saved to sec.conf
+2014-05-25 23:03:22		Options saved to weechat.conf
+2014-05-25 23:03:22		Options saved to plugins.conf
+2014-05-25 23:03:22		Options saved to buffers.conf
+2014-05-25 23:03:22		Options saved to iset.conf
+2014-05-25 23:03:22		Options saved to irc.conf
+2014-05-25 23:03:22		Options saved to alias.conf
+2014-05-25 23:03:22		Options saved to charset.conf
+2014-05-25 23:03:22		Options saved to rmodifier.conf
+2014-05-25 23:03:22		Options saved to script.conf
+2014-05-25 23:03:22		Options saved to relay.conf
+2014-05-25 23:03:22		Options saved to aspell.conf
+2014-05-25 23:03:22		Options saved to logger.conf
+2014-05-25 23:03:22		Options saved to xfer.conf
+2014-05-25 23:03:46	=!=	You can not write text in this buffer
+2014-05-25 23:07:50		List of aliases:
+2014-05-25 23:07:50		  AAWAY => allserv /away
+2014-05-27 09:33:53	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-05-27 09:33:53	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-05-27 09:33:53		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, xfer
+2014-05-27 09:33:55		script: 279 scripts for WeeChat 0.4.3
+2014-05-27 09:35:21		List of aliases:
+2014-05-27 09:35:21		  W => who
+2014-05-27 09:35:27		List of aliases:
+2014-05-27 09:35:27		  WI => whois
+2014-05-27 09:35:31		List of aliases:
+2014-05-27 09:35:31		  WII => whois $1 $1
+2014-05-27 09:49:29		[alias]  /BEEP  
+2014-05-27 09:49:29		print -stderr \a
+2014-05-27 09:56:16		Option changed: weechat.bar.input.items = "[input_prompt]+(away),[input_search],[input_paste],input_text"
+2014-05-27 09:59:14		Option changed: buffers.color.current_bg = cyan  (default: red)
+2014-05-27 09:59:26		Option changed: buffers.color.current_fg = black  (default: lightcyan)
+2014-05-27 09:59:54		Option changed: buffers.color.number = black  (default: lightgreen)
+2014-05-27 10:00:07		Option changed: buffers.color.number = white  (default: lightgreen)
+2014-05-27 10:00:20		Option changed: buffers.color.number = yellow  (default: lightgreen)
+2014-05-27 10:00:53		Option changed: weechat.bar.buffers.position = top  (default: left)
+2014-05-27 10:01:03		Option changed: weechat.bar.buffers.position = bottom  (default: left)
+2014-05-27 10:01:32		Option changed: weechat.bar.input.position = top  (default: bottom)
+2014-05-27 10:01:47		Option changed: weechat.bar.input.position = left  (default: bottom)
+2014-05-27 10:02:08	=!=	Error: failed to set option "weechat.bar.input.position"
+2014-05-27 10:02:18	=!=	Error: failed to set option "weechat.bar.input.position"
+2014-05-27 10:02:21	=!=	Error: failed to set option "weechat.bar.input.position"
+2014-05-27 10:02:40		Option changed: weechat.bar.input.position = top  (default: bottom)
+2014-05-27 10:02:47		Option changed: weechat.bar.input.position = bottom
+2014-05-27 10:05:08		Option changed: weechat.bar.status.items = "(time),+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll"  (default: "[time],[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll")
+2014-05-27 10:05:29		Option changed: weechat.bar.status.position = top  (default: bottom)
+2014-05-27 10:06:07		Option changed: weechat.bar.title.priority = 300  (default: 500)
+2014-05-27 10:06:32		Option changed: weechat.bar.status.priority = 200  (default: 500)
+2014-05-27 10:07:43		[look] (weechat.conf)
+2014-05-27 10:07:43		  weechat.look.window_title = "WeeChat ${info:version}"
+2014-05-27 10:07:43		[bar] (weechat.conf)
+2014-05-27 10:07:43		  weechat.bar.title.color_bg = blue
+2014-05-27 10:07:43		  weechat.bar.title.color_delim = cyan
+2014-05-27 10:07:43		  weechat.bar.title.color_fg = default
+2014-05-27 10:07:43		  weechat.bar.title.conditions = ""
+2014-05-27 10:07:43		  weechat.bar.title.filling_left_right = vertical
+2014-05-27 10:07:43		  weechat.bar.title.filling_top_bottom = horizontal
+2014-05-27 10:07:43		  weechat.bar.title.hidden = off
+2014-05-27 10:07:43		  weechat.bar.title.items = "buffer_title"
+2014-05-27 10:07:43		  weechat.bar.title.position = top
+2014-05-27 10:07:43		  weechat.bar.title.priority = 300  (default: 500)
+2014-05-27 10:07:43		  weechat.bar.title.separator = off
+2014-05-27 10:07:43		  weechat.bar.title.size = 1
+2014-05-27 10:07:43		  weechat.bar.title.size_max = 0
+2014-05-27 10:07:43		  weechat.bar.title.type = window
+2014-05-27 10:07:43		15 options (matching with "*title*")
+2014-05-27 10:08:05	=!=	Error: option "*title.color_bg" not found
+2014-05-27 10:08:16		Option changed: weechat.bar.title.color_bg = default  (default: blue)
+2014-05-27 10:09:34		Option changed: weechat.bar.title.items = "+{buffer_nicklist_count} \- [buffer_title]"  (default: "buffer_title")
+2014-05-27 10:09:43		Option changed: weechat.bar.title.items = "+{buffer_nicklist_count} [buffer_title]"  (default: "buffer_title")
+2014-05-27 10:09:54		Option changed: weechat.bar.title.items = "+buffer_nicklist_count [buffer_title]"  (default: "buffer_title")
+2014-05-27 10:10:32		Option changed: weechat.bar.title.items = "+(Nicks: buffer_nicklist_count) +[buffer_title]"  (default: "buffer_title")
+2014-05-27 10:11:02		Option changed: weechat.bar.title.items = "+(buffer_nicklist_count) +[buffer_title]"  (default: "buffer_title")
+2014-05-27 10:11:16		Option changed: weechat.bar.status.items = "(time),+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll"  (default: "[time],[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll")
+2014-05-27 10:11:22		Options saved to sec.conf
+2014-05-27 10:11:22		Options saved to weechat.conf
+2014-05-27 10:11:22		Options saved to plugins.conf
+2014-05-27 10:11:22		Options saved to buffers.conf
+2014-05-27 10:11:22		Options saved to iset.conf
+2014-05-27 10:11:22		Options saved to irc.conf
+2014-05-27 10:11:22		Options saved to alias.conf
+2014-05-27 10:11:22		Options saved to charset.conf
+2014-05-27 10:11:22		Options saved to rmodifier.conf
+2014-05-27 10:11:22		Options saved to script.conf
+2014-05-27 10:11:22		Options saved to relay.conf
+2014-05-27 10:11:22		Options saved to aspell.conf
+2014-05-27 10:11:22		Options saved to logger.conf
+2014-05-27 10:11:22		Options saved to xfer.conf
+2014-05-27 10:14:22		Option changed: weechat.bar.status.items = "(time) |,[hotlist] |,lag,completion,scroll"  (default: "[time],[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll")
+2014-05-27 10:16:25		Option changed: weechat.bar.status.items = "(time) ,[hotlist] |,lag,completion,scroll"  (default: "[time],[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll")
+2014-05-27 10:17:15		Option changed: weechat.bar.input.items = "(time) [input_prompt]+(away),[input_search],[input_paste],input_text"  (default: "[input_prompt]+(away),[input_search],[input_paste],input_text")
+2014-05-27 10:17:29		Option changed: weechat.bar.status.items = "[hotlist] |,lag,completion,scroll"  (default: "[time],[buffer_count],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,[lag],[hotlist],completion,scroll")
+2014-05-27 10:18:32		Option changed: weechat.bar.nicklist.items = "(buffer_nicklist_count) buffer_nicklist"  (default: "buffer_nicklist")
+2014-05-27 10:18:45		Option changed: weechat.bar.nicklist.items = "(buffer_nicklist_count) ,buffer_nicklist"  (default: "buffer_nicklist")
+2014-05-27 10:18:59	perl	warning: Use of uninitialized value $cmd_array[0] in string ne at /home/jared/.weechat/perl/autoload/iset.pl line 249.
+2014-05-27 10:19:16		Option changed: weechat.bar.title.items = "+[buffer_title]"  (default: "buffer_title")
+2014-05-27 10:22:04		[irc]  /ignore  list
+2014-05-27 10:22:04		                add [re:]<nick> [<server> [<channel>]]
+2014-05-27 10:22:04		                del <number>|-all
+2014-05-27 10:22:04		ignore nicks/hosts from servers or channels
+2014-05-27 10:22:04		     list: list all ignores
+2014-05-27 10:22:04		      add: add an ignore
+2014-05-27 10:22:04		     nick: nick or hostname (can be a POSIX extended regular expression if "re:" is given or a mask using "*" to replace one or more chars)
+2014-05-27 10:22:04		      del: delete an ignore
+2014-05-27 10:22:04		   number: number of ignore to delete (look at list to find it)
+2014-05-27 10:22:04		     -all: delete all ignores
+2014-05-27 10:22:04		   server: internal server name where ignore is working
+2014-05-27 10:22:04		  channel: channel name where ignore is working
+2014-05-27 10:22:04		Note: the regular expression can start with "(?-i)" to become case sensitive.
+2014-05-27 10:22:04		Examples:
+2014-05-27 10:22:04		  ignore nick "toto" everywhere:
+2014-05-27 10:22:04		    /ignore add toto
+2014-05-27 10:22:04		  ignore host "toto@domain.com" on freenode server:
+2014-05-27 10:22:04		    /ignore add toto@domain.com freenode
+2014-05-27 10:22:04		  ignore host "toto*@*.domain.com" on freenode/#weechat:
+2014-05-27 10:22:04		    /ignore add toto*@*.domain.com freenode #weechat
+2014-05-27 10:22:32		irc: no ignore in list
+2014-05-27 10:24:05		[core]  /filter  list
+2014-05-27 10:24:05		                 enable|disable|toggle [<name>]
+2014-05-27 10:24:05		                 add <name> <buffer>[,<buffer>...] <tags> <regex>
+2014-05-27 10:24:05		                 del <name>|-all
+2014-05-27 10:24:05		filter messages in buffers, to hide/show them according to tags or regex
+2014-05-27 10:24:05		   list: list all filters
+2014-05-27 10:24:05		 enable: enable filters (filters are enabled by default)
+2014-05-27 10:24:05		disable: disable filters
+2014-05-27 10:24:05		 toggle: toggle filters
+2014-05-27 10:24:05		   name: filter name
+2014-05-27 10:24:05		    add: add a filter
+2014-05-27 10:24:05		    del: delete a filter
+2014-05-27 10:24:05		   -all: delete all filters
+2014-05-27 10:24:05		 buffer: comma separated list of buffers where filter is active:
+2014-05-27 10:24:05		         - this is full name including plugin (example: "irc.freenode.#weechat")
+2014-05-27 10:24:05		         - "*" means all buffers
+2014-05-27 10:24:05		         - a name starting with '!' is excluded
+2014-05-27 10:24:05		         - name can start or end with '*' to match many buffers
+2014-05-27 10:24:05		   tags: comma separated list of tags, for example "irc_join,irc_part,irc_quit"
+2014-05-27 10:24:05		         - logical "and": use "+" between tags (for example: "nick_toto+irc_action")
+2014-05-27 10:24:05		         - tags can start or end with '*'
+2014-05-27 10:24:05		  regex: POSIX extended regular expression to search in line
+2014-05-27 10:24:05		         - use '\t' to separate prefix from message, special chars like '|' must be escaped: '\|'
+2014-05-27 10:24:05		         - if regex starts with '!', then matching result is reversed (use '\!' to start with '!')
+2014-05-27 10:24:05		         - two regular expressions are created: one for prefix and one for message
+2014-05-27 10:24:05		         - regex are case insensitive, they can start by "(?-i)" to become case sensitive
+2014-05-27 10:24:05		The default key alt+'=' toggles filtering on/off.
+2014-05-27 10:24:05		Tags most commonly used:
+2014-05-27 10:24:05		  no_filter, no_highlight, no_log, log0..log9 (log level),
+2014-05-27 10:24:05		  notify_none, notify_message, notify_private, notify_highlight,
+2014-05-27 10:24:05		  nick_xxx (xxx is nick in message), prefix_nick_ccc (ccc is color of nick),
+2014-05-27 10:24:05		  irc_xxx (xxx is command name or number, see /server raw or /debug tags),
+2014-05-27 10:24:05		  irc_numeric, irc_error, irc_action, irc_ctcp, irc_ctcp_reply, irc_smart_filter, away_info.
+2014-05-27 10:24:05		To see tags for lines in buffers: /debug tags
+2014-05-27 10:24:05		Examples:
+2014-05-27 10:24:05		  use IRC smart filter on all buffers:
+2014-05-27 10:24:05		    /filter add irc_smart * irc_smart_filter *
+2014-05-27 10:24:05		  use IRC smart filter on all buffers except those with "#weechat" in name:
+2014-05-27 10:24:05		    /filter add irc_smart *,!*#weechat* irc_smart_filter *
+2014-05-27 10:24:05		  filter all IRC join/part/quit messages:
+2014-05-27 10:24:05		    /filter add joinquit * irc_join,irc_part,irc_quit *
+2014-05-27 10:24:05		  filter nicks displayed when joining channels or with /names:
+2014-05-27 10:24:05		    /filter add nicks * irc_366 *
+2014-05-27 10:24:05		  filter nick "toto" on IRC channel #weechat:
+2014-05-27 10:24:05		    /filter add toto irc.freenode.#weechat nick_toto *
+2014-05-27 10:24:05		  filter IRC join/action messages from nick "toto":
+2014-05-27 10:24:05		    /filter add toto * nick_toto+irc_join,nick_toto+irc_action *
+2014-05-27 10:24:05		  filter lines containing "weechat sucks" on IRC channel #weechat:
+2014-05-27 10:24:05		    /filter add sucks irc.freenode.#weechat * weechat sucks
+2014-05-27 10:24:42	=!=	Error: missing arguments for "filter add" command
+2014-05-27 10:24:42	=!=	Error with command "filter" (try /help filter)
+2014-05-27 10:24:49		Filter "joinquit" added:
+2014-05-27 10:24:49		  [joinquit] buffer: * / tags: irc_join,irc_part,irc_quit / regex: * 
+2014-05-27 10:25:29		Option changed: weechat.bar.input.items = "(time) ,[input_prompt]+(away),[input_search],[input_paste],input_text"  (default: "[input_prompt]+(away),[input_search],[input_paste],input_text")
+2014-05-27 10:28:49	=!=	Error: missing arguments for "filter add" command
+2014-05-27 10:28:49	=!=	Error with command "filter" (try /help filter)
+2014-05-27 10:28:53		[core]  /filter  list
+2014-05-27 10:28:53		                 enable|disable|toggle [<name>]
+2014-05-27 10:28:53		                 add <name> <buffer>[,<buffer>...] <tags> <regex>
+2014-05-27 10:28:53		                 del <name>|-all
+2014-05-27 10:28:53		filter messages in buffers, to hide/show them according to tags or regex
+2014-05-27 10:28:53		   list: list all filters
+2014-05-27 10:28:53		 enable: enable filters (filters are enabled by default)
+2014-05-27 10:28:53		disable: disable filters
+2014-05-27 10:28:53		 toggle: toggle filters
+2014-05-27 10:28:53		   name: filter name
+2014-05-27 10:28:53		    add: add a filter
+2014-05-27 10:28:53		    del: delete a filter
+2014-05-27 10:28:53		   -all: delete all filters
+2014-05-27 10:28:53		 buffer: comma separated list of buffers where filter is active:
+2014-05-27 10:28:53		         - this is full name including plugin (example: "irc.freenode.#weechat")
+2014-05-27 10:28:53		         - "*" means all buffers
+2014-05-27 10:28:53		         - a name starting with '!' is excluded
+2014-05-27 10:28:53		         - name can start or end with '*' to match many buffers
+2014-05-27 10:28:53		   tags: comma separated list of tags, for example "irc_join,irc_part,irc_quit"
+2014-05-27 10:28:53		         - logical "and": use "+" between tags (for example: "nick_toto+irc_action")
+2014-05-27 10:28:53		         - tags can start or end with '*'
+2014-05-27 10:28:53		  regex: POSIX extended regular expression to search in line
+2014-05-27 10:28:53		         - use '\t' to separate prefix from message, special chars like '|' must be escaped: '\|'
+2014-05-27 10:28:53		         - if regex starts with '!', then matching result is reversed (use '\!' to start with '!')
+2014-05-27 10:28:53		         - two regular expressions are created: one for prefix and one for message
+2014-05-27 10:28:53		         - regex are case insensitive, they can start by "(?-i)" to become case sensitive
+2014-05-27 10:28:53		The default key alt+'=' toggles filtering on/off.
+2014-05-27 10:28:53		Tags most commonly used:
+2014-05-27 10:28:53		  no_filter, no_highlight, no_log, log0..log9 (log level),
+2014-05-27 10:28:53		  notify_none, notify_message, notify_private, notify_highlight,
+2014-05-27 10:28:53		  nick_xxx (xxx is nick in message), prefix_nick_ccc (ccc is color of nick),
+2014-05-27 10:28:53		  irc_xxx (xxx is command name or number, see /server raw or /debug tags),
+2014-05-27 10:28:53		  irc_numeric, irc_error, irc_action, irc_ctcp, irc_ctcp_reply, irc_smart_filter, away_info.
+2014-05-27 10:28:53		To see tags for lines in buffers: /debug tags
+2014-05-27 10:28:53		Examples:
+2014-05-27 10:28:53		  use IRC smart filter on all buffers:
+2014-05-27 10:28:53		    /filter add irc_smart * irc_smart_filter *
+2014-05-27 10:28:53		  use IRC smart filter on all buffers except those with "#weechat" in name:
+2014-05-27 10:28:53		    /filter add irc_smart *,!*#weechat* irc_smart_filter *
+2014-05-27 10:28:53		  filter all IRC join/part/quit messages:
+2014-05-27 10:28:53		    /filter add joinquit * irc_join,irc_part,irc_quit *
+2014-05-27 10:28:53		  filter nicks displayed when joining channels or with /names:
+2014-05-27 10:28:53		    /filter add nicks * irc_366 *
+2014-05-27 10:28:53		  filter nick "toto" on IRC channel #weechat:
+2014-05-27 10:28:53		    /filter add toto irc.freenode.#weechat nick_toto *
+2014-05-27 10:28:53		  filter IRC join/action messages from nick "toto":
+2014-05-27 10:28:53		    /filter add toto * nick_toto+irc_join,nick_toto+irc_action *
+2014-05-27 10:28:53		  filter lines containing "weechat sucks" on IRC channel #weechat:
+2014-05-27 10:28:53		    /filter add sucks irc.freenode.#weechat * weechat sucks
+2014-05-27 10:40:12	=!=	Error: unknown option for "filter" command
+2014-05-27 10:40:17		All filters have been deleted
+2014-05-27 10:40:19		Options saved to sec.conf
+2014-05-27 10:40:19		Options saved to weechat.conf
+2014-05-27 10:40:19		Options saved to plugins.conf
+2014-05-27 10:40:19		Options saved to buffers.conf
+2014-05-27 10:40:19		Options saved to iset.conf
+2014-05-27 10:40:19		Options saved to irc.conf
+2014-05-27 10:40:19		Options saved to alias.conf
+2014-05-27 10:40:19		Options saved to charset.conf
+2014-05-27 10:40:19		Options saved to rmodifier.conf
+2014-05-27 10:40:19		Options saved to script.conf
+2014-05-27 10:40:19		Options saved to relay.conf
+2014-05-27 10:40:19		Options saved to aspell.conf
+2014-05-27 10:40:19		Options saved to logger.conf
+2014-05-27 10:40:19		Options saved to xfer.conf
+2014-05-27 11:42:20	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-05-27 11:42:20	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-05-27 11:42:20		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, xfer
+2014-05-27 11:42:21		script: 279 scripts for WeeChat 0.4.3
+2014-05-27 11:50:50		irc: server irc.freenode.net created (temporary server, NOT SAVED!)
+2014-05-27 11:51:02	=!=	irc: not connected to server "irc.freenode.net"!
+2014-05-27 11:51:02	=!=	Error with command "disconnect" (try /help disconnect)
+2014-05-31 20:44:51	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-05-31 20:44:51	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-05-31 20:44:51		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, xfer
+2014-05-31 20:44:53		script: 279 scripts for WeeChat 0.4.3
+2014-05-31 20:44:56	=!=	Error: can not merge windows, there's no other window with same size near current one
+2014-06-19 09:42:01	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-06-19 09:42:01	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-06-19 09:42:01		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, xfer
+2014-06-19 09:42:02		script: 279 scripts for WeeChat 0.4.3
+2014-06-19 09:43:43	=!=	irc: unknown option for "server" command
+2014-06-19 09:43:46		[irc]  /server  list|listfull [<server>]
+2014-06-19 09:43:46		                add <server> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2014-06-19 09:43:46		                copy|rename <server> <new_name>
+2014-06-19 09:43:46		                del|keep <server>
+2014-06-19 09:43:46		                deloutq|jump|raw
+2014-06-19 09:43:46		list, add or remove IRC servers
+2014-06-19 09:43:46		    list: list servers (without argument, this list is displayed)
+2014-06-19 09:43:46		listfull: list servers with detailed info for each server
+2014-06-19 09:43:46		     add: create a new server
+2014-06-19 09:43:46		  server: server name, for internal and display use
+2014-06-19 09:43:46		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2014-06-19 09:43:46		    temp: create temporary server (not saved)
+2014-06-19 09:43:46		  option: set option for server (for boolean option, value can be omitted)
+2014-06-19 09:43:46		nooption: set boolean option to 'off' (for example: -nossl)
+2014-06-19 09:43:46		    copy: duplicate a server
+2014-06-19 09:43:46		  rename: rename a server
+2014-06-19 09:43:46		    keep: keep server in config file (for temporary servers only)
+2014-06-19 09:43:46		     del: delete a server
+2014-06-19 09:43:46		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2014-06-19 09:43:46		    jump: jump to server buffer
+2014-06-19 09:43:46		     raw: open buffer with raw IRC data
+2014-06-19 09:43:46		Examples:
+2014-06-19 09:43:46		  /server listfull
+2014-06-19 09:43:46		  /server add oftc irc.oftc.net/6697 -ssl -autoconnect
+2014-06-19 09:43:46		  /server add oftc6 irc6.oftc.net/6697 -ipv6 -ssl
+2014-06-19 09:43:46		  /server add freenode2 chat.eu.freenode.net/6667,chat.us.freenode.net/6667
+2014-06-19 09:43:46		  /server add freenode3 irc.freenode.net -password=mypass
+2014-06-19 09:43:46		  /server copy oftc oftcbis
+2014-06-19 09:43:46		  /server rename oftc newoftc
+2014-06-19 09:43:46		  /server del freenode
+2014-06-19 09:43:46		  /server deloutq
+2014-06-19 09:43:51		irc: server freenode has been deleted
+2014-06-25 09:01:49	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-06-25 09:01:49	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-06-25 09:01:49		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, xfer
+2014-06-25 09:01:51		script: 279 scripts for WeeChat 0.4.3
+2014-07-14 09:20:31	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-07-14 09:20:31	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-07-14 09:20:31		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, xfer
+2014-07-14 09:20:33		script: 279 scripts for WeeChat 0.4.3
+2014-07-14 09:35:00	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-07-14 09:35:00	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-07-14 09:35:00		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, xfer
+2014-08-05 09:21:33	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-08-05 09:21:33	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-08-05 09:21:33		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, xfer
+2014-08-05 09:21:34		script: 279 scripts for WeeChat 0.4.3
+2014-08-05 09:22:04	=!=	Error: missing arguments for "key bind" command
+2014-08-05 09:22:04	=!=	Error with command "key" (try /help key)
+2014-08-05 09:22:10	=!=	Error: unknown command "bind" (type /help for help)
+2014-08-05 09:22:13		[core]  /key  list|listdefault|listdiff [<context>]
+2014-08-05 09:22:13		              bind <key> [<command> [<args>]]
+2014-08-05 09:22:13		              bindctxt <context> <key> [<command> [<args>]]
+2014-08-05 09:22:13		              unbind <key>
+2014-08-05 09:22:13		              unbindctxt <context> <key>
+2014-08-05 09:22:13		              reset <key>
+2014-08-05 09:22:13		              resetctxt <context> <key>
+2014-08-05 09:22:13		              resetall -yes [<context>]
+2014-08-05 09:22:13		              missing [<context>]
+2014-08-05 09:22:13		bind/unbind keys
+2014-08-05 09:22:13		       list: list all current keys (without argument, this list is displayed)
+2014-08-05 09:22:13		listdefault: list default keys
+2014-08-05 09:22:13		   listdiff: list differences between current and default keys (keys added, redefined or deleted)
+2014-08-05 09:22:13		    context: name of context ("default" or "search")
+2014-08-05 09:22:13		       bind: bind a command to a key or display command bound to key (for context "default")
+2014-08-05 09:22:13		   bindctxt: bind a command to a key or display command bound to key, for given context
+2014-08-05 09:22:13		    command: command (many commands can be separated by semicolons)
+2014-08-05 09:22:13		     unbind: remove a key binding (for context "default")
+2014-08-05 09:22:13		 unbindctxt: remove a key binding for given context
+2014-08-05 09:22:13		      reset: reset a key to default binding (for context "default")
+2014-08-05 09:22:13		  resetctxt: reset a key to default binding, for given context
+2014-08-05 09:22:13		   resetall: restore bindings to the default values and delete ALL personal bindings (use carefully!)
+2014-08-05 09:22:13		    missing: add missing keys (using default bindings), useful after installing new WeeChat version
+2014-08-05 09:22:13		When binding a command to a key, it is recommended to use key alt+k (or Esc then k), and then press the key to bind: this will insert key code in command line.
+2014-08-05 09:22:13		For context "mouse" (possible in context "cursor" too), key has format: "@area:key" or "@area1>area2:key" where area can be:
+2014-08-05 09:22:13		          *: any area on screen
+2014-08-05 09:22:13		       chat: chat area (any buffer)
+2014-08-05 09:22:13		  chat(xxx): char area for buffer with name "xxx" (full name including plugin)
+2014-08-05 09:22:13		     bar(*): any bar
+2014-08-05 09:22:13		   bar(xxx): bar "xxx"
+2014-08-05 09:22:13		    item(*): any bar item
+2014-08-05 09:22:13		  item(xxx): bar item "xxx"
+2014-08-05 09:22:13		The key can start or end with '*' to match many mouse events.
+2014-08-05 09:22:13		A special value for command with format "hsignal:name" can be used for context mouse, this will send the hsignal "name" with the focus hashtable as argument.
+2014-08-05 09:22:13		Another special value "-" can be used to disable key (it will be ignored when looking for keys).
+2014-08-05 09:22:13		Examples:
+2014-08-05 09:22:13		  key alt-x to toggle nicklist bar:
+2014-08-05 09:22:13		    /key bind meta-x /bar toggle nicklist
+2014-08-05 09:22:13		  key alt-r to jump to #weechat IRC channel:
+2014-08-05 09:22:13		    /key bind meta-r /buffer #weechat
+2014-08-05 09:22:13		  restore default binding for key alt-r:
+2014-08-05 09:22:13		    /key reset meta-r
+2014-08-05 09:22:13		  key "tab" to stop search in buffer:
+2014-08-05 09:22:13		    /key bindctxt search ctrl-I /input search_stop
+2014-08-05 09:22:13		  middle button of mouse on a nick to retrieve info on nick:
+2014-08-05 09:22:13		    /key bindctxt mouse @item(buffer_nicklist):button3 /msg nickserv info ${nick}
+2014-08-05 09:22:19		[core]  /key  list|listdefault|listdiff [<context>]
+2014-08-05 09:22:19		              bind <key> [<command> [<args>]]
+2014-08-05 09:22:19		              bindctxt <context> <key> [<command> [<args>]]
+2014-08-05 09:22:19		              unbind <key>
+2014-08-05 09:22:19		              unbindctxt <context> <key>
+2014-08-05 09:22:19		              reset <key>
+2014-08-05 09:22:19		              resetctxt <context> <key>
+2014-08-05 09:22:19		              resetall -yes [<context>]
+2014-08-05 09:22:19		              missing [<context>]
+2014-08-05 09:22:19		bind/unbind keys
+2014-08-05 09:22:19		       list: list all current keys (without argument, this list is displayed)
+2014-08-05 09:22:19		listdefault: list default keys
+2014-08-05 09:22:19		   listdiff: list differences between current and default keys (keys added, redefined or deleted)
+2014-08-05 09:22:19		    context: name of context ("default" or "search")
+2014-08-05 09:22:19		       bind: bind a command to a key or display command bound to key (for context "default")
+2014-08-05 09:22:19		   bindctxt: bind a command to a key or display command bound to key, for given context
+2014-08-05 09:22:19		    command: command (many commands can be separated by semicolons)
+2014-08-05 09:22:19		     unbind: remove a key binding (for context "default")
+2014-08-05 09:22:19		 unbindctxt: remove a key binding for given context
+2014-08-05 09:22:19		      reset: reset a key to default binding (for context "default")
+2014-08-05 09:22:19		  resetctxt: reset a key to default binding, for given context
+2014-08-05 09:22:19		   resetall: restore bindings to the default values and delete ALL personal bindings (use carefully!)
+2014-08-05 09:22:19		    missing: add missing keys (using default bindings), useful after installing new WeeChat version
+2014-08-05 09:22:19		When binding a command to a key, it is recommended to use key alt+k (or Esc then k), and then press the key to bind: this will insert key code in command line.
+2014-08-05 09:22:19		For context "mouse" (possible in context "cursor" too), key has format: "@area:key" or "@area1>area2:key" where area can be:
+2014-08-05 09:22:19		          *: any area on screen
+2014-08-05 09:22:19		       chat: chat area (any buffer)
+2014-08-05 09:22:19		  chat(xxx): char area for buffer with name "xxx" (full name including plugin)
+2014-08-05 09:22:19		     bar(*): any bar
+2014-08-05 09:22:19		   bar(xxx): bar "xxx"
+2014-08-05 09:22:19		    item(*): any bar item
+2014-08-05 09:22:19		  item(xxx): bar item "xxx"
+2014-08-05 09:22:19		The key can start or end with '*' to match many mouse events.
+2014-08-05 09:22:19		A special value for command with format "hsignal:name" can be used for context mouse, this will send the hsignal "name" with the focus hashtable as argument.
+2014-08-05 09:22:19		Another special value "-" can be used to disable key (it will be ignored when looking for keys).
+2014-08-05 09:22:19		Examples:
+2014-08-05 09:22:19		  key alt-x to toggle nicklist bar:
+2014-08-05 09:22:19		    /key bind meta-x /bar toggle nicklist
+2014-08-05 09:22:19		  key alt-r to jump to #weechat IRC channel:
+2014-08-05 09:22:19		    /key bind meta-r /buffer #weechat
+2014-08-05 09:22:19		  restore default binding for key alt-r:
+2014-08-05 09:22:19		    /key reset meta-r
+2014-08-05 09:22:19		  key "tab" to stop search in buffer:
+2014-08-05 09:22:19		    /key bindctxt search ctrl-I /input search_stop
+2014-08-05 09:22:19		  middle button of mouse on a nick to retrieve info on nick:
+2014-08-05 09:22:19		    /key bindctxt mouse @item(buffer_nicklist):button3 /msg nickserv info ${nick}
+2014-08-05 09:22:46		237 key bindings for context "default":
+2014-08-05 09:22:46		  ctrl-? => /input delete_previous_char
+2014-08-05 09:22:46		  ctrl-A => /input move_beginning_of_line
+2014-08-05 09:22:46		  ctrl-B => /input move_previous_char
+2014-08-05 09:22:46		  ctrl-C_ => /input insert \x1F
+2014-08-05 09:22:46		  ctrl-Cb => /input insert \x02
+2014-08-05 09:22:46		  ctrl-Cc => /input insert \x03
+2014-08-05 09:22:46		  ctrl-Ci => /input insert \x1D
+2014-08-05 09:22:46		  ctrl-Co => /input insert \x0F
+2014-08-05 09:22:46		  ctrl-Cv => /input insert \x16
+2014-08-05 09:22:46		  ctrl-D => /input delete_next_char
+2014-08-05 09:22:46		  ctrl-E => /input move_end_of_line
+2014-08-05 09:22:46		  ctrl-F => /input move_next_char
+2014-08-05 09:22:46		  ctrl-H => /input delete_previous_char
+2014-08-05 09:22:46		  ctrl-I => /input complete_next
+2014-08-05 09:22:46		  ctrl-J => /input return
+2014-08-05 09:22:46		  ctrl-K => /input delete_end_of_line
+2014-08-05 09:22:46		  ctrl-L => /window refresh
+2014-08-05 09:22:46		  ctrl-M => /input return
+2014-08-05 09:22:46		  ctrl-N => /buffer +1
+2014-08-05 09:22:46		  ctrl-P => /buffer -1
+2014-08-05 09:22:46		  ctrl-R => /input search_text
+2014-08-05 09:22:46		  ctrl-Sctrl-U => /input set_unread
+2014-08-05 09:22:46		  ctrl-T => /input transpose_chars
+2014-08-05 09:22:46		  ctrl-U => /input delete_beginning_of_line
+2014-08-05 09:22:46		  ctrl-W => /input delete_previous_word
+2014-08-05 09:22:46		  ctrl-X => /input switch_active_buffer
+2014-08-05 09:22:46		  ctrl-Y => /input clipboard_paste
+2014-08-05 09:22:46		  meta-ctrl-I => /input grab_key_command
+2014-08-05 09:22:46		  meta-meta2-1~ => /window scroll_top
+2014-08-05 09:22:46		  meta-meta2-23~ => /bar scroll nicklist * b
+2014-08-05 09:22:46		  meta-meta2-24~ => /bar scroll nicklist * e
+2014-08-05 09:22:46		  meta-meta2-4~ => /window scroll_bottom
+2014-08-05 09:22:46		  meta-meta2-5~ => /window scroll_up
+2014-08-05 09:22:46		  meta-meta2-6~ => /window scroll_down
+2014-08-05 09:22:46		  meta-meta2-7~ => /window scroll_top
+2014-08-05 09:22:46		  meta-meta2-8~ => /window scroll_bottom
+2014-08-05 09:22:46		  meta-meta2-A => /buffer -1
+2014-08-05 09:22:46		  meta-meta2-B => /buffer +1
+2014-08-05 09:22:46		  meta-meta2-C => /buffer +1
+2014-08-05 09:22:46		  meta-meta2-D => /buffer -1
+2014-08-05 09:22:46		  meta-/ => /input jump_last_buffer_displayed
+2014-08-05 09:22:46		  meta-0 => /buffer *10
+2014-08-05 09:22:46		  meta-1 => /buffer *1
+2014-08-05 09:22:46		  meta-2 => /buffer *2
+2014-08-05 09:22:46		  meta-3 => /buffer *3
+2014-08-05 09:22:46		  meta-4 => /buffer *4
+2014-08-05 09:22:46		  meta-5 => /buffer *5
+2014-08-05 09:22:46		  meta-6 => /buffer *6
+2014-08-05 09:22:46		  meta-7 => /buffer *7
+2014-08-05 09:22:46		  meta-8 => /buffer *8
+2014-08-05 09:22:46		  meta-9 => /buffer *9
+2014-08-05 09:22:46		  meta-< => /input jump_previously_visited_buffer
+2014-08-05 09:22:46		  meta-= => /filter toggle
+2014-08-05 09:22:46		  meta-> => /input jump_next_visited_buffer
+2014-08-05 09:22:46		  meta-J => /buffer move -1
+2014-08-05 09:22:46		  meta-K => /buffer move +1
+2014-08-05 09:22:46		  meta-OA => /input history_global_previous
+2014-08-05 09:22:46		  meta-OB => /input history_global_next
+2014-08-05 09:22:46		  meta-OC => /input move_next_word
+2014-08-05 09:22:46		  meta-OD => /input move_previous_word
+2014-08-05 09:22:46		  meta-OF => /input move_end_of_line
+2014-08-05 09:22:46		  meta-OH => /input move_beginning_of_line
+2014-08-05 09:22:46		  meta-Oa => /input history_global_previous
+2014-08-05 09:22:46		  meta-Ob => /input history_global_next
+2014-08-05 09:22:46		  meta-Oc => /input move_next_word
+2014-08-05 09:22:46		  meta-Od => /input move_previous_word
+2014-08-05 09:22:46		  meta2-15~ => /buffer -1
+2014-08-05 09:22:46		  meta2-17~ => /buffer +1
+2014-08-05 09:22:46		  meta2-18~ => /window -1
+2014-08-05 09:22:46		  meta2-19~ => /window +1
+2014-08-05 09:22:46		  meta2-1;3A => /buffer -1
+2014-08-05 09:22:46		  meta2-1;3B => /buffer +1
+2014-08-05 09:22:46		  meta2-1;3C => /buffer +1
+2014-08-05 09:22:46		  meta2-1;3D => /buffer -1
+2014-08-05 09:22:46		  meta2-1;3F => /window scroll_bottom
+2014-08-05 09:22:46		  meta2-1;3H => /window scroll_top
+2014-08-05 09:22:46		  meta2-1;5A => /input history_global_previous
+2014-08-05 09:22:46		  meta2-1;5B => /input history_global_next
+2014-08-05 09:22:46		  meta2-1;5C => /input move_next_word
+2014-08-05 09:22:46		  meta2-1;5D => /input move_previous_word
+2014-08-05 09:22:46		  meta2-1~ => /input move_beginning_of_line
+2014-08-05 09:22:46		  meta2-200~ => /input paste_start
+2014-08-05 09:22:46		  meta2-201~ => /input paste_stop
+2014-08-05 09:22:46		  meta2-20~ => /bar scroll title * -30%
+2014-08-05 09:22:46		  meta2-21~ => /bar scroll title * +30%
+2014-08-05 09:22:46		  meta2-23;3~ => /bar scroll nicklist * b
+2014-08-05 09:22:46		  meta2-23~ => /bar scroll nicklist * -100%
+2014-08-05 09:22:46		  meta2-24;3~ => /bar scroll nicklist * e
+2014-08-05 09:22:46		  meta2-24~ => /bar scroll nicklist * +100%
+2014-08-05 09:22:46		  meta2-3~ => /input delete_next_char
+2014-08-05 09:22:46		  meta2-4~ => /input move_end_of_line
+2014-08-05 09:22:46		  meta2-5;3~ => /window scroll_up
+2014-08-05 09:22:46		  meta2-5~ => /window page_up
+2014-08-05 09:22:46		  meta2-6;3~ => /window scroll_down
+2014-08-05 09:22:46		  meta2-6~ => /window page_down
+2014-08-05 09:22:46		  meta2-7~ => /input move_beginning_of_line
+2014-08-05 09:22:46		  meta2-8~ => /input move_end_of_line
+2014-08-05 09:22:46		  meta2-A => /input history_previous
+2014-08-05 09:22:46		  meta2-B => /input history_next
+2014-08-05 09:22:46		  meta2-C => /input move_next_char
+2014-08-05 09:22:46		  meta2-D => /input move_previous_char
+2014-08-05 09:22:46		  meta2-F => /input move_end_of_line
+2014-08-05 09:22:46		  meta2-G => /window page_down
+2014-08-05 09:22:46		  meta2-H => /input move_beginning_of_line
+2014-08-05 09:22:46		  meta2-I => /window page_up
+2014-08-05 09:22:46		  meta2-Z => /input complete_previous
+2014-08-05 09:22:46		  meta2-[E => /buffer -1
+2014-08-05 09:22:46		  meta-_ => /input redo
+2014-08-05 09:22:46		  meta-a => /input jump_smart
+2014-08-05 09:22:46		  meta-b => /input move_previous_word
+2014-08-05 09:22:46		  meta-d => /input delete_next_word
+2014-08-05 09:22:46		  meta-f => /input move_next_word
+2014-08-05 09:22:46		  meta-h => /window -1
+2014-08-05 09:22:46		  meta-j => /buffer +1
+2014-08-05 09:22:46		  meta-jmeta-l => /input jump_last_buffer
+2014-08-05 09:22:46		  meta-jmeta-r => /server raw
+2014-08-05 09:22:46		  meta-jmeta-s => /server jump
+2014-08-05 09:22:46		  meta-j01 => /buffer 1
+2014-08-05 09:22:46		  meta-j02 => /buffer 2
+2014-08-05 09:22:46		  meta-j03 => /buffer 3
+2014-08-05 09:22:46		  meta-j04 => /buffer 4
+2014-08-05 09:22:46		  meta-j05 => /buffer 5
+2014-08-05 09:22:46		  meta-j06 => /buffer 6
+2014-08-05 09:22:46		  meta-j07 => /buffer 7
+2014-08-05 09:22:46		  meta-j08 => /buffer 8
+2014-08-05 09:22:46		  meta-j09 => /buffer 9
+2014-08-05 09:22:46		  meta-j10 => /buffer 10
+2014-08-05 09:22:46		  meta-j11 => /buffer 11
+2014-08-05 09:22:46		  meta-j12 => /buffer 12
+2014-08-05 09:22:46		  meta-j13 => /buffer 13
+2014-08-05 09:22:46		  meta-j14 => /buffer 14
+2014-08-05 09:22:46		  meta-j15 => /buffer 15
+2014-08-05 09:22:46		  meta-j16 => /buffer 16
+2014-08-05 09:22:46		  meta-j17 => /buffer 17
+2014-08-05 09:22:46		  meta-j18 => /buffer 18
+2014-08-05 09:22:46		  meta-j19 => /buffer 19
+2014-08-05 09:22:46		  meta-j20 => /buffer 20
+2014-08-05 09:22:46		  meta-j21 => /buffer 21
+2014-08-05 09:22:46		  meta-j22 => /buffer 22
+2014-08-05 09:22:46		  meta-j23 => /buffer 23
+2014-08-05 09:22:46		  meta-j24 => /buffer 24
+2014-08-05 09:22:46		  meta-j25 => /buffer 25
+2014-08-05 09:22:46		  meta-j26 => /buffer 26
+2014-08-05 09:22:46		  meta-j27 => /buffer 27
+2014-08-05 09:22:46		  meta-j28 => /buffer 28
+2014-08-05 09:22:46		  meta-j29 => /buffer 29
+2014-08-05 09:22:46		  meta-j30 => /buffer 30
+2014-08-05 09:22:46		  meta-j31 => /buffer 31
+2014-08-05 09:22:46		  meta-j32 => /buffer 32
+2014-08-05 09:22:46		  meta-j33 => /buffer 33
+2014-08-05 09:22:46		  meta-j34 => /buffer 34
+2014-08-05 09:22:46		  meta-j35 => /buffer 35
+2014-08-05 09:22:46		  meta-j36 => /buffer 36
+2014-08-05 09:22:46		  meta-j37 => /buffer 37
+2014-08-05 09:22:46		  meta-j38 => /buffer 38
+2014-08-05 09:22:46		  meta-j39 => /buffer 39
+2014-08-05 09:22:46		  meta-j40 => /buffer 40
+2014-08-05 09:22:46		  meta-j41 => /buffer 41
+2014-08-05 09:22:46		  meta-j42 => /buffer 42
+2014-08-05 09:22:46		  meta-j43 => /buffer 43
+2014-08-05 09:22:46		  meta-j44 => /buffer 44
+2014-08-05 09:22:46		  meta-j45 => /buffer 45
+2014-08-05 09:22:46		  meta-j46 => /buffer 46
+2014-08-05 09:22:46		  meta-j47 => /buffer 47
+2014-08-05 09:22:46		  meta-j48 => /buffer 48
+2014-08-05 09:22:46		  meta-j49 => /buffer 49
+2014-08-05 09:22:46		  meta-j50 => /buffer 50
+2014-08-05 09:22:46		  meta-j51 => /buffer 51
+2014-08-05 09:22:46		  meta-j52 => /buffer 52
+2014-08-05 09:22:46		  meta-j53 => /buffer 53
+2014-08-05 09:22:46		  meta-j54 => /buffer 54
+2014-08-05 09:22:46		  meta-j55 => /buffer 55
+2014-08-05 09:22:46		  meta-j56 => /buffer 56
+2014-08-05 09:22:46		  meta-j57 => /buffer 57
+2014-08-05 09:22:46		  meta-j58 => /buffer 58
+2014-08-05 09:22:46		  meta-j59 => /buffer 59
+2014-08-05 09:22:46		  meta-j60 => /buffer 60
+2014-08-05 09:22:46		  meta-j61 => /buffer 61
+2014-08-05 09:22:46		  meta-j62 => /buffer 62
+2014-08-05 09:22:46		  meta-j63 => /buffer 63
+2014-08-05 09:22:46		  meta-j64 => /buffer 64
+2014-08-05 09:22:46		  meta-j65 => /buffer 65
+2014-08-05 09:22:46		  meta-j66 => /buffer 66
+2014-08-05 09:22:46		  meta-j67 => /buffer 67
+2014-08-05 09:22:46		  meta-j68 => /buffer 68
+2014-08-05 09:22:46		  meta-j69 => /buffer 69
+2014-08-05 09:22:46		  meta-j70 => /buffer 70
+2014-08-05 09:22:46		  meta-j71 => /buffer 71
+2014-08-05 09:22:46		  meta-j72 => /buffer 72
+2014-08-05 09:22:46		  meta-j73 => /buffer 73
+2014-08-05 09:22:46		  meta-j74 => /buffer 74
+2014-08-05 09:22:46		  meta-j75 => /buffer 75
+2014-08-05 09:22:46		  meta-j76 => /buffer 76
+2014-08-05 09:22:46		  meta-j77 => /buffer 77
+2014-08-05 09:22:46		  meta-j78 => /buffer 78
+2014-08-05 09:22:46		  meta-j79 => /buffer 79
+2014-08-05 09:22:46		  meta-j80 => /buffer 80
+2014-08-05 09:22:46		  meta-j81 => /buffer 81
+2014-08-05 09:22:46		  meta-j82 => /buffer 82
+2014-08-05 09:22:46		  meta-j83 => /buffer 83
+2014-08-05 09:22:46		  meta-j84 => /buffer 84
+2014-08-05 09:22:46		  meta-j85 => /buffer 85
+2014-08-05 09:22:46		  meta-j86 => /buffer 86
+2014-08-05 09:22:46		  meta-j87 => /buffer 87
+2014-08-05 09:22:46		  meta-j88 => /buffer 88
+2014-08-05 09:22:46		  meta-j89 => /buffer 89
+2014-08-05 09:22:46		  meta-j90 => /buffer 90
+2014-08-05 09:22:46		  meta-j91 => /buffer 91
+2014-08-05 09:22:46		  meta-j92 => /buffer 92
+2014-08-05 09:22:46		  meta-j93 => /buffer 93
+2014-08-05 09:22:46		  meta-j94 => /buffer 94
+2014-08-05 09:22:46		  meta-j95 => /buffer 95
+2014-08-05 09:22:46		  meta-j96 => /buffer 96
+2014-08-05 09:22:46		  meta-j97 => /buffer 97
+2014-08-05 09:22:46		  meta-j98 => /buffer 98
+2014-08-05 09:22:46		  meta-j99 => /buffer 99
+2014-08-05 09:22:46		  meta-k => /buffer -1
+2014-08-05 09:22:46		  meta-l => /window +1
+2014-08-05 09:22:46		  meta-m => /mute mouse toggle
+2014-08-05 09:22:46		  meta-n => /window scroll_next_highlight
+2014-08-05 09:22:46		  meta-p => /window scroll_previous_highlight
+2014-08-05 09:22:46		  meta-r => /input delete_line
+2014-08-05 09:22:46		  meta-s => /mute aspell toggle
+2014-08-05 09:22:46		  meta-u => /window scroll_unread
+2014-08-05 09:22:46		  meta-wmeta-meta2-A => /window up
+2014-08-05 09:22:46		  meta-wmeta-meta2-B => /window down
+2014-08-05 09:22:46		  meta-wmeta-meta2-C => /window right
+2014-08-05 09:22:46		  meta-wmeta-meta2-D => /window left
+2014-08-05 09:22:46		  meta-wmeta2-1;3A => /window up
+2014-08-05 09:22:46		  meta-wmeta2-1;3B => /window down
+2014-08-05 09:22:46		  meta-wmeta2-1;3C => /window right
+2014-08-05 09:22:46		  meta-wmeta2-1;3D => /window left
+2014-08-05 09:22:46		  meta-wmeta-b => /window balance
+2014-08-05 09:22:46		  meta-wmeta-s => /window swap
+2014-08-05 09:22:46		  meta-x => /input zoom_merged_buffer
+2014-08-05 09:22:46		  meta-z => /window zoom
+2014-08-05 09:22:46		  ctrl-_ => /input undo
+2014-08-05 09:22:46		7 key bindings for context "search":
+2014-08-05 09:22:46		  ctrl-I => /input search_switch_where
+2014-08-05 09:22:46		  ctrl-J => /input search_stop
+2014-08-05 09:22:46		  ctrl-M => /input search_stop
+2014-08-05 09:22:46		  ctrl-R => /input search_switch_regex
+2014-08-05 09:22:46		  meta2-A => /input search_previous
+2014-08-05 09:22:46		  meta2-B => /input search_next
+2014-08-05 09:22:46		  meta-c => /input search_switch_case
+2014-08-05 09:22:46		22 key bindings for context "cursor":
+2014-08-05 09:22:46		  ctrl-J => /cursor stop
+2014-08-05 09:22:46		  ctrl-M => /cursor stop
+2014-08-05 09:22:46		  meta-meta2-A => /cursor move area_up
+2014-08-05 09:22:46		  meta-meta2-B => /cursor move area_down
+2014-08-05 09:22:46		  meta-meta2-C => /cursor move area_right
+2014-08-05 09:22:46		  meta-meta2-D => /cursor move area_left
+2014-08-05 09:22:46		  meta2-1;3A => /cursor move area_up
+2014-08-05 09:22:46		  meta2-1;3B => /cursor move area_down
+2014-08-05 09:22:46		  meta2-1;3C => /cursor move area_right
+2014-08-05 09:22:46		  meta2-1;3D => /cursor move area_left
+2014-08-05 09:22:46		  meta2-A => /cursor move up
+2014-08-05 09:22:46		  meta2-B => /cursor move down
+2014-08-05 09:22:46		  meta2-C => /cursor move right
+2014-08-05 09:22:46		  meta2-D => /cursor move left
+2014-08-05 09:22:46		  @item(buffer_nicklist):K => /window ${_window_number};/kickban ${nick}
+2014-08-05 09:22:46		  @item(buffer_nicklist):b => /window ${_window_number};/ban ${nick}
+2014-08-05 09:22:46		  @item(buffer_nicklist):k => /window ${_window_number};/kick ${nick}
+2014-08-05 09:22:46		  @item(buffer_nicklist):q => /window ${_window_number};/query ${nick};/cursor stop
+2014-08-05 09:22:46		  @item(buffer_nicklist):w => /window ${_window_number};/whois ${nick}
+2014-08-05 09:22:46		  @chat:Q => hsignal:chat_quote_time_prefix_message;/cursor stop
+2014-08-05 09:22:46		  @chat:m => hsignal:chat_quote_message;/cursor stop
+2014-08-05 09:22:46		  @chat:q => hsignal:chat_quote_prefix_message;/cursor stop
+2014-08-05 09:22:46		32 key bindings for context "mouse":
+2014-08-05 09:22:46		  @bar(input):button2 => /input grab_mouse_area
+2014-08-05 09:22:46		  @bar(nicklist):button1-gesture-down => /bar scroll nicklist ${_window_number} +100%
+2014-08-05 09:22:46		  @bar(nicklist):button1-gesture-down-long => /bar scroll nicklist ${_window_number} e
+2014-08-05 09:22:46		  @bar(nicklist):button1-gesture-up => /bar scroll nicklist ${_window_number} -100%
+2014-08-05 09:22:46		  @bar(nicklist):button1-gesture-up-long => /bar scroll nicklist ${_window_number} b
+2014-08-05 09:22:46		  @chat(perl.iset):button1 => hsignal:iset_mouse
+2014-08-05 09:22:46		  @chat(perl.iset):button2* => hsignal:iset_mouse
+2014-08-05 09:22:46		  @chat(perl.iset):wheeldown => /repeat 5 /iset **down
+2014-08-05 09:22:46		  @chat(perl.iset):wheelup => /repeat 5 /iset **up
+2014-08-05 09:22:46		  @chat(script.scripts):button1 => /window ${_window_number};/script go ${_chat_line_y}
+2014-08-05 09:22:46		  @chat(script.scripts):button2 => /window ${_window_number};/script go ${_chat_line_y};/script installremove -q ${script_name_with_extension}
+2014-08-05 09:22:46		  @chat(script.scripts):wheeldown => /script down 5
+2014-08-05 09:22:46		  @chat(script.scripts):wheelup => /script up 5
+2014-08-05 09:22:46		  @item(buffer_nicklist):button1 => /window ${_window_number};/query ${nick}
+2014-08-05 09:22:46		  @item(buffer_nicklist):button1-gesture-left => /window ${_window_number};/kick ${nick}
+2014-08-05 09:22:46		  @item(buffer_nicklist):button1-gesture-left-long => /window ${_window_number};/kickban ${nick}
+2014-08-05 09:22:46		  @item(buffer_nicklist):button2 => /window ${_window_number};/whois ${nick}
+2014-08-05 09:22:46		  @item(buffer_nicklist):button2-gesture-left => /window ${_window_number};/ban ${nick}
+2014-08-05 09:22:46		  @item(buffers):button1* => hsignal:buffers_mouse
+2014-08-05 09:22:46		  @item(buffers):button2* => hsignal:buffers_mouse
+2014-08-05 09:22:46		  @bar:wheeldown => /bar scroll ${_bar_name} ${_window_number} +20%
+2014-08-05 09:22:46		  @bar:wheelup => /bar scroll ${_bar_name} ${_window_number} -20%
+2014-08-05 09:22:46		  @chat:button1 => /window ${_window_number}
+2014-08-05 09:22:46		  @chat:button1-gesture-left => /window ${_window_number};/buffer -1
+2014-08-05 09:22:46		  @chat:button1-gesture-left-long => /window ${_window_number};/buffer 1
+2014-08-05 09:22:46		  @chat:button1-gesture-right => /window ${_window_number};/buffer +1
+2014-08-05 09:22:46		  @chat:button1-gesture-right-long => /window ${_window_number};/input jump_last_buffer
+2014-08-05 09:22:46		  @chat:ctrl-wheeldown => /window scroll_horiz -window ${_window_number} +10%
+2014-08-05 09:22:46		  @chat:ctrl-wheelup => /window scroll_horiz -window ${_window_number} -10%
+2014-08-05 09:22:46		  @chat:wheeldown => /window scroll_down -window ${_window_number}
+2014-08-05 09:22:46		  @chat:wheelup => /window scroll_up -window ${_window_number}
+2014-08-05 09:22:46		  @*:button3 => /cursor go ${_x},${_y}
+2014-08-05 09:23:51		Key "meta-l" unbound (context: "default")
+2014-08-05 09:23:51		New key binding (context "default"): meta-l => /buffer +1
+2014-08-05 09:24:03		Key "meta-h" unbound (context: "default")
+2014-08-05 09:24:03		New key binding (context "default"): meta-h => /buffer -1
+2014-08-05 09:24:15		Key "meta-k" unbound (context: "default")
+2014-08-05 09:24:15		New key binding (context "default"): meta-k => /window +1
+2014-08-05 09:24:24		Key "meta-j" unbound (context: "default")
+2014-08-05 09:24:24		New key binding (context "default"): meta-j => /window -1
+2014-08-13 13:07:55	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-08-13 13:07:55	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-08-13 13:07:55		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, xfer
+2014-08-13 13:07:56		script: 279 scripts for WeeChat 0.4.3
+2014-08-21 16:15:32	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-08-21 16:15:32	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-08-21 16:15:32		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2014-08-21 16:15:33		script: 280 scripts for WeeChat 1.0
+2014-08-21 16:46:31	=!=	Error with command "/window splitb" (help on command: /help window)
+2014-08-22 15:24:34	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-08-22 15:24:34	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-08-22 15:24:34		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2014-08-22 15:24:36		script: 280 scripts for WeeChat 1.0
+2014-08-28 00:41:03	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-08-28 00:41:03	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-08-28 00:41:03		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2014-08-28 00:41:05		script: 280 scripts for WeeChat 1.0
+2014-08-28 15:37:01	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-08-28 15:37:01	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-08-28 15:37:01		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2014-08-28 15:37:01		script: 280 scripts for WeeChat 1.0
+2014-08-29 14:55:19	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-08-29 14:55:19	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-08-29 14:55:19		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2014-08-29 14:55:20		script: 280 scripts for WeeChat 1.0
+2014-09-05 14:40:48	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-09-05 14:40:48	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-09-05 14:40:48		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2014-09-05 14:40:49		script: 280 scripts for WeeChat 1.0
+2014-09-05 14:44:51	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-09-05 14:44:51	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-09-05 14:44:51		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2014-09-09 16:20:50	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-09-09 16:20:50	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-09-09 16:20:50		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2014-09-09 16:20:52		script: 280 scripts for WeeChat 1.0
+2014-10-03 18:57:31	=!=	Error: unable to load plugin "/usr/lib/weechat/plugins/tcl.so": libtcl8.6.so: cannot open shared object file: No such file or directory
+2014-10-03 18:57:31	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2014-10-03 18:57:31		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2014-10-03 18:57:32		script: 280 scripts for WeeChat 1.0.1
