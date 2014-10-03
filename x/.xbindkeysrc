@@ -60,7 +60,7 @@
 "systemctl suspend"
   XF86Sleep
 
-"scrot -m -e 'mv $f ~/screens/'"
+"scrot -m -e 'mv $f ~/pictures/screens/'"
   Print
 
 "termite -e ncmpcpp"

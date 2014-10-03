@@ -19,6 +19,8 @@ set background=dark
 
 set modeline
 
+set viminfo+=n/home/jared/.vim/viminfo
+
 set number
 syntax on
 
@@ -38,3 +40,5 @@ if has('gui_running')
 endif
 
 imap jj <Esc>
+
+

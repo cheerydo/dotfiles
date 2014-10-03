@@ -22,7 +22,7 @@ thunar --daemon &
 
 #tint2 &
 
-stalonetray &
+stalonetray -c /home/jared/.config/.stalonetrayrc &
 xfce4-clipman &
 volumeicon &
 
