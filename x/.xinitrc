@@ -20,9 +20,11 @@ nitrogen --restore &
 thunar --daemon &
 #urxvtd -q -f -o &
 
-#tint2 &
+xfsettingsd &
 
-stalonetray -c /home/jared/.config/.stalonetrayrc &
+tint2 &
+
+#stalonetray -c /home/jared/.config/.stalonetrayrc &
 xfce4-clipman &
 volumeicon &
 
@@ -36,8 +38,9 @@ numlockx &
 xrandr --output VGA1 --left-of HDMI1
 #exec 2bwm
 #exec termite
-#conky -c ~/.conky.conf
+conky -c ~/.conky.conf
 
-exec spectrwm
+#exec spectrwm
 #exec dwm
 #exec startxfce4
+exec openbox-session
