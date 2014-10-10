@@ -12,7 +12,7 @@ export EDITOR=vim
 #export GPGKEY=FBB0702A
 export LESSHISTFILE="/dev/null"
 eval $(ssh-agent)
-ssh-add ~/.ssh/{server,fbox,git}.id_rsa
+ssh-add ~/.ssh/{hserv,fbox,git}.id_rsa
 eval $(gpg-agent --daemon)
 
 [[ -f ~/.zshrc ]] && . ~/.zshrc
