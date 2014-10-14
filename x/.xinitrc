@@ -22,7 +22,7 @@ thunar --daemon &
 
 xfsettingsd &
 
-tint2 &
+tint2 -c ~/tint2/tint2rc.crux &
 
 #stalonetray -c /home/jared/.config/.stalonetrayrc &
 xfce4-clipman &
