@@ -11,36 +11,42 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
+# Some X stuff I really need
 xset b off
 setxkbmap -option caps:super
 xrdb -load ~/.Xresources
+
+# For that good looking-ness
 compton &
-
 nitrogen --restore &
+xrandr --output VGA1 --left-of HDMI1
+
+# Dose daemons dough
 thunar --daemon &
-#urxvtd -q -f -o &
+urxvtd -q -f -o &
 
-xfsettingsd &
-
-tint2 -c ~/tint2/tint2rc.crux &
-
-#stalonetray -c /home/jared/.config/.stalonetrayrc &
-xfce4-clipman &
-volumeicon &
-
-#/home/jared/bin/baraction.sh &
-#/home/jared/bin/baraction2.sh &
-
+# Gots to have my bindkeys
 xbindkeys
 numlockx & 
 
-#xsetroot -cursor_name top_left_arrow
-xrandr --output VGA1 --left-of HDMI1
-#exec 2bwm
-#exec termite
-conky -c ~/.conky.conf
-
-#exec spectrwm
-#exec dwm
-#exec startxfce4
-exec openbox-session
+case "$2" in
+	openbox)
+		xfsettingsd &
+		tint2 -c ~/tint2/tint2rc.crux &
+		xfce4-clipman &
+		volumeicon &
+		conky -c ~/.conky.conf
+		exec openbox-session ;;
+	spectrwm)
+		stalonetray -c /home/jared/.config/.stalonetrayrc &
+		xfce4-clipman &
+		volumeicon &
+		exec spectrwm ;;
+	2bwm) 
+		/home/jared/bin/baraction.sh &
+		xsetroot -cursor_name top_left_arrow
+		exec 2bwm 
+		exec termite ;;
+	dwm) 
+		exec dwm ;;
+esac
