@@ -11,9 +11,8 @@ export EDITOR=vim
 #export TERM=rxvt-unicode
 #export GPGKEY=FBB0702A
 export LESSHISTFILE="/dev/null"
-eval $(ssh-agent)
+eval $(keychain --eval BB636CD3)
 ssh-add ~/.ssh/{hserv,fbox,git}.id_rsa
-eval $(gpg-agent --daemon)
 
 [[ -f ~/.zshrc ]] && . ~/.zshrc
 [[ -f ~/.aliases ]] && . ~/.aliases
