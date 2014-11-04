@@ -43,10 +43,15 @@ case "$2" in
 		volumeicon &
 		exec spectrwm ;;
 	2bwm) 
+		tint2 -c ~/tint2/tint2rc.crux &
+		xfce4-clipman &
+		volumeicon &
 		/home/jared/bin/baraction.sh &
 		xsetroot -cursor_name top_left_arrow
 		exec 2bwm 
 		exec termite ;;
 	dwm) 
 		exec dwm ;;
+	xfce)
+		exec startxfce4 ;;
 esac
