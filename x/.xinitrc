@@ -13,6 +13,7 @@ fi
 
 # Some X stuff I really need
 xset b off
+xset s off
 setxkbmap -option caps:super
 xrdb -load ~/.Xresources
 
