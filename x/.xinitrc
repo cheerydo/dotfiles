@@ -55,8 +55,6 @@ case "$2" in
 		exec dwm ;;
 	xfce)
 		exec startxfce4 ;;
-	swm)
-		exec swm ;;
 	i3) 
 		exec i3 ;;
 esac
