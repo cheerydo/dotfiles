@@ -11,6 +11,8 @@ export LESSHISTFILE="/dev/null"
 #eval $(ssh-agent)
 #ssh-add ~/.ssh/{hserv,fbox,git}.id_rsa
 #eval $(gpg-agent --daemon)
+eval $(keychain --eval FBB0702A)
+ssh-add ~/.ssh/{hserv,fbox,git}.id_rsa
 
 [[ -f ~/.zshrc ]] && . ~/.zshrc
 [[ -f ~/.aliases ]] && . ~/.aliases

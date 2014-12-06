@@ -44,3 +44,5 @@ main_window_highlight_color = "white"
 active_column_color = "green"
 window_border_color = "green"
 active_window_border = "green"
+
+ask_before_clearing_playlists = no

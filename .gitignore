@@ -11,6 +11,7 @@ irssi/.irssi/away.log
 irssi/.irssi/config
 ncmpcpp/.ncmpcpp/error.log
 ncmpcpp/.ncmpcpp/artists
+ncmpcpp/.ncmpcpp/config.def
 vim/.viminfo
 mutt/.mutt/cache/*
 mutt/.mutt/certificates
