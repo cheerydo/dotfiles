@@ -18,8 +18,7 @@ setxkbmap -option caps:super
 xrdb -load ~/.Xresources
 
 # For that good looking-ness
-compton &
-nitrogen --restore &
+compton -b
 xrandr --output VGA1 --left-of HDMI1
 
 # Dose daemons dough
@@ -42,6 +41,7 @@ case "$2" in
 		stalonetray -c /home/jared/.config/.stalonetrayrc &
 		xfce4-clipman &
 		volumeicon &
+		nitrogen --restore &
 		exec spectrwm ;;
 	2bwm) 
 		tint2 -c ~/tint2/tint2rc.crux &
@@ -49,6 +49,7 @@ case "$2" in
 		volumeicon &
 		/home/jared/bin/baraction.sh &
 		xsetroot -cursor_name top_left_arrow
+		nitrogen --restore &
 		exec 2bwm 
 		exec termite ;;
 	dwm) 
