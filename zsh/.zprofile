@@ -7,9 +7,6 @@
 #Preferred editor for local and remote sessions
 
 export EDITOR=vim
-#export TERM=xterm-termite
-#export TERM=rxvt-unicode
-#export GPGKEY=FBB0702A
 export LESSHISTFILE="/dev/null"
 eval $(keychain --eval FBB0702A)
 ssh-add ~/.ssh/{hserv,fbox,git}.id_rsa
@@ -19,5 +16,3 @@ ssh-add ~/.ssh/{hserv,fbox,git}.id_rsa
 [[ -d "/sbin" ]] && PATH="/sbin:$PATH"
 [[ -d "/usr/sbin" ]] && PATH="/usr/sbin:$PATH"
 [[ -d "$HOME/bin" ]] && PATH="$HOME/bin:$PATH"
-
-#[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
