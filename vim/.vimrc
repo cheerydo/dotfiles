@@ -1,28 +1,22 @@
-" The ArchLinux global vimrc - setting only a few sane defaults
-"
-" Maintainer:      Tobias Kieslich [tobias funnychar archlinux dot org]
-"
-" NEVER EDIT THIS FILE, IT'S OVERWRITTEN UPON UPGRADES, GLOBAL CONFIGURATION
-" SHALL BE DONE IN /etc/vimrc, USER SPECIFIC CONFIGURATION IN ~/.vimrc
+set nocompatible
+syntax on
+filetype plugin indent on
 
-" Normally we use vim-extensions. If you want true vi-compatibility
-" remove change the following statements
-set nocompatible                " Use Vim defaults instead of 100% vi compatibility
-set backspace=indent,eol,start  " more powerful backspacing
-set tabstop=4			" Number of space that a <Tab> in the file counts for
-set shiftwidth=4		" Number of spaces to use for each step of autoindent
+set backspace=indent,eol,start
+set tabstop=4
+set shiftwidth=4
 set smarttab
+
+" No backups, YOLO
 set nobackup
 set nowritebackup
 
+" For the visuals
 set background=dark
-
+set number
 set modeline
 
 set viminfo+=n/home/jared/.vim/viminfo
-
-set number
-syntax on
 
 " Now we set some defaults for the editor
 set history=50                  " keep 50 lines of command line history
@@ -39,6 +33,5 @@ if has('gui_running')
   map! <S-Insert> <MiddleMouse>
 endif
 
+" Some keymappings
 imap jj <Esc>
-
-

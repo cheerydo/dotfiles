@@ -18,9 +18,9 @@ setxkbmap -option caps:super
 xrdb -load ~/.Xresources
 
 # For that good looking-ness
-compton &
+compton -b
 nitrogen --restore &
-xrandr --output VGA1 --left-of HDMI1
+xrandr --output VGA1 --left-of HDMI1 &
 
 # Dose daemons dough
 thunar --daemon &
@@ -33,7 +33,8 @@ numlockx &
 case "$2" in
 	openbox)
 		xfsettingsd &
-		tint2 -c ~/tint2/tint2rc.crux &
+#		tint2 -c ~/.config/tint2/tint2rc.crux &
+		tint2 -c ~/.config/tint2/cool &
 		xfce4-clipman &
 		volumeicon &
 		conky -c ~/.conky.conf
@@ -44,7 +45,7 @@ case "$2" in
 		volumeicon &
 		exec spectrwm ;;
 	2bwm) 
-		tint2 -c ~/tint2/tint2rc.crux &
+		tint2 -c ~/.config/tint2/tint2rc.crux &
 		xfce4-clipman &
 		volumeicon &
 		/home/jared/bin/baraction.sh &
