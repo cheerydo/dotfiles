@@ -2,7 +2,7 @@
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
 #PROMPT='%{$fg[green]%}%2~%{$reset_color%} $(git_prompt_info)%{$reset_color%}%B(%T)--%b '
-PROMPT='$(git_prompt_info)%{$reset_color%}%B────%b '
+PROMPT='%D{|%L.%M %P|} $(git_prompt_info)%{$reset_color%}%B────%b '
 RPS1="${return_code}"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}‹"
