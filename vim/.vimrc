@@ -15,6 +15,7 @@ set nowritebackup
 set background=dark
 set number
 set modeline
+colorscheme darkspectrum
 
 set viminfo+=n/home/jared/.vim/viminfo
 

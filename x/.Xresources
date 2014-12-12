@@ -3,7 +3,7 @@
 ! URxvt*Usage: urxvt [options] [-e command args]
 URxvt*scrollBar: 	false
 URxvt*transparent: 	false
-URxvt*shading:      40
+!URxvt*shading:      40
 URxvt*depth:		32
 
 ! terminal colors
@@ -39,18 +39,18 @@ URxvt*depth:		32
 ! fontconfigs and copy/paste with url launching
 URxvt*colorUL:          #4682B4
 !URxvt*font:             xft:BitstreamVeraSansMono:size=11
-!URxvt*font: 			xft:AnonymousProMinus:size=12
-URxvt*font: 			xft:Inconsolatazi4:pixelsize=14
-URxvt*letterSpace: -1
+!URxvt*font: 			xft:AnonymousProMinus:size=10
+URxvt*font: 			xft:Inconsolata-zi4:size=11
+URxvt*letterSpace:		-2
 URxvt*perl-ext-common:  default,matcher,clipboard
 URxvt*iso14755:         false
 URxvt.keysym.Shift-Control-V: perl:clipboard
 URxvt*matcher.button:	1
-URxvt*url-launcher:		/usr/bin/dwb
+URxvt*url-launcher:		/usr/bin/firefox
 
 Xft.authint:	False
 Xft.lcdfilter:	lcddefault
-Xft.hintstyle:	hintfull
+Xft.hintstyle:	hintslight
 Xft.hinting: 	True
 Xft.antialias:  True
 Xft.rgba:		rgb
