@@ -19,7 +19,6 @@ xrdb -load ~/.Xresources
 
 # For that good looking-ness
 compton -b
-nitrogen --restore &
 xrandr --output VGA1 --left-of HDMI1 &
 
 # Dose daemons dough
