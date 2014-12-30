@@ -1,0 +1,15 @@
+#!/bin/sh
+
+cd $HOME/builds && cower -d "$1"
+builddir="$_"
+cd "$builddir" && ${EDITOR} PKGBUILD
+
+makepkg -si && cd - &>/dev/null
+
+read -p "Remove build directory? [Y/n]? " yn
+if [ "$yn" = "y" ]; then
+	printf "\n%s\n" "Removing build directory..."
+	rm -rf "$builddir"
+else
+	prinf "%s\n" "Build completed."
+fi
