@@ -1,3 +1,1 @@
-macro pager \cb <pipe-enty>'urlview'<enter> 'Follow links with urlview'
-macro index pager b '<enter-command>toggle sidebar_visible<refresh>'
-macro index pager b '<enter-command>toggle sidebar_visible<redraw-screen>'
+macro generic,pager,index <f1> "!w3m /usr/share/doc/mutt/manual.html\n" "Show Mutt documentation."

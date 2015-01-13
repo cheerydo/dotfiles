@@ -1,0 +1,85 @@
+## Kindly inspired from                                                                                                                                             
+## http://nongeekshandbook.blogspot.ie/2009/03/mutt-color-configuration.html                                                                                              
+
+## Colours for items in the index                                                                                                                                         
+color index brightcyan black ~N
+color index brightred black ~O
+color index brightyellow black ~F
+color index black green ~T
+color index brightred default ~D
+mono index bold ~N
+mono index bold ~F
+mono index bold ~T
+mono index bold ~D
+
+## Highlights inside the body of a message.                                                                                                                               
+
+## URLs                                                                                                                                                                    
+color body brightcyan default "(http|https|ftp|news|telnet|finger)://[^ \"\t\r\n]*"
+color body brightgreen default "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
+mono body bold "(http|ftp|news|telnet|finger)://[^ \"\t\r\n]*"
+mono body bold "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
+
+## Email addresses.                                                                                                                                                       
+color body brightgreen default "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+
+## Header                                                                                                                                                                 
+color header green default "^from:"
+color header green default "^to:"
+color header green default "^cc:"
+color header green default "^date:"
+color header brightyellow default "^newsgroups:"
+color header brightyellow default "^reply-to:"
+color header brightcyan default "^subject:"
+color header red default "^x-spam-rule:"
+color header green default "^x-mailer:"
+color header yellow default "^message-id:"
+color header yellow default "^Organization:"
+color header yellow default "^Organisation:"
+color header yellow default "^User-Agent:"
+color header yellow default "^message-id: .*pine"
+color header yellow default "^X-Fnord:"
+color header yellow default "^X-WebTV-Stationery:"
+
+color header red default "^x-spam-rule:"
+color header green default "^x-mailer:"
+color header yellow default "^message-id:"
+color header yellow default "^Organization:"
+color header yellow default "^Organisation:"
+color header yellow default "^User-Agent:"
+color header yellow default "^message-id: .*pine"
+color header yellow default "^X-Fnord:"
+color header yellow default "^X-WebTV-Stationery:"
+color header yellow default "^X-Message-Flag:"
+color header yellow default "^X-Spam-Status:"
+color header yellow default "^X-SpamProbe:"
+color header red default "^X-SpamProbe: SPAM"
+
+## Coloring quoted text - coloring the first 7 levels:                                                                                                                    
+#color quoted cyan black
+#color quoted1 yellow black
+#color quoted2 red black
+#color quoted3 green black
+#color quoted4 cyan black
+#color quoted5 yellow black
+#color quoted6 red black
+#color quoted7 green black
+
+## Default color definitions                                                                                                                                              
+#color hdrdefault white green                                                                                                                                             
+color signature brightmagenta default
+color indicator black cyan
+color attachment brightgreen default
+color error brightred default
+color message black default
+color search brightwhite magenta
+color status brightyellow blue
+color tree brightblue default
+color normal black default
+color tilde green default
+color bold brightyellow default
+#color underline magenta black                                                                                                                                            
+## Colour definitions when on a mono screen                                                                                                                               
+mono bold bold
+mono underline underline
+mono indicator reverse
