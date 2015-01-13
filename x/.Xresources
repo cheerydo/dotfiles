@@ -1,6 +1,3 @@
-! URxvt*rxvt-unicode (urxvt) v9.19 - released: 2013-10-27
-! URxvt*options: perl,xft,styles,combining,blink,iso14755,unicode3,encodings=eu+vn+jp+jp-ext+kr+zh+zh-ext,fade,transparent,tint,pixbuf,XIM,frills,selectionscrolling,wheel,slipwheel,smart-resize,cursorBlink,pointerBlank,scrollbars=plain+rxvt+NeXT+xterm
-! URxvt*Usage: urxvt [options] [-e command args]
 URxvt*scrollBar: 	false
 URxvt*transparent: 	false
 !URxvt*shading:      40
@@ -38,8 +35,6 @@ URxvt*depth:		32
 
 ! fontconfigs and copy/paste with url launching
 URxvt*colorUL:          #4682B4
-!URxvt*font:             xft:BitstreamVeraSansMono:size=11
-!URxvt*font: 			xft:AnonymousProMinus:size=10
 URxvt*font: 			xft:Inconsolata-zi4:size=11
 URxvt*letterSpace:		-1
 URxvt*perl-ext-common:  default,matcher,clipboard

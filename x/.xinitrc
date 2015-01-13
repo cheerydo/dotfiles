@@ -35,6 +35,7 @@ case "$2" in
 		tint2 -c ~/.config/tint2/cool &
 		xfce4-clipman &
 		volumeicon &
+		thunar --daemon &
 		conky -c ~/.conky.conf
 		exec openbox-session ;;
 	spectrwm)
@@ -42,6 +43,7 @@ case "$2" in
 		xfce4-clipman &
 		volumeicon &
 		nitrogen --restore &
+		thunar --daemon &
 		exec spectrwm ;;
 	2bwm) 
 		tint2 -c ~/.config/tint2/tint2rc.crux &
@@ -50,6 +52,7 @@ case "$2" in
 		/home/jared/bin/baraction.sh &
 		xsetroot -cursor_name top_left_arrow
 		nitrogen --restore &
+		thunar --daemon &
 		exec 2bwm 
 		exec termite ;;
 	dwm) 
