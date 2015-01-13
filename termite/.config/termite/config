@@ -47,8 +47,8 @@ browser = /usr/bin/firefox
 
 # Imported from Xresources
 # background = #1d1d1d
-background = #2b2827
-foreground = #FFFFFF
+foreground = #2b2827
+background = #FFFFFF
 
 # if unset, will reverse foreground and background
 # highlight = #2f2f2f

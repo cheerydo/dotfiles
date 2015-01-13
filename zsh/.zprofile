@@ -8,8 +8,8 @@
 
 export EDITOR=vim
 export LESSHISTFILE="/dev/null"
-eval $(keychain --eval FBB0702A)
-ssh-add ~/.ssh/{hserv,fbox,git}.id_rsa
+#eval $(keychain --eval FBB0702A)
+#ssh-add ~/.ssh/{hserv,fbox,git}.id_rsa
 
 [[ -f ~/.zshrc ]] && . ~/.zshrc
 [[ -f ~/.aliases ]] && . ~/.aliases

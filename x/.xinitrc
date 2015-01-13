@@ -18,12 +18,12 @@ setxkbmap -option caps:super
 xrdb -load ~/.Xresources
 
 # For that good looking-ness
-compton -b
-xrandr --output VGA1 --left-of HDMI1 &
+#compton -b
+#xrandr --output VGA1 --left-of HDMI1 &
 
 # Dose daemons dough
-thunar --daemon &
-urxvtd -q -f -o &
+#thunar --daemon &
+#urxvtd -q -f -o &
 
 # Gots to have my bindkeys
 xbindkeys
@@ -32,7 +32,6 @@ numlockx &
 case "$2" in
 	openbox)
 		xfsettingsd &
-#		tint2 -c ~/.config/tint2/tint2rc.crux &
 		tint2 -c ~/.config/tint2/cool &
 		xfce4-clipman &
 		volumeicon &
@@ -56,6 +55,7 @@ case "$2" in
 	dwm) 
 		exec dwm ;;
 	xfce)
+		volumeicon &
 		exec startxfce4 ;;
 	i3) 
 		exec i3 ;;

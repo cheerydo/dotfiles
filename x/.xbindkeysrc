@@ -54,7 +54,7 @@
 "claws-mail"
   XF86Mail
 
-"galculator"
+"termite -e 'bc -q'"
   XF86Calculator
 
 "systemctl suspend"
