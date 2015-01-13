@@ -4,7 +4,7 @@ cd $HOME/builds && cower -d "$1"
 builddir="$_"
 cd "$builddir" && ${EDITOR} PKGBUILD
 
-makepkg -si && cd - &>/dev/null
+makepkg -sic && cd - &>/dev/null
 
 read -p "Remove build directory? [Y/n]? " yn
 if [ "$yn" = "y" ]; then

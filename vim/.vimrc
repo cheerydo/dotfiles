@@ -1,6 +1,6 @@
 set nocompatible
 colorscheme darkspectrum
-"set term=xterm-256
+set term=xterm-256
 set background=dark
 
 set history=50
@@ -14,7 +14,6 @@ set autoindent
 " Suffixes that get lower priority when doing tab completion for filenames.
 " These are files we are not likely to want to edit or read.
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
-
 
 if has('gui_running')
   " Make shift-insert work like in Xterm
