@@ -6,9 +6,6 @@ source ~/.mutt/id
 set imap_user=$my_id
 set imap_pass=$my_pass
 set folder=$my_server
-
-# Need to set up for sending as well (might as well go big or go home)
-# smtp || msmtp
 set sendmail=/usr/sbin/msmtp
 
 # set some folder mappings
@@ -72,6 +69,7 @@ ignore *
 unignore From To Reply-To Cc Bcc Subject Date X-Label X-Mailer User-Agent
 
 # keybindings for more vim-like nav
+bind index "\&" imap-fetch-mail
 bind pager,index,generic h exit
 bind pager j next-line
 bind pager k previous-line
@@ -79,13 +77,14 @@ bind pager d half-down
 bind pager u half-up
 bind pager \Cb previous-page
 bind pager \Cf next-page
+bind index \Cl limit
+bind pager d half-down
+bind pager D delete-message
 bind pager gg top
 bind pager G bottom
 bind pager \Cd delete-message
 bind pager,index H display-toggle-weed
-bind index "^" imap-fetch-mail
 bind index l display-message
-bind index \Cl limit
 bind index \CN sidebar-next
 bind index \CP sidebar-prev
 bind index \CO sidebar-open
