@@ -33,3 +33,7 @@ alias FTL='cd .steam/root/SteamApps/common/FTL\ Faster\ Than\ Light/data/ && ./F
 alias hide='sudo openvpn /etc/openvpn/client.conf'
 
 alias refresh='killall -SIGUSR1'
+
+alias grep='grep --color=auto'
+
+alias w32='WINEARCH=wine33 WINEPREFIX=~/win32'

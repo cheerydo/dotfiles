@@ -1,14 +1,11 @@
-# General settings
-browser ilinks %u 
+browser elinks %u 
 display-article-progress yes
 goto-next-feed no
 save-path ~/documents/newsbeuters/
 show-keymap-hint yes
 
-# macro
 macro h toggle-show-read-feeds
 
-# key-bindings
 unbind-key j
 unbind-key J
 unbind-key k

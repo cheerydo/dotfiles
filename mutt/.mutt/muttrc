@@ -1,0 +1,129 @@
+# ---------- Internals ----------#
+# source id information 
+# NOTE TO SELF: you need to have variables set in id-file if you're pulling this from git
+# NOTE TO READER: $my_server ends with fastmail's "blahblah.com/INBOX." so folder switching is less painful
+source ~/.mutt/id
+set imap_user=$my_id
+set imap_pass=$my_pass
+set folder=$my_server
+set sendmail=/usr/sbin/msmtp
+
+# set some folder mappings
+set spoolfile="="
+set postponed="=Drafts"
+set record="=Sent Items"
+set trash="=Trash"
+
+# will not move read in INBOX to another folder
+set move=no
+
+# no asking if you're sure when moving mails (I'm an adult!)
+set confirmappend=no
+
+# used for replying with body
+set include=yes
+set fast_reply
+set reply_to
+
+# I wanna go fast!
+unset imap_passive
+set imap_keepalive=300
+set mail_check=120
+set header_cache="~/.mutt/cache/headers"
+set message_cachedir="~/.mutt/cache"
+set imap_check_subscribed
+# ----------   END   ----------#
+
+
+
+# ---------- APPEARANCE ---------#
+# --------------&----------------#
+# ----------  KEYBINDS  ---------#
+# some aesthetics
+set editor="vim"
+set sort=threads
+set sort_aux=reverse-last-date-received
+set pager_index_lines=9
+set smart_wrap
+set pager_stop
+unset markers
+unset help
+
+# for reading HTML mails, requires w3m (or reconfiguring mailcap command)
+set mailcap_path="~/.mutt/mailcap"
+set implicit_autoview
+auto_view text/html
+
+# sidebar stuff
+set sidebar_visible=yes
+set sidebar_width=25
+set sidebar_shortpath
+
+# Default index_format
+set index_format="%3C %Z | %{%b %e} %[\[%l:%M %P\]] | %-20.20L | %s"
+set status_chars=" *%A"
+set status_format="───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+# Filter out headers we don't want to see
+ignore *
+unignore From To Reply-To Cc Bcc Subject Date X-Label X-Mailer User-Agent
+
+# keybindings for more vim-like nav
+bind index "\&" imap-fetch-mail
+bind pager,index,generic h exit
+bind pager j next-line
+bind pager k previous-line
+bind pager d half-down
+bind pager u half-up
+bind pager \Cb previous-page
+bind pager \Cf next-page
+bind index \Cl limit
+bind pager d half-down
+bind pager D delete-message
+bind pager gg top
+bind pager G bottom
+bind pager \Cd delete-message
+bind pager,index H display-toggle-weed
+bind index l display-message
+bind index \CN sidebar-next
+bind index \CP sidebar-prev
+bind index \CO sidebar-open
+# ----------      END      ----------#
+	
+
+# ---------- MAILING LISTS ----------# 
+# Arch
+subscribe arch-general@archlinux.org
+subscribe arch-projects@archlinux.org
+subscribe arch-dev-public@archlinux.org
+subscribe aur-general@archlinux.org
+subscribe pacman-dev@archlinux.org
+subscribe arch-announce@archlinux.org
+# Crux
+subscribe crux@lists.crux.nu
+subscribe crux-commits@lists.crux.nu
+subscribe crux-devel@lists.crux.nu
+# Others
+subscribe chugalug@chugalug.org
+subscribe orthodoxdynamis@yahoogroups.com
+# ----------      END      ----------#
+
+
+
+# ---------- Miscellaneous ----------#
+# siggy sig
+set signature="~/.mutt/signature"
+set sig_on_top=yes
+
+# yay colors 
+source ~/.mutt/colors/colors.arch
+
+# Address book!
+set alias_file="~/.mutt/addresses"
+set sort_alias=alias
+set reverse_alias=yes
+source $alias_file
+
+# And macros!
+source ~/.mutt/macros
+# ---------- END CONFIG ------------#

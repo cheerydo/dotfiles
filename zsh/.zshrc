@@ -1,11 +1,11 @@
 # Path to your oh-my-zsh installation.
-ZSH=/usr/share/oh-my-zsh/
+ZSH=/usr/share/oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="jared"
+ZSH_THEME="jared1"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -23,7 +23,6 @@ DISABLE_AUTO_UPDATE="true"
 plugins=(git extract pass)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.aliases
 
 # Vi mode engage!
 bindkey -v
@@ -40,5 +39,6 @@ export LS_COLORS='rs=0:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 
 setopt NO_HUP
 
-#unset GREP_OPTIONS
-export LANG="en_US.UTF-8"
+#export LANG="en_US.UTF-8"
+unset GREP_OPTIONS
+source $HOME/.aliases

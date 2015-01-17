@@ -15,8 +15,8 @@ ncmpcpp/.ncmpcpp/config.def
 vim/.viminfo
 mutt/.mutt/cache/*
 mutt/.mutt/certificates
-mutt/.mutt/muttrc
-mutt/.mutt/sample.muttrc
+mutt/.mutt/id
+mutt/.mutt/addresses
 ranger/.config/ranger/bookmarks
 weechat/.weechat/irc.conf
 weechat/.weechat/logs/*
