@@ -17,7 +17,7 @@ bar_action			= /home/jared/bin/baraction.sh
 clock_enabled		= 0
 
 # Launch applications in a workspace of choice
-autorun		= ws[2]:trayer --edge top --align right --height 15 --SetDockType true --width 3 --transparent true  
+# autorun		= ws[2]:trayer --edge top --align right --height 15 --SetDockType true --width 3 --transparent true  
 # autorun		= ws[2]:xombrero http://www.openbsd.org
 
 # Customize workspace layout at start
@@ -31,13 +31,14 @@ layout		= ws[5]:0:0:0:0:horizontal
 modkey = Mod4
 
 # Validated default programs:
-#program[lock]		= 
+program[lock]		= i3lock
 program[term]		= termite
-# program[menu]		= dmenu_run $dmenu_bottom -fn $bar_font -nb $bar_color -nf $bar_font_color -sb $bar_border -sf $bar_color
+program[menu]		= dmenu_run $dmenu_bottom -fn $bar_font -nb $bar_color -nf $bar_font_color -sb $bar_border -sf $bar_color
 
 # To disable validation of the above, free the respective binding(s):
-bind[]		= MOD+Shift+Delete	# disable lock
-# bind[]		= MOD+Shift+Enter	# disable term
+# bind[]		= MOD+Shift+Delete	# disable lock
+bind[term]		= MOD+Return
+bind[swap_main]	= MOD+Shift+Return	# disable term
 # bind[]		= MOD+p			# disable menu
 
 program[volup]	= amixer -c 0 set Master 5+

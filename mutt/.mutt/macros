@@ -1,1 +1,3 @@
 macro generic,pager,index <f1> "!w3m /usr/share/doc/mutt/manual.html\n" "Show Mutt documentation."
+macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
+macro index,pager,generic \& "!mbsync -a" "Check for new mail."

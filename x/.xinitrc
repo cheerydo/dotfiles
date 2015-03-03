@@ -26,8 +26,8 @@ xrdb -load ~/.Xresources
 #urxvtd -q -f -o &
 
 # Gots to have my bindkeys
-xbindkeys
-numlockx & 
+#xbindkeys
+#numlockx & 
 
 case "$2" in
 	openbox)
@@ -62,4 +62,9 @@ case "$2" in
 		exec startxfce4 ;;
 	i3) 
 		exec i3 ;;
+	cinn)
+		exec cinnamon-session ;;
+	*)
+		volumeicon &
+		exec startxfce4 ;;
 esac

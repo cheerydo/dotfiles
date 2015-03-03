@@ -1,4 +1,5 @@
-browser elinks %u 
+#browser elinks %u 
+browser firefox %u
 display-article-progress yes
 goto-next-feed no
 save-path ~/documents/newsbeuters/
@@ -11,9 +12,13 @@ unbind-key J
 unbind-key k
 unbind-key K
 unbind-key l
-bind-key j next
-bind-key k prev
-bind-key J next-feed
-bind-key K prev-feed
+bind-key J next
+bind-key K prev
+#bind-key J next-feed
+#bind-key K prev-feed
 bind-key h quit
 bind-key l open
+#bind-key d down
+#bind-key u up
+bind-key j down
+bind-key k up
