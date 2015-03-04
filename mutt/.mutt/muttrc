@@ -11,7 +11,7 @@ set mbox_type=Maildir
 #set folder=$my_server
 set folder=~/mail_test
 set sendmail=/usr/sbin/msmtp
-set my_msmtp_pass=`gpg -d -q --no-tty ~/.mutt/.msmtp-fmail.gpg`
+set my_msmtp_pass=`gpg -d -q --no-tty ~/.mutt/fmail.gpg`
 
 # set some folder mappings
 #set spoolfile="="
@@ -24,10 +24,10 @@ folder-hook Trash 'unset trash'
 # Mailboxen
 mailboxes =Inbox \
 		  =Inbox/\.Arch \
-		  =Inbox/\.Arch\.Arch-dev \
-		  =Inbox/\.Arch\.Arch-projects \
-		  =Inbox/\.Arch\.Aur-general \
-		  =Inbox/\.Arch\.Pacman-dev \
+		  =Inbox/\.Arch/\.Arch-dev \
+		  =Inbox/\.Arch/\.Arch-projects \
+		  =Inbox/\.Arch/\.Aur-general \
+		  =Inbox/\.Arch/\.Pacman-dev \
 		  =Inbox/\.Archive \
 		  =Inbox/\.Chugalug \
 		  =Inbox/\.Church \
@@ -101,7 +101,7 @@ set sidebar_shortpath="yes"
 set sidebar_folderindent="yes"
 
 # Default index_format
-set index_format="%3C | %Z | %-20.20L | %?M?(%M)? %s%> | %{%b %e} %[\[%l:%M %P\]]"
+set index_format="%3C | %Z | %-25.25L | %?M?(%M)? %s%> | %{%b %e} %[\[%l:%M %P\]]"
 set status_chars=" *%A"
 set status_format="───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
 
@@ -170,10 +170,12 @@ source ~/.mutt/colors/colors.arch
 	
 
 # Address book!
-set alias_file="~/.mutt/addresses"
+#set alias_file="~/.mutt/addresses"
+set query_command="abook --mutt-query '%s'"
+bind editor <Tab> complete-query
 set sort_alias=alias
 set reverse_alias=yes
-source $alias_file
+#source $alias_file
 
 # And macros!
 source ~/.mutt/macros
