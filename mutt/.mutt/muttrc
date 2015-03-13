@@ -32,6 +32,7 @@ mailboxes =Inbox \
 		  =Inbox/\.Chugalug \
 		  =Inbox/\.Church \
 		  =Inbox/\.Crux \
+		  =Inbox/\.OpenBSD \
 		  =Inbox/\.Drafts \
 		  =Inbox/\.Dynamis \
 		  =Inbox/\.edX \
@@ -85,6 +86,7 @@ set pager_context=3
 set smart_wrap
 set pager_stop
 set menu_scroll
+unset mark_old
 unset markers
 unset help
 
@@ -114,7 +116,7 @@ unhdr_order *
 hdr_order From To Cc Bcc Date Subject *
 
 # Some personal headers
-my_hdr Bcc: $my_id
+reply-hook . my_hdr Bcc: $my_id
 
 # keybindings for more vim-like nav
 #bind index "\&" !offlineimap
@@ -152,6 +154,12 @@ subscribe arch-announce@archlinux.org
 subscribe crux@lists.crux.nu
 subscribe crux-commits@lists.crux.nu
 subscribe crux-devel@lists.crux.nu
+# OpenBSD
+subscribe advocacy@openbsd.org
+subscribe announce@openbsd.org
+subscribe misc@openbsd.org
+subscribe tech@openbsd.org
+subscribe openbsd-newbies@sfobug.theapt.org
 # Others
 subscribe chugalug@chugalug.org
 subscribe orthodoxdynamis@yahoogroups.com
@@ -168,7 +176,6 @@ set from="Jared Hamilton <jared@fastmail.com>"
 # yay colors 
 source ~/.mutt/colors/colors.arch
 	
-
 # Address book!
 #set alias_file="~/.mutt/addresses"
 set query_command="abook --mutt-query '%s'"
