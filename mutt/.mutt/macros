@@ -1,1 +1,12 @@
 macro generic,pager,index <f1> "!w3m /usr/share/doc/mutt/manual.html\n" "Show Mutt documentation."
+
+macro pager \cb <pipe-entry>'extract_url'<enter> 'Follow links with urlview'
+
+macro index,pager a "<pipe-message>abook --add-email-quiet<return>" "Add this sender to Abook"
+
+bind editor <space> noop
+macro index gt 'c=Inbox/.Trash'<enter> 'Go to trash'
+macro index gh 'c=Inbox'<enter> 'Go to Inbox'
+macro index gs 'c=Inbox/.Sent Items'<enter> 'Go to Sent mail'
+
+macro index,pager,generic \& "!mbsync -a -q" "Check for new mail."

@@ -1,6 +1,5 @@
 ## Kindly inspired from                                                                                                                                             
 ## http://nongeekshandbook.blogspot.ie/2009/03/mutt-color-configuration.html                                                                                              
-
 ## Colours for items in the index                                                                                                                                         
 color index brightcyan black ~N # new messages
 color index brightred black ~O # old
@@ -11,9 +10,7 @@ mono index bold ~N
 mono index bold ~F
 mono index bold ~T
 mono index bold ~D
-
 ## Highlights inside the body of a message.                                                                                                                               
-
 ## URLs                                                                                                                                                                    
 color body brightgreen black "(http|ftp|news|telnet|finger)://[^ \"\t\r\n]*"
 color body brightgreen black "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
@@ -27,7 +24,7 @@ color body brightgreen black "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
 color header green black "^from:"
 color header green black "^to:"
 color header green black "^cc:"
-color header green black "^date:"
+color header brightcyan black "^date:"
 color header yellow black "^newsgroups:"
 color header yellow black "^reply-to:"
 color header brightcyan black "^subject:"
@@ -69,7 +66,7 @@ color quoted7 green black
 #color hdrdefault white green                                                                                                                                             
 color signature brightmagenta black
 color indicator black cyan
-color attachment black green
+color attachment brightblack default
 color error red black
 color message white black
 color search brightwhite magenta

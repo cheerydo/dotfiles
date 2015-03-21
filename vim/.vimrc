@@ -1,6 +1,5 @@
 set nocompatible
 colorscheme darkspectrum
-set term=xterm-256
 set background=dark
 
 set history=50

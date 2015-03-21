@@ -1,14 +1,17 @@
 "amixer -c 0 set Master 5+ && notify-send `amixer get Master -M | grep -oE "[[:digit:]]*%"`"
-  XF86AudioRaiseVolume
+  Control + Alt + Prior
 
 "amixer -c 0 set Master 5- && notify-send `amixer get Master -M | grep -oE "[[:digit:]]*%"`"
-  XF86AudioLowerVolume
+  Control + Alt + Next
 
 "amixer set Master toggle && notify-send -u urgent Muted"
-  XF86AudioMute
+  Control + Alt + End
+
+"systemctl suspend"
+  Alt + End
 
 "thunar"
-  XF86HomePage
+  Control + Home
 
 "claws-mail"
   XF86Mail
@@ -29,7 +32,7 @@
   Mod4 + Shift + v
 
 "firefox"
-   Alt + W
+  Alt + W
 
 "dmenu_run"
   Mod4 + p

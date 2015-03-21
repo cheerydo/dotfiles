@@ -10,7 +10,7 @@ dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
 #font = Bitstream Vera Sans Mono 10
-#font = Source Code Pro 10
+#font = Terminus 11
 font = Inconsolatazi4 11
 #font = Source Code Pro 10
 scrollback_lines = 1000
@@ -46,9 +46,9 @@ browser = /usr/bin/firefox
 #cursor = #dcdccc
 
 # Imported from Xresources
-# background = #1d1d1d
-foreground = #2b2827
-background = #FFFFFF
+background = #1d1d1d
+#foreground = #2b2827
+foreground = #FFFFFF
 
 # if unset, will reverse foreground and background
 # highlight = #2f2f2f
