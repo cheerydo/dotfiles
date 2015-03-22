@@ -31,6 +31,7 @@ xrdb -load ~/.Xresources
 
 case "$2" in
 	openbox)
+		compton -b &
 		xfsettingsd &
 		tint2 -c ~/.config/tint2/cool &
 		xfce4-clipman &
@@ -39,6 +40,8 @@ case "$2" in
 		conky -c ~/.conky.conf
 		exec openbox-session ;;
 	spectrwm)
+		xrandr --output VGA1 --left-of HDMI1
+		compton -b &
 		stalonetray -c /home/jared/.config/.stalonetrayrc &
 		xfce4-clipman &
 		volumeicon &
@@ -46,6 +49,8 @@ case "$2" in
 		thunar --daemon &
 		exec spectrwm ;;
 	2bwm) 
+		xrandr --output VGA1 --left-of HDMI1
+		compton -b &
 		tint2 -c ~/.config/tint2/tint2rc.crux &
 		xfce4-clipman &
 		volumeicon &
@@ -61,6 +66,13 @@ case "$2" in
 		volumeicon &
 		exec startxfce4 ;;
 	i3) 
+		compton -b &
+		xrandr --output VGA1 --left-of HDMI1
+		xfce4-clipman &
+		volumeicon &
+		caffeine &
+		nitrogen --restore &
+		thunar --daemon &
 		exec i3 ;;
 	cinn)
 		exec cinnamon-session ;;
