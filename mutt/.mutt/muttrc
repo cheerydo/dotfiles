@@ -2,23 +2,17 @@
 # source id information 
 # NOTE TO SELF: you need to have variables set in id-file if you're pulling this from git
 # NOTE TO READER: $my_server ends with fastmail's "blahblah.com/INBOX." so folder switching is less painful
-#source ~/.mutt/id
-set my_id="jared@fastmail.com"
-set from="Jared Hamilton $my_id"
+set from="Jared Hamilton <jared@fastmail.com>"
 set mbox_type=Maildir
-#set imap_user=$my_id
-#set imap_pass=$my_pass
-#set folder=$my_server
-set folder=~/mail_test
+set folder=~/mail
 set sendmail=/usr/sbin/msmtp
 set my_msmtp_pass=`gpg -d -q --no-tty ~/.mutt/fmail.gpg`
 
 # set some folder mappings
-#set spoolfile="="
 set spoolfile="=Inbox"
-set postponed="=Inbox/.Drafts"
-set record="=Inbox/.Sent Items"
-folder-hook . 'set trash="=Inbox/.Trash"'
+set postponed="=Inbox/\.Drafts"
+set record="=Inbox/\.Sent Items"
+folder-hook . 'set trash="=Inbox/\.Trash"'
 folder-hook Trash 'unset trash'
 
 # Mailboxen
@@ -32,7 +26,9 @@ mailboxes =Inbox \
 		  =Inbox/\.Chugalug \
 		  =Inbox/\.Church \
 		  =Inbox/\.Crux \
-		  =Inbox/\.OpenBSD \
+		  =Inbox/\.OpenBSD-announce \
+		  =Inbox/\.OpenBSD-misc \
+		  =Inbox/\.OpenBSD-tech \
 		  =Inbox/\.Drafts \
 		  =Inbox/\.Dynamis \
 		  =Inbox/\.edX \
@@ -47,29 +43,13 @@ mailboxes =Inbox \
 		  =Inbox/\.Sent\ Items \
 		  =Inbox/\.Trash
 
-# will not move read in INBOX to another folder
-set move=no
-
-# no asking if you're sure when moving mails (I'm an adult!)
-set confirmappend=no
-
 # used for replying with body
+set move=no
+set confirmappend=no
 set include=yes
 set fast_reply
 set reply_to
 set edit_headers
-
-# I wanna go fast!
-#unset imap_passive
-#set imap_keepalive=300
-#set mail_check=120
-#set header_cache="~/.mutt/cache/headers"
-#set message_cachedir="~/.mutt/cache"
-#set imap_check_subscribed
-
-# But I wanna stay safe!
-#set ssl_use_sslv3=no
-#set ssl_force_tls=yes
 # ----------   END   ----------#
 
 
@@ -89,6 +69,7 @@ set menu_scroll
 unset mark_old
 unset markers
 unset help
+set sleep_time=0
 
 
 # for reading HTML mails, requires w3m (or reconfiguring mailcap command)
@@ -103,7 +84,7 @@ set sidebar_shortpath="yes"
 set sidebar_folderindent="yes"
 
 # Default index_format
-set index_format="%3C | %Z | %-25.25L | %?M?(%M)? %s%> | %{%b %e} %[\[%l:%M %P\]]"
+set index_format="%3C | %Z | %-25.25L | %?M?(%M)? %s%> | %(%b %e) %(\[%l:%M %P\])"
 set status_chars=" *%A"
 set status_format="───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
 
@@ -120,6 +101,13 @@ reply-hook . my_hdr Bcc: $my_id
 
 # keybindings for more vim-like nav
 #bind index "\&" !offlineimap
+bind index - collapse-thread
+bind index _ collapse-all
+bind index \Cl limit
+bind index l display-message
+bind index \CN sidebar-next
+bind index \CP sidebar-prev
+bind index \CO sidebar-open
 bind pager,index,generic,attach h exit
 bind pager j next-line
 bind pager k previous-line
@@ -127,17 +115,12 @@ bind pager d half-down
 bind pager u half-up
 bind pager \Cb previous-page
 bind pager \Cf next-page
-bind index \Cl limit
-bind pager d half-down
 bind pager D delete-message
 bind pager gg top
 bind pager G bottom
 bind pager \Cd delete-message
 bind pager,index H display-toggle-weed
-bind index l display-message
-bind index \CN sidebar-next
-bind index \CP sidebar-prev
-bind index \CO sidebar-open
+bind pager R group-reply
 bind attach <return> view-mailcap
 # ----------      END      ----------#
 	
@@ -171,7 +154,6 @@ subscribe orthodoxdynamis@yahoogroups.com
 # siggy sig
 set signature="~/.mutt/signature"
 set sig_on_top=yes
-set from="Jared Hamilton <jared@fastmail.com>"
 
 # yay colors 
 source ~/.mutt/colors/colors.arch

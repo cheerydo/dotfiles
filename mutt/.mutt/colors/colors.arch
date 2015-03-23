@@ -65,12 +65,12 @@ color quoted7 green black
 ## Default color definitions                                                                                                                                              
 #color hdrdefault white green                                                                                                                                             
 color signature brightmagenta black
-color indicator black cyan
+color indicator brightblue color234
 color attachment brightblack default
 color error red black
 color message white black
 color search brightwhite magenta
-color status brightyellow blue
+color status brightblue black
 color tree brightblue black
 color normal white black
 color tilde green black
