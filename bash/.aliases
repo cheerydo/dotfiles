@@ -37,3 +37,5 @@ alias refresh='killall -SIGUSR1'
 alias grep='grep --color=auto'
 
 alias w32='WINEARCH=wine33 WINEPREFIX=~/win32'
+
+alias paste="curl -F 'sprunge=<-' http://sprunge.us"
