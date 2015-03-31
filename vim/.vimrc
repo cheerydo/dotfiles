@@ -1,5 +1,5 @@
 set nocompatible
-colorscheme darkspectrum
+" colorscheme darkspectrum
 set background=dark
 
 set history=50
