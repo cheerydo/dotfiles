@@ -2,10 +2,10 @@
 # source id information 
 # NOTE TO SELF: you need to have variables set in id-file if you're pulling this from git
 # NOTE TO READER: $my_server ends with fastmail's "blahblah.com/INBOX." so folder switching is less painful
-set from="Jared Hamilton <jared@fastmail.com>"
 set mbox_type=Maildir
 set folder=~/mail
-set sendmail=/usr/sbin/msmtp
+set sendmail=/usr/bin/msmtp
+set sendmail_wait=0
 set my_msmtp_pass=`gpg -d -q --no-tty ~/.mutt/fmail.gpg`
 
 # set some folder mappings
@@ -49,6 +49,10 @@ set confirmappend=no
 set include=yes
 set fast_reply
 set reply_to
+set from='Jared Hamilton'
+set move=no
+set confirmappend=no
+set delete=yes
 set edit_headers
 # ----------   END   ----------#
 
@@ -58,15 +62,19 @@ set edit_headers
 # --------------&----------------#
 # ----------  KEYBINDS  ---------#
 # some aesthetics
-set editor="vim"
+set editor=vim
 set sort=threads
 set sort_aux=reverse-last-date-received
+unset collapse_unread
 set pager_index_lines=9
 set pager_context=3
-set smart_wrap
 set pager_stop
+set smart_wrap
 set menu_scroll
-unset mark_old
+set text_flowed
+set charset=utf-8
+set mark_old=no
+set wait_key=no
 unset markers
 unset help
 set sleep_time=0

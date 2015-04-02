@@ -34,3 +34,9 @@ set nowritebackup
 " Some keymappings
 imap jj <Esc>
 map <C-h> :nohl<CR>
+set pastetoggle=<F4>
+
+set wildmenu
+set wildmode=longest,list
+
+au BufNewFile,BufRead ~/.mutt/.tmp/* set ft=mail:fo=aw

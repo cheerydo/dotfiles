@@ -1,0 +1,49 @@
+# bash_aliases
+alias mutt='mutt -F ~/.config/mutt/muttrc'
+
+alias rh='rehash'
+alias p='pwd'
+alias v='vim'
+alias mkdir='mkdir -pv'
+alias rmdir='rmdir -v'
+alias ls='ls --color=auto'
+alias lsa='ls --color=auto -A'
+alias lsl='ls --color=auto -l'
+alias lsal='ls --color=auto -Al'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias df='df -h'
+alias du='du -h'
+alias paste="curl -F 'f:1=<-' ix.io"
+
+alias sup='sudo pacman -Syu'
+alias pin='sudo pacman -S'
+alias prem='sudo pacman -Rns'
+alias pchk='checkupdates'
+alias prepi='pacman -Si'
+alias preps='pacman -Ss'
+alias ploc='pacman -Qs'
+alias ploci='pacman -Qi'
+alias paclocf='pacman -Ql'
+alias porf='pacman -Qtd'
+alias try='sudo pacman -S --asdeps'
+
+alias fbox='ssh tornainbow@hermes.feralhosting.com'
+alias hserv='ssh 192.241.173.213'
+alias tor='scp ~/down/*.torrent tornainbow@hermes.feralhosting.com:/media/sde1/home/tornainbow/private/rtorrent/watch && rm ~/down/*.torrent'
+alias hide='sudo openvpn /etc/openvpn/client.conf'
+
+alias shd='systemctl poweroff'
+alias ssp='systemctl suspend'
+alias rbt='systemctl reboot'
+
+alias gis='git status'
+alias gic='git commit'
+alias gip='git push'
+alias gil='git log'
+alias gid='git diff'
+
+alias fresh='killall -SIGUSR1'
+
+alias w32='WINEARCH=wine33 WINEPREFIX=~/win32'
