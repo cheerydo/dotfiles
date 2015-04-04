@@ -41,6 +41,7 @@ alias rbt='systemctl reboot'
 alias gis='git status'
 alias gic='git commit'
 alias gip='git push'
+alias gia='git add'
 alias gil='git log'
 alias gid='git diff'
 
