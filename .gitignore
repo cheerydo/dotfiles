@@ -13,10 +13,10 @@ ncmpcpp/.ncmpcpp/error.log
 ncmpcpp/.ncmpcpp/artists
 ncmpcpp/.ncmpcpp/config.def
 vim/.viminfo
-mutt/.mutt/cache/*
-mutt/.mutt/certificates
-mutt/.mutt/id
-mutt/.mutt/addresses
+mutt/.config/mutt/cache/
+mutt/.config/mutt/certificates
+mutt/.config/mutt/id
+mutt/.config/mutt/addresses
 ranger/.config/ranger/bookmarks
 weechat/.weechat/irc.conf
 weechat/.weechat/logs/*
