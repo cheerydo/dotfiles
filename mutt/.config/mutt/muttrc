@@ -2,46 +2,46 @@
 # source id information 
 # NOTE TO SELF: you need to have variables set in id-file if you're pulling this from git
 # NOTE TO READER: $my_server ends with fastmail's "blahblah.com/INBOX." so folder switching is less painful
-set from="Jared Hamilton <jared@fastmail.com>"
 set mbox_type=Maildir
-set folder=~/mail
-set sendmail=/usr/sbin/msmtp
-set my_msmtp_pass=`gpg -d -q --no-tty ~/.mutt/fmail.gpg`
+set folder=~/mail/Inbox
+set sendmail=/usr/bin/msmtp
+set sendmail_wait=0
+set my_msmtp_pass=`gpg -d -q --no-tty ~/.config/mutt/fmail.gpg`
 
 # set some folder mappings
-set spoolfile="=Inbox"
-set postponed="=Inbox/\.Drafts"
-set record="=Inbox/\.Sent Items"
-folder-hook . 'set trash="=Inbox/\.Trash"'
+set spoolfile="="
+set postponed="=/\.Drafts"
+set record="=/\.Sent Items"
+folder-hook . 'set trash="=/\.Trash"'
 folder-hook Trash 'unset trash'
 
 # Mailboxen
-mailboxes =Inbox \
-		  =Inbox/\.Arch \
-		  =Inbox/\.Arch/\.Arch-dev \
-		  =Inbox/\.Arch/\.Arch-projects \
-		  =Inbox/\.Arch/\.Aur-general \
-		  =Inbox/\.Arch/\.Pacman-dev \
-		  =Inbox/\.Archive \
-		  =Inbox/\.Chugalug \
-		  =Inbox/\.Church \
-		  =Inbox/\.Crux \
-		  =Inbox/\.OpenBSD-announce \
-		  =Inbox/\.OpenBSD-misc \
-		  =Inbox/\.OpenBSD-tech \
-		  =Inbox/\.Drafts \
-		  =Inbox/\.Dynamis \
-		  =Inbox/\.edX \
-		  =Inbox/\.Important \
-		  =Inbox/\.Important/\.School\ loans \
-		  =Inbox/\.Jessica \
-		  =Inbox/\.Junk\ Mail \
-		  =Inbox/\.Lee \
-		  =Inbox/\.Personal \
-		  =Inbox/\.Queue \
-		  =Inbox/\.Receipts \
-		  =Inbox/\.Sent\ Items \
-		  =Inbox/\.Trash
+mailboxes Inbox \
+		  =/\.Arch \
+		  =/\.Arch/\.Arch-dev \
+		  =/\.Arch/\.Arch-projects \
+		  =/\.Arch/\.Aur-general \
+		  =/\.Arch/\.Pacman-dev \
+		  =/\.Archive \
+		  =/\.Chugalug \
+		  =/\.Church \
+		  =/\.Crux \
+		  =/\.OpenBSD-announce \
+		  =/\.OpenBSD-misc \
+		  =/\.OpenBSD-tech \
+		  =/\.Drafts \
+		  =/\.Dynamis \
+		  =/\.edX \
+		  =/\.Important \
+		  =/\.Important/\.School\ loans \
+		  =/\.Jessica \
+		  =/\.Junk\ Mail \
+		  =/\.Lee \
+		  =/\.Personal \
+		  =/\.Queue \
+		  =/\.Receipts \
+		  =/\.Sent\ Items \
+		  =/\.Trash
 
 # used for replying with body
 set move=no
@@ -49,6 +49,10 @@ set confirmappend=no
 set include=yes
 set fast_reply
 set reply_to
+set from='Jared Hamilton'
+set move=no
+set confirmappend=no
+set delete=yes
 set edit_headers
 # ----------   END   ----------#
 
@@ -58,27 +62,31 @@ set edit_headers
 # --------------&----------------#
 # ----------  KEYBINDS  ---------#
 # some aesthetics
-set editor="vim"
+set editor=vim
 set sort=threads
 set sort_aux=reverse-last-date-received
+unset collapse_unread
 set pager_index_lines=9
 set pager_context=3
-set smart_wrap
 set pager_stop
+set smart_wrap
 set menu_scroll
-unset mark_old
+set text_flowed
+set charset=utf-8
+set mark_old=no
+set wait_key=no
 unset markers
 unset help
 set sleep_time=0
 
 
 # for reading HTML mails, requires w3m (or reconfiguring mailcap command)
-set mailcap_path="~/.mutt/mailcap"
+set mailcap_path="~/.config/mutt/mailcap"
 #set implicit_autoview
 auto_view text/html
 
 # sidebar stuff
-set sidebar_visible="yes"
+set sidebar_visible="no"
 set sidebar_width=25
 set sidebar_shortpath="yes"
 set sidebar_folderindent="yes"
@@ -152,20 +160,20 @@ subscribe orthodoxdynamis@yahoogroups.com
 
 # ---------- Miscellaneous ----------#
 # siggy sig
-set signature="~/.mutt/signature"
+set signature="~/.config/mutt/signature"
 set sig_on_top=yes
 
 # yay colors 
-source ~/.mutt/colors/colors.arch
+source ~/.config/mutt/colors/colors.arch
 	
 # Address book!
-#set alias_file="~/.mutt/addresses"
-set query_command="abook --mutt-query '%s'"
+set alias_file="~/.config/mutt/addresses"
+#set query_command="abook --mutt-query '%s'"
 bind editor <Tab> complete-query
 set sort_alias=alias
 set reverse_alias=yes
-#source $alias_file
+source $alias_file
 
 # And macros!
-source ~/.mutt/macros
+source ~/.config/mutt/macros
 # ---------- END CONFIG ------------#
