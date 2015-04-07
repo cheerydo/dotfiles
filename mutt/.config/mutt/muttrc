@@ -44,55 +44,32 @@ mailboxes Inbox \
 		  =/\.Trash
 
 # used for replying with body
-set move=no
-set confirmappend=no
 set include=yes
 set fast_reply
 set reply_to
 set from='Jared Hamilton'
-set move=no
-set confirmappend=no
-set delete=yes
+set text_flowed="yes"
 set edit_headers
 # ----------   END   ----------#
-
-
 
 # ---------- APPEARANCE ---------#
 # --------------&----------------#
 # ----------  KEYBINDS  ---------#
-# some aesthetics
+# some aesthetics and viewing prefs
 set editor=vim
 set sort=threads
 set sort_aux=reverse-last-date-received
-unset collapse_unread
 set pager_index_lines=9
 set pager_context=3
-set pager_stop
 set smart_wrap
+set pager_stop
 set menu_scroll
-set text_flowed
-set charset=utf-8
-set mark_old=no
-set wait_key=no
 unset markers
 unset help
-set sleep_time=0
-
-
-# for reading HTML mails, requires w3m (or reconfiguring mailcap command)
-set mailcap_path="~/.config/mutt/mailcap"
-#set implicit_autoview
-auto_view text/html
-
-# sidebar stuff
-set sidebar_visible="no"
-set sidebar_width=25
-set sidebar_shortpath="yes"
-set sidebar_folderindent="yes"
 
 # Default index_format
-set index_format="%3C | %Z | %-25.25L | %?M?(%M)? %s%> | %(%b %e) %(\[%l:%M %P\])"
+folder-hook *Sent* 'set index_format="%3C %Z | %-35.35t | %(%b %e) %(\(%H:%M\)) | %s"'
+folder-hook ! *Sent* 'set index_format="%3C %Z | %(!%b %e) %(!\(%H:%M\)) %-35.35F | %?M?[+](%2.M messages)? %s"'
 set status_chars=" *%A"
 set status_format="───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
 
@@ -106,9 +83,29 @@ hdr_order From To Cc Bcc Date Subject *
 
 # Some personal headers
 reply-hook . my_hdr Bcc: $my_id
+# Logistics
+set mark_old="no"
+set delete="yes"
+set confirmappend=no
+set move=no
+set sleep_time=0
+
+# Threads begin collapsed except for threads with unread mails
+unset collapse_unread
+folder-hook . "exec collapse-all"
+
+# for reading HTML mails, requires w3m (or reconfiguring mailcap command)
+set mailcap_path="~/.config/mutt/mailcap"
+auto_view text/html
+
+## sidebar stuff
+set sidebar_visible=no
+set sidebar_width=25
+set sidebar_shortpath=yes
+set sidebar_delim=" |"
+set sidebar_folderindent="yes"
 
 # keybindings for more vim-like nav
-#bind index "\&" !offlineimap
 bind index - collapse-thread
 bind index _ collapse-all
 bind index \Cl limit
@@ -132,7 +129,6 @@ bind pager R group-reply
 bind attach <return> view-mailcap
 # ----------      END      ----------#
 	
-
 # ---------- MAILING LISTS ----------# 
 # Arch
 subscribe arch-general@archlinux.org
@@ -156,12 +152,9 @@ subscribe chugalug@chugalug.org
 subscribe orthodoxdynamis@yahoogroups.com
 # ----------      END      ----------#
 
-
-
 # ---------- Miscellaneous ----------#
 # siggy sig
 set signature="~/.config/mutt/signature"
-set sig_on_top=yes
 
 # yay colors 
 source ~/.config/mutt/colors/colors.arch
