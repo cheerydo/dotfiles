@@ -3,8 +3,8 @@ macro pager,index b '<enter-command>toggle sidebar_visible<enter>'
 macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
 
 bind editor <space> noop
-macro index gt 'c=/.Trash<enter>'
-macro index gh 'c=<enter>'
-macro index gs 'c=/.Sent Items<enter>'
+macro index gt 'c=/Trash<enter>'
+macro index gh 'c=/Inbox<enter>'
+macro index gs 'c=/Sent Items<enter>'
 
 macro index \& '!echo "Syncing mail..."; mbsync -a <enter>'
