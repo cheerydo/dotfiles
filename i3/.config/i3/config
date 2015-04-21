@@ -182,3 +182,7 @@ bindsym Mod1+p exec --no-startup-id mpc toggle
 bindsym Mod1+period exec --no-startup-id mpc next
 bindsym Mod1+comma exec --no-startup-id mpc prev
 bindsym Mod1+s exec --no-startup-id mpc stop
+
+# Quick keys
+bindsym Mod1+w exec firefox
+bindsym Mod1+f exec thunar 
