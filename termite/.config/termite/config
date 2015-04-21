@@ -45,8 +45,8 @@ browser = /usr/bin/firefox
 #cursor = #dcdccc
 
 # Imported from Xresources
-#background = #1d1d1d
-background = #2b2b2b
+background = #1d1d1d
+#background = #2b2b2b
 #foreground = #2b2827
 foreground = #FFFFFF
 
