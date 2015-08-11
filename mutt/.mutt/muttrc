@@ -3,7 +3,6 @@
 # NOTE TO SELF: you need to have variables set in id-file if you're pulling this from git
 # NOTE TO READER: $my_server ends with fastmail's "blahblah.com/INBOX." so folder switching is less painful
 #source ~/.mutt/id
-set my_id="jared@fastmail.com"
 set from="Jared Hamilton $my_id"
 set mbox_type=Maildir
 #set imap_user=$my_id
