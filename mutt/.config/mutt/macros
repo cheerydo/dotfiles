@@ -1,6 +1,7 @@
 macro generic,pager,index <f1> "!elinks /usr/share/doc/mutt/manual.html\n" "Show Mutt documentation."
 macro pager,index b '<enter-command>toggle sidebar_visible<enter>'
 macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
+#macro index,pager a "<pipe-message>abook --add-email-quiet<return>" "Add this sender to Abook"
 
 bind editor <space> noop
 macro index gt 'c=/Trash<enter>'
