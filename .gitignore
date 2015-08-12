@@ -1,6 +1,5 @@
 **/*history
-**/*logout
-mpd/.mpd/
+**/*logout mpd/.mpd/
 mpd/**/**/mpd.log
 mpd/**/**/mpd.db
 mpd/**/**/mpd.pid
@@ -10,10 +9,13 @@ zsh/**/.zcomp*
 ncmpcpp/.ncmpcpp/error.log
 ncmpcpp/.ncmpcpp/artists
 ncmpcpp/.ncmpcpp/config.def
-vim/.viminfo
-mutt/.config/mutt/cache/
+*viminfo
+mutt/.config/mutt/cache/*
+mutt/.config/mutt/cache/headers
 mutt/.config/mutt/certificates
 mutt/.config/mutt/id
 mutt/.config/mutt/addresses
 ranger/.config/ranger/bookmarks
 weechat/*
+newsbeuter/.newsbeuter/cache.db
+newsbeuter/.newsbeuter/history*
