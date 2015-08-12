@@ -21,17 +21,31 @@ xset fp rehash
 
 setxkbmap -option caps:super -option shift:both_capslock
 xrdb -load ~/.Xresources
+numlockx
+xbindkeys
+compton -b
 
 case "$2" in
 	spectrwm)
-		nitrogen --restore &
-		compton -b
+		nitrogen --restore
 		exec spectrwm ;;
-	xfce) 
-		compton -b
-		exec startxfce4 ;;
-	i3|*) 
-		nitrogen --restore &
-		compton -b
+    lxqt)
+        exec startlxqt ;;
+    ob)
+        tint2 &
+        volumeicon &
+        exec openbox-session ;;
+	i3) 
+		nitrogen --restore
 		exec i3 ;;
+    2b)
+        nitrogen --restore
+        exec 2bwm &
+        termite ;;
+    fwm) 
+        xrandr --ouput DVI-I --right-of HDMI1
+        exec /usr/bin/frankenwm & ;;
+    xf|*)
+        volumeicon &
+        exec startxfce4 ;;
 esac

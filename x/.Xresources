@@ -35,7 +35,7 @@ URxvt*depth:		32
 
 ! fontconfigs and copy/paste with url launching
 URxvt.colorUL:          #4682B4
-URxvt.font: 			xft:Inconsolata-zi4:size=11
+URxvt.font: 			xft:Inconsolata-zi4:size=10
 URxvt.letterSpace:		-1
 URxvt.perl-ext-common:  default,matcher,clipboard
 URxvt.iso14755:         false
