@@ -47,12 +47,12 @@ load {
 
 disk "/" {
 		prefix_type = custom
-        format = "root %avail/%total"
+        format = "root %used/%total"
 }
 
 disk "/home" {
 		prefix_type = custom
-		format = "home %avail/%total"
+		format = "home %used/%total"
 }
 
 cpu_temperature 0 {
