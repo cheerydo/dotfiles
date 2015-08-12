@@ -71,6 +71,7 @@ nnoremap <Leader>Q :q!<CR>
 nnoremap <Leader>c :set cursorline!<CR>
 nnoremap <Leader>n :set number!<CR>
 nnoremap <Leader>h :nohl<CR>
+nnoremap <Leader>p :set paste!<CR>
 
 " Nice buffer navigation
 noremap <C-h> <C-w>h
@@ -78,4 +79,4 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
-au BufNewFile,BufRead ~/.mutt/.tmp/* set ft=mail:fo=aw:tw=0:wrap
+au BufNewFile,BufRead *tmp/* set ft=mail | set fo=aw | set tw=0 | set wrap | +/^--.$/-1 | nohl | startinsert
