@@ -37,6 +37,8 @@ export KEYTIMEOUT=1
 
 # Cases are sooo insensitive
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' menu select
+zstyle ':completion:*:*:kill:*' menu yes select
 zstyle ':completion:*:kill:*' force-list always
 
 # Erliarses

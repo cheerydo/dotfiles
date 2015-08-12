@@ -1,5 +1,6 @@
 # bash_aliases
 alias mutt='mutt -F ~/.config/mutt/muttrc'
+alias cm='mbsync -a'
 
 alias rh='rehash'
 alias p='pwd'
@@ -30,8 +31,10 @@ alias porf='pacman -Qtd'
 alias try='sudo pacman -S --asdeps'
 
 alias fbox='ssh tornainbow@hermes.feralhosting.com'
+alias gbox='ssh tornainbow@gyges.feralhosting.com'
 alias hserv='ssh 192.241.173.213'
-alias tor='scp ~/down/*.torrent tornainbow@hermes.feralhosting.com:/media/sde1/home/tornainbow/private/rtorrent/watch && rm ~/down/*.torrent'
+alias jserv='ssh 104.238.179.144'
+alias tor='scp ~/down/*.torrent tornainbow@gyges.feralhosting.com:/media/sdz1/tornainbow/private/rtorrent/watch && rm ~/down/*.torrent'
 alias hide='sudo openvpn /etc/openvpn/client.conf'
 
 alias shd='systemctl poweroff'
@@ -48,3 +51,4 @@ alias gid='git diff'
 alias fresh='killall -SIGUSR1'
 
 alias w32='WINEARCH=wine33 WINEPREFIX=~/win32'
+alias nh='telnet nethack.alt.org'
