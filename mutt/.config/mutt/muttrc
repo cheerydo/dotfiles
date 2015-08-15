@@ -120,7 +120,7 @@ folder-hook . "exec collapse-all"
 
 # for reading HTML mails, requires w3m (or reconfiguring mailcap command)
 set mailcap_path="~/.config/mutt/mailcap"
-auto_view text/html
+#auto_view text/html
 
 ## sidebar stuff
 set sidebar_visible=no

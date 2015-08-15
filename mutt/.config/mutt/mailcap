@@ -1,4 +1,4 @@
-text/html; chromium %s; test=test -n "$DISPLAY"; needsterminal;
+text/html; /usr/bin/chromium %s ; needsterminal;
 text/html; elinks -dump; copiousoutput;
 application/vnd.oasis.opendocument.text; lowriter %s; needsterminal;
 application/pdf; zathura --fork '%s';
