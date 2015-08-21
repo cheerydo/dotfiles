@@ -144,7 +144,7 @@ send-hook '! ~s [Rr]e:' 'set signature="~/.config/mutt/signature"'
 set signature="~/.config/mutt/signature"
 
 # yay colors 
-source ~/.config/mutt/colors/colors.arch
+source ~/.config/mutt/colors/main
 	
 # Address book!
 set query_command="abook --mutt-query '%s'"
