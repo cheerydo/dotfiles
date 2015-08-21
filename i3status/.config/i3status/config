@@ -11,12 +11,11 @@ general {
         interval = 5
 }
 
-order += "disk /"
-order += "disk /home"
+order += "wireless wlp7s0"
+order += "path_exists VPN"
 order += "load"
 order += "cpu_temperature 0"
 order += "ethernet enp0s25"
-order += "run_watch VPN"
 order += "battery 0"
 order += "tztime local"
 
@@ -28,13 +27,21 @@ volume master {
 		mixer_idx = 0
 }
 
+# This is for the laptop
+wireless wlp7s0 {
+        format_up = "W: (%quality at %essid) %ip"
+        format_down = "W: down"
+}
+
+# This is for the desktop
 ethernet enp0s25 {
         format_up = "I: %ip"
         format_down = "I: down"
 }
 
-run_watch VPN {
-        pidfile = "/var/run/vpnc/pid"
+path_exists VPN {
+        # when launced from nm-applet
+        path = "/proc/sys/net/ipv4/conf/tun0"
 }
 
 tztime local {
@@ -42,17 +49,7 @@ tztime local {
 }
 
 load {
-        format = "%1min %5min %15min"
-}
-
-disk "/" {
-		prefix_type = custom
-        format = "root %used/%total"
-}
-
-disk "/home" {
-		prefix_type = custom
-		format = "home %used/%total"
+        format = "☉  %1min %5min %15min"
 }
 
 cpu_temperature 0 {

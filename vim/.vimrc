@@ -1,5 +1,5 @@
 set          nocompatible
-colorscheme  eclm_wombat_wip
+colorscheme jah_wombat
 set          history=50
 set          ruler
 set          showcmd
@@ -49,4 +49,10 @@ set nobackup
 set nowritebackup
 
 " Special circumstances for reading mutt mails
-au BufNewFile,BufRead *tmp/mutt* set ft=mail | set fo=aw | set tw=0 | set wrap | +/^--.$/-1 | nohl | startinsert
+au BufNewFile,BufRead *tmp/*mutt* set ft=mail | set fo=aw | set tw=0 | set wrap | +/^--.$/-1 | nohl | startinsert
+
+" Statusline times
+set laststatus=2
+let g:lightline = {
+    \ 'colorscheme': 'apprentice',
+    \ }
