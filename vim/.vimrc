@@ -22,8 +22,10 @@ set          lazyredraw
 set          wildmenu
 set          wildmode=longest,list
 syntax       on
-filetype     plugin                              indent  on
+filetype     plugin indent  on
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
+
+let g:netrw_liststyle=3
 
 set       pastetoggle=<F4>
 inoremap  jj                <Esc>
@@ -34,10 +36,9 @@ nnoremap  <Leader>w         :w<CR>
 nnoremap  <Leader>wq        :wq<CR>
 nnoremap  <Leader>q         :q<CR>
 nnoremap  <Leader>Q         :q!<CR>
-nnoremap  <Leader>c         :set cursorline!<CR>
 nnoremap  <Leader>n         :set number!<CR>
 nnoremap  <Leader>h         :nohl<CR>
-nnoremap  <Leader>p         :set paste!<CR>
+nnoremap  <Leader>k         :Explore<CR>
 noremap   <C-h>             <C-w>h
 noremap   <C-j>             <C-w>j
 noremap   <C-k>             <C-w>k
