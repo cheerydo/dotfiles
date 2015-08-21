@@ -15,3 +15,6 @@
 
 "passmenu"
   Mod4 + Shift + p
+
+"termite -e 'bc -q'"
+  Alt + c
