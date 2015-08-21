@@ -21,3 +21,4 @@ ranger/.config/ranger/bookmarks
 weechat/.weechat/irc.conf
 weechat/.weechat/logs/*
 weechat/.weechat/weechat.log
+*viminfo
