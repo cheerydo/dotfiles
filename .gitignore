@@ -1,11 +1,11 @@
 **/*history
-**/*logout mpd/.mpd/
+**/*logout
 mpd/**/**/mpd.log
 mpd/**/**/mpd.db
 mpd/**/**/mpd.pid
 mpd/**/**/mpdstate
 mpd/**/**/playlists
-zsh/**/.zcomp*
+zsh/**/**/.zcomp*
 ncmpcpp/.ncmpcpp/error.log
 ncmpcpp/.ncmpcpp/artists
 ncmpcpp/.ncmpcpp/config.def
