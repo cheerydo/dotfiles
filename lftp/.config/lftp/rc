@@ -1,8 +1,0 @@
-set cache:enable no
-set xfer:destination-directory "/home/jared/down"
-#lcd ~/down
-alias rget 'mirror'
-alias rput 'mirror -R'
-alias ls 'cls'
-alias v 'edit'
-alias lv 'ledit'
