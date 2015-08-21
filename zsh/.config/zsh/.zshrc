@@ -2,15 +2,15 @@
 PROMPT='(%3~) ──── '
 
 setopt histappend \
-        histexpiredupsfirst \
-        histverify \
-        nohup \
-        completeinword \
-        interactivecomments \
-        autocd \
-        automenu \
-        completealiases \
-        nobgnice
+	histexpiredupsfirst \
+	histverify \
+	nohup \
+	completeinword \
+	interactivecomments \
+	autocd \
+	automenu \
+	completealiases \
+	nobgnice
 
 # Some history params
 HISTSIZE=10000
@@ -43,7 +43,7 @@ zstyle ':completion:*:kill:*' force-list always
 
 # Erliarses
 if [[ -f $ZDOTDIR/.aliases ]]; then
-        . $ZDOTDIR/.aliases
+	. $ZDOTDIR/.aliases
 fi
 
 eval $(dircolors $ZDOTDIR/.dircolors)

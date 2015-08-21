@@ -1,13 +1,13 @@
-## Kindly inspired from                                                                                                                                             
-## http://nongeekshandbook.blogspot.ie/2009/03/mutt-color-configuration.html                                                                                              
-## Colours for items in the index                                                                                                                                         
+## Kindly inspired from
+## http://nongeekshandbook.blogspot.ie/2009/03/mutt-color-configuration.html
+## Colours for items in the index
 color index brightcyan default ~N # new messages
 color index brightred default ~O # old
 color index brightyellow default ~F #flagged
 color index default green ~T #tagged
 color index brightred default ~D # deleted
 
-## Colour definitions when on a mono screen                                                                                                                               
+## Colour definitions when on a mono screen
 mono index bold ~N
 mono index bold ~F
 mono index bold ~T
@@ -16,7 +16,7 @@ mono bold bold
 mono underline underline
 mono indicator reverse
 
-## Header                                                                                                                                                                 
+## Header
 color header green default "^from:"
 color header green default "^to:"
 color header green default "^cc:"
@@ -37,7 +37,7 @@ color header yellow default "^X-SpamProbe:"
 color header red default "^X-SpamProbe: SPAM"
 color header red default "^x-spam-rule:"
 
-## Colors while viewing message.                                                                                                                               
+## Colors while viewing message.
 color normal default default
 color signature brightmagenta default
 color indicator black cyan
@@ -62,11 +62,11 @@ color quoted5 yellow default
 color quoted6 red default
 color quoted7 green default
 
-## URLs                                                                                                                                                                    
+## URLs
 color body brightgreen default "(http|ftp|news|telnet|finger)://[^ \"\t\r\n]*"
 color body brightgreen default "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
 mono body bold "(http|ftp|news|telnet|finger)://[^ \"\t\r\n]*"
 mono body bold "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
 
-## Email addresses.                                                                                                                                                       
+## Email addresses.
 color body brightgreen default "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"

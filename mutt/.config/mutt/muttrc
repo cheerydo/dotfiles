@@ -1,0 +1,173 @@
+# ---------- Internals ----------#
+set from="Jared Hamilton <jared@fastmail.com>"
+set mbox_type=Maildir
+set folder=~/mail
+set sendmail=/usr/bin/msmtp
+set sendmail_wait=0
+set my_msmtp_pass=`gpg -d -q --no-tty ~/.config/mutt/fmail.gpg`
+
+# set some folder mappings
+set spoolfile="=/Inbox"
+set postponed="=/Drafts"
+set record="=/Sent Items"
+folder-hook . 'set trash="=/Trash"'
+folder-hook Trash 'unset trash'
+
+# Mailboxen
+mailboxes =Inbox \
+		  =Arch \
+		  =Arch/\.Arch-dev \
+		  =Arch/\.Arch-projects \
+		  =Arch/\.Aur-general \
+		  =Arch/\.Pacman-dev \
+		  =Archive \
+		  =Chugalug \
+		  =Church \
+		  =Crux \
+		  =OpenBSD-announce \
+		  =OpenBSD-misc \
+		  =OpenBSD-tech \
+          =Lobsters \
+		  =Drafts \
+		  =Dynamis \
+		  =edX \
+		  =Important \
+		  =Important/\.School\ loans \
+		  =Jessica \
+		  =Junk\ Mail \
+		  =Lee \
+		  =Personal \
+		  =Queue \
+		  =Receipts \
+		  =Sent\ Items \
+		  =Trash
+
+# Some working nicey nices
+set move=no
+set confirmappend=no
+set include=yes
+set fast_reply
+set reply_to
+set edit_headers
+set header_cache="~/.config/mutt/cache/headers"
+set message_cachedir="~/.config/mutt/cache"
+# ----------   END   ----------#
+
+
+# -----------  PGP  -----------#
+source ~/.config/mutt/gpg.rc
+
+# ---------- APPEARANCE ---------#
+# --------------&----------------#
+# ----------  KEYBINDS  ---------#
+# some aesthetics
+set editor=vim
+set sort=threads
+set sort_aux=reverse-last-date-received
+unset collapse_unread
+set pager_index_lines=9
+set pager_context=3
+set smart_wrap
+set text_flowed="yes"
+set pager_stop
+set menu_scroll
+set mark_old="no"
+set delete="yes"
+unset markers
+unset help
+set wait_key="no"
+set sleep_time=0
+folder-hook . "exec collapse-all"
+
+# for reading HTML mails, requires w3m (or reconfiguring mailcap command)
+set mailcap_path="~/.config/mutt/mailcap"
+auto_view text/html
+
+## sidebar stuff
+set sidebar_visible=no
+set sidebar_width=25
+set sidebar_shortpath=yes
+set sidebar_delim=" |"
+set sidebar_folderindent="yes"
+color sidebar_new brightdefault default 
+
+# Default index_format
+folder-hook *Sent* 'set index_format="%3C %Z  |  %(!%m/%d)   %-35.35F   %?M?[+](%2.M messages)? %s"'
+folder-hook ! *Sent* 'set index_format="%3C %Z  |  %(!%m/%d)   %-35.35F   %?M?[+](%2.M messages)? %s"'
+set status_chars=" *%A"
+set status_format="───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+# Filter out headers we don't want to see
+ignore *
+unignore From To Reply-To Cc Bcc Subject Date X-Label X-Mailer User-Agent
+
+# Reorder some headers
+unhdr_order *
+hdr_order From To Cc Bcc Date Subject *
+reply-hook . my_hdr Bcc: jared@fastmail.com
+
+# Some personal headers
+# Logistics
+set mark_old="no"
+set delete="yes"
+set confirmappend=no
+set move=no
+set sleep_time=0
+
+# Threads begin collapsed except for threads with unread mails
+unset collapse_unread
+folder-hook . "exec collapse-all"
+
+# for reading HTML mails, requires w3m (or reconfiguring mailcap command)
+set mailcap_path="~/.config/mutt/mailcap"
+#auto_view text/html
+
+## sidebar stuff
+set sidebar_visible=no
+set sidebar_width=25
+set sidebar_shortpath=yes
+set sidebar_delim=" |"
+set sidebar_folderindent="yes"
+
+# keybinds!
+source ~/.config/mutt/keys
+# ----------      END      ----------#
+	
+# ---------- MAILING LISTS ----------# 
+# Arch
+subscribe arch-general \
+    arch-projects \
+    arch-dev-public \
+    aur-general \
+    pacman-dev \
+    arch-announce
+# Crux
+subscribe crux \
+    crux-commits \
+    crux-devel 
+# OpenBSD
+subscribe advocacy \
+    announce \
+    misc \
+    tech 
+# Others
+subscribe chugalug \
+    lobsters
+# ----------      END      ----------#
+
+# ---------- Miscellaneous ----------#
+# siggy sig
+set signature="~/.config/mutt/signature"
+
+# yay colors 
+source ~/.config/mutt/colors/colors.arch
+	
+# Address book!
+set query_command="abook --mutt-query '%s'"
+bind editor <Tab> complete-query
+set sort_alias=alias
+set reverse_alias=yes
+
+# And macros!
+source ~/.config/mutt/macros
+# ---------- END CONFIG ------------#
