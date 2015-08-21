@@ -1,7 +1,7 @@
 set nocompatible
-colorscheme darkspectrum
-set term=xterm-256
-set background=dark
+" set background=light
+colorscheme eclm_wombat
+" set term=screen-256color
 
 set history=50
 set ruler
@@ -10,9 +10,9 @@ set incsearch
 set modeline
 set cindent
 set autoindent
+set showcmd
 
-" Suffixes that get lower priority when doing tab completion for filenames.
-" These are files we are not likely to want to edit or read.
+" Low priority 
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 
 if has('gui_running')
@@ -32,6 +32,23 @@ set smartindent
 set nobackup
 set nowritebackup
 
+set wildmenu
+set wildmode=longest,list
+
+au BufNewFile,BufRead /tmp/*mutt* set fo=aw tw=0
+
+let mapleader = "\<Space>"
+hi CursorLine cterm=bold
+set cursorline
+
 " Some keymappings
+set pastetoggle=<F4>
 imap jj <Esc>
 map <C-h> :nohl<CR>
+
+nnoremap <Leader>w :w<CR>  
+nnoremap <Leader>wq :wq<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>Q :q!<CR>
+nnoremap <Leader>c :set cursorline!<CR>
+nnoremap <Leader>n :set number!<CR>

@@ -2,9 +2,9 @@
 ## http://nongeekshandbook.blogspot.ie/2009/03/mutt-color-configuration.html                                                                                              
 
 ## Colours for items in the index                                                                                                                                         
-color index brightcyan black ~N
-color index brightred black ~O
-color index brightyellow black ~F
+color index brightcyan white ~N
+color index brightred white ~O
+color index brightyellow white ~F
 color index black green ~T
 color index brightred default ~D
 mono index bold ~N
@@ -15,7 +15,7 @@ mono index bold ~D
 ## Highlights inside the body of a message.                                                                                                                               
 
 ## URLs                                                                                                                                                                    
-color body brightcyan default "(http|https|ftp|news|telnet|finger)://[^ \"\t\r\n]*"
+color body brightgreen default "(http|https|ftp|news|telnet|finger)://[^ \"\t\r\n]*"
 color body brightgreen default "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
 mono body bold "(http|ftp|news|telnet|finger)://[^ \"\t\r\n]*"
 mono body bold "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
@@ -27,7 +27,7 @@ color body brightgreen default "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
 color header green default "^from:"
 color header green default "^to:"
 color header green default "^cc:"
-color header green default "^date:"
+color header cyan default "^date:"
 color header brightyellow default "^newsgroups:"
 color header brightyellow default "^reply-to:"
 color header brightcyan default "^subject:"
@@ -56,14 +56,14 @@ color header yellow default "^X-SpamProbe:"
 color header red default "^X-SpamProbe: SPAM"
 
 ## Coloring quoted text - coloring the first 7 levels:                                                                                                                    
-#color quoted cyan black
-#color quoted1 yellow black
-#color quoted2 red black
-#color quoted3 green black
-#color quoted4 cyan black
-#color quoted5 yellow black
-#color quoted6 red black
-#color quoted7 green black
+color quoted cyan default
+color quoted1 yellow default
+color quoted2 red default
+color quoted3 magenta default
+color quoted4 cyan default
+color quoted5 yellow default
+color quoted6 red default
+color quoted7 magenta default
 
 ## Default color definitions                                                                                                                                              
 #color hdrdefault white green                                                                                                                                             

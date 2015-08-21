@@ -1,1 +1,8 @@
-macro generic,pager,index <f1> "!w3m /usr/share/doc/mutt/manual.html\n" "Show Mutt documentation."
+macro generic,pager,index <f1> "!elinks /usr/share/doc/mutt/manual.html\n" "Show Mutt documentation."
+macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
+macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
+macro index b '<enter-command>toggle sidebar_visible<enter><refresh>'
+macro index \& '!mbsync -a<enter>'
+macro index gh 'c=Inbox<enter>'
+macro index gt 'c=Inbox/.Trash<enter>'
+macro index gs 'c=Inbox/.Sent<quote-char> Items<enter>'

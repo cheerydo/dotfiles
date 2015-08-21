@@ -2,23 +2,54 @@
 # source id information 
 # NOTE TO SELF: you need to have variables set in id-file if you're pulling this from git
 # NOTE TO READER: $my_server ends with fastmail's "blahblah.com/INBOX." so folder switching is less painful
-source ~/.mutt/id
-set imap_user=$my_id
-set imap_pass=$my_pass
-set folder=$my_server
-set sendmail=/usr/sbin/msmtp
+set my_msmtp_pass=`gpg -d --for-your-eyes-only ~/.mutt/fmail.gpg`
+set folder=~/mail
+set mbox_type=Maildir
+set sendmail=/usr/bin/msmtp
+#set use_from="no"
+set from='Jared Hamilton <jared@fastmail.com>'
 
 # set some folder mappings
-set spoolfile="="
-set postponed="=Drafts"
-set record="=Sent Items"
-set trash="=Trash"
-
+set spoolfile="=Inbox"
+set postponed="=Inbox/\.Drafts"
+set record="=Inbox/\.Sent Items"
+folder-hook . 'set trash="=Inbox/\.Trash"'
+folder-hook Trash 'unset trash'
+#set imap_check_subscribed
+mailboxes =Inbox \
+		  =Inbox/\.Arch \
+		  =Inbox/\.Arch/\.Arch-dev \
+		  =Inbox/\.Arch/\.Arch-projects \
+		  =Inbox/\.Arch/\.Aur-general \
+		  =Inbox/\.Arch/\.Pacman-dev \
+		  =Inbox/\.Archive \
+		  =Inbox/\.Chugalug \
+		  =Inbox/\.Church \
+		  =Inbox/\.Crux \
+		  =Inbox/\.OpenBSD-announce \
+		  =Inbox/\.OpenBSD-misc \
+		  =Inbox/\.OpenBSD-tech \
+		  =Inbox/\.Lobsters \
+		  =Inbox/\.Drafts \
+		  =Inbox/\.Dynamis \
+		  =Inbox/\.edX \
+		  =Inbox/\.Important \
+		  =Inbox/\.Important/\.School\ loans \
+		  =Inbox/\.Jessica \
+		  =Inbox/\.Jobs \
+		  =Inbox/\.Junk\ Mail \
+		  =Inbox/\.Lee \
+		  =Inbox/\.Personal \
+		  =Inbox/\.Queue \
+		  =Inbox/\.Receipts \
+		  =Inbox/\.Sent\ Items \
+		  =Inbox/\.Trash
 # will not move read in INBOX to another folder
 set move=no
 
 # no asking if you're sure when moving mails (I'm an adult!)
 set confirmappend=no
+set delete
 
 # used for replying with body
 set include=yes
@@ -26,14 +57,24 @@ set fast_reply
 set reply_to
 
 # I wanna go fast!
-unset imap_passive
-set imap_keepalive=300
-set mail_check=120
 set header_cache="~/.mutt/cache/headers"
 set message_cachedir="~/.mutt/cache"
-set imap_check_subscribed
+set read_inc=100
+set write_inc=100
 # ----------   END   ----------#
 
+
+# -----------  PGP  -----------#
+set crypt_use_gpgme="yes"
+set crypt_autosign="no"
+set pgp_sign_as=FBB0702A
+set pgp_timeout=3600
+set pgp_good_sign="^gpgv?: Good signature from "
+
+set crypt_verify_sig="yes"
+set crypt_replysign="yes"
+set crypt_replyencrypt="yes"
+set crypt_replysignencrypted="yes"
 
 
 # ---------- APPEARANCE ---------#
@@ -43,24 +84,39 @@ set imap_check_subscribed
 set editor="vim"
 set sort=threads
 set sort_aux=reverse-last-date-received
+unset collapse_unread
 set pager_index_lines=9
+set pager_context=3
 set smart_wrap
+set text_flowed="yes"
 set pager_stop
+set menu_scroll
+set mark_old="no"
+set delete="yes"
 unset markers
 unset help
+set wait_key="no"
+set sendmail_wait=-1
+set sleep_time=0
+folder-hook . "exec collapse-all"
 
 # for reading HTML mails, requires w3m (or reconfiguring mailcap command)
 set mailcap_path="~/.mutt/mailcap"
-set implicit_autoview
+#set implicit_autoview
 auto_view text/html
 
 # sidebar stuff
-set sidebar_visible=yes
+set sidebar_visible=no
 set sidebar_width=25
-set sidebar_shortpath
+#set sidebar_shortpath="yes"
+#set sidebar_delim=" |"
+#set sidebar_folderindent="yes"
 
 # Default index_format
-set index_format="%3C %Z | %{%b %e} %[\[%l:%M %P\]] | %-20.20L | %s"
+#set index_format="%3C %Z | %{%b %e} %[\[%l:%M %P\]] | %-20.20L | %s"
+folder-hook Sent* 'set index_format="%3C %Z | %-35.35t | %(!%b/%d) | %s"'
+folder-hook ! Sent* 'set index_format="%3C %Z | %(!%b/%d)   %-35.35F | %?M?[+](%2.M messages)? %s"'
+set pager_format="%n at %-20(!%H:%M)  %s%*  -- (%P)"
 set status_chars=" *%A"
 set status_format="───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
 
@@ -68,44 +124,74 @@ set status_format="───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%
 ignore *
 unignore From To Reply-To Cc Bcc Subject Date X-Label X-Mailer User-Agent
 
+# Reorder some headers
+unhdr_order *
+hdr_order From To Cc Bcc Date Subject *
+reply-hook . my_hdr Bcc: jared@fastmail.com
+
 # keybindings for more vim-like nav
-bind index "\&" imap-fetch-mail
-bind pager,index,generic h exit
+bind pager,index,generic,attach h exit
+bind pager,index H display-toggle-weed
+bind index \CN sidebar-next
+bind index \CP sidebar-prev
+bind index \CO sidebar-open
+bind index,pager <Esc>K extract-keys
+bind index,pager <Esc>p print-message
+
+bind index <space> collapse-thread
+bind index _ collapse-all
+bind index \Ch previous-entry
+bind index \Cl next-entry
+bind index \Cf limit
+bind index B bounce-message
+bind index J next-unread
+bind index K previous-unread
+bind index n next-thread
+bind index p previous-thread
+bind index l display-message
+
 bind pager j next-line
 bind pager k previous-line
 bind pager d half-down
 bind pager u half-up
 bind pager \Cb previous-page
 bind pager \Cf next-page
-bind index \Cl limit
 bind pager d half-down
 bind pager D delete-message
 bind pager gg top
 bind pager G bottom
+bind pager R group-reply
 bind pager \Cd delete-message
-bind pager,index H display-toggle-weed
-bind index l display-message
-bind index \CN sidebar-next
-bind index \CP sidebar-prev
-bind index \CO sidebar-open
 # ----------      END      ----------#
 	
 
 # ---------- MAILING LISTS ----------# 
 # Arch
-subscribe arch-general@archlinux.org
-subscribe arch-projects@archlinux.org
-subscribe arch-dev-public@archlinux.org
-subscribe aur-general@archlinux.org
-subscribe pacman-dev@archlinux.org
-subscribe arch-announce@archlinux.org
+#subscribe arch-general@archlinux.org
+#subscribe arch-projects@archlinux.org
+#subscribe arch-dev-public@archlinux.org
+#subscribe aur-general@archlinux.org
+#subscribe pacman-dev@archlinux.org
+#subscribe arch-announce@archlinux.org
+subscribe arch-general arch-projects arch-dev-public aur-general pacman-dev \
+			  arch-announce
 # Crux
-subscribe crux@lists.crux.nu
-subscribe crux-commits@lists.crux.nu
-subscribe crux-devel@lists.crux.nu
+#subscribe crux@lists.crux.nu
+#subscribe crux-commits@lists.crux.nu
+#subscribe crux-devel@lists.crux.nu
+subscribe crux crux-commits crux-devel
+# OpenBSD
+#subscribe advocacy@openbsd.org
+#subscribe announce@openbsd.org
+#subscribe misc@openbsd.org
+#subscribe tech@openbsd.org
+#subscribe openbsd-newbies@sfobug.theapt.org
+subscribe advocacy openbsd-newbies announce@openbsd.org misc@openbsd.org \
+			  tech@openbsd.org
 # Others
-subscribe chugalug@chugalug.org
-subscribe orthodoxdynamis@yahoogroups.com
+#subscribe chugalug@chugalug.org
+#subscribe orthodoxdynamis@yahoogroups
+subscribe chugalug orthodoxdynamis
 # ----------      END      ----------#
 
 
@@ -113,7 +199,7 @@ subscribe orthodoxdynamis@yahoogroups.com
 # ---------- Miscellaneous ----------#
 # siggy sig
 set signature="~/.mutt/signature"
-set sig_on_top=yes
+send-hook '~t jessica' set signature=~/.mutt/signature.jess
 
 # yay colors 
 source ~/.mutt/colors/colors.arch
