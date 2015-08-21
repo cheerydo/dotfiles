@@ -1,3 +1,0 @@
-text/html; firefox %s; test=test -n "$DISPLAY"; needsterminal;
-text/html; elinks -dump; copiousoutput;
-image/*; feh %s;

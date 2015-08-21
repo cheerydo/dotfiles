@@ -1,0 +1,12 @@
+macro generic,pager,index <f1> "!elinks /usr/share/doc/mutt/manual.html\n" "Show Mutt documentation."
+macro pager,index b '<enter-command>toggle sidebar_visible<enter>'
+macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
+macro attach 'V' "<pipe-entry>cat >~/.cache/mail.html && chromium ~/.cache/mail.html && rm ~/.cache/mail.html<enter>"
+#macro index,pager a "<pipe-message>abook --add-email-quiet<return>" "Add this sender to Abook"
+
+bind editor <space> noop
+macro index gt 'c=/Trash<enter>'
+macro index gh 'c=/Inbox<enter>'
+macro index gs 'c=/Sent Items<enter>'
+
+macro index \& '!echo "Syncing mail..."; mbsync -a <enter>'

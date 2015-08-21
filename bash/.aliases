@@ -1,0 +1,41 @@
+# bash_aliases
+
+alias ls='ls --color=auto'
+alias la='ls --color=auto -a'
+alias ll='ls --color=auto -l'
+alias all='ls --color=auto -al'
+
+alias torrent='scp ~/downloads/*.torrent tornainbow@hermes.feralhosting.com:/media/sde1/home/tornainbow/private/rtorrent/watch && rm ~/downloads/*.torrent'
+alias pacup='sudo pacman -Syu'
+alias pacin='sudo pacman -S'
+alias pacrem='sudo pacman -Rns'
+alias pachk='checkupdates'
+alias pacrepi='pacman -Si'
+alias pacreps='pacman -Ss'
+alias pacloci='pacman -Qi'
+alias pacloc='pacman -Qs'
+alias pacorf='pacman -Qtd'
+alias paclocf='pacman -Ql'
+alias try='sudo pacman -S --asdeps'
+
+alias fbox='ssh tornainbow@hermes.feralhosting.com'
+alias hserv='ssh 192.241.173.213'
+
+alias shd='systemctl poweroff'
+alias ssp='systemctl suspend'
+alias rbt='systemctl reboot'
+
+alias wow='git status'
+alias such='git'
+alias very='git'
+
+alias FTL='cd .steam/root/SteamApps/common/FTL\ Faster\ Than\ Light/data/ && ./FTL'
+alias hide='sudo openvpn /etc/openvpn/client.conf'
+
+alias refresh='killall -SIGUSR1'
+
+alias grep='grep --color=auto'
+
+alias w32='WINEARCH=wine33 WINEPREFIX=~/win32'
+
+alias paste="curl -F 'sprunge=<-' http://sprunge.us"

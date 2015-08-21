@@ -14,57 +14,38 @@ fi
 # Some X stuff I really need
 xset b off
 xset s off
-setxkbmap -option caps:super
+
+xset +fp /usr/share/fonts/local
+xset +fp /usr/share/fonts/misc
+xset fp rehash
+
+setxkbmap -option caps:super -option shift:both_capslock
 xrdb -load ~/.Xresources
-
-# For that good looking-ness
-#compton -b
-#xrandr --output VGA1 --left-of HDMI1 &
-
-# Dose daemons dough
-#thunar --daemon &
-#urxvtd -q -f -o &
-
-# Gots to have my bindkeys
-#xbindkeys
-#numlockx & 
+numlockx
+xbindkeys
+compton -b
 
 case "$2" in
-	openbox)
-		xfsettingsd &
-		tint2 -c ~/.config/tint2/cool &
-		xfce4-clipman &
-		volumeicon &
-		thunar --daemon &
-		conky -c ~/.conky.conf
-		exec openbox-session ;;
 	spectrwm)
-		stalonetray -c /home/jared/.config/.stalonetrayrc &
-		xfce4-clipman &
-		volumeicon &
-		nitrogen --restore &
-		thunar --daemon &
-		exec spectrwm ;;
-	2bwm) 
-		tint2 -c ~/.config/tint2/tint2rc.crux &
-		xfce4-clipman &
-		volumeicon &
-		/home/jared/bin/baraction.sh &
-		xsetroot -cursor_name top_left_arrow
-		nitrogen --restore &
-		thunar --daemon &
-		exec 2bwm 
-		exec termite ;;
-	dwm) 
-		exec dwm ;;
-	xfce)
-		volumeicon &
-		exec startxfce4 ;;
-	i3) 
-		exec i3 ;;
-	cinn)
-		exec cinnamon-session ;;
-	*)
-		volumeicon &
-		exec startxfce4 ;;
+            nitrogen --restore
+            exec spectrwm ;;
+        lxqt)
+            exec startlxqt ;;
+        ob)
+            tint2 &
+            volumeicon &
+            exec openbox-session ;;
+        i3) 
+            nitrogen --restore
+            exec i3 ;;
+        2b)
+            nitrogen --restore
+            exec 2bwm &
+            termite ;;
+        fwm) 
+            xrandr --ouput DVI-I --right-of HDMI1
+            exec /usr/bin/frankenwm & ;;
+        xf|*)
+            volumeicon &
+            exec startxfce4 ;;
 esac

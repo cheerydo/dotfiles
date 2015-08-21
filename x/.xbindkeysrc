@@ -1,26 +1,8 @@
-"amixer -c 0 set Master 5+ && notify-send `amixer get Master -M | grep -oE "[[:digit:]]*%"`"
-  Control + Alt + Prior
-
-"amixer -c 0 set Master 5- && notify-send `amixer get Master -M | grep -oE "[[:digit:]]*%"`"
-  Control + Alt + Next
-
-"amixer set Master toggle && notify-send -u urgent Muted"
-  Control + Alt + End
-
 "systemctl suspend"
   Alt + End
 
 "thunar"
   Control + Home
-
-"claws-mail"
-  XF86Mail
-
-"termite -e 'bc -q'"
-  XF86Calculator
-
-"systemctl suspend"
-  XF86Sleep
 
 "scrot -m -e 'mv $f ~/pictures/screens/'"
   Print
@@ -28,14 +10,11 @@
 "termite -e ncmpcpp"
   Alt + m
 
-"keepass --auto-type"
-  Mod4 + Shift + v
-
-"firefox"
+"chromium"
   Alt + W
-
-"dmenu_run"
-  Mod4 + p
 
 "passmenu"
   Mod4 + Shift + p
+
+"termite -e 'bc -q'"
+  Alt + c
