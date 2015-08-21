@@ -27,25 +27,25 @@ compton -b
 
 case "$2" in
 	spectrwm)
-		nitrogen --restore
-		exec spectrwm ;;
-    lxqt)
-        exec startlxqt ;;
-    ob)
-        tint2 &
-        volumeicon &
-        exec openbox-session ;;
-	i3) 
-		nitrogen --restore
-		exec i3 ;;
-    2b)
-        nitrogen --restore
-        exec 2bwm &
-        termite ;;
-    fwm) 
-        xrandr --ouput DVI-I --right-of HDMI1
-        exec /usr/bin/frankenwm & ;;
-    xf|*)
-        volumeicon &
-        exec startxfce4 ;;
+            nitrogen --restore
+            exec spectrwm ;;
+        lxqt)
+            exec startlxqt ;;
+        ob)
+            tint2 &
+            volumeicon &
+            exec openbox-session ;;
+        i3) 
+            nitrogen --restore
+            exec i3 ;;
+        2b)
+            nitrogen --restore
+            exec 2bwm &
+            termite ;;
+        fwm) 
+            xrandr --ouput DVI-I --right-of HDMI1
+            exec /usr/bin/frankenwm & ;;
+        xf|*)
+            volumeicon &
+            exec startxfce4 ;;
 esac
