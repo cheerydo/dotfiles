@@ -24,7 +24,7 @@ decorations none
 # dockapp_mode <mode>        # set dockapp mode, which can be either simple (for
                              # e.g. OpenBox, wmaker for WindowMaker, or none
                              # (default). NEW in 0.8.
-dockapp_mode none
+dockapp_mode simple
 
 # fuzzy_edges [<level>]      # enable fuzzy edges and set fuzziness level. level
                              # can be from 0 (disabled) to 3; this setting works
@@ -34,17 +34,17 @@ fuzzy_edges 0
 
 # geometry <geometry>        # tray's geometry in standard X notation; width and
                              # height are specified in slot_size multiples
-geometry 1x1+1880+2
+geometry 1x1+1352+754
 
 # grow_gravity <gravity>     # one of N, S, E, W, NW, NE, SW, SE; tray will grow
                              # in the direction opposite to one specified by
 							 # grow_gravity; if horizontal or vertical
 							 # direction is not specified, tray will not grow in
 							 # that direction
-grow_gravity W
+grow_gravity E
 
 # icon_gravity <gravity>     # icon placement gravity, one of NW, NE, SW, SE
-icon_gravity W
+icon_gravity NE
 
 # icon_size <int>            # specifies dimensions of typical icon slot
 icon_size 14
@@ -127,7 +127,7 @@ window_layer normal
                              # windows); mode defines to which screen border tray
                              # will be attached; it can be either top, bottom,
                              # left, right, none or auto (default)
-window_strut top
+#window_strut top
 
 # window_type <type>         # set the EWMH-compatible window type; one of:
                              # desktop, dock, normal, toolbar, utility

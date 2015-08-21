@@ -11,5 +11,5 @@ if [ "$yn" = "y" ]; then
 	printf "\n%s\n" "Removing build directory..."
 	rm -rf "$builddir"
 else
-	prinf "%s\n" "Build completed."
+	printf "%s\n" "Build completed."
 fi

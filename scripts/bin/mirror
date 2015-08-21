@@ -1,0 +1,5 @@
+#!/bin/bash
+
+reflector --verbose --country 'United States' -p http -l 20 --sort rate --save /etc/pacman.d/mirrorlist.pacnew
+
+exit 0
