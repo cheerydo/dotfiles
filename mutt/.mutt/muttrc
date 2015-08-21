@@ -6,7 +6,6 @@ set my_msmtp_pass=`gpg -d --for-your-eyes-only ~/.mutt/fmail.gpg`
 set folder=~/mail
 set mbox_type=Maildir
 set sendmail=/usr/bin/msmtp
-#set use_from="no"
 set from='Jared Hamilton <jared@fastmail.com>'
 
 # set some folder mappings
@@ -15,7 +14,8 @@ set postponed="=Inbox/\.Drafts"
 set record="=Inbox/\.Sent Items"
 folder-hook . 'set trash="=Inbox/\.Trash"'
 folder-hook Trash 'unset trash'
-#set imap_check_subscribed
+
+# Mailboxen
 mailboxes =Inbox \
 		  =Inbox/\.Arch \
 		  =Inbox/\.Arch/\.Arch-dev \
@@ -44,6 +44,7 @@ mailboxes =Inbox \
 		  =Inbox/\.Receipts \
 		  =Inbox/\.Sent\ Items \
 		  =Inbox/\.Trash
+
 # will not move read in INBOX to another folder
 set move=no
 
@@ -55,6 +56,7 @@ set delete
 set include=yes
 set fast_reply
 set reply_to
+set edit_headers
 
 # I wanna go fast!
 set header_cache="~/.mutt/cache/headers"
@@ -91,8 +93,7 @@ set smart_wrap
 set text_flowed="yes"
 set pager_stop
 set menu_scroll
-set mark_old="no"
-set delete="yes"
+unset mark_old
 unset markers
 unset help
 set wait_key="no"
@@ -100,20 +101,19 @@ set sendmail_wait=-1
 set sleep_time=0
 folder-hook . "exec collapse-all"
 
+
 # for reading HTML mails, requires w3m (or reconfiguring mailcap command)
 set mailcap_path="~/.mutt/mailcap"
-#set implicit_autoview
 auto_view text/html
 
 # sidebar stuff
 set sidebar_visible=no
 set sidebar_width=25
-#set sidebar_shortpath="yes"
-#set sidebar_delim=" |"
-#set sidebar_folderindent="yes"
+set sidebar_shortpath="yes"
+set sidebar_delim=" |"
+set sidebar_folderindent="yes"
 
 # Default index_format
-#set index_format="%3C %Z | %{%b %e} %[\[%l:%M %P\]] | %-20.20L | %s"
 folder-hook Sent* 'set index_format="%3C %Z | %-35.35t | %(!%b/%d) | %s"'
 folder-hook ! Sent* 'set index_format="%3C %Z | %(!%b/%d)   %-35.35F | %?M?[+](%2.M messages)? %s"'
 set pager_format="%n at %-20(!%H:%M)  %s%*  -- (%P)"
@@ -162,53 +162,38 @@ bind pager gg top
 bind pager G bottom
 bind pager R group-reply
 bind pager \Cd delete-message
+bind attach <return> view-mailcap
 # ----------      END      ----------#
 	
 
 # ---------- MAILING LISTS ----------# 
 # Arch
-#subscribe arch-general@archlinux.org
-#subscribe arch-projects@archlinux.org
-#subscribe arch-dev-public@archlinux.org
-#subscribe aur-general@archlinux.org
-#subscribe pacman-dev@archlinux.org
-#subscribe arch-announce@archlinux.org
 subscribe arch-general arch-projects arch-dev-public aur-general pacman-dev \
 			  arch-announce
 # Crux
-#subscribe crux@lists.crux.nu
-#subscribe crux-commits@lists.crux.nu
-#subscribe crux-devel@lists.crux.nu
 subscribe crux crux-commits crux-devel
 # OpenBSD
-#subscribe advocacy@openbsd.org
-#subscribe announce@openbsd.org
-#subscribe misc@openbsd.org
-#subscribe tech@openbsd.org
-#subscribe openbsd-newbies@sfobug.theapt.org
 subscribe advocacy openbsd-newbies announce@openbsd.org misc@openbsd.org \
 			  tech@openbsd.org
 # Others
-#subscribe chugalug@chugalug.org
-#subscribe orthodoxdynamis@yahoogroups
-subscribe chugalug orthodoxdynamis
+subscribe chugalug 
 # ----------      END      ----------#
-
-
 
 # ---------- Miscellaneous ----------#
 # siggy sig
+set sig_on_top=yes
 set signature="~/.mutt/signature"
-send-hook '~t jessica' set signature=~/.mutt/signature.jess
 
 # yay colors 
 source ~/.mutt/colors/colors.arch
-
+	
 # Address book!
-set alias_file="~/.mutt/addresses"
+#set alias_file="~/.mutt/addresses"
+set query_command="abook --mutt-query '%s'"
+bind editor <Tab> complete-query
 set sort_alias=alias
 set reverse_alias=yes
-source $alias_file
+#source $alias_file
 
 # And macros!
 source ~/.mutt/macros

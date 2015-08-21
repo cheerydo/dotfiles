@@ -1,7 +1,5 @@
 set nocompatible
-" set background=light
 colorscheme eclm_wombat
-" set term=screen-256color
 
 set history=50
 set ruler

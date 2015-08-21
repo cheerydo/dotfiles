@@ -1,6 +1,5 @@
 ## Kindly inspired from                                                                                                                                             
 ## http://nongeekshandbook.blogspot.ie/2009/03/mutt-color-configuration.html                                                                                              
-
 ## Colours for items in the index                                                                                                                                         
 color index brightcyan default ~N # new messages
 color index brightred default ~O # old
@@ -39,7 +38,6 @@ color header red default "^X-SpamProbe: SPAM"
 color header red default "^x-spam-rule:"
 
 ## Colors while viewing message.                                                                                                                               
-#color hdrdefault white green                                                                                                                                             
 color normal default default
 color signature brightmagenta default
 color indicator black cyan
@@ -52,10 +50,9 @@ color tree brightblue default
 color tilde green default
 color bold brightyellow default
 color markers brightcyan default
-#color underline magenta default
+color underline magenta default
 
 color sidebar_new brightdefault default
-## Coloring quoted text - coloring the first 7 levels:                                                                                                                    
 color quoted cyan default
 color quoted1 yellow default
 color quoted2 red default
