@@ -24,42 +24,42 @@ eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets)
 mpd &
 
 case "$2" in
-	spectrwm)
-            nitrogen --restore &
-            compton -b
-            synclient VertScrollDelta=-108
-            synclient HorizScrollDelta=-10
-            synclient HorizTwoFingerScroll=1
-            xbindkeys
-            stalonetray &
-            nm-applet &
-            exec spectrwm ;;
-	i3) 
-            nitrogen --restore &
-            compton -b
-            xbindkeys
-            synclient VertScrollDelta=-108
-            synclient HorizScrollDelta=-10
-            synclient HorizTwoFingerScroll=1
-            exec i3 ;;
-        rat)
-            compton -b
-            xbindkeys
-            synclient VertScrollDelta=-108
-            synclient HorizScrollDelta=-10
-            synclient HorizTwoFingerScroll=1
-            exec ratpoison ;;
-        pekwm)
-            compton -b
-            xbindkeys
-            synclient VertScrollDelta=-108
-            synclient HorizScrollDelta=-10
-            synclient HorizTwoFingerScroll=1
-            exec pekwm ;;
-        fwm)
-            compton -b
-            xbindkeys
-            exec frankenwm ;;
-	cinn|*)
-            exec cinnamon-session ;;
+    spectrwm)
+        nitrogen --restore &
+        compton -b
+        synclient VertScrollDelta=-108
+        synclient HorizScrollDelta=-10
+        synclient HorizTwoFingerScroll=1
+        xbindkeys
+        stalonetray &
+        nm-applet &
+        exec spectrwm ;;
+    i3) 
+        nitrogen --restore &
+        compton -b
+        xbindkeys
+        synclient VertScrollDelta=-108
+        synclient HorizScrollDelta=-10
+        synclient HorizTwoFingerScroll=1
+        exec i3 ;;
+    rat)
+        compton -b
+        xbindkeys
+        synclient VertScrollDelta=-108
+        synclient HorizScrollDelta=-10
+        synclient HorizTwoFingerScroll=1
+        exec ratpoison ;;
+    pekwm)
+        compton -b
+        xbindkeys
+        synclient VertScrollDelta=-108
+        synclient HorizScrollDelta=-10
+        synclient HorizTwoFingerScroll=1
+        exec pekwm ;;
+    fwm)
+        compton -b
+        xbindkeys
+        exec frankenwm ;;
+    cinn|*)
+        exec cinnamon-session ;;
 esac
