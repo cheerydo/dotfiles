@@ -31,8 +31,8 @@ case "$2" in
         synclient HorizScrollDelta=-10
         synclient HorizTwoFingerScroll=1
         xbindkeys
-        stalonetray &
-        nm-applet &
+        #stalonetray &
+        #nm-applet &
         exec spectrwm ;;
     i3) 
         nitrogen --restore &
