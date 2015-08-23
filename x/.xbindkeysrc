@@ -23,10 +23,10 @@
   Print
 
 "termite -e ncmpcpp"
-  Alt + m
+  Control + Alt + m
 
 "chromium"
-  Alt + W
+  Control + Alt + W
 
 "dmenu_run"
   Mod4 + p
@@ -35,4 +35,4 @@
   Mod4 + Shift + p
 
 "termite -e 'bc -q'"
-  Alt + c
+  Control + Alt + c
