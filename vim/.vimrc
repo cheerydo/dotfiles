@@ -1,5 +1,9 @@
 set          nocompatible
+
+" also make sure to grab git.io/vsVXT and git.io/vsVPK (CSApprox)
+" for good times
 colorscheme jah_wombat
+
 set          history=50
 set          ruler
 set          showcmd
@@ -52,7 +56,8 @@ set nowritebackup
 au BufNewFile,BufRead *tmp/*mutt* set ft=mail | set fo=aw | set tw=0 | set wrap | +/^--.$/-1 | nohl | startinsert
 
 " Statusline times
+" Make sure to grap git.io/lightline for sure
 set laststatus=2
 let g:lightline = {
-    \ 'colorscheme': 'apprentice',
+    \ 'colorscheme': 'wombat',
     \ }
