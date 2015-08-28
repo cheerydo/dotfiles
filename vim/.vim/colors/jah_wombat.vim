@@ -38,7 +38,7 @@ hi Error            guifg=#c41df5 guibg=#232323 gui=none
 hi Comment          guifg=#99968b gui=italic
 hi Todo             guifg=#8f8f8f gui=italic
 hi Constant         guifg=#6e9cbe gui=none
-hi String           guifg=#cae682 gui=italic
+hi String           guifg=#f7ee43 gui=italic
 hi Identifier       guifg=#c9ceff gui=none
 hi Function         guifg=#ffa319 gui=none
 hi Type             guifg=#ffffff gui=bold
