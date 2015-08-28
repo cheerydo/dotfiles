@@ -11,12 +11,10 @@ general {
         interval = 5
 }
 
-order += "wireless wlp7s0"
-order += "path_exists VPN"
 order += "load"
 order += "cpu_temperature 0"
 order += "ethernet enp0s25"
-order += "battery 0"
+order += "path_exists VPN"
 order += "tztime local"
 
 volume master {
@@ -25,12 +23,6 @@ volume master {
 		device = "default"
 		mixer = "Master"
 		mixer_idx = 0
-}
-
-# This is for the laptop
-wireless wlp7s0 {
-        format_up = "W: (%quality at %essid) %ip"
-        format_down = "W: down"
 }
 
 # This is for the desktop

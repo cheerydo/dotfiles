@@ -29,8 +29,6 @@ case "$2" in
 	spectrwm)
             nitrogen --restore
             exec spectrwm ;;
-        lxqt)
-            exec startlxqt ;;
         ob)
             tint2 &
             volumeicon &
@@ -42,9 +40,6 @@ case "$2" in
             nitrogen --restore
             exec 2bwm &
             termite ;;
-        fwm) 
-            xrandr --ouput DVI-I --right-of HDMI1
-            exec /usr/bin/frankenwm & ;;
         xf|*)
             volumeicon &
             exec startxfce4 ;;

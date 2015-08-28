@@ -10,9 +10,6 @@ allow_bold = true
 dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
-#laptop font
-#font = Termsyn Medium 11 
-#desktop font
 font = Dina Medium 10
 scrollback_lines = 1000
 search_wrap = true
