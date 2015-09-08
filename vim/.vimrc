@@ -54,7 +54,7 @@ set nobackup
 set nowritebackup
 
 " Special circumstances for reading mutt mails
-au BufNewFile,BufRead *tmp/*mutt* set ft=mail | set fo=aw | set tw=0 | set wrap | +/^--.$/-1 | nohl | startinsert
+au BufNewFile,BufRead *tmp/*mutt* set ft=mail | set fo=aw | set tw=80 | set wrap | +/^--.$/-1 | nohl | startinsert
 
 " For that Explorer goodness
 let g:netrw_liststyle=3
