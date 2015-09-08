@@ -1,7 +1,5 @@
 URxvt*scrollBar: 	false
 URxvt*transparent: 	false
-!URxvt*shading:      40
-!URxvt*depth:		32
 
 ! terminal colors
 *background: #1d1d1d
@@ -33,32 +31,32 @@ URxvt*transparent: 	false
 ! --- end of terminal colors section ---
 
 ! fontconfigs and copy/paste with url launching
-URxvt.colorUL:          #4682B4
-! URxvt.font: 			xft:Inconsolata-zi4:size=10
-! Urxvt*font:             -*-termsyn-medium-*-*-*-14-*-*-*-*-*-*-*
-URxvt.font:             -*-dina-medium-r-*-*-13-*-*-*-*-*-*-*
-URxvt.perl-ext-common:  default,clipboard,url-select,keyboard-select
-Urxvt.keysym.M-Escape: 		perl:keyboard-select:activate
-Urxvt.keysym.M-s: 			perl:keyboard-select:search
-Urxvt.keysym.M-u: 			perl:url-select:select_next
-Urxvt.keysym.M-c: 			perl:clipboard:copy
-Urxvt.keysym.M-v: 			perl:clipboard:paste
-Urxvt.keysym.M-C-v: 		perl:clipboard:paste_escaped
-Urxvt.url-select.autocopy: 	true
-Urxvt.url-select.button:	1
+URxvt.colorUL:              #4682B4
+! URxvt.font: 		    xft:Inconsolata-zi4:size=10
+! Urxvt*font:               -*-termsyn-medium-*-*-*-14-*-*-*-*-*-*-*
+URxvt.font:                 -*-dina-medium-r-*-*-13-*-*-*-*-*-*-*
+URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select
+Urxvt.keysym.M-Escape: 	    perl:keyboard-select:activate
+Urxvt.keysym.M-s: 	    perl:keyboard-select:search
+Urxvt.keysym.M-u: 	    perl:url-select:select_next
+Urxvt.keysym.M-c: 	    perl:clipboard:copy
+Urxvt.keysym.M-v: 	    perl:clipboard:paste
+Urxvt.keysym.M-C-v: 	    perl:clipboard:paste_escaped
+Urxvt.url-select.autocopy:  true
+Urxvt.url-select.button:    1
 Urxvt.url-select.underline: true
-Urxvt.url-select.launcher:	/usr/bin/chromium
+Urxvt.url-select.launcher:  /usr/bin/chromium
 
-URxvt.iso14755:         false
+URxvt.iso14755:             false
 
-Xft.autohint:	False
-Xft.lcdfilter:	lcddefault
-Xft.hintstyle:	hintslight
-Xft.hinting: 	True
-Xft.antialias:  True
-Xft.rgba:		rgb
-Xft.dpi:		96
+Xft.autohint:	            False
+Xft.lcdfilter:	            lcddefault
+Xft.hintstyle:	            hintslight
+Xft.hinting: 	            True
+Xft.antialias:              True
+Xft.rgba:	            rgb
+Xft.dpi:	            96
 
-dzen2.font: 	-*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
-dzen2.foreground: rgb:ff/ff/ff
-dzen2.background: rgb:00/00/00
+dzen2.font: 	            -*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
+dzen2.foreground:           rgb:ff/ff/ff
+dzen2.background:           rgb:00/00/00
