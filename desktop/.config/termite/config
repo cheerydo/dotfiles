@@ -8,9 +8,11 @@ visible_bell = false
 mouse_autohide = false
 allow_bold = true
 dynamic_title = true
-urgent_on_bell = true
+urgent_on_bell = false
 clickable_url = true
 font = Dina Medium 10
+#font = Hack 10
+#font = Source Code Pro 10
 scrollback_lines = 1000
 search_wrap = true
 cursor_blink = off
@@ -23,7 +25,8 @@ roundness = 2.0
 
 [colors]
 foreground = #ffffff
-background = #292929
+background = #303030
+#background = #292929
 
 # black
 color0 = #000000

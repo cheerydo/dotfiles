@@ -17,30 +17,32 @@ xset s off
 
 xset +fp /usr/share/fonts/local
 xset +fp /usr/share/fonts/misc
+xset +fp /home/jared/.fonts
 xset fp rehash
 
 setxkbmap -option caps:super -option shift:both_capslock
 xrdb -load ~/.Xresources
-numlockx
 xbindkeys
 compton -b
 
 case "$2" in
 	spectrwm)
-            nitrogen --restore
-            exec spectrwm ;;
+          nitrogen --restore
+          exec spectrwm ;;
         ob)
-            tint2 &
-            volumeicon &
-            exec openbox-session ;;
+          tint2 &
+          volumeicon &
+          exec openbox-session ;;
         i3) 
-            nitrogen --restore
-            exec i3 ;;
+          nitrogen --restore
+          exec i3 ;;
         2b)
-            nitrogen --restore
-            exec 2bwm &
-            termite ;;
+          nitrogen --restore
+          exec 2bwm &
+          termite ;;
+        kde)
+          exec startkde ;;  
         xf|*)
-            volumeicon &
-            exec startxfce4 ;;
+          volumeicon &
+          exec startxfce4 ;;
 esac
