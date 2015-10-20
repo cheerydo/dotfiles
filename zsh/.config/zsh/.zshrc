@@ -1,5 +1,5 @@
 # Prompt!
-PROMPT='(%3~) ──── '
+PROMPT='[%m](%3~) ──── '
 
 setopt histappend \
 	histexpiredupsfirst \
@@ -44,4 +44,4 @@ if [[ -f $ZDOTDIR/.aliases ]]; then
 	. $ZDOTDIR/.aliases
 fi
 
-eval $(dircolors $ZDOTDIR/.dircolors)
+eval $(gdircolors $ZDOTDIR/.dircolors)
