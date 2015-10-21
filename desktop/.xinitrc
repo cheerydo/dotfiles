@@ -30,10 +30,10 @@ case "$2" in
           nitrogen --restore
           exec spectrwm ;;
         ob)
-          tint2 &
           volumeicon &
           exec openbox-session ;;
         i3) 
+          xfsettingsd
           nitrogen --restore
           exec i3 ;;
         2b)
