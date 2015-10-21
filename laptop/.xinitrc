@@ -14,6 +14,7 @@ fi
 # Some X stuff I really need
 xset b off
 xset s off
+xset -dpms
 xset +fp /usr/share/fonts/local
 xset fp rehash
 setxkbmap -option caps:super -option shift:both_capslock
