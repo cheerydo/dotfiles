@@ -2,8 +2,7 @@ set          nocompatible
 
 " also make sure to grab git.io/vsVXT and git.io/vsVPK (CSApprox)
 " for good times
-" colorscheme jah_wombat
-colorscheme default
+colorscheme jah_wombat
 
 set          history=50
 set          ruler
