@@ -1,5 +1,5 @@
 # Prompt!
-PROMPT='[%m](%3~) ──── '
+PROMPT='[%m](%5~) ──── '
 
 setopt histappend \
 	histexpiredupsfirst \
@@ -42,6 +42,14 @@ zstyle ':completion:*:kill:*' force-list always
 # Erliarses
 if [[ -f $ZDOTDIR/.aliases ]]; then
 	. $ZDOTDIR/.aliases
+fi
+
+if [[ $HOST == "chicken" ]]; then
+    . $ZDOTDIR/aliases.obsd
+elif [[ $HOST == "potatoes" ]]; then
+    . $ZDOTDIR/aliases.debian
+else
+    . $ZDOTDIR/aliases.arch
 fi
 
 eval $(gdircolors $ZDOTDIR/.dircolors)
