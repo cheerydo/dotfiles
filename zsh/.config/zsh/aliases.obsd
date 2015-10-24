@@ -1,28 +1,6 @@
-# bash_aliases
-alias mutt='mutt -F ~/.config/mutt/muttrc'
-
-alias rh='rehash'
-alias p='pwd'
-alias v='vim'
 alias mkdir='mkdir -p'
 alias rmdir='rmdir'
 alias ls='gls --color=auto'
 alias lsa='gls --color=auto -A'
 alias lsl='gls --color=auto -l'
 alias lsal='gls --color=auto -Al'
-alias df='df -h'
-alias du='du -h'
-alias tmux='tmux -u'
-alias paste="curl -F 'f:1=<-' ix.io"
-
-#alias fbox='ssh tornainbow@hermes.feralhosting.com'
-#alias hserv='ssh 192.241.173.213'
-#alias tor='scp ~/down/*.torrent tornainbow@hermes.feralhosting.com:/media/sde1/home/tornainbow/private/rtorrent/watch && rm ~/down/*.torrent'
-#alias hide='sudo openvpn /etc/openvpn/client.conf'
-
-alias gis='git status'
-alias gic='git commit'
-alias gip='git push'
-alias gia='git add'
-alias gil='git log'
-alias gid='git diff'
