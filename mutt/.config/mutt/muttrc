@@ -6,10 +6,10 @@ set sendmail=/usr/bin/msmtp
 set my_msmtp_pass=`gpg -d -q --no-tty ~/.config/mutt/fmail.gpg`
 
 # set some folder mappings
-set spoolfile="=/Inbox"
-set postponed="=/Drafts"
-set record="=/Sent Items"
-folder-hook . 'set trash="=/Trash"'
+set spoolfile="=Inbox"
+set postponed="=Drafts"
+set record="=Sent Items"
+folder-hook . 'set trash="=Trash"'
 folder-hook Trash 'unset trash'
 
 # Mailboxen
@@ -88,14 +88,11 @@ auto_view text/html
 ## sidebar stuff
 set sidebar_visible=no
 set sidebar_width=25
-set sidebar_shortpath=yes
-set sidebar_delim=" |"
-set sidebar_folderindent="yes"
 color sidebar_new brightdefault default 
 
 # Default index_format
-folder-hook *Sent* 'set index_format="%3C %Z  |  %(!%m/%d)   %-35.35F   %?M?[+](%2.M messages)? %s"'
-folder-hook ! *Sent* 'set index_format="%3C %Z  |  %(!%m/%d)   %-35.35F   %?M?[+](%2.M messages)? %s"'
+folder-hook "Sent*" 'set index_format="%3C %Z  |  %(!%m/%d)   %-35.35F   %?M?[+](%2.M messages)? %s"'
+folder-hook ! "Sent*" 'set index_format="%3C %Z  |  %(!%m/%d)   %-35.35F   %?M?[+](%2.M messages)? %s"'
 set pager_format="Sent at %[!%b %e at %H:%M] from %F -- (%P)"
 set status_chars=" *%A"
 set status_format="───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
@@ -135,13 +132,13 @@ subscribe chugalug \
 # ----------      END      ----------#
 
 # ----------     HOOKS     ----------#
-reply-hook . "set signature=''"
-send-hook '! ~s [Rr]e:' 'set signature="~/.config/mutt/signature"'
 # ----------      END      ----------#
 
 # ---------- Miscellaneous ----------#
 # siggy sig
 set signature="~/.config/mutt/signature"
+reply-hook . "set signature=''"
+send-hook '! ~s [Rr]e:' 'set signature="~/.config/mutt/signature"'
 
 # yay colors 
 source ~/.config/mutt/colors/main
