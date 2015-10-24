@@ -16,13 +16,14 @@ font pango: Dina, Bold 9
 
 # start a terminal
 bindsym $mod+Return exec termite
-#bindsym $mod+Shift+Return exec urxvt
+bindsym $mod+Shift+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+p exec dmenu_run -nf '#FFFFFF' -nb '#000000' -fn '-*-dina-bold-r-*-*-10-*-*-*-*-*-*-*'
+bindsym $mod+Shift+p exec passmenu
 
 # change focus
 bindsym $mod+h focus left
@@ -49,11 +50,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-#bindsym $mod+minus split vertical
 bindsym $mod+v split vertical
 
 # split in vertical orientation
-bindsym $mod+apostrophe split horizontal
+bindsym $mod+g split horizontal
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
@@ -73,7 +73,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-bindsym $mod+Shift+a focus child
+bindsym $mod+d focus child
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -90,6 +90,8 @@ bindsym $mod+0 workspace 10
 # quick switching
 bindsym $mod+Mod1+h workspace prev
 bindsym $mod+Mod1+l workspace next
+bindsym $mod+b workspace back_and_forth
+bindsym $mod+x [urgent=latest] focus
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -135,8 +137,17 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym q mode "default"
 }
-
 bindsym $mod+r mode "resize"
+
+set $launch "Launch things!"
+mode $launch {
+    bindsym c exec chromium; mode "default"
+    bindsym t exec thunar; mode "default"
+
+    bindsym Escape mode "default"
+    bindsym q mode "default"
+}
+bindsym $mod+Tab mode $launch
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -145,19 +156,18 @@ bar {
 }
 
 # Autostart 
-exec --no-startup-id keepassx
-exec --no-startup-id caffeine &
+exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
+exec --no-startup-id keepassx
 
 # Looks
 new_window pixel 2
-hide_edge_borders both
-# class                 border  backgr. text    indicator
-client.focused 			 #6D5782 #6D5782 #EEEEEE #AF3A3A
-client.focused_inactive	 #16130F #16130F #EEEEEE #16130F
-client.unfocused 	  	 #16130F #16130F #888888 #AF3A3A
-client.urgent 		     #AF3A3A #AF3A3A #EEEEEE #900000
 
+# class                   border  backgr. text    indicator
+client.focused            #6D5782 #6D5782 #EEEEEE #16130F
+client.focused_inactive   #16130F #16130F #EEEEEE #16130F
+client.unfocused          #16130F #16130F #888888 #16130F
+client.urgent             #AF3A3A #AF3A3A #EEEEEE #900000
 
 # Scratchpad
 bindsym $mod+equal scratchpad show
@@ -169,20 +179,14 @@ focus_follows_mouse no
 for_window [title="Preferences"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
-for_window [class="Thunar"] floating enable
-for_window [class="Keepassx"] floating enable
 for_window [class="Gimp"] floating enable
+for_window [class="Steam"] floating enable
+for_window [class="Thunar"] floating enable
 
 # Media keys
-bindsym Mod1+End exec --no-startup-id ponymix toggle 
-bindsym Mod1+Next exec --no-startup-id ponymix decrease 3 
-bindsym Mod1+Prior exec --no-startup-id ponymix increase 3 
-
-bindsym Mod1+p exec --no-startup-id mpc toggle
-bindsym Mod1+period exec --no-startup-id mpc next
-bindsym Mod1+comma exec --no-startup-id mpc prev
-bindsym Mod1+s exec --no-startup-id mpc stop
-
-# Quick keys
-bindsym Mod1+w exec firefox
-bindsym Mod1+f exec thunar 
+bindsym XF86AudioMute exec --no-startup-id ponymix toggle && notify-send -a volume -t 50 "$( (ponymix is-muted && echo 'Volume is muted') || echo 'Volume is unmuted')"
+bindsym XF86AudioLowerVolume exec --no-startup-id ponymix decrease 3 && notify-send -a volume -t 50 "$(ponymix get-volume)"
+bindsym XF86AudioRaiseVolume exec --no-startup-id ponymix increase 3 && notify-send -a volume -t 50 "$(ponymix get-volume)"
+bindsym XF86AudioPlay mpc toggle
+bindsym XF86AudioNext mpc next
+bindsym XF86AudioPrev mpc prev

@@ -1,0 +1,41 @@
+# Main keys
+bind pager,index,generic,attach h 	exit
+bind pager,index 		H 	display-toggle-weed
+bind index,pager 		\Cp sidebar-prev
+bind index,pager 		\Cn sidebar-next
+bind index,pager 		\Co sidebar-open
+bind index,pager	 <Esc>k	extract-keys
+bind index,pager     <Esc>p print-message
+bind index 	         <Esc>r refresh
+
+# Index keys
+bind index 			<space> collapse-thread
+bind index 				- 	collapse-all
+bind index 				B 	bounce-message
+bind index				J	next-unread
+bind index				K	previous-unread
+bind index		   <return> display-message
+bind index              \Cf limit
+bind index 				\Cl next-entry
+bind index              \Ch previous-entry
+bind index              n   next-thread
+bind index              p   previous-thread
+bind index 				l 	display-message
+
+## Pager keys
+bind pager 				D 	delete-message
+bind pager 				G 	bottom
+bind pager				J	next-entry
+bind pager				K	previous-entry
+bind pager 				R 	group-reply
+bind pager 				j 	next-line
+bind pager 				k 	previous-line
+bind pager 				d 	half-down
+bind pager 				gg 	top
+bind pager 				u 	half-up
+bind pager 				\Cb previous-page
+bind pager 				\Cf next-page
+bind pager 				\Cd delete-message
+
+# Attachment keys
+bind attach 	   <return> view-mailcap

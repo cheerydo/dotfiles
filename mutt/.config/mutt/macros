@@ -7,4 +7,4 @@ macro index gt 'c=/Trash<enter>'
 macro index gh 'c=/Inbox<enter>'
 macro index gs 'c=/Sent Items<enter>'
 
-macro index \& '!echo "Syncing mail..."; mbsync -a <enter>'
+macro index \& '!mbsync -a <enter>'

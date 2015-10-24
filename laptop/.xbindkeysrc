@@ -7,11 +7,11 @@
 #"ponymix toggle && notify-send $((ponymix is-muted && echo 'Volume is muted') || echo 'Volume is not muted')"
 #  XF86AudioMute
 #
-#"xbacklight -inc 10"
-#  XF86MonBrightnessUp
-#
-#"xbacklight -dec 10"
-#  XF86MonBrightnessDown
+"xbacklight -inc 10"
+  XF86MonBrightnessUp
+
+"xbacklight -dec 10"
+  XF86MonBrightnessDown
 
 "systemctl suspend"
   Alt + End

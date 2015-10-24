@@ -2,15 +2,15 @@
 PROMPT='[%m](%5~) ──── '
 
 setopt histappend \
-	histexpiredupsfirst \
-	histverify \
-	nohup \
-	completeinword \
-	interactivecomments \
-	autocd \
-	automenu \
-	completealiases \
-	nobgnice
+    histexpiredupsfirst \
+    histverify \
+    nohup \
+    completeinword \
+    interactivecomments \
+    autocd \
+    automenu \
+    completealiases \
+    nobgnice
 
 # Some history params
 HISTSIZE=10000
@@ -37,11 +37,13 @@ export KEYTIMEOUT=1
 
 # Cases are sooo insensitive
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' menu select
+zstyle ':completion:*:*:kill:*' menu yes select
 zstyle ':completion:*:kill:*' force-list always
 
 # Erliarses
 if [[ -f $ZDOTDIR/.aliases ]]; then
-	. $ZDOTDIR/.aliases
+    . $ZDOTDIR/.aliases
 fi
 
 if [[ $HOST == "chicken" ]]; then
