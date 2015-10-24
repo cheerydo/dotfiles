@@ -54,7 +54,7 @@ else
     . $ZDOTDIR/aliases.arch
 fi
 
-eval $(gdircolors $ZDOTDIR/.dircolors)
+eval $(dircolors $ZDOTDIR/.dircolors)
 
 case $TERM in
   *termite)
