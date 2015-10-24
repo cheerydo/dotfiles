@@ -1,5 +1,8 @@
-# Prompt!
-PROMPT='[%m](%5~) ──── '
+# add shell completions dir to fpath
+fpath=($ZDOTDIR/.completion $fpath)
+autoload -U compinit
+autoload -Uz vcs_info
+compinit
 
 setopt histappend \
     histexpiredupsfirst \
@@ -10,7 +13,8 @@ setopt histappend \
     autocd \
     automenu \
     completealiases \
-    nobgnice
+    nobgnice \
+    PROMPT_SUBST
 
 # Some history params
 HISTSIZE=10000
@@ -27,11 +31,6 @@ vimode=i
 bindkey '^R' history-incremental-search-backward
 bindkey ' ' magic-space
 
-# add shell completions dir to fpath
-fpath=($ZDOTDIR/.completion $fpath)
-autoload -U compinit
-compinit
-
 # Prevent key race
 export KEYTIMEOUT=1
 
@@ -40,6 +39,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
 zstyle ':completion:*:*:kill:*' menu yes select
 zstyle ':completion:*:kill:*' force-list always
+zstyle ':vcs_info:*' enable git svn
 
 # Erliarses
 if [[ -f $ZDOTDIR/.aliases ]]; then
@@ -55,3 +55,18 @@ else
 fi
 
 eval $(gdircolors $ZDOTDIR/.dircolors)
+
+case $TERM in
+  *termite)
+  precmd () {
+    vcs_info
+    print -Pn "\e]0;termite\a"
+  }
+  preexec () {
+    print -Pn "\e]0; $1\a"
+  }
+  ;;
+esac
+
+# Prompt!
+PROMPT='[%m](%5~) ──── '
