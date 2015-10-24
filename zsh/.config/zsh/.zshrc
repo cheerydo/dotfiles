@@ -48,13 +48,14 @@ fi
 
 if [[ $HOST == "chicken" ]]; then
     . $ZDOTDIR/aliases.obsd
+    eval $(gdircolors $ZDOTDIR/.dircolors)
 elif [[ $HOST == "potatoes" ]]; then
     . $ZDOTDIR/aliases.debian
+    eval $(dircolors $ZDOTDIR/.dircolors)
 else
     . $ZDOTDIR/aliases.arch
+    eval $(dircolors $ZDOTDIR/.dircolors)
 fi
-
-eval $(dircolors $ZDOTDIR/.dircolors)
 
 case $TERM in
   *termite)
