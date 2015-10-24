@@ -17,6 +17,7 @@ scrollback_lines = 1000
 search_wrap = true
 cursor_blink = off
 cursor_shape = block
+icon_name = terminal
 
 [hints]
 font = Dina Medium 8

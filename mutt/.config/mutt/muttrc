@@ -88,6 +88,7 @@ auto_view text/html
 ## sidebar stuff
 set sidebar_visible=no
 set sidebar_width=25
+set sidebar_delim=" |"
 color sidebar_new brightdefault default 
 
 # Default index_format

@@ -33,7 +33,6 @@ case "$2" in
           volumeicon &
           exec openbox-session ;;
         i3) 
-          xfsettingsd
           nitrogen --restore
           exec i3 ;;
         2b)
