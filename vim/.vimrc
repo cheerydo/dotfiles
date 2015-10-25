@@ -20,8 +20,9 @@ set smartindent
 set cindent
 set cursorline
 set modeline
+set number
 set laststatus=2
-set backspace=indent,eol,start
+set backspace=2
 set expandtab
 set softtabstop=2
 set shiftwidth=2
@@ -54,12 +55,12 @@ noremap <C-w>j :res +5<CR>
 noremap <C-w>k :res -5<CR>
 
 " No backups, YOLO
-set nobackup
-set nowritebackup
+set nobk
+set nowb
 
 " Special circumstances for reading mutt mails
 "au BufNewFile,BufRead *tmp/*mutt* set ft=mail | set fo=aw | set tw=80 | set wrap | +/^--.$/-1\|+/^$/ | nohl | startinsert
-au FileType mail set fo=aw tw=80 wrap | +/^$/ | nohl | startinsert
+au FileType mail set fo=aw tw=80 wrap | +/^$/ | startinsert
 
 " For that Explorer goodness
 let g:netrw_liststyle=3
