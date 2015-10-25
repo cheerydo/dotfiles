@@ -22,7 +22,7 @@ xrdb -load ~/.Xresources
 
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets)
 
-mpd &
+#mpd &
 
 case "$2" in
     spectrwm)
@@ -36,7 +36,7 @@ case "$2" in
         #nm-applet &
         exec spectrwm ;;
     i3) 
-        nitrogen --restore &
+        nitrogen --restore
         compton -b
         xbindkeys
         synclient VertScrollDelta=-108
