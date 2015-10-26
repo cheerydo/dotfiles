@@ -46,10 +46,3 @@ hi Keyword          guifg=#69a1ff gui=none
 hi PreProc          guifg=#8ac6f2 gui=none
 hi Number           guifg=#99968b gui=none
 hi Special          guifg=#e7f6da gui=none
-
-" Rail specific
-hi link RubyStringDemiliter String
-
-hi link htmlTag                     Identifier
-hi link htmlTagName                 htmlTag
-hi link htmlEndTag                  htmlTag
