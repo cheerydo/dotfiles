@@ -2,3 +2,5 @@ agin='sudo apt-get install'
 agrem='sudo apt-get --purge autoremove'
 agreps='apt-cache search'
 agup='sudo apt-get update && sudo apt-get upgrade'
+
+# vim: ft=zsh

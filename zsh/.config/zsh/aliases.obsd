@@ -4,3 +4,5 @@ alias ls='gls --color=auto'
 alias lsa='gls --color=auto -A'
 alias lsl='gls --color=auto -l'
 alias lsal='gls --color=auto -Al'
+
+# vim: ft=zsh

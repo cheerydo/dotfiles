@@ -1,7 +1,7 @@
 # add shell completions dir to fpath
 fpath=($ZDOTDIR/.completion $fpath)
-autoload -U compinit
-autoload -Uz vcs_info
+HELPDIR=/usr/share/zsh/$ZSH_VERSION/help
+autoload -Uz compinit run-help vcs_info edit-command-line
 compinit
 
 setopt histappend \
@@ -14,7 +14,7 @@ setopt histappend \
     automenu \
     completealiases \
     nobgnice \
-    PROMPT_SUBST
+    prompt_subst
 
 # Some history params
 HISTSIZE=10000
@@ -25,20 +25,18 @@ HISTFILE=$ZDOTDIR/.zsh_history
 typeset -U path
 path=(~/bin /sbin /usr/sbin $path)
 
-# Keybindings
+# Keybindings - vim for the win
 bindkey -v
 vimode=i
 bindkey '^R' history-incremental-search-backward
 bindkey ' ' magic-space
 
-# Prevent key race
+# Prevent key race with vim escape key
 export KEYTIMEOUT=1
 
 # Cases are sooo insensitive
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
-zstyle ':completion:*:*:kill:*' menu yes select
-zstyle ':completion:*:kill:*' force-list always
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':vcs_info:*' enable git svn
 
 # Erliarses
@@ -68,6 +66,12 @@ case $TERM in
   }
   ;;
 esac
+
+# Home/End keybinds
+bindkey -M vicmd "^[[H" vi-beginning-of-line
+bindkey          "^[[H" beginning-of-line
+bindkey -M vicmd "^[[F" vi-end-of-line
+bindkey          "^[[F" end-of-line
 
 # Prompt!
 PROMPT='[%m](%5~) ──── '
