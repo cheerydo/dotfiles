@@ -2,6 +2,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'godlygeek/csapprox'
 Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 " Vi is right out
@@ -71,14 +72,18 @@ nnoremap <Leader>k :Vex<CR>
 set pastetoggle=<F4>
 
 " Window/pane/tab nav
-noremap <C-h> <C-w>h
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
-noremap <C-w>h :vertical res -5<CR>
-noremap <C-w>l :vertical res +5<CR>
-noremap <C-w>j :res +5<CR>
-noremap <C-w>k :res -5<CR>
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <C-w>h :vertical res -5<CR>
+nnoremap <C-w>l :vertical res +5<CR>
+nnoremap <C-w>j :res +5<CR>
+nnoremap <C-w>k :res -5<CR>
+
+nnoremap <Leader>tn :tabnext<CR>
+nnoremap <Leader>tp :tabprevious<CR>
+nnoremap <Leader>te :tabedit<Space>
 
 " Special circumstances for reading mutt mails
 "au BufNewFile,BufRead *tmp/*mutt* set ft=mail | set fo=aw | set tw=80 | set wrap | +/^--.$/-1\|+/^$/ | nohl | startinsert
