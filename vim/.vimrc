@@ -24,6 +24,7 @@ set autoindent
 set smartindent
 set cindent
 set lazyredraw
+set title
 
 " No backups, YOLO
 set nobk
