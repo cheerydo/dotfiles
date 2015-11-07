@@ -27,7 +27,7 @@ alias gid='git diff'
 
 alias fresh='killall -SIGUSR1'
 
-alias w32='WINEARCH=wine33 WINEPREFIX=~/win32'
+alias w32='WINEARCH=wine32 WINEPREFIX=~/.wine_32'
 alias nh='telnet nethack.alt.org'
 
 # vim: filetype=zsh
