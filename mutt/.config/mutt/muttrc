@@ -14,33 +14,34 @@ folder-hook Trash 'unset trash'
 
 # Mailboxen
 mailboxes =Inbox \
-        =Arch \
-        =Arch/\.Arch-dev \
-        =Arch/\.Arch-projects \
-        =Arch/\.Aur-general \
-        =Arch/\.Pacman-dev \
-        =Archive \
-        =Chugalug \
-        =Church \
-        =Crux \
-        =OpenBSD-announce \
-        =OpenBSD-misc \
-        =OpenBSD-tech \
-        =Lobsters \
-        =Drafts \
-        =Dynamis \
-        =edX \
-        =Important \
-        =Important/\.School\ loans \
-        =Jessica \
-        =Jobs \
-        =Junk\ Mail \
-        =Lee \
-        =Personal \
-        =Queue \
-        =Receipts \
-        =Sent\ Items \
-        =Trash
+  =Arch \
+  =Arch/\.Arch-dev \
+  =Arch/\.Arch-projects \
+  =Arch/\.Aur-general \
+  =Arch/\.Pacman-dev \
+  =Archive \
+  =Chugalug \
+  =Church \
+  =Crux \
+  =OpenBSD-announce \
+  =OpenBSD-misc \
+  =OpenBSD-tech \
+  =Lobsters \
+  =Drafts \
+  =Dynamis \
+  =edX \
+  =Important \
+  =Important/\.School\ loans \
+  =Jessica \
+  =Jobs \
+  =Junk\ Mail \
+  =Lee \
+  =Personal \
+  =Queue \
+  =Receipts \
+  =Sent\ Items \
+  =Trash \
+  =mailbak
 
 # Some working nicey nices
 set include=yes
@@ -72,6 +73,7 @@ set text_flowed
 set pager_stop
 set menu_scroll
 set delete
+set beep_new
 unset mark_old
 unset markers
 unset help
@@ -109,27 +111,27 @@ reply-hook . my_hdr Bcc: jared@fastmail.com
 
 # keybinds!
 source ~/.config/mutt/keys
-	
+        
 # ---------- MAILING LISTS ----------# 
 # Arch
 subscribe arch-general \
-    arch-projects \
-    arch-dev-public \
-    aur-general \
-    pacman-dev \
-    arch-announce
+  arch-projects \
+  arch-dev-public \
+  aur-general \
+  pacman-dev \
+  arch-announce
 # Crux
 subscribe crux \
-    crux-commits \
-    crux-devel 
+  crux-commits \
+  crux-devel 
 # OpenBSD
 subscribe advocacy \
-    announce \
-    misc \
-    tech 
+  announce \
+  misc \
+  tech 
 # Others
 subscribe chugalug \
-    lobsters
+  lobsters
 # ----------      END      ----------#
 
 # ----------     HOOKS     ----------#
@@ -143,9 +145,10 @@ send-hook '! ~s [Rr]e:' 'set signature="~/.config/mutt/signature"'
 
 # yay colors 
 source ~/.config/mutt/colors/main
-	
+
 # Address book!
-set query_command="abook --mutt-query '%s'"
+#set query_command="abook --mutt-query '%s'"
+set query_command="pc_query -m '%s'"
 bind editor <Tab> complete-query
 set sort_alias=alias
 set reverse_alias=yes

@@ -1,0 +1,22 @@
+IMAPAccount fastmail
+Host foo.bar.com
+User foo@fastmail.com
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d super-secret-pass.gpg"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore fastmail-remote
+Account fastmail
+
+MaildirStore fastmail-local
+Path ~/mail/
+Inbox ~/mail/Inbox
+
+Channel fastmail
+Master :fastmail-remote:
+Slave :fastmail-local:
+Patterns * !mailbak
+Create Slave
+Sync All
+SyncState *
+Expunge Both
