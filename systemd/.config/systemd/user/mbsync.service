@@ -1,0 +1,10 @@
+[Unit]
+Description=Start mbsync for mailbox
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/mbsync -a -q
+ExecStartPost=/sbin/notmuch new --quiet
+
+[Install]
+WantedBy=default.target
