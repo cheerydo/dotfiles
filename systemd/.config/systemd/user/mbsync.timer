@@ -1,0 +1,10 @@
+[Unit]
+Description=sync IMAP mailbox
+
+[Timer]
+#OnCalendar=*-*-* *:0/02
+OnBootSec=5min
+OnUnitActiveSec=2min
+
+[Install]
+WantedBy=default.target

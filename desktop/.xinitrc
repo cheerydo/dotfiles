@@ -14,6 +14,7 @@ fi
 # Some X stuff I really need
 xset b off
 xset s off
+xset -dpms
 
 xset +fp /usr/share/fonts/local
 xset +fp /usr/share/fonts/misc
@@ -39,8 +40,6 @@ case "$2" in
           nitrogen --restore
           exec 2bwm &
           termite ;;
-        kde)
-          exec startkde ;;  
         xf|*)
           volumeicon &
           exec startxfce4 ;;

@@ -1,28 +1,34 @@
-macro generic,pager,index <f1> "!elinks /usr/share/doc/mutt/manual.html\n" "Show Mutt documentation."
-macro pager,index b '<enter-command>toggle sidebar_visible<enter>'
-macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
+# F1 shows help in case I forget something
+macro generic,pager,index <f1> \
+  "!elinks /usr/share/doc/mutt/manual.html\n" \
+  "Show Mutt documentation."
 
-bind editor <space> noop
+macro pager,index b \
+  '<enter-command>toggle sidebar_visible<enter>'
+
+# Refreshing mail if I'm feeling impatient
+macro index \& '!mbsync -a && notmuch new<enter>'
+
+# Mailbox navigation
 macro index gt 'c=Trash<enter>'
 macro index gh 'c=Inbox<enter>'
 macro index gs 'c=Sent Items<enter>'
 
-macro index \& '!mbsync -a <enter>'
-macro index \# '!notmuch new'
+# Addressbook at fastmail integration
+macro index,pager a \
+  "<pipe-message>pycard-import<enter>" \
+  "add sender address to pycardsyncer"
 
 # this monstrosity is for notmuch searching
 macro index <F8> \
-"<enter-command>set my_old_pipe_decode=\$pipe_decode my_old_wait_key=\$wait_key nopipe_decode nowait_key<enter>\
-<shell-escape>notmuch-mutt -r --prompt search<enter>\
-<change-folder-readonly>`echo ${XDG_CACHE_HOME:-$HOME/.cache}/notmuch/mutt/results`<enter>\
-<enter-command>set pipe_decode=\$my_old_pipe_decode wait_key=\$my_old_wait_key<enter>" \
-"notmuch: search mail"
+  "<shell-escape>notmuch-mutt -r --prompt search<enter>\
+  <change-folder-readonly>`echo ${XDG_CACHE_HOME:-$HOME/.cache}/notmuch/mutt/results`<enter>" \
+  "notmuch: search mail"
 
 # this one's for reconstructing a thread
-
 macro index <F9> \
-"<enter\-command>set my_old_pipe_decode=\e$pipe_decode my_old_wait_key=\e$wait_key nopipe_decode nowait_key<enter>\
-<pipe\-message>notmuch\-mutt \-r thread<enter>\
-<change\-folder\-readonly>\`echo ${XDG_CACHE_HOME:\-$HOME/.cache}/notmuch/mutt/results\`<enter>\
-<enter\-command>set pipe_decode=\e$my_old_pipe_decode wait_key=\e$my_old_wait_key<enter>" \
-"notmuch: reconstruct thread"
+  "<pipe-message>notmuch-mutt -r thread<enter>\
+  <change-folder-readonly>`echo ${XDG_CACHE_HOME:-$HOME/.cache}/notmuch/mutt/results`<enter>" \
+  "notmuch: reconstruct thread"
+
+# vim: ft=muttrc
