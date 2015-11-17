@@ -1,8 +1,12 @@
 " Vim-plug awesomeness
 call plug#begin('~/.vim/plugged')
-Plug 'godlygeek/csapprox'
 Plug 'itchyny/lightline.vim'
+Plug 'godlygeek/csapprox'
+Plug 'kien/ctrlp.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-markdown'
 call plug#end()
 
 " Vi is right out
@@ -27,11 +31,11 @@ set lazyredraw
 set title
 
 " No backups, YOLO
-set nobk
-set nowb
+set nobackup
+set nowritebackup
 
 set history=50
-set viminfo+=n/home/jared/.vim/viminfo
+set viminfo+=n~/.vim/viminfo
 
 " Tabs are spaces always please
 set expandtab
@@ -82,9 +86,15 @@ nnoremap <C-w>l :vertical res +5<CR>
 nnoremap <C-w>j :res +5<CR>
 nnoremap <C-w>k :res -5<CR>
 
+nnoremap <Leader>sv :vne<CR>
+nnoremap <Leader>sh :new<CR>
+
 nnoremap <Leader>tn :tabnext<CR>
 nnoremap <Leader>tp :tabprevious<CR>
 nnoremap <Leader>te :tabedit<Space>
+nnoremap <Leader>x :tabclose<CR>
+
+nnoremap <Leader>wr :tabe +Goyo<Space>
 
 " Special circumstances for reading mutt mails
 "au BufNewFile,BufRead *tmp/*mutt* set ft=mail | set fo=aw | set tw=80 | set wrap | +/^--.$/-1\|+/^$/ | nohl | startinsert
