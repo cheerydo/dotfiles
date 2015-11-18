@@ -100,8 +100,9 @@ nnoremap <Leader>wr :tabe +Goyo<Space>
 "au BufNewFile,BufRead *tmp/*mutt* set ft=mail | set fo=aw | set tw=80 | set wrap | +/^--.$/-1\|+/^$/ | nohl | startinsert
 au FileType mail set fo=aw tw=80 wrap | +/^$/ | startinsert
 
+""" Plugin settings """
+
 " Statusline times
-" Make sure to grap git.io/lightline for sure
 set laststatus=2
 let g:lightline = {
     \ 'colorscheme': 'wombat',
@@ -113,3 +114,9 @@ let g:lightline = {
     \             [ 'fileencoding', 'filetype' ] ] 
     \ }
     \ }
+
+" CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_show_hidden = 1 " Show me the dotfiles!
