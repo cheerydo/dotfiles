@@ -13,3 +13,4 @@ mutt/.config/mutt/id
 mutt/.config/mutt/addresses
 vim/.vim/*
 !vim/.vim/colors
+!vim/.vim/ftplugin
