@@ -1,3 +1,6 @@
+" Vi is right out - this is VIM
+set nocompatible
+
 " Vim-plug awesomeness
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
@@ -9,41 +12,38 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-markdown'
 call plug#end()
 
-" Vi is right out
-set nocompatible
-
 " Homegrown is best grown colorscheme
 colorscheme jah_wombat
 
 " Some nice aesthetic options
-set ruler
+set backspace=2
 set cursorline
+set incsearch
+set lazyredraw
 set modeline
 set number
-set showcmd
-set incsearch
 set nohlsearch
+set ruler
 set showmatch
-set autoindent
-set smartindent
-set cindent
-set lazyredraw
+set showcmd
 set title
 
 " No backups, YOLO
 set nobackup
 set nowritebackup
+set noundofile
 
+" History and vimfile specs
 set history=50
 set viminfo+=n~/.vim/viminfo
+
+" Demote suffixes we don't want to see in file searching
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 
 " Tabs are spaces always please
 set expandtab
 set softtabstop=2
 set shiftwidth=2
-
-set laststatus=2
-set backspace=2
 
 " I never quite remember what these do but they're staying
 set wildmenu
@@ -59,8 +59,8 @@ filetype plugin indent  on
 " For that Explorer goodness
 let g:netrw_liststyle=3
 
-" Demote suffixes we don't want to see in file searching
-set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
+" Special circumstances for reading mutt mails
+au FileType mail set fo=aw tw=80 wrap | +/^$/ | startinsert
 
 " Keymappings for your health
 nmap <space> <leader>
@@ -71,12 +71,12 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>wq :wq<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :q!<CR>
-nnoremap <Leader>n :set number!<CR>
-nnoremap <Leader>h :nohl<CR>
+nnoremap <Leader>nu :set number!<CR>
+nnoremap <Leader>hi :nohl<CR>
 nnoremap <Leader>k :Vex<CR>
 set pastetoggle=<F4>
 
-" Window/pane/tab nav
+" Window nav with resize
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -86,22 +86,21 @@ nnoremap <C-w>l :vertical res +5<CR>
 nnoremap <C-w>j :res +5<CR>
 nnoremap <C-w>k :res -5<CR>
 
+" Quick splits
 nnoremap <Leader>sv :vne<CR>
 nnoremap <Leader>sh :new<CR>
 
-nnoremap <Leader>tn :tabnext<CR>
-nnoremap <Leader>tp :tabprevious<CR>
-nnoremap <Leader>te :tabedit<Space>
+" Tab navigation
+nnoremap <Leader>m :tabnext<CR>
+nnoremap <Leader>n :tabprevious<CR>
+nnoremap <Leader>b :tabedit<Space>
+nnoremap <Leader>B :tabnew<CR>
 nnoremap <Leader>x :tabclose<CR>
 
+" Zen mode for writing
 nnoremap <Leader>wr :tabe +Goyo<Space>
 
-" Special circumstances for reading mutt mails
-"au BufNewFile,BufRead *tmp/*mutt* set ft=mail | set fo=aw | set tw=80 | set wrap | +/^--.$/-1\|+/^$/ | nohl | startinsert
-au FileType mail set fo=aw tw=80 wrap | +/^$/ | startinsert
-
 """ Plugin settings """
-
 " Statusline times
 set laststatus=2
 let g:lightline = {
@@ -111,12 +110,12 @@ let g:lightline = {
     \             [ 'absolutepath', 'modified' ] ],
     \   'right': [ [ 'lineinfo'],
     \             [ 'percent' ],
-    \             [ 'fileencoding', 'filetype' ] ] 
+    \             [ 'fileencoding', 'filetype' ] ]
     \ }
     \ }
 
 " CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_working_path_mode = 'c'
 let g:ctrlp_show_hidden = 1 " Show me the dotfiles!
