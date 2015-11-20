@@ -1,0 +1,45 @@
+hi clear
+
+" Command Line colors
+hi StatusLine color: #ddc; background: #333; font-family: Consolas; font-size: 12px; margin-top: 1px;
+hi CmdLine color: #aaa; background: #333; font-family: Consolas; font-size: 12px; padding: 0px; vertical-align: middle; border: none;
+
+" Completion results
+hi CompResult color: #aaa; width: 45%; overflow: hidden; font-size: 10pt; font-family: Consolas; font-weight: normal;
+hi CompTitle color: #ddc; background: #333; font-weight: bold;
+hi CompTitle>* color: #aaa; font-weight: bold; border-top: 1px solid gray; border-bottom: 1px solid #BBB; padding: 1px 0.5ex;
+hi CompDesc color: #999; width: 50%; font-size: 9pt; font-family: Consolas; font-weight: normal;
+hi CompItem[selected] background: #666;
+
+" Kindly inspired hints from vimium
+hi Hint text-transform: uppercase; 
+hi Hint -a font-family: Sans, Consolas; 
+hi Hint -a font-weight: bold; 
+hi Hint -a font-size: 10px; 
+hi Hint -a text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6); 
+hi Hint -a color: #302505; 
+hi Hint -a padding: 1px 3px 0px 3px; 
+hi Hint -a background: -moz-linear-gradient(top, #fff785, #ffc524); 
+hi Hint -a border: 1px #c38a22 solid; 
+hi Hint -a -moz-border-radius: 3px; 
+hi Hint -a -moz-box-shadow: 0 3px 7px 0px rgba(0, 0, 0, 0.3); 
+hi HintElem background-color: inherit !important; 
+hi HintActive background-color: inherit !important;
+hi HintImage opacity: 0.5 !important;
+
+" Used also in wrapping error messages as the background, simple speaking
+hi InfoMsg color: #ddc; background: #333;
+
+" Used when error on syntax error in vimperatorrc, etc.
+hi LineNr color: orange; background-color: #333;
+hi ErrorMsg color: #c22; background-color: #333; font-weight: bold; 
+
+" Caret mode
+hi ModeMsg color: #ddc; background: #333;
+hi MoreMsg color: #080; background: #222; font-weight: bold; -moz-border-radius: 5px; padding-left: 5px;
+hi Normal color: #ddc; background: #333;
+
+" Used in "Press ENTER..." of `jumps` or `bmarks`, or "Follow Hint..." or `f`
+hi Question color: #080; background: #222; font-weight: bold; -moz-border-radius: 5px; padding-left: 5px;
+
+" vim:set filetype=vim:

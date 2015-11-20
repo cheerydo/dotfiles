@@ -50,7 +50,7 @@ set wildmenu
 set wildmode=longest:full,full
 
 " Use Xorg buffer as default
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " Gotta have my syntax and filetype helps
 syntax on
