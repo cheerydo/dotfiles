@@ -1,5 +1,5 @@
 [options]
-browser = /usr/bin/chromium
+browser = /usr/bin/firefox
 resize_grip = false
 scroll_on_output = false
 scroll_on_keystroke = true
@@ -10,7 +10,8 @@ allow_bold = true
 dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
-font = Dina Medium 10
+#font = Dina Medium 10
+font = Inconsolatazi4 11
 #font = Hack 10
 #font = Source Code Pro 10
 scrollback_lines = 1000
