@@ -3,8 +3,8 @@ set nocompatible
 
 " Vim-plug awesomeness
 call plug#begin('~/.vim/plugged')
+Plug 'romainl/Apprentice'
 Plug 'itchyny/lightline.vim'
-Plug 'godlygeek/csapprox'
 Plug 'kien/ctrlp.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'scrooloose/nerdtree'
@@ -12,8 +12,11 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-markdown'
 call plug#end()
 
+set t_Co=16
 " Homegrown is best grown colorscheme
-colorscheme jah_wombat
+" colorscheme jah_wombat
+set t_Co=256
+colorscheme apprentice
 
 " Some nice aesthetic options
 set backspace=2
@@ -26,6 +29,8 @@ set nohlsearch
 set ruler
 set showmatch
 set showcmd
+set splitbelow
+set splitright
 set title
 
 " No backups, YOLO
@@ -36,6 +41,9 @@ set noundofile
 " History and vimfile specs
 set history=50
 set viminfo+=n~/.vim/viminfo
+
+" Key timeouts for commands in ms
+set timeoutlen=500
 
 " Demote suffixes we don't want to see in file searching
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
@@ -79,6 +87,7 @@ set pastetoggle=<F4>
 " Window nav with resize
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
+
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-w>h :vertical res -5<CR>
@@ -99,6 +108,10 @@ nnoremap <Leader>x :tabclose<CR>
 
 " Zen mode for writing
 nnoremap <Leader>wr :tabe +Goyo<Space>
+
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+      \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+      \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 """ Plugin settings """
 " Statusline times
