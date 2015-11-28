@@ -1,32 +1,31 @@
-"3.9 (created: 2015/02/15 15:49:05)
-
+" vim: set ft=vim:
 set runtimepath=$HOME/.config/vimperator
-colorscheme vimium_hints.vmp
+colorscheme jah
 
-" Faster navigation
-nnoremap h 5h
-nnoremap j 5j
-nnoremap k 5k
-nnoremap l 5l
+" Saner navigation (for me anyway!)
+nnoremap  h 5h
+nnoremap  j 5j
+nnoremap  k 5k
+nnoremap  l 5l
+nnoremap  d <c-d>
+nnoremap  u <c-u>
+nnoremap  x :bd<cr>
+nnoremap  X :undo<cr>
+map       J <c-p>
+map       K <c-n>
+map       <a-s-j> :tabmove! -1<cr>
+map       <a-s-k> :tabmove! +1<cr>
 
-" I hate the Ctrl key sometimes
-nnoremap d <c-d>
-nnoremap u <c-u>
-
-" Make it behave like dwb (sad cry)
-nnoremap x :bd<cr>
-nnoremap X :undo<cr>
-map J <c-p>
-map K <c-n>
-map <a-s-j> :tabmove! -1<cr>
-map <a-s-k> :tabmove! +1<cr>
-
-set hintchars=asdfjkl;ghruie
-
-" Gud looks bae
 set gui=tabs,navigation
+set hlsearch
+set hintchars=fdsartgbvecwxqyiopmnhzuljk
+set focuscontent=true
+set maxitems=10
+set noscrollbars
+set status+=ssl
+set wildmode=list:longest,full
 
-" Toggle dat bar
+" Maps
 nmap <c-b> :sbar<Space>Bookmarks<cr>
 
-" vim: set ft=vimperator:
+" Firefox about:config
