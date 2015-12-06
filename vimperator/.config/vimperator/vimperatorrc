@@ -1,7 +1,7 @@
 "3.9 (created: 2015/02/15 15:49:05)
 
 set runtimepath=$HOME/.config/vimperator
-colorscheme vimium_hints.vmp
+colorscheme jah
 
 " Faster navigation
 nnoremap h 5h
