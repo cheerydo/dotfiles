@@ -12,7 +12,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-markdown'
 call plug#end()
 
-set t_Co=16
+" set t_Co=16
 " Homegrown is best grown colorscheme
 " colorscheme jah_wombat
 set t_Co=256
