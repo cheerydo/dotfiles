@@ -11,9 +11,8 @@ dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
 #font = Dina Medium 10
-font = Inconsolatazi4 11
-#font = Hack 10
-#font = Source Code Pro 10
+#font = Inconsolatazi4 12
+font = Fira Mono 10
 scrollback_lines = 1000
 search_wrap = true
 cursor_blink = off
@@ -26,36 +25,77 @@ background = #000000
 roundness = 2.0
 
 [colors]
+foreground = #FFFFFF
+background = #303030
+
+## These were custom colors until 11 29 15
+## black
+#color0 = #000000
+#color8 = #555753
+## red
+#color1 = #ff6565
+#color9 = #ff8d8d
+## green
+#color2 = #99e051
+#color10 = #c2e0a3
+## yellow
+#color3 = #eafd51
+#color11 = #f6fdbd
+## blue
+#color4 = #204a87
+#color12 = #3465a4
+## magenta
+#color5 = #ce5c00
+#color13 = #f57900
+## cyan
+#color6 = #89b6e2
+#color14 = #46a4ff
+## white
+#color7 = #cccccc
+#color15 = #ffffff
+
+# special from newly minted Xresources on 11 29 15
 foreground = #ffffff
 background = #303030
-#background = #292929
-
 # black
 color0 = #000000
-color8 = #555753
+color8 = #000000
+#color8 = #555753
 # red
-color1 = #ff6565
-color9 = #ff8d8d
+color1 = #ec7171
+color9 = #ec7171
+#color9 = #b8cfee
+# BELOW HERE ARE NEWNEW
 # green
-color2 = #93d44f
-color10 = #c8e7a8
-## from laptop
-#color2 = #6fb126
-#color10 = #b6e354
+color2 = #99e051
+color10 = #99e051
+#color10 = #c2e0a3
 # yellow
-color3 = #eab93d
-color11 = #ffc123
+color3 = #eafd51
+color11 = #eafd51
+#color11 = #f6fdbd
+# BELOW HERE ARE OLDNEW 
+## green
+#color2 = #b0e07f
+#color10 = #d4e0c9
+## yellow
+#color3 = #cfe04e
+#color11 = #f2fd9a
 # blue
-color4 = #204a87
-color12 = #3465a4
+color4 = #2e6dc8
+color12 = #2e6dc8
+#color12 = #88a2c8
 # magenta
-color5 = #ce5c00
-color13 = #f57900
+color5 = #ab5ac9
+color13 = #ab5ac9
+#color13 = #c0a7c9
 # cyan
-color6 = #89b6e2
-color14 = #46a4ff
+color6 = #4bd8e2
+color14 = #4bd8e2
+#color14 = #99dde2
 # white
-color7 = #cccccc
-color15 = #ffffff
+color7 = #cdcdcd
+color15 = #cdcdcd
+#color15 = #ffffff
 
 # vim: ft=dosini cms=#%s
