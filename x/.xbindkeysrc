@@ -28,11 +28,11 @@
 "firefox"
   Mod4 + Alt + w
 
-"dmenu_run"
-  Mod4 + p
+#"dmenu_run"
+#  Mod4 + p
 
 "passmenu"
   Mod4 + Shift + p
 
 "termite -e 'bc -q'"
-  Control + Alt + c
+  Mod4 + Shift + c
