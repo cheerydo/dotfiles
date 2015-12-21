@@ -20,7 +20,7 @@ nnoremap  <a-s-k> :tabmove! -1<cr>
 
 set defsearch=ddg
 set focuscontent
-set gui=tabs,navigation,nobookmarks
+set gui=tabs,navigation,bookmarks
 set hlsearch
 set hintchars=fdsartgbvecwxqyiopmnhzuljk
 set maxitems=10
