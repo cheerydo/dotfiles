@@ -14,10 +14,10 @@ call plug#end()
 
 " Some nice aesthetic options
 " Colorscheme bits
-"set t_Co=256
-"colorscheme apprentice
-set t_Co=16
-hi CursorLine cterm=NONE ctermbg=237
+"set t_Co=16
+"hi CursorLine cterm=NONE ctermbg=237
+set t_Co=256
+colorscheme apprentice
 
 " And the rest
 set backspace=2

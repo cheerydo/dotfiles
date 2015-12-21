@@ -11,9 +11,6 @@ new_window pixel 1
 # }}}
 # {{{ Window binds
 
-# start dmenu (a program launcher)
-#bindsym $mod+p exec dmenu_run -nf '#FFFFFF' -nb '#000000' -fn '-*-dina-bold-r-*-*-10-*-*-*-*-*-*-*'
-
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
