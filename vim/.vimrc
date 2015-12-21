@@ -12,13 +12,14 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-markdown'
 call plug#end()
 
-set t_Co=16
-" Homegrown is best grown colorscheme
-" colorscheme jah_wombat
-set t_Co=256
-colorscheme apprentice
-
 " Some nice aesthetic options
+" Colorscheme bits
+"set t_Co=256
+"colorscheme apprentice
+set t_Co=16
+hi CursorLine cterm=NONE ctermbg=237
+
+" And the rest
 set backspace=2
 set cursorline
 set incsearch
@@ -59,6 +60,9 @@ set wildmode=longest:full,full
 
 " Use Xorg buffer as default
 set clipboard=unnamed
+
+" Use 1 column to margin of folds
+set foldcolumn=1
 
 " Gotta have my syntax and filetype helps
 syntax on
