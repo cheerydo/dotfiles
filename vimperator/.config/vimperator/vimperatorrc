@@ -11,21 +11,60 @@ nnoremap  d <c-d>
 nnoremap  u <c-u>
 nnoremap  x :bd<cr>
 nnoremap  X :undo<cr>
-map       J <c-p>
-map       K <c-n>
-map       <a-s-j> :tabmove! -1<cr>
-map       <a-s-k> :tabmove! +1<cr>
+nnoremap  J <c-n>
+nnoremap  K <c-p>
+nnoremap  <a-j> <c-n>
+nnoremap  <a-k> <c-p>
+nnoremap  <a-s-j> :tabmove! +1<cr>
+nnoremap  <a-s-k> :tabmove! -1<cr>
 
-set gui=tabs,navigation
+set defsearch=ddg
+set focuscontent
+set gui=tabs,navigation,nobookmarks
 set hlsearch
 set hintchars=fdsartgbvecwxqyiopmnhzuljk
-set focuscontent=true
 set maxitems=10
 set noscrollbars
 set status+=ssl
 set wildmode=list:longest,full
 
 " Maps
-nmap <c-b> :sbar<Space>Bookmarks<cr>
+nmap <c-b> :ignorekeys<cr> :sbar<Space>Bookmarks<cr>
 
 " Firefox about:config
+set! intl.charset.fallback.override=unicode
+" I'll manage my own thanks
+set! extensions.checkCompatibility=false
+" Only cookies from originating server
+set! network.cookie.cookieBehavior=1
+" Disables plugins by default
+set! plugins.click_to_play=true
+" Don't do that
+set! reader.parse-on-load.enabled=false
+
+" Baby says I gotsta have muh privacy
+set! browser.safebrowsing.downloads.enabled=false
+set! browser.safebrowsing.malware.enabled=false
+set! browser.safebrowsing.enabled=false
+set! privacy.trackingprotection.enabled=true
+set! browser.search.suggest.enabled=false
+set! network.http.sendRefererHeader=0
+set! network.prefetch-next=false
+set! browser.pocket.enabled=false
+set! geo.enabled=false
+set! datareporting.healthreport.service.enabled=false
+set! datareporting.healthreport.uploadEnabled=false
+set! toolkit.telemetry.enabled=false
+set! browser.selfsupport.url=""
+set! browser.readinglist.enabled=false
+set! browser.readinglist.sidebarEverOpened=false
+
+" Disable WebRTC, Firefox Hello, and EME
+set! media.peerconnection.enabled=false
+set! loop.enabled=false
+set! media.gmp-eme-adobe.enabled=false
+set! media.eme.enabled=false
+
+" Force safe ssl
+set! security.ssl.treat_unsafe_negotiation_as_broken=true
+set! security.ssl.require_safe_negotiation=true
