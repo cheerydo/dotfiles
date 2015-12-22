@@ -1,11 +1,11 @@
-"ponymix increase 10 && notify-send 'Volume is' $(ponymix get-volume)"
-  XF86AudioRaiseVolume
-
-"ponymix decrease 10 && notify-send 'Volume is' $(ponymix get-volume)"
-  XF86AudioLowerVolume
-
-"ponymix toggle && notify-send $((ponymix is-muted && echo 'Volume is muted') || echo 'Volume is not muted')"
-  XF86AudioMute
+#"ponymix increase 10 && notify-send 'Volume is' $(ponymix get-volume)"
+#  XF86AudioRaiseVolume
+#
+#"ponymix decrease 10 && notify-send 'Volume is' $(ponymix get-volume)"
+#  XF86AudioLowerVolume
+#
+#"ponymix toggle && notify-send $((ponymix is-muted && echo 'Volume is muted') || echo 'Volume is not muted')"
+#  XF86AudioMute
 
 "xbacklight -inc 10"
   XF86MonBrightnessUp

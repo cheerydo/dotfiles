@@ -36,14 +36,6 @@ case "$2" in
         stalonetray &
         nm-applet &
         exec spectrwm ;;
-    i3) 
-        nitrogen --restore
-        compton -b
-        xbindkeys
-        synclient VertScrollDelta=-108
-        synclient HorizScrollDelta=-10
-        synclient HorizTwoFingerScroll=1
-        exec i3 ;;
     rat)
         compton -b
         xbindkeys
@@ -62,6 +54,14 @@ case "$2" in
         compton -b
         xbindkeys
         exec frankenwm ;;
-    cinn|*)
+    cinn)
         exec cinnamon-session ;;
+    i3|*) 
+        nitrogen --restore
+        compton -b
+        xbindkeys
+        synclient VertScrollDelta=-108
+        synclient HorizScrollDelta=-10
+        synclient HorizTwoFingerScroll=1
+        exec i3 ;;
 esac
