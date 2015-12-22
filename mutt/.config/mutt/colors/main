@@ -19,8 +19,8 @@ mono body bold "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
 color body brightgreen default "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
 
 ## Header
-color header green default "^from:"
-color header green default "^to:"
+color header brightcyan default "^from:"
+color header brightcyan default "^to:"
 color header green default "^cc:"
 color header brightcyan default "^date:"
 color header yellow default "^newsgroups:"
