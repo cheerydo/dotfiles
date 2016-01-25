@@ -3,8 +3,8 @@ set nocompatible
 
 " Vim-plug awesomeness
 call plug#begin('~/.vim/plugged')
+Plug 'romainl/Apprentice'
 Plug 'itchyny/lightline.vim'
-Plug 'godlygeek/csapprox'
 Plug 'kien/ctrlp.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'scrooloose/nerdtree'
@@ -13,7 +13,7 @@ Plug 'tpope/vim-markdown'
 call plug#end()
 
 " Homegrown is best grown colorscheme
-colorscheme jah_wombat
+colorscheme apprentice
 
 " Some nice aesthetic options
 set backspace=2
@@ -27,6 +27,8 @@ set ruler
 set showmatch
 set showcmd
 set title
+set titlestring="vim %f"
+let &titleold=getcwd()
 
 " No backups, YOLO
 set nobackup
