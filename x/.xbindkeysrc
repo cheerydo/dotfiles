@@ -1,11 +1,11 @@
-"ponymix increase 10 && notify-send 'Volume is' $(ponymix get-volume)"
-  XF86AudioRaiseVolume
-
-"ponymix decrease 10 && notify-send 'Volume is' $(ponymix get-volume)"
-  XF86AudioLowerVolume
-
-"ponymix toggle && notify-send $((ponymix is-muted && echo 'Volume is muted') || echo 'Volume is not muted')"
-  XF86AudioMute
+#"ponymix increase 10 && notify-send 'Volume is' $(ponymix get-volume)"
+#  XF86AudioRaiseVolume
+#
+#"ponymix decrease 10 && notify-send 'Volume is' $(ponymix get-volume)"
+#  XF86AudioLowerVolume
+#
+#"ponymix toggle && notify-send $((ponymix is-muted && echo 'Volume is muted') || echo 'Volume is not muted')"
+#  XF86AudioMute
 
 "xbacklight -inc 10"
   XF86MonBrightnessUp
@@ -25,14 +25,14 @@
 "termite -e ncmpcpp"
   Control + Alt + m
 
-"chromium"
-  Control + Alt + W
+"firefox"
+  Mod4 + Alt + w
 
-"dmenu_run"
-  Mod4 + p
+#"dmenu_run"
+#  Mod4 + p
 
 "passmenu"
   Mod4 + Shift + p
 
 "termite -e 'bc -q'"
-  Control + Alt + c
+  Mod4 + Shift + c

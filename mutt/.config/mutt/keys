@@ -1,6 +1,8 @@
 # Main keys
 bind index,pager,generic,attach h       exit
 bind index,pager    H      display-toggle-weed
+bind index,pager    \Cl       next-entry
+bind index,pager    \Ch       previous-entry
 bind index,pager    \Cp    sidebar-prev
 bind index,pager    \Cn    sidebar-next
 bind index,pager    \Co    sidebar-open
@@ -16,8 +18,6 @@ bind index    n         next-thread
 bind index    p         previous-thread
 bind index    l         display-message
 bind index    \Cf       limit
-bind index    \Cl       next-entry
-bind index    \Ch       previous-entry
 bind index    <Esc>r    refresh
 bind index    <space>   collapse-thread
 bind index    <return>  display-message

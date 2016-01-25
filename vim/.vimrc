@@ -14,8 +14,13 @@ call plug#end()
 
 " Homegrown is best grown colorscheme
 colorscheme apprentice
-
 " Some nice aesthetic options
+" Colorscheme bits
+"set t_Co=16
+"hi CursorLine cterm=NONE ctermbg=237
+"set t_Co=256
+
+" And the rest
 set backspace=2
 set cursorline
 set incsearch
@@ -26,6 +31,8 @@ set nohlsearch
 set ruler
 set showmatch
 set showcmd
+set splitbelow
+set splitright
 set title
 set titlestring="vim %f"
 let &titleold=getcwd()
@@ -38,6 +45,9 @@ set noundofile
 " History and vimfile specs
 set history=50
 set viminfo+=n~/.vim/viminfo
+
+" Key timeouts for commands in ms
+set timeoutlen=500
 
 " Demote suffixes we don't want to see in file searching
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
@@ -53,6 +63,9 @@ set wildmode=longest:full,full
 
 " Use Xorg buffer as default
 set clipboard=unnamed
+
+" Use 1 column to margin of folds
+set foldcolumn=1
 
 " Gotta have my syntax and filetype helps
 syntax on
@@ -81,6 +94,7 @@ set pastetoggle=<F4>
 " Window nav with resize
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
+
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-w>h :vertical res -5<CR>
@@ -101,6 +115,10 @@ nnoremap <Leader>x :tabclose<CR>
 
 " Zen mode for writing
 nnoremap <Leader>wr :tabe +Goyo<Space>
+
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+      \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+      \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 """ Plugin settings """
 " Statusline times

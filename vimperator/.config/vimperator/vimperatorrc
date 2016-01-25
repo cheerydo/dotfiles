@@ -1,32 +1,70 @@
-"3.9 (created: 2015/02/15 15:49:05)
-
+" vim: set ft=vim:
 set runtimepath=$HOME/.config/vimperator
-colorscheme vimium_hints.vmp
+colorscheme jah
 
-" Faster navigation
-nnoremap h 5h
-nnoremap j 5j
-nnoremap k 5k
-nnoremap l 5l
+" Saner navigation (for me anyway!)
+nnoremap  h 5h
+nnoremap  j 5j
+nnoremap  k 5k
+nnoremap  l 5l
+nnoremap  d <c-d>
+nnoremap  u <c-u>
+nnoremap  x :bd<cr>
+nnoremap  X :undo<cr>
+nnoremap  J <c-n>
+nnoremap  K <c-p>
+nnoremap  <a-j> <c-n>
+nnoremap  <a-k> <c-p>
+nnoremap  <a-s-j> :tabmove! +1<cr>
+nnoremap  <a-s-k> :tabmove! -1<cr>
 
-" I hate the Ctrl key sometimes
-nnoremap d <c-d>
-nnoremap u <c-u>
+set defsearch=ddg
+set focuscontent
+set gui=tabs,navigation,bookmarks
+set hlsearch
+set hintchars=fdsartgbvecwxqyiopmnhzuljk
+set maxitems=10
+set noscrollbars
+set status+=ssl
+set wildmode=list:longest,full
 
-" Make it behave like dwb (sad cry)
-nnoremap x :bd<cr>
-nnoremap X :undo<cr>
-map J <c-p>
-map K <c-n>
-map <a-s-j> :tabmove! -1<cr>
-map <a-s-k> :tabmove! +1<cr>
+" Maps
+nmap <c-b> :ignorekeys<cr> :sbar<Space>Bookmarks<cr>
 
-set hintchars=asdfjkl;ghruie
+" Firefox about:config
+set! intl.charset.fallback.override=unicode
+" I'll manage my own thanks
+set! extensions.checkCompatibility=false
+" Only cookies from originating server
+set! network.cookie.cookieBehavior=1
+" Disables plugins by default
+set! plugins.click_to_play=true
+" Don't do that
+set! reader.parse-on-load.enabled=false
 
-" Gud looks bae
-set gui=tabs,navigation
+" Baby says I gotsta have muh privacy
+set! browser.safebrowsing.downloads.enabled=false
+set! browser.safebrowsing.malware.enabled=false
+set! browser.safebrowsing.enabled=false
+set! privacy.trackingprotection.enabled=true
+set! browser.search.suggest.enabled=false
+set! network.http.sendRefererHeader=0
+set! network.prefetch-next=false
+set! browser.pocket.enabled=false
+set! geo.enabled=false
+set! datareporting.healthreport.service.enabled=false
+set! datareporting.healthreport.uploadEnabled=false
+set! toolkit.telemetry.enabled=false
+set! browser.selfsupport.url=""
+set! browser.readinglist.enabled=false
+set! browser.readinglist.sidebarEverOpened=false
 
-" Toggle dat bar
-nmap <c-b> :sbar<Space>Bookmarks<cr>
+" Disable WebRTC, Firefox Hello, and EME
+set! media.peerconnection.enabled=false
+set! loop.enabled=false
+set! media.gmp-eme-adobe.enabled=false
+set! media.eme.enabled=false
 
-" vim: set ft=vimperator:
+" Force safe ssl
+set! security.ssl.treat_unsafe_negotiation_as_broken=true
+set! security.ssl.require_safe_negotiation=true
