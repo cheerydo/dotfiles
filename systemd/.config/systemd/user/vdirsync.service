@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/sbin/vdirsyncer
+ExecStart=/sbin/vdirsyncer sync
 
 [Install]
 WantedBy=default.target
