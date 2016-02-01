@@ -18,15 +18,15 @@ nnoremap  <a-k> <c-p>
 nnoremap  <a-s-j> :tabmove! +1<cr>
 nnoremap  <a-s-k> :tabmove! -1<cr>
 
-set defsearch=ddg
-set focuscontent
+"set defsearch=ddg
+"set focuscontent
 set gui=tabs,navigation,bookmarks
 set hlsearch
 set hintchars=fdsartgbvecwxqyiopmnhzuljk
-set maxitems=10
-set noscrollbars
+"set maxitems=10
+"set noscrollbars
 set status+=ssl
-set wildmode=list:longest,full
+"set wildmode=list:longest,full
 
 " Maps
 nmap <c-b> :ignorekeys<cr> :sbar<Space>Bookmarks<cr>
@@ -48,7 +48,7 @@ set! browser.safebrowsing.malware.enabled=false
 set! browser.safebrowsing.enabled=false
 set! privacy.trackingprotection.enabled=true
 set! browser.search.suggest.enabled=false
-set! network.http.sendRefererHeader=0
+set! network.http.sendRefererHeader=1
 set! network.prefetch-next=false
 set! browser.pocket.enabled=false
 set! geo.enabled=false
