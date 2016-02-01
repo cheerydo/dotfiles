@@ -73,7 +73,6 @@ set text_flowed
 set pager_stop
 set menu_scroll
 set delete
-set beep_new
 unset mark_old
 unset markers
 unset help
