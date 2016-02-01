@@ -1,5 +1,5 @@
 [options]
-browser = /usr/bin/firefox
+browser = /usr/bin/chromium
 resize_grip = false
 scroll_on_output = false
 scroll_on_keystroke = true

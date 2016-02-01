@@ -1,0 +1,9 @@
+[Unit]
+Description=sync CalDav calendar and CardDav contacts
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=30min
+
+[Install]
+WantedBy=default.target

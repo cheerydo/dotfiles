@@ -1,0 +1,10 @@
+[Unit]
+Description=Start vdirsyncer for contacts and calendar
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/sbin/vdirsyncer
+
+[Install]
+WantedBy=default.target
