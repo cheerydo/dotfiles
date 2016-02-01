@@ -12,9 +12,9 @@ setopt histappend \
     interactivecomments \
     autocd \
     automenu \
-    completealiases \
     nobgnice \
-    prompt_subst
+    prompt_subst \
+    nocheckjobs
 
 # Some history params
 HISTSIZE=10000
