@@ -44,3 +44,5 @@ window_border_color = "green"
 active_window_border = "green"
 
 ask_before_clearing_playlists = no
+
+#media_library_primary_tag = album_artist
