@@ -97,6 +97,6 @@ dzen2.foreground:       rgb:ff/ff/ff
 dzen2.background:       rgb:00/00/00
 
 rofi.font:              Fira Mono 10
-rofi.key-window:        Mod4+bracketleft
-rofi.key-run:           Mod4+p
+rofi.key-window:        SuperL+bracketleft
+rofi.key-run:           SuperL+p
 rofi.terminal:          /sbin/termite
