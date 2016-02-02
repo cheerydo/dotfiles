@@ -91,7 +91,8 @@ set sidebar_visible=no
 set sidebar_width=25
 set sidebar_delim=" |"
 color sidebar_new brightdefault default 
-
+set sidebar_shortpath=yes
+set sidebar_folderindent=yes
 # Default index_format
 folder-hook "Sent*" 'set index_format="%3C %Z  |  %(!%m/%d)   %-35.35F   %?M?[+](%2.M messages)? %s"'
 folder-hook ! "Sent*" 'set index_format="%3C %Z  |  %(!%m/%d)   %-35.35F   %?M?[+](%2.M messages)? %s"'
