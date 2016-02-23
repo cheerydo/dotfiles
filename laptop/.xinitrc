@@ -12,56 +12,56 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 # Some X stuff I really need
-xset b off
-xset s off
-xset -dpms
-xset +fp /usr/share/fonts/local
-xset +fp /home/jared/.fonts
-xset fp rehash
-setxkbmap -option caps:super -option shift:both_capslock
-xrdb -load ~/.Xresources
+xset b off &
+xset s off &
+xset -dpms &
+xset +fp /usr/share/fonts/local &
+xset +fp /home/jared/.fonts &
+xset fp rehash &
+setxkbmap -option caps:super -option shift:both_capslock &
+xrdb -load ~/.Xresources &
 
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets)
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets) &
 
 #mpd &
 
 case "$2" in
     spectrwm)
         nitrogen --restore &
-        compton -b
-        synclient VertScrollDelta=-108
-        synclient HorizScrollDelta=-10
-        synclient HorizTwoFingerScroll=1
-        xbindkeys
+        compton -b &
+        synclient VertScrollDelta=-108 &
+        synclient HorizScrollDelta=-10 &
+        synclient HorizTwoFingerScroll=1 &
+        xbindkeys &
         stalonetray &
         nm-applet &
         exec spectrwm ;;
     rat)
-        compton -b
-        xbindkeys
-        synclient VertScrollDelta=-108
-        synclient HorizScrollDelta=-10
-        synclient HorizTwoFingerScroll=1
+        compton -b &
+        xbindkeys &
+        synclient VertScrollDelta=-108 &
+        synclient HorizScrollDelta=-10 &
+        synclient HorizTwoFingerScroll=1 &
         exec ratpoison ;;
     pekwm)
-        compton -b
-        xbindkeys
-        synclient VertScrollDelta=-108
-        synclient HorizScrollDelta=-10
-        synclient HorizTwoFingerScroll=1
+        compton -b &
+        xbindkeys &
+        synclient VertScrollDelta=-108 &
+        synclient HorizScrollDelta=-10 &
+        synclient HorizTwoFingerScroll=1 &
         exec pekwm ;;
     fwm)
-        compton -b
-        xbindkeys
+        compton -b &
+        xbindkeys &
         exec frankenwm ;;
     cinn)
         exec cinnamon-session ;;
     i3|*) 
-        nitrogen --restore
-        compton -b
-        xbindkeys
-        synclient VertScrollDelta=-108
-        synclient HorizScrollDelta=-10
-        synclient HorizTwoFingerScroll=1
+        nitrogen --restore &
+        compton -b &
+        xbindkeys &
+        synclient VertScrollDelta=-108 &
+        synclient HorizScrollDelta=-10 &
+        synclient HorizTwoFingerScroll=1 &
         exec i3 ;;
 esac
