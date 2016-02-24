@@ -26,6 +26,7 @@ setxkbmap -option caps:super -option shift:both_capslock &
 xrdb -load ~/.Xresources &
 xbindkeys &
 (sleep 2 && compton -b) &
+emacs --daemon &
 
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets)
 
