@@ -18,3 +18,5 @@ if [[ "$HOST" == potatoes ]]; then
   fi
   export GPG_AGENT_INFO  # the env file does not contain the export statement
 fi
+
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx xf 

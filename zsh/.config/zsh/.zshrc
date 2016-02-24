@@ -40,19 +40,19 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':vcs_info:*' enable git svn
 
 # Erliarses
-if [[ -f $ZDOTDIR/.aliases ]]; then
-    . $ZDOTDIR/.aliases
+if [[ -f $ZDOTDIR/aliases.main ]]; then
+  . $ZDOTDIR/aliases.main
 fi
 
 if [[ $HOST == "chicken" ]]; then
-    . $ZDOTDIR/aliases.obsd
-    eval $(gdircolors $ZDOTDIR/.dircolors)
+  . $ZDOTDIR/aliases.obsd
+  eval $(gdircolors $ZDOTDIR/.dircolors)
 elif [[ $HOST == "potatoes" ]]; then
-    . $ZDOTDIR/aliases.debian
-    eval $(dircolors $ZDOTDIR/.dircolors)
+  . $ZDOTDIR/aliases.debian
+  eval $(dircolors $ZDOTDIR/.dircolors)
 else
-    . $ZDOTDIR/aliases.arch
-    eval $(dircolors $ZDOTDIR/.dircolors)
+  . $ZDOTDIR/aliases.arch
+  eval $(dircolors $ZDOTDIR/.dircolors)
 fi
 
 case $TERM in
@@ -72,6 +72,8 @@ bindkey -M vicmd "^[[H" vi-beginning-of-line
 bindkey          "^[[H" beginning-of-line
 bindkey -M vicmd "^[[F" vi-end-of-line
 bindkey          "^[[F" end-of-line
+bindkey -M vicmd "^[[3~" vi-delete-char 
+bindkey          "^[[3~" delete-char 
 
 # Prompt!
 PROMPT='[%m](%5~) ──── '
