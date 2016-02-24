@@ -19,14 +19,14 @@ nnoremap  <a-s-j> :tabmove! +1<cr>
 nnoremap  <a-s-k> :tabmove! -1<cr>
 
 "set defsearch=ddg
-"set focuscontent
-set gui=tabs,navigation,bookmarks
+set focuscontent
+set gui=tabs,nonavigation,bookmarks
 set hlsearch
 set hintchars=fdsartgbvecwxqyiopmnhzuljk
-"set maxitems=10
+set maxitems=10
 "set noscrollbars
 set status+=ssl
-"set wildmode=list:longest,full
+set wildmode=list:longest
 
 " Maps
 nmap <c-b> :ignorekeys<cr> :sbar<Space>Bookmarks<cr>
@@ -61,6 +61,10 @@ set! browser.readinglist.sidebarEverOpened=false
 
 " Disable WebRTC, Firefox Hello, and EME
 set! media.peerconnection.enabled=false
+set! media.peerconnection.turn.disable = true
+set! media.peerconnection.use_document_iceservers = false
+set! media.peerconnection.video.enabled = false
+set! media.peerconnection.identity.timeout = 1
 set! loop.enabled=false
 set! media.gmp-eme-adobe.enabled=false
 set! media.eme.enabled=false

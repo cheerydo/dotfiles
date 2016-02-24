@@ -16,3 +16,4 @@ vim/.vim/*
 !vim/.vim/ftplugin
 newsbeuter/.newsbeuter/*
 !newsbeuter/.newsbeuter/config
+systemd/.config/systemd/user/default.target.wants
