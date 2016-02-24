@@ -1,8 +1,8 @@
 hi clear
 
 " Command Line colors
-hi StatusLine color: #ddc; background: #333; font-family: Consolas; font-size: 12px; margin-top: 1px;
-hi CmdLine color: #aaa; background: #333; font-family: Consolas; font-size: 12px; padding: 0px; vertical-align: middle; border: none;
+hi StatusLine color: #ddc; background: #2B2E37; font-family: Consolas; font-size: 12px; margin-top: 1px;
+hi CmdLine color: #aaa; background: #2B2E37; font-family: Consolas; font-size: 12px; padding: 0px; vertical-align: middle; border: none;
 
 " Completion results
 hi CompResult color: #aaa; width: 45%; overflow: hidden; font-size: 10pt; font-family: Consolas; font-weight: normal;

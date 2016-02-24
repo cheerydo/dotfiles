@@ -3,10 +3,10 @@ set runtimepath=$HOME/.config/vimperator
 colorscheme jah
 
 " Saner navigation (for me anyway!)
-nnoremap  h 5h
+nnoremap  h gT
 nnoremap  j 5j
 nnoremap  k 5k
-nnoremap  l 5l
+nnoremap  l gt
 nnoremap  d <c-d>
 nnoremap  u <c-u>
 nnoremap  x :bd<cr>
@@ -15,49 +15,41 @@ nnoremap  J <c-n>
 nnoremap  K <c-p>
 nnoremap  <a-j> <c-n>
 nnoremap  <a-k> <c-p>
-nnoremap  <a-s-j> :tabmove! +1<cr>
-nnoremap  <a-s-k> :tabmove! -1<cr>
+nnoremap  <a-l> :tabmove! +1<cr>
+nnoremap  <a-h> :tabmove! -1<cr>
 
-"set defsearch=ddg
 set focuscontent
-set gui=tabs,nonavigation,bookmarks
+set gui=tabs,bookmarks,nonavigation
 set hlsearch
 set hintchars=fdsartgbvecwxqyiopmnhzuljk
 set maxitems=10
-"set noscrollbars
+set noscrollbars
 set status+=ssl
-set wildmode=list:longest
-
-" Maps
-nmap <c-b> :ignorekeys<cr> :sbar<Space>Bookmarks<cr>
-
-" Firefox about:config
-set! intl.charset.fallback.override=unicode
-" I'll manage my own thanks
-set! extensions.checkCompatibility=false
-" Only cookies from originating server
-set! network.cookie.cookieBehavior=1
-" Disables plugins by default
-set! plugins.click_to_play=true
-" Don't do that
-set! reader.parse-on-load.enabled=false
+set complete=slh
+set wildmode=list:full
 
 " Baby says I gotsta have muh privacy
+set! browser.pocket.enabled=false
+set! browser.readinglist.enabled=false
+set! browser.readinglist.sidebarEverOpened=false
 set! browser.safebrowsing.downloads.enabled=false
 set! browser.safebrowsing.malware.enabled=false
 set! browser.safebrowsing.enabled=false
-set! privacy.trackingprotection.enabled=true
 set! browser.search.suggest.enabled=false
-set! network.http.sendRefererHeader=1
-set! network.prefetch-next=false
-set! browser.pocket.enabled=false
-set! geo.enabled=false
+set! browser.selfsupport.url=""
+set! browser.tabs.drawInTitlebar=true
 set! datareporting.healthreport.service.enabled=false
 set! datareporting.healthreport.uploadEnabled=false
+set! intl.charset.fallback.override=unicode
+set! extensions.checkCompatibility=false
+set! geo.enabled=false
+set! network.cookie.cookieBehavior=1
+set! network.http.sendRefererHeader=1
+set! network.prefetch-next=false
+set! plugins.click_to_play=true
+set! privacy.trackingprotection.enabled=true
+set! reader.parse-on-load.enabled=false
 set! toolkit.telemetry.enabled=false
-set! browser.selfsupport.url=""
-set! browser.readinglist.enabled=false
-set! browser.readinglist.sidebarEverOpened=false
 
 " Disable WebRTC, Firefox Hello, and EME
 set! media.peerconnection.enabled=false
@@ -70,5 +62,22 @@ set! media.gmp-eme-adobe.enabled=false
 set! media.eme.enabled=false
 
 " Force safe ssl
+" and disable broken DH primes
 set! security.ssl.treat_unsafe_negotiation_as_broken=true
 set! security.ssl.require_safe_negotiation=true
+set! security.ssl3.dhe_rsa_aes_128_sha=false
+set! security.ssl3.dhe_rsa_aes_256_sha=false
+
+" Disable all autoplay. Please
+set! media.autoplay.enabled=true
+set! media.gstreamer.enabled=false
+set! media.webm.enabled=false
+set! media.opus.enabled=false
+set! media.wave.enabled=false
+set! media.ogg.enabled=false
+
+" Key maps
+nmap <c-b> :ignorekeys<cr> :sbar<Space>Bookmarks<cr>
+
+" Ublock origin fix
+"style -name ublock * #nav-bar * { visibility: visible; }

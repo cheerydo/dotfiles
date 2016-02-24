@@ -67,6 +67,7 @@
 ! fontconfigs and copy/paste with url launching
 !URxvt.font: 		xft:Inconsolata-zi4:size=12
 !*font:                  -*-termsyn-medium-*-*-*-15-*-*-*-*-*-*-*
+Emacs.font: 		Fira Mono 10
 *font:                  -*-dina-medium-r-*-*-13-*-*-*-*-*-*-*
 *perl-ext-common:       default,clipboard,url-select,keyboard-select
 *keysym.M-Escape:       perl:keyboard-select:activate
@@ -100,3 +101,7 @@ rofi.font:              Fira Mono 10
 rofi.key-window:        SuperL+bracketleft
 rofi.key-run:           SuperL+p
 rofi.terminal:          /sbin/termite
+
+Emacs.toolBar:          0
+Emacs.verticalScrollBars: off
+Emacs.menuBar:          0
