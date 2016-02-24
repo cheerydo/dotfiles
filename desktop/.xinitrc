@@ -12,34 +12,30 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 # Some X stuff
-xset b off
-xset s off
-xset -dpms
+xset b off &
+xset s off &
+xset -dpms &
+xset m 5 7 &
+ 
+xset +fp /usr/share/fonts/local &
+xset +fp /usr/share/fonts/misc &
+xset +fp /home/jared/.fonts &
+xset fp rehash &
 
-xset +fp /usr/share/fonts/local
-xset +fp /usr/share/fonts/misc
-xset +fp /home/jared/.fonts
-xset fp rehash
+setxkbmap -option caps:super -option shift:both_capslock &
+xrdb -load ~/.Xresources &
+xbindkeys &
+(sleep 2 && compton -b) &
 
-setxkbmap -option caps:super -option shift:both_capslock
-xrdb -load ~/.Xresources
-xbindkeys
-compton -b
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets)
 
 case "$2" in
-	spectrwm)
-          nitrogen --restore
-          exec spectrwm ;;
         ob)
           volumeicon &
           exec openbox-session ;;
         i3) 
-          nitrogen --restore
+          nitrogen --restore &
           exec i3 ;;
-        2b)
-          nitrogen --restore
-          exec 2bwm &
-          termite ;;
         pw)
           exec pekwm ;;
         xf|*)
