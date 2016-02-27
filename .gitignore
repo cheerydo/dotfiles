@@ -2,12 +2,11 @@
 **/*logout
 mpd/*
 !mpd.conf
-zsh/**/**/.zcomp*
+**/.zcomp*
 ncmpcpp/.ncmpcpp/error.log
 ncmpcpp/.ncmpcpp/artists
 ncmpcpp/.ncmpcpp/config.def
-mutt/.config/mutt/cache/*
-mutt/.config/mutt/cache/headers
+mutt/.config/mutt/cache/**
 mutt/.config/mutt/certificates
 mutt/.config/mutt/id
 mutt/.config/mutt/addresses
@@ -17,3 +16,5 @@ vim/.vim/*
 newsbeuter/.newsbeuter/*
 !newsbeuter/.newsbeuter/config
 systemd/.config/systemd/user/default.target.wants
+emacs/.emacs.d/*
+!init.el
