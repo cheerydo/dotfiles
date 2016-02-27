@@ -19,6 +19,7 @@ nnoremap  <a-l> :tabmove! +1<cr>
 nnoremap  <a-h> :tabmove! -1<cr>
 
 set focuscontent
+set defsearch=google
 set gui=tabs,bookmarks,nonavigation
 set hlsearch
 set hintchars=fdsartgbvecwxqyiopmnhzuljk
@@ -44,20 +45,20 @@ set! intl.charset.fallback.override=unicode
 set! extensions.checkCompatibility=false
 set! geo.enabled=false
 set! network.cookie.cookieBehavior=1
-set! network.http.sendRefererHeader=1
+set! network.http.sendRefererHeader=2
 set! network.prefetch-next=false
 set! plugins.click_to_play=true
 set! privacy.trackingprotection.enabled=true
 set! reader.parse-on-load.enabled=false
 set! toolkit.telemetry.enabled=false
-
-" Disable WebRTC, Firefox Hello, and EME
+"
+"" Disable WebRTC, Firefox Hello, and EME
 set! media.peerconnection.enabled=false
-set! media.peerconnection.turn.disable = true
-set! media.peerconnection.use_document_iceservers = false
-set! media.peerconnection.video.enabled = false
-set! media.peerconnection.identity.timeout = 1
-set! loop.enabled=false
+set! media.peerconnection.turn.disable=true
+set! media.peerconnection.use_document_iceservers=false
+set! media.peerconnection.video.enabled=false
+set! media.peerconnection.identity.timeout=0
+set! loop.enabled=true
 set! media.gmp-eme-adobe.enabled=false
 set! media.eme.enabled=false
 

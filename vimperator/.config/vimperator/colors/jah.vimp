@@ -1,14 +1,14 @@
 hi clear
 
 " Command Line colors
-hi StatusLine color: #ddc; background: #2B2E37; font-family: Consolas; font-size: 12px; margin-top: 1px;
-hi CmdLine color: #aaa; background: #2B2E37; font-family: Consolas; font-size: 12px; padding: 0px; vertical-align: middle; border: none;
+hi StatusLine color: #ddc; background: #2B2E37; font-family: Fira Mono; font-size: 12px; margin-top: 1px;
+hi CmdLine color: #aaa; background: #2B2E37; font-family: Fira Mono; font-size: 12px; padding: 0px; vertical-align: middle; border: none;
 
 " Completion results
-hi CompResult color: #aaa; width: 45%; overflow: hidden; font-size: 10pt; font-family: Consolas; font-weight: normal;
+hi CompResult color: #aaa; width: 45%; overflow: hidden; font-size: 10pt; font-family: Fira Mono; font-weight: normal;
 hi CompTitle color: #ddc; background: #333; font-weight: bold;
 hi CompTitle>* color: #aaa; font-weight: bold; border-top: 1px solid gray; border-bottom: 1px solid #BBB; padding: 1px 0.5ex;
-hi CompDesc color: #999; width: 50%; font-size: 9pt; font-family: Consolas; font-weight: normal;
+hi CompDesc color: #999; width: 50%; font-size: 9pt; font-family: Fira Mono; font-weight: normal;
 hi CompItem[selected] background: #666;
 
 " Kindly inspired hints from vimium
