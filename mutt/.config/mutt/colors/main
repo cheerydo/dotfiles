@@ -61,7 +61,7 @@ color quoted7 green default
 
 ## Default color definitions
 color signature brightmagenta default
-color indicator brightblue color237
+color indicator brightblue brightdefault
 color attachment brightdefault default
 color error red default
 color message default default
