@@ -2,7 +2,7 @@
 (require 'package)
 (add-to-list 'package-archives'("org" . "http://orgmode.org/elpa/"))
 (add-to-list 'package-archives'("melpa" . "http://melpa.org/packages/"))
-(add-to-list 'package-archives'("melpa-stable" . "http://stable.melpa.org/packages/"))
+(add-to-list 'package-archives'("marmalade" . "http://marmalade-repo.org/packages/"))
 (setq package-enable-at-startup nil
       load-prefer-newer t)
 
@@ -14,20 +14,14 @@
   (package-refresh-contents)
   (package-install 'use-package))
 (setq use-package-verbose t)
-
 (require 'use-package)
+
 ; auto-compile lisp code
 (use-package auto-compile
              :ensure t
 	     :config
 	     (auto-compile-on-load-mode t)
 	     (auto-compile-on-save-mode t))
-
-; backup settings
-(setq backup-directory-alist '(("." . "~/.emacs.d/bak")))
-(setq delete-old-versions -1)
-(setq version-control t)
-(setq vc-make-backup-files t)
 
 ; GUI settings
 (when window-system
@@ -48,8 +42,13 @@
 	  helm-quick-update t
 	  helm-M-x-requires-pattern nil
 	  helm-M-x-fuzzy-match t
-	  helm-ff-skip-boring-files t)
-          (helm-mode))
+	  helm-ff-skip-boring-files t))
+  :config
+  (progn
+    (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
+    (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)
+    (define-key helm-map (kbd "C-z") 'helm-select-action)
+    (helm-mode t))
   :bind (("C-c h" . helm-mini)
 	 ("C-h a" . helm-apropos)
 	 ("C-x C-b" . helm-buffers-list)
@@ -67,18 +66,18 @@
 (use-package evil
   :ensure t
   :init
-  (progn
-    (require 'evil)
-    (setq evil-default-cursor t
-          evil-want-C-u-scroll t)
-  (evil-mode 1)))
+  (setq evil-want-C-u-scroll t)
+  (setq evil-default-cursor t)
+  (evil-mode))
 
 (use-package powerline
   :ensure t
   :init
-  (progn
-    (require powerline)
-    (powerline-default-theme)))
+  (powerline-default-theme))
+
+(use-package zenburn-theme
+  :ensure t
+  :init (load-theme 'zenburn t))
 
 ;Don't show default window
 (setq inhibit-startup-screen t
@@ -86,4 +85,10 @@
       x-select-enable-primary t
       mouse-yank-at-point t)
 (fset 'yes-or-no-p 'y-or-n-p)
-(load-theme 'zenburn t)
+
+; backup settings
+(setq backup-directory-alist '(("." . "~/.emacs.d/bak")))
+(setq delete-old-versions -1)
+(setq version-control t)
+(setq vc-make-backup-files t)
+
