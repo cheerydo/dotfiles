@@ -81,4 +81,4 @@ set! media.ogg.enabled=false
 nmap <c-b> :ignorekeys<cr> :sbar<Space>Bookmarks<cr>
 
 " Ublock origin fix
-"style -name ublock * #nav-bar * { visibility: visible; }
+style -name ublock * #nav-bar * { visibility: visible; }
