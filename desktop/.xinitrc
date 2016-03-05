@@ -22,7 +22,10 @@ xset +fp /usr/share/fonts/misc &
 xset +fp /home/jared/.fonts &
 xset fp rehash &
 
-setxkbmap -option caps:super -option shift:both_capslock &
+if [ -s ~/.Xmodmap ]; then
+  xmodmap ~/.Xmodmap
+fi
+
 xrdb -load ~/.Xresources &
 xbindkeys &
 (sleep 2 && compton -b) &

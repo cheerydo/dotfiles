@@ -25,36 +25,6 @@ background = #000000
 roundness = 2.0
 
 [colors]
-foreground = #FFFFFF
-background = #303030
-
-## These were custom colors until 11 29 15
-## black
-#color0 = #000000
-#color8 = #555753
-## red
-#color1 = #ff6565
-#color9 = #ff8d8d
-## green
-#color2 = #99e051
-#color10 = #c2e0a3
-## yellow
-#color3 = #eafd51
-#color11 = #f6fdbd
-## blue
-#color4 = #204a87
-#color12 = #3465a4
-## magenta
-#color5 = #ce5c00
-#color13 = #f57900
-## cyan
-#color6 = #89b6e2
-#color14 = #46a4ff
-## white
-#color7 = #cccccc
-#color15 = #ffffff
-
-# special from newly minted Xresources on 11 29 15
 foreground = #ffffff
 background = #303030
 # black
