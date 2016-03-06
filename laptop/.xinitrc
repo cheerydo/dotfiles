@@ -19,7 +19,13 @@ xset +fp /usr/share/fonts/local &
 xset +fp /home/jared/.fonts &
 xset fp rehash &
 setxkbmap -option caps:super -option shift:both_capslock &
-xrdb -load ~/.Xresources &
+if [[ -f ~/.Xresources ]]; then
+  xrdb -load ~/.Xresources &
+fi
+
+if [[ -f ~/.Xmodmap ]]; then
+  xmodmap ~/.Xmodmap &
+fi
 
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets) &
 
