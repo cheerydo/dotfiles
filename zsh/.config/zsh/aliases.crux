@@ -1,0 +1,11 @@
+alias pup='sudo ports -u && sudo prt-get cache'
+alias sup='sudo prt-get sysup'
+alias pin='sudo prt-get depinst'
+alias prem='sudo prt-get remove'
+alias pchk='ports -d'
+alias preps='prt-cache -vv dsearch'
+alias prepi='prt-get info'
+alias ploc='prt-get listinst | grep'
+alias pcat='prt-get cat'
+
+# vim: set ft=zsh:

@@ -65,21 +65,21 @@
 ! --- end of terminal colors section ---
 
 ! fontconfigs and copy/paste with url launching
-!URxvt.font: 		xft:Inconsolata-zi4:size=12
-!*font:                  -*-termsyn-medium-*-*-*-15-*-*-*-*-*-*-*
+! URxvt.font: 		xft:Inconsolata-zi4:size=10
 Emacs.font: 		Fira Mono 10
-*font:                  -*-dina-medium-r-*-*-13-*-*-*-*-*-*-*
-*perl-ext-common:       default,clipboard,url-select,keyboard-select
-*keysym.M-Escape:       perl:keyboard-select:activate
-*keysym.M-s: 	        perl:keyboard-select:search
-*keysym.M-u: 	        perl:url-select:select_next
-*keysym.M-c: 	        perl:clipboard:copy
-*keysym.M-v: 	        perl:clipboard:paste
-*keysym.M-C-v: 	        perl:clipboard:paste_escaped
-*url-select.autocopy:   1
-*url-select.button:     1
-*url-select.underline:  1
-*url-select.launcher:   /usr/bin/chromium
+*font:                  -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
+! *font:                  -*-dina-medium-r-*-*-13-*-*-*-*-*-*-*
+!*perl-ext-common:       default,clipboard,url-select,keyboard-select
+!*keysym.M-Escape:       perl:keyboard-select:activate
+!*keysym.M-s: 	        perl:keyboard-select:search
+!*keysym.M-u: 	        perl:url-select:select_next
+!*keysym.M-c: 	        perl:clipboard:copy
+!*keysym.M-v: 	        perl:clipboard:paste
+!*keysym.M-C-v: 	        perl:clipboard:paste_escaped
+!*url-select.autocopy:   true
+!*url-select.button:     1
+!*url-select.underline:  true
+!*url-select.launcher:   /usr/bin/chromium
 *colorUL:               #4682B4
 *iso14755:              0
 *scrollBar: 	        0
