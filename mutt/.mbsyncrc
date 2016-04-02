@@ -1,9 +1,9 @@
 IMAPAccount fastmail
-Host foo.bar.com
-User foo@fastmail.com
-PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d super-secret-pass.gpg"
+Host mail.messagingengine.com
+User jared@fastmail.com
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d ~/.config/mutt/fmail.gpg"
 SSLType IMAPS
-CertificateFile /etc/ssl/certs/ca-certificates.crt
+CertificateFile /etc/ssl/cert.pem
 
 IMAPStore fastmail-remote
 Account fastmail

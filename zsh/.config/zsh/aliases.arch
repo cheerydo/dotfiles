@@ -27,4 +27,4 @@ alias jserv='ssh obsd-server'
 alias tor='scp ~/down/*.torrent tornainbow@tor-server:/media/sdz1/tornainbow/private/rtorrent/watch && rm ~/down/*.torrent'
 alias startvpn='sudo openvpn /etc/openvpn/client.conf'
 
-# vim: ft=zsh
+# vim: set ft=zsh:

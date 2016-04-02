@@ -108,8 +108,8 @@ nnoremap <Leader>sv :vne<CR>
 nnoremap <Leader>sh :new<CR>
 
 " Tab navigation
-nnoremap <Leader>m :tabnext<CR>
-nnoremap <Leader>n :tabprevious<CR>
+nnoremap <Leader>, :tabnext<CR>
+nnoremap <Leader>. :tabprevious<CR>
 nnoremap <Leader>b :tabedit<Space>
 nnoremap <Leader>B :tabnew<CR>
 nnoremap <Leader>x :tabclose<CR>
