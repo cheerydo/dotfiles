@@ -1,8 +1,8 @@
 ;;; init.el -*- no-byte-compile: t -*-
 (require 'package)
 (add-to-list 'package-archives'("org" . "http://orgmode.org/elpa/"))
-(add-to-list 'package-archives'("melpa" . "http://melpa.org/packages/"))
-(add-to-list 'package-archives'("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives'("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives'("marmalade" . "https://marmalade-repo.org/packages/"))
 (setq package-enable-at-startup nil
       load-prefer-newer t)
 
@@ -48,7 +48,7 @@
     (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
     (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)
     (define-key helm-map (kbd "C-z") 'helm-select-action)
-    (helm-mode t))
+  (helm-mode t))
   :bind (("C-c h" . helm-mini)
 	 ("C-h a" . helm-apropos)
 	 ("C-x C-b" . helm-buffers-list)
@@ -66,18 +66,21 @@
 (use-package evil
   :ensure t
   :init
-  (setq evil-want-C-u-scroll t)
-  (setq evil-default-cursor t)
+  (setq evil-want-C-u-scroll t
+        evil-default-cursor t)
   (evil-mode))
+
+(use-package color-theme-wombat
+  :ensure t
+  :config
+  (load-theme 'wombat t))
 
 (use-package powerline
   :ensure t
   :init
-  (powerline-default-theme))
-
-(use-package zenburn-theme
-  :ensure t
-  :init (load-theme 'zenburn t))
+  (progn
+    (setq powerline-default-separator "wave")
+  (powerline-default-theme)))
 
 ;Don't show default window
 (setq inhibit-startup-screen t
@@ -92,3 +95,4 @@
 (setq version-control t)
 (setq vc-make-backup-files t)
 
+(setq initial-scratch-message "")

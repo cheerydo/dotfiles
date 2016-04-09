@@ -56,11 +56,9 @@ set! toolkit.telemetry.enabled=false
 set! media.peerconnection.enabled=false
 set! media.peerconnection.turn.disable=true
 set! media.peerconnection.use_document_iceservers=false
-set! media.peerconnection.video.enabled=false
+set! media.peerconnection.video.enabled=true
 set! media.peerconnection.identity.timeout=0
 set! loop.enabled=true
-set! media.gmp-eme-adobe.enabled=false
-set! media.eme.enabled=false
 
 " Force safe ssl
 " and disable broken DH primes
@@ -71,8 +69,10 @@ set! security.ssl3.dhe_rsa_aes_256_sha=false
 
 " Disable all autoplay. Please
 set! media.autoplay.enabled=true
+set! media.eme.enabled=false
+set! media.gmp-eme-adobe.enabled=false
 set! media.gstreamer.enabled=false
-set! media.webm.enabled=false
+set! media.webm.enabled=true
 set! media.opus.enabled=false
 set! media.wave.enabled=false
 set! media.ogg.enabled=false
@@ -82,3 +82,6 @@ nmap <c-b> :ignorekeys<cr> :sbar<Space>Bookmarks<cr>
 
 " Ublock origin fix
 style -name ublock * #nav-bar * { visibility: visible; }
+
+" fix for gtk woes
+set! gfx.font_rendering.fontconfig.fontlist.enabled=false

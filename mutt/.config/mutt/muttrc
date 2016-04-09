@@ -18,7 +18,6 @@ mailboxes =Inbox \
   =Arch/\.Arch-dev \
   =Arch/\.Arch-projects \
   =Arch/\.Aur-general \
-  =Arch/\.Pacman-dev \
   =Archive \
   =Chugalug \
   =Church \
