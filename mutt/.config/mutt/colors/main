@@ -5,7 +5,7 @@ color index brightcyan default ~N # new messages
 color index brightred default ~O # old
 color index brightyellow default ~F #flagged
 color index green default ~T #tagged
-color index brightred default ~D # deleted
+color index red default ~D # deleted
 
 ## Highlight definitions
 ## URLs
@@ -61,7 +61,7 @@ color quoted7 green default
 
 ## Default color definitions
 color signature brightmagenta default
-color indicator brightblue brightdefault
+color indicator brightblue default
 color attachment brightdefault default
 color error red default
 color message default default
@@ -76,7 +76,7 @@ color markers brightcyan default
 
 mono bold bold
 mono underline underline
-mono indicator reverse
+#mono indicator reverse
 mono index bold ~N
 mono index bold ~F
 mono index bold ~T

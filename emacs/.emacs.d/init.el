@@ -1,4 +1,5 @@
-;;; init.el -*- no-byte-compile: t -*-
+;;; package -- Summary
+
 (require 'package)
 (add-to-list 'package-archives'("org" . "http://orgmode.org/elpa/"))
 (add-to-list 'package-archives'("melpa" . "https://melpa.org/packages/"))
@@ -37,13 +38,13 @@
   (progn
     (require 'helm-config)
     (setq helm-candidate-number-limit 100
-          helm-idle-delay 0.0
-	  helm-input-idle-delay 0.01
-	  helm-quick-update t
-	  helm-M-x-requires-pattern nil
-	  helm-M-x-fuzzy-match t
-	  helm-ff-skip-boring-files t))
-  :config
+	helm-idle-delay 0.0
+	helm-input-idle-delay 0.01
+	helm-quick-update t
+	helm-M-x-requires-pattern nil
+	helm-M-x-fuzzy-match t
+	helm-ff-skip-boring-files t))
+ :config
   (progn
     (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
     (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)
@@ -68,7 +69,9 @@
   :init
   (setq evil-want-C-u-scroll t
         evil-default-cursor t)
-  (evil-mode))
+  (evil-mode t))
+
+(setq custom-safe-themes t)
 
 (use-package color-theme-wombat
   :ensure t
@@ -82,11 +85,22 @@
     (setq powerline-default-separator "wave")
   (powerline-default-theme)))
 
+;(use-package smart-mode-line
+;  :ensure t
+;  :init
+;  (progn
+;    (use-package smart-mode-line-powerline-theme
+;      :ensure t)
+;    (setq sml/theme 'powerline))
+;  :config
+;  (sml/setup))				;
+
 ;Don't show default window
 (setq inhibit-startup-screen t
       x-select-enable-clipboard t
       x-select-enable-primary t
-      mouse-yank-at-point t)
+      mouse-yank-at-point t
+      initial-scratch-message nil)
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ; backup settings
@@ -94,5 +108,8 @@
 (setq delete-old-versions -1)
 (setq version-control t)
 (setq vc-make-backup-files t)
+<<<<<<< Updated upstream
 
 (setq initial-scratch-message "")
+=======
+>>>>>>> Stashed changes

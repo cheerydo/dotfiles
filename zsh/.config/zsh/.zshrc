@@ -50,7 +50,7 @@ if [[ $HOST == "chicken" ]]; then
 elif [[ $HOST == "potatoes" ]]; then
     . $ZDOTDIR/aliases.debian
     eval $(dircolors $ZDOTDIR/.dircolors)
-elif [[ $HOST == "beans" ]]; then
+elif [[ $HOST == "beans" ]] || [[ $HOST == "rice" ]]; then
     . $ZDOTDIR/aliases.arch
     eval $(dircolors $ZDOTDIR/.dircolors)
 elif [[ $HOST == "chili" ]]; then

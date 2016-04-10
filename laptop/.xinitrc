@@ -18,7 +18,7 @@ xset -dpms &
 xset +fp /usr/share/fonts/local &
 xset +fp /home/jared/.fonts &
 xset fp rehash &
-setxkbmap -option caps:super -option shift:both_capslock &
+setxkbmap -option shift:both_capslock &
 if [[ -f ~/.Xresources ]]; then
   xrdb -load ~/.Xresources &
 fi
