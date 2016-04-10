@@ -28,8 +28,8 @@ fi
 
 xrdb -load ~/.Xresources &
 xbindkeys &
-(sleep 2 && compton -b) &
-emacs --daemon &
+(sleep 2 && compton) &
+#emacs --daemon &
 
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets)
 
@@ -42,7 +42,10 @@ case "$2" in
           exec i3 ;;
         pw)
           exec pekwm ;;
+        cin)
+          exec cinnamon-session ;;
         xf|*)
           volumeicon &
+          nitrogen --restore &
           exec startxfce4 ;;
 esac

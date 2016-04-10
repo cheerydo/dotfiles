@@ -10,6 +10,9 @@ export PAGER=less
 export LESSHISTFILE="-"
 export LANG="en_US.UTF-8"
 
+export WINEPREFIX=~/win64
+export WINEARCH=win64
+
 if [[ "$HOST" == chicken ]]; then
   export PKG_PATH="http://openbsd.mirrors.hoobly.com/5.8/packages/$(machine -a)/"
   export TERM="screen-256color"
