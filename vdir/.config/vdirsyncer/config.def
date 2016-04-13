@@ -1,0 +1,100 @@
+[general]
+status_path = ~/.config/vdirsyncer/status/
+
+### Contacts ###
+
+[pair contacts]
+a = local 
+b = fastmail
+conflict_resolution = b wins
+collections = null
+
+[storage local]
+type = filesystem
+path = ~/.contacts
+fileext = .vcf
+
+[storage fastmail]
+type = carddav 
+url = fastmail_url
+username = username@fastmail.com
+password.fetch = ["command", "pass", "show", "inetservices/fastmail"]
+
+### Calendars ###
+
+[pair main]
+a = main_local
+b = main_remote 
+conflict_resolution = b wins
+collections = null
+
+[storage main_local]
+type = filesystem
+path = ~/cal/home
+fileext = .ics
+
+[storage main_remote]
+type = caldav
+url = caldav_url
+username = username@fastmail.com
+password.fetch = ["command", "pass", "show", "inetservices/fastmail"]
+
+[pair church]
+a = church_local
+b = church_remote
+conflict_resolution = b wins
+collections = null
+
+[storage church_local]
+type = filesystem
+path = ~/cal/church
+fileext = .ics
+
+[storage church_remote]
+type = http
+url = church_cal_url
+
+### For Orage calendar ###
+[pair orage]
+a = orage_local
+b = orage_remote
+conflict_resolution = b wins
+collections = null
+
+[storage orage_local]
+type = singlefile
+path = ~/cal/orage.ics
+
+[storage orage_remote]
+type = caldav
+url = caldav_url
+username = username@fastmail.com
+password.fetch = ["command", "pass", "show", "inetservices/fastmail"]
+
+[pair orage_church]
+a = orage_church_local
+b = orage_church_remote
+conflict_resolution = b wins
+collections = null
+
+[storage orage_church_local]
+type = singlefile
+path = ~/cal/church.ics
+
+[storage orage_church_remote]
+type = http
+url = church_cal_url
+
+[pair orage_todo_rtm]
+a = orage_todo_local
+b = orage_todo_remote
+conflict_resolution = b wins
+collections = null
+
+[storage orage_todo_local]
+type = singlefile
+path = ~/cal/todo.ics
+
+[storage orage_todo_remote]
+type = http
+url = rtm_url
