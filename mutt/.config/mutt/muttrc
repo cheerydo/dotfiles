@@ -148,8 +148,7 @@ send-hook '! ~s [Rr]e:' 'set signature="~/.config/mutt/signature"'
 source ~/.config/mutt/colors/main
 
 # Address book!
-#set query_command="abook --mutt-query '%s'"
-set query_command="pc_query -m '%s'"
+set query_command="khard email %s"
 bind editor <Tab> complete-query
 set sort_alias=alias
 set reverse_alias=yes

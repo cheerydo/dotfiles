@@ -16,8 +16,8 @@ macro index gs 'c=Sent Items<enter>'
 
 # Addressbook at fastmail integration
 macro index,pager a \
-  "<pipe-message>pycard-import<enter>" \
-  "add sender address to pycardsyncer"
+  "<pipe-message>khard add-email<enter>" \
+  "add sender address to khard"
 
 # this monstrosity is for notmuch searching
 macro index <F8> \
