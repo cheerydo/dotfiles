@@ -66,9 +66,8 @@
 
 (use-package evil
   :ensure t
-  :init
-  (setq evil-want-C-u-scroll t
-        evil-default-cursor t)
+  :init (setq evil-want-C-u-scroll t)
+        (setq evil-default-cursor t)
   (evil-mode t))
 
 (setq custom-safe-themes t)
@@ -78,22 +77,21 @@
   :config
   (load-theme 'wombat t))
 
-(use-package powerline
+;(use-package powerline
+;  :ensure t
+;  :config
+;  (setq powerline-default-separator "wave")
+;  (powerline-center-evil-theme))
+
+(use-package smart-mode-line
   :ensure t
   :init
   (progn
-    (setq powerline-default-separator "wave")
-  (powerline-default-theme)))
-
-;(use-package smart-mode-line
-;  :ensure t
-;  :init
-;  (progn
-;    (use-package smart-mode-line-powerline-theme
-;      :ensure t)
-;    (setq sml/theme 'powerline))
-;  :config
-;  (sml/setup))				;
+    (use-package smart-mode-line-powerline-theme
+      :ensure t)
+    (setq sml/theme 'powerline))
+  :config
+  (sml/setup))				;
 
 ;Don't show default window
 (setq inhibit-startup-screen t
@@ -108,8 +106,3 @@
 (setq delete-old-versions -1)
 (setq version-control t)
 (setq vc-make-backup-files t)
-<<<<<<< Updated upstream
-
-(setq initial-scratch-message "")
-=======
->>>>>>> Stashed changes

@@ -69,5 +69,6 @@ case "$2" in
         synclient VertScrollDelta=-108 &
         synclient HorizScrollDelta=-10 &
         synclient HorizTwoFingerScroll=1 &
+        emacs --daemon &
         exec i3 ;;
 esac
