@@ -1,4 +1,6 @@
 ;;; package -- Summary
+;;; Commentary:
+;;; Code:
 
 (require 'package)
 (add-to-list 'package-archives'("org" . "http://orgmode.org/elpa/"))
@@ -17,11 +19,35 @@
 (setq use-package-verbose t)
 (require 'use-package)
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(backup-directory-alist (quote (("." . "~/.emacs.d/bak"))))
+ '(custom-safe-themes
+   (quote
+    ("c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" . t)))
+ '(delete-old-versions t)
+ '(kept-new-versions 1)
+ '(kept-old-versions 0)
+ '(org-insert-mode-line-in-empty-file t)
+ '(org-startup-indented t)
+ '(vc-make-backup-files t)
+ '(version-control t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(sml/filename ((t (:inherit sml/global :foreground "turquoise4" :weight bold)))))
+
 ; auto-compile lisp code
 (use-package auto-compile
              :ensure t
 	     :config
 	     (auto-compile-on-load-mode t)
+
 	     (auto-compile-on-save-mode t))
 
 ; GUI settings
@@ -32,6 +58,7 @@
   (scroll-bar-mode -1))
 
 (use-package helm
+
   :ensure t
   :diminish helm-mode
   :init
@@ -70,39 +97,37 @@
         (setq evil-default-cursor t)
   (evil-mode t))
 
-(setq custom-safe-themes t)
-
 (use-package color-theme-wombat
   :ensure t
   :config
   (load-theme 'wombat t))
 
-;(use-package powerline
-;  :ensure t
-;  :config
-;  (setq powerline-default-separator "wave")
-;  (powerline-center-evil-theme))
-
 (use-package smart-mode-line
   :ensure t
   :init
-  (progn
-    (use-package smart-mode-line-powerline-theme
-      :ensure t)
-    (setq sml/theme 'powerline))
+  (setq sml/theme 'respectful)
   :config
-  (sml/setup))				;
+  (sml/setup))                          ;
 
+(use-package org
+  :ensure t
+  :init
+  (global-set-key "\C-cl" 'org-store-link)
+  (global-set-key "\C-cc" 'org-capture)
+  (global-set-key "\C-ca" 'org-agenda)
+  (global-set-key "\C-cb" 'org-iswitchb))
+ 
 ;Don't show default window
 (setq inhibit-startup-screen t
       x-select-enable-clipboard t
-      x-select-enable-primary t
+      x-select-enable-primary nil
       mouse-yank-at-point t
       initial-scratch-message nil)
 (fset 'yes-or-no-p 'y-or-n-p)
 
-; backup settings
-(setq backup-directory-alist '(("." . "~/.emacs.d/bak")))
-(setq delete-old-versions -1)
-(setq version-control t)
-(setq vc-make-backup-files t)
+(provide 'init)
+;;; init.el ends here
+
+;; Local Variables:
+;; no-byte-compile: t
+;; End:
