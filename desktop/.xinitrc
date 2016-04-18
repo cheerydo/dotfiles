@@ -29,7 +29,7 @@ fi
 xrdb -load ~/.Xresources &
 xbindkeys &
 (sleep 2 && compton) &
-#emacs --daemon &
+emacs --daemon &
 
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets)
 
