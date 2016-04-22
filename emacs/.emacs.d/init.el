@@ -2,10 +2,31 @@
 ;;; Commentary:
 ;;; Code:
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(backup-directory-alist (quote (("." . "~/.emacs.d/bak"))))
+ '(custom-safe-themes t)
+ '(delete-old-versions t)
+ '(initial-buffer-choice "/home/jared/seafile/Seafile/My Library/Org/notes.org")
+ '(kept-new-versions 1)
+ '(kept-old-versions 0)
+ '(org-startup-indented t)
+ '(vc-make-backup-files t)
+ '(version-control t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(sml/filename ((t (:inherit sml/global :foreground "azure2" :weight bold)))))
+
 (require 'package)
 (add-to-list 'package-archives'("org" . "http://orgmode.org/elpa/"))
 (add-to-list 'package-archives'("melpa" . "https://melpa.org/packages/"))
-(add-to-list 'package-archives'("marmalade" . "https://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives'("melpa-stable" . "https://stable.melpa.org/packages/"))
 (setq package-enable-at-startup nil
       load-prefer-newer t)
 
@@ -19,29 +40,6 @@
 (setq use-package-verbose t)
 (require 'use-package)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(backup-directory-alist (quote (("." . "~/.emacs.d/bak"))))
- '(custom-safe-themes
-   (quote
-    ("c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" . t)))
- '(delete-old-versions t)
- '(kept-new-versions 1)
- '(kept-old-versions 0)
- '(org-insert-mode-line-in-empty-file t)
- '(org-startup-indented t)
- '(vc-make-backup-files t)
- '(version-control t))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(sml/filename ((t (:inherit sml/global :foreground "turquoise4" :weight bold)))))
-
 ; auto-compile lisp code
 (use-package auto-compile
              :ensure t
@@ -54,8 +52,10 @@
 (when window-system
   (tooltip-mode -1)
   (tool-bar-mode -1)
-  (menu-bar-mode 1)
+  (menu-bar-mode -1)
   (scroll-bar-mode -1))
+
+(load-theme 'jangotango t)
 
 (use-package helm
 
@@ -93,21 +93,25 @@
 
 (use-package evil
   :ensure t
-  :init (setq evil-want-C-u-scroll t)
-        (setq evil-default-cursor t)
+  :init
+  (progn 
+    (setq evil-default-cursor t)
+    (define-key global-map (kbd "C-f") 'universal-argument)
+    (define-key universal-argument-map (kbd "C-u") nil)
+    (define-key universal-argument-map (kbd "C-f") 'universal-argument-more)
+    (define-key global-map (kbd "C-u") 'kill-whole-line)
+    (eval-after-load 'evil-maps
+    '(progn
+	(define-key evil-motion-state-map (kbd "C-f") nil)
+	(define-key evil-motion-state-map (kbd "C-u") 'evil-scroll-up))))
   (evil-mode t))
-
-(use-package color-theme-wombat
-  :ensure t
-  :config
-  (load-theme 'wombat t))
 
 (use-package smart-mode-line
   :ensure t
   :init
-  (setq sml/theme 'respectful)
-  :config
-  (sml/setup))                          ;
+  (progn
+    (setq sml/theme 'respectful))
+    (sml/setup))
 
 (use-package org
   :ensure t
@@ -124,6 +128,7 @@
       mouse-yank-at-point t
       initial-scratch-message nil)
 (fset 'yes-or-no-p 'y-or-n-p)
+
 
 (provide 'init)
 ;;; init.el ends here
