@@ -18,13 +18,9 @@ xset -dpms &
 xset +fp /usr/share/fonts/local &
 xset +fp /home/jared/.fonts &
 xset fp rehash &
-setxkbmap -option shift:both_capslock &
+setxkbmap -option shift:both_capslock -option ctrl:nocaps -option compose:ralt &
 if [[ -f ~/.Xresources ]]; then
   xrdb -load ~/.Xresources &
-fi
-
-if [[ -f ~/.Xmodmap ]]; then
-  xmodmap ~/.Xmodmap &
 fi
 
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets) &
