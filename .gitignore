@@ -16,7 +16,6 @@ vim/.vim/*
 newsbeuter/.newsbeuter/*
 !newsbeuter/.newsbeuter/config
 systemd/.config/systemd/user/default.target.wants
-emacs/.emacs.d/*
-!init.el
 vdir/.config/vdirsyncer/**
 !vdir/.config/vdirsyncer/config.def
+emacs/**/\#*\#
