@@ -1,23 +1,6 @@
-;;; package -- Summary
+;; package -- Summary
 ;;; Commentary:
 ;;; Code:
-
-(require 'package)
-(add-to-list 'package-archives'("org" . "http://orgmode.org/elpa/"))
-(add-to-list 'package-archives'("melpa" . "https://melpa.org/packages/"))
-(add-to-list 'package-archives'("marmalade" . "https://marmalade-repo.org/packages/"))
-(setq package-enable-at-startup nil
-      load-prefer-newer t)
-
-;; Activate installed packages
-(package-initialize)
-
-;; Bootstrap use-package
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
-(setq use-package-verbose t)
-(require 'use-package)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -27,10 +10,11 @@
  '(backup-directory-alist (quote (("." . "~/.emacs.d/bak"))))
  '(custom-safe-themes
    (quote
-    ("c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" . t)))
+    ("c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" default)))
  '(delete-old-versions t)
  '(kept-new-versions 1)
  '(kept-old-versions 0)
+ '(org-agenda-files (quote ("~/doc/Seafile/My Library/Org/notes.org")))
  '(org-insert-mode-line-in-empty-file t)
  '(org-startup-indented t)
  '(vc-make-backup-files t)
@@ -40,16 +24,33 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(sml/filename ((t (:inherit sml/global :foreground "turquoise4" :weight bold)))))
+ )
+
+(require 'package)
+(add-to-list 'package-archives'("org" . "http://orgmode.org/elpa/"))
+(add-to-list 'package-archives'("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives'("melpa-stable" . "https://stable.melpa.org/packages/"))
+;(add-to-list 'package-archives'("marmalade" . "https://marmalade-repo.org/packages/"))
+(setq package-enable-at-startup nil
+      load-prefer-newer t)
+
+; Activate installed packages
+(package-initialize)
+
+; Bootstrap use-package
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+(setq use-package-verbose t)
+(require 'use-package)
 
 ; auto-compile lisp code
 (use-package auto-compile
              :ensure t
 	     :config
 	     (auto-compile-on-load-mode t)
-
 	     (auto-compile-on-save-mode t))
-
+;
 ; GUI settings
 (when window-system
   (tooltip-mode -1)
@@ -97,17 +98,17 @@
         (setq evil-default-cursor t)
   (evil-mode t))
 
-(use-package color-theme-wombat
+(use-package tangotango-theme
   :ensure t
   :config
-  (load-theme 'wombat t))
+  (load-theme 'tangotango t))
 
 (use-package smart-mode-line
   :ensure t
+  :pin melpa-stable
   :init
   (setq sml/theme 'respectful)
-  :config
-  (sml/setup))                          ;
+  (sml/setup))
 
 (use-package org
   :ensure t
@@ -125,9 +126,5 @@
       initial-scratch-message nil)
 (fset 'yes-or-no-p 'y-or-n-p)
 
-(provide 'init)
+;(provide 'init)
 ;;; init.el ends here
-
-;; Local Variables:
-;; no-byte-compile: t
-;; End:
