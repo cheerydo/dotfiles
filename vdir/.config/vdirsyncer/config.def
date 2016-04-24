@@ -1,3 +1,5 @@
+# vim: set ft=dosini
+
 [general]
 status_path = ~/.config/vdirsyncer/status/
 
@@ -36,6 +38,21 @@ fileext = .ics
 [storage main_remote]
 type = caldav
 url = caldav_url
+username = username@fastmail.com
+password.fetch = ["command", "pass", "show", "inetservices/fastmail"]
+
+[pair jcal]
+a = jlocal
+b = jremote
+
+[storage jlocal]
+type = filesystem
+path = ~/cal/jess
+fileext = .ics
+
+[storage jremote]
+type = http
+url = j_url
 username = username@fastmail.com
 password.fetch = ["command", "pass", "show", "inetservices/fastmail"]
 
