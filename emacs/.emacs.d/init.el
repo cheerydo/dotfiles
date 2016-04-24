@@ -1,4 +1,4 @@
-;;; package -- Summary
+;; package -- Summary
 ;;; Commentary:
 ;;; Code:
 
@@ -13,6 +13,8 @@
  '(initial-buffer-choice "/home/jared/seafile/Seafile/My Library/Org/notes.org")
  '(kept-new-versions 1)
  '(kept-old-versions 0)
+ '(org-agenda-files (quote ("~/doc/Seafile/My Library/Org/notes.org")))
+ '(org-insert-mode-line-in-empty-file t)
  '(org-startup-indented t)
  '(vc-make-backup-files t)
  '(version-control t))
@@ -22,18 +24,21 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(sml/filename ((t (:inherit sml/global :foreground "azure2" :weight bold)))))
+ )
 
 (require 'package)
 (add-to-list 'package-archives'("org" . "http://orgmode.org/elpa/"))
 (add-to-list 'package-archives'("melpa" . "https://melpa.org/packages/"))
 (add-to-list 'package-archives'("melpa-stable" . "https://stable.melpa.org/packages/"))
+
+;; Bootstrap use-package
 (setq package-enable-at-startup nil
       load-prefer-newer t)
 
-;; Activate installed packages
+; Activate installed packages
 (package-initialize)
 
-;; Bootstrap use-package
+; Bootstrap use-package
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
@@ -45,9 +50,8 @@
              :ensure t
 	     :config
 	     (auto-compile-on-load-mode t)
-
 	     (auto-compile-on-save-mode t))
-
+;
 ; GUI settings
 (when window-system
   (tooltip-mode -1)
@@ -108,9 +112,10 @@
 
 (use-package smart-mode-line
   :ensure t
+  :pin melpa-stable
   :init
   (progn
-    (setq sml/theme 'respectful))
+    (setq sml/theme 'respectful)
     (sml/setup))
 
 (use-package org
@@ -130,9 +135,5 @@
       initial-scratch-message nil)
 (fset 'yes-or-no-p 'y-or-n-p)
 
-(provide 'init)
+;(provide 'init)
 ;;; init.el ends here
-
-;; Local Variables:
-;; no-byte-compile: t
-;; End:

@@ -3,7 +3,7 @@
 ;;; Code:
 
 (deftheme jangotango
-  "A color theme based on the Tango Palette colors.")
+  "A color theme based on the Tango Palette colors, just a few tweaks")
 
 (custom-theme-set-faces
  'jangotango
