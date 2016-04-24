@@ -18,5 +18,7 @@ newsbeuter/.newsbeuter/*
 systemd/.config/systemd/user/default.target.wants
 vdir/.config/vdirsyncer/**
 !vdir/.config/vdirsyncer/config.def
-emacs/**/\#*\#
+emacs/*
+!init.el
+!jangotango-theme.el
 *.swp
