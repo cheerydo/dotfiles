@@ -27,6 +27,8 @@ alias gip='git push'
 alias gia='git add'
 alias gil='git log'
 alias gid='git diff'
+alias gich='git checkout'
+alias gib='git branch'
 
 alias fresh='killall -SIGUSR1'
 
