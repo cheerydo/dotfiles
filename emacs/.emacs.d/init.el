@@ -126,9 +126,9 @@
       x-select-enable-clipboard t
       x-select-enable-primary nil
       mouse-yank-at-point t
+      vc-follow-symlinks t
       initial-scratch-message nil)
 (fset 'yes-or-no-p 'y-or-n-p)
-
 
 (provide 'init)
 ;;; init.el ends here
