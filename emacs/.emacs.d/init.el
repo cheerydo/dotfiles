@@ -10,20 +10,21 @@
  '(backup-directory-alist (quote (("." . "~/.emacs.d/bak"))))
  '(custom-safe-themes t)
  '(delete-old-versions t)
- '(initial-buffer-choice "/home/jared/seafile/Seafile/My Library/Org/notes.org")
+ '(initial-buffer-choice "/home/jared/seafile/My Library/Org/notes.org")
  '(kept-new-versions 1)
  '(kept-old-versions 0)
  '(org-agenda-files (quote ("~/doc/Seafile/My Library/Org/notes.org")))
  '(org-insert-mode-line-in-empty-file t)
  '(org-startup-indented t)
  '(vc-make-backup-files t)
- '(version-control t))
+ '(version-control t)
+ )
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(sml/filename ((t (:inherit sml/global :foreground "azure2" :weight bold)))))
+ '(sml/filename ((t (:inherit sml/global :foreground "azure2" :weight bold))))
  )
 
 (require 'package)
@@ -116,15 +117,16 @@
   :init
   (progn
     (setq sml/theme 'respectful)
-    (sml/setup))
+    (sml/setup)))
 
 (use-package org
   :ensure t
   :init
-  (global-set-key "\C-cl" 'org-store-link)
-  (global-set-key "\C-cc" 'org-capture)
-  (global-set-key "\C-ca" 'org-agenda)
-  (global-set-key "\C-cb" 'org-iswitchb))
+  (progn
+    (global-set-key "\C-cl" 'org-store-link)
+    (global-set-key "\C-cc" 'org-capture)
+    (global-set-key "\C-ca" 'org-agenda)
+    (global-set-key "\C-cb" 'org-iswitchb)))
  
 ;Don't show default window
 (setq inhibit-startup-screen t
