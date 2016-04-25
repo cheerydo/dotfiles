@@ -63,7 +63,7 @@ set! loop.enabled=true
 " Force safe ssl
 " and disable broken DH primes
 set! security.ssl.treat_unsafe_negotiation_as_broken=true
-set! security.ssl.require_safe_negotiation=true
+set! security.ssl.require_safe_negotiation=false
 set! security.ssl3.dhe_rsa_aes_128_sha=false
 set! security.ssl3.dhe_rsa_aes_256_sha=false
 
