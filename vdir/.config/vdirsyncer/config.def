@@ -44,6 +44,8 @@ password.fetch = ["command", "pass", "show", "inetservices/fastmail"]
 [pair jcal]
 a = jlocal
 b = jremote
+conflict_resolution = b wins
+collections = null
 
 [storage jlocal]
 type = filesystem
