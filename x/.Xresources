@@ -98,8 +98,12 @@ dzen2.foreground:       rgb:ff/ff/ff
 dzen2.background:       rgb:00/00/00
 
 rofi.font:              Fira Mono 10
-rofi.key-window:        Alt+bracketright
-rofi.key-run:           Alt+bracketleft
+rofi.color-enabled:     1
+rofi.color-normal:      #303030, #FFFFFF, #4A4A4A, #5294E2, #FFFFFF 
+rofi.color-window:      #303030, #303030
+rofi.color-urgent:      #303030, #DC322F, #4A4A4A, #5294E2, #DC322F 
+rofi.color-active:      #303030, #C2CAD0, #4A4A4A, #5294E2, #FFFFFF 
+rofi.separator-style:   solid
 rofi.terminal:          /sbin/termite
 
 Emacs.toolBar:          0
