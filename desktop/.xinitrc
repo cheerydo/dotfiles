@@ -37,15 +37,15 @@ case "$2" in
         ob)
           volumeicon &
           exec openbox-session ;;
-        i3) 
-          nitrogen --restore &
-          exec i3 ;;
         pw)
           exec pekwm ;;
         cin)
           exec cinnamon-session ;;
+        i3) 
+          xfsettingsd &
+          nitrogen --restore &
+          exec i3 ;;
         xf|*)
           volumeicon &
-          nitrogen --restore &
           exec startxfce4 ;;
 esac
