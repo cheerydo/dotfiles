@@ -4,9 +4,8 @@ alias cm='mbsync -a'
 alias rh='rehash'
 alias p='pwd'
 alias v='vim'
-alias em='emacsclient'
-alias emt='emacsclient -t'
-alias emc='emacsclient -c'
+alias e='emacsclient -c --alternate-editor="" -nw'
+alias eg='emacsclient -c --alternate-editor=""'
 alias c='cd'
 alias mkdir='mkdir -pv'
 alias rmdir='rmdir -v'
@@ -28,12 +27,12 @@ alias gipall='git push && git push jserv master'
 alias gia='git add'
 alias gil='git log'
 alias gid='git diff'
-alias gich='git checkout'
-alias gib='git branch'
+alias gch='git checkout'
+alias gib='git branch -v'
 
 alias fresh='killall -SIGUSR1'
 
 alias w32='WINEARCH=wine32 WINEPREFIX=~/win32'
 alias nh='telnet nethack.alt.org'
 
-# vim: filetype=zsh
+# vim: ft=zsh

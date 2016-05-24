@@ -25,7 +25,9 @@ fi
 
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets) &
 
-#mpd &
+emacs --daemon &
+
+mpd &
 
 case "$2" in
     spectrwm)
@@ -65,6 +67,5 @@ case "$2" in
         synclient VertScrollDelta=-108 &
         synclient HorizScrollDelta=-10 &
         synclient HorizTwoFingerScroll=1 &
-        emacs --daemon &
         exec i3 ;;
 esac

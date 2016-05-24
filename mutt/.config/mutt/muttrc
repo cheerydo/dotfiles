@@ -88,12 +88,16 @@ set mailcap_path="~/.config/mutt/mailcap"
 auto_view text/html
 
 ## sidebar stuff
-set sidebar_visible=no
+set sidebar_divider_char=" |"
+set sidebar_indent_string=" "
+set sidebar_visible=yes
 set sidebar_width=25
-set sidebar_delim=" |"
+set sidebar_delim_chars="/."
+#set sidebar_format=look_at_man_page
 color sidebar_new brightdefault default 
-set sidebar_shortpath=yes
-set sidebar_folderindent=yes
+set sidebar_short_path=yes
+set sidebar_folder_indent=yes
+set sidebar_next_new_wrap=yes
 # Default index_format
 folder-hook "Sent*" 'set index_format="%3C %Z  |  %(!%m/%d)   %-35.35F   %?M?[+](%2.M messages)? %s"'
 folder-hook ! "Sent*" 'set index_format="%3C %Z  |  %(!%m/%d)   %-35.35F   %?M?[+](%2.M messages)? %s"'

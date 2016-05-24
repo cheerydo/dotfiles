@@ -129,6 +129,7 @@ mode "launch" {
     bindsym c exec chromium; mode "default"
     bindsym t exec thunar; mode "default"
     bindsym f exec firefox; mode "default"
+    bindsym e exec emacsclient -c -n --alternate-editor=""; mode "default"
 
     bindsym Escape mode "default"
     bindsym q mode "default"
@@ -156,7 +157,7 @@ bindsym Mod1+bracketleft exec rofi -show run
 bindsym Mod1+bracketright exec rofi -show window
 bindsym Mod1+Shift+p exec /home/jared/bin/passmenu
 
-bindsym XF86AudioMute exec --no-startup-id ponymix toggle && notify-send -a volume -t 50 "$( (ponymix is-muted && echo 'Volume is muted') || echo 'Volume is unmuted')"
+bindsym XF86AudioMute exec --no-startup-id ponymix toggle && notify-send -a volume -t 50 "$((ponymix is-muted && echo 'Volume is muted') || echo 'Volume is unmuted')"
 bindsym XF86AudioLowerVolume exec --no-startup-id ponymix decrease 3 && notify-send -a volume -t 50 "$(ponymix get-volume)"
 bindsym XF86AudioRaiseVolume exec --no-startup-id ponymix increase 3 && notify-send -a volume -t 50 "$(ponymix get-volume)"
 bindsym XF86AudioPlay exec mpc toggle

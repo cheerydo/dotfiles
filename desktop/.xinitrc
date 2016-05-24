@@ -28,8 +28,7 @@ fi
 
 xrdb -load ~/.Xresources &
 xbindkeys &
-(sleep 2 && compton) &
-emacs --daemon &
+compton &
 
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets)
 
@@ -46,6 +45,5 @@ case "$2" in
           nitrogen --restore &
           exec i3 ;;
         xf|*)
-          volumeicon &
           exec startxfce4 ;;
 esac

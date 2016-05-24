@@ -1,4 +1,4 @@
-# vim: set ft=dosini
+# vim: ft=dosini
 
 [general]
 status_path = ~/.config/vdirsyncer/status/
@@ -41,6 +41,23 @@ url = caldav_url
 username = username@fastmail.com
 password.fetch = ["command", "pass", "show", "inetservices/fastmail"]
 
+[pair church]
+a = church_local
+b = church_remote
+conflict_resolution = b wins
+collections = null
+
+[storage church_local]
+type = filesystem
+path = ~/cal/church
+fileext = .ics
+
+[storage church_remote]
+type = http
+url = church_cal_url
+username = username@fastmail.com
+password.fetch = ["command", "pass", "show", "inetservices/fastmail"]
+
 [pair jcal]
 a = jlocal
 b = jremote
@@ -58,22 +75,7 @@ url = j_url
 username = username@fastmail.com
 password.fetch = ["command", "pass", "show", "inetservices/fastmail"]
 
-[pair church]
-a = church_local
-b = church_remote
-conflict_resolution = b wins
-collections = null
-
-[storage church_local]
-type = filesystem
-path = ~/cal/church
-fileext = .ics
-
-[storage church_remote]
-type = http
-url = church_cal_url
-
-### For Orage calendar ###
+### Orage calendar ###
 [pair orage]
 a = orage_local
 b = orage_remote
@@ -104,16 +106,18 @@ path = ~/cal/church.ics
 type = http
 url = church_cal_url
 
-[pair orage_todo_rtm]
-a = orage_todo_local
-b = orage_todo_remote
+[pair o_jcal]
+a = o_jlocal
+b = o_jremote
 conflict_resolution = b wins
 collections = null
 
-[storage orage_todo_local]
+[storage o_jlocal]
 type = singlefile
-path = ~/cal/todo.ics
+path = ~/cal/jess.ics
 
-[storage orage_todo_remote]
+[storage o_jremote]
 type = http
-url = rtm_url
+url = o_jcal url
+username = username@fastmail.com
+password.fetch = ["command", "pass", "show", "inetservices/fastmail"]
