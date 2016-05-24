@@ -77,8 +77,8 @@ set! media.wave.enabled=false
 set! media.ogg.enabled=false
 
 " Graphics settings
-set! layers.acceleration.force-enabled=true
-set! layers.offmainthreadcomposition.enabled=true
+"set! layers.acceleration.force-enabled=true
+"set! layers.offmainthreadcomposition.enabled=true
 
 " Key maps
 nmap <c-b> :ignorekeys<cr> :sbar<Space>Bookmarks<cr>
