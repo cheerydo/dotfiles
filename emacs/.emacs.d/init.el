@@ -67,6 +67,8 @@
   (menu-bar-mode 1)
   (scroll-bar-mode -1))
 
+(windmove-default-keybindings)
+
 (load-theme 'jangotango t nil)
 
 (use-package evil
@@ -98,7 +100,7 @@
         helm-mode-fuzzy-match t
 	helm-ff-file-name-history-use-recentf t
 	helm-ff-skip-boring-files t))
- :config
+  :config
   (progn
     (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
     (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)
@@ -158,7 +160,14 @@
   (progn
     (setq org-insert-mode-line-in-empty-file t
 	  org-startup-indented t
-	  org-agenda-files (quote ("~/doc/Seafile/My Library/Org/notes.org")))))
+	  org-agenda-files (quote ("~/Seafile/My Library/Org/notes.org")))
+    ;; Make windmove work in org-mode:
+    (add-hook 'org-shiftup-final-hook 'windmove-up)
+    (add-hook 'org-shiftleft-final-hook 'windmove-left)
+    (add-hook 'org-shiftdown-final-hook 'windmove-down)
+    (add-hook 'org-shiftright-final-hook 'windmove-right)))
+
+
  
 (use-package magit
   :ensure t
