@@ -9,6 +9,7 @@ Plug 'itchyny/calendar.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'vimperator/vimperator.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-markdown'
 call plug#end()
