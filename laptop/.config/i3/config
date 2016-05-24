@@ -129,7 +129,7 @@ mode "launch" {
     bindsym c exec chromium; mode "default"
     bindsym t exec thunar; mode "default"
     bindsym f exec firefox; mode "default"
-    bindsym e exec 'emacslient -c --alternate-editor=""' "default"
+    bindsym e exec emacsclient -c -n --alternate-editor=""; mode "default"
 
     bindsym Escape mode "default"
     bindsym q mode "default"
