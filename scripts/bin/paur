@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd $HOME/build && cower -d "$1"
+cd $HOME/pkgs && cower -d "$1"
 builddir="$_"
 cd "$builddir" && vim PKGBUILD
 
