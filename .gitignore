@@ -6,6 +6,7 @@ mpd/*
 ncmpcpp/.ncmpcpp/error.log
 ncmpcpp/.ncmpcpp/artists
 ncmpcpp/.ncmpcpp/config.def
+ncmpcpp/.ncmpcpp/bindings.def
 mutt/.config/mutt/cache/**
 mutt/.config/mutt/certificates
 mutt/.config/mutt/id
