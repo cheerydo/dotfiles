@@ -58,12 +58,13 @@ set write_inc=100
 
 # -----------  PGP  -----------#
 source ~/.config/mutt/gpg.rc
+# ----------   END   ----------#
 
 # ---------- APPEARANCE ---------#
 # --------------&----------------#
 # ----------  KEYBINDS  ---------#
 # some aesthetics
-set editor=vim
+set editor="emacsclient -nw"
 set sort=threads
 set sort_aux=reverse-last-date-received
 unset collapse_unread
@@ -116,6 +117,7 @@ reply-hook . my_hdr Bcc: jared@fastmail.com
 
 # keybinds!
 source ~/.config/mutt/keys
+# ----------   END   ----------#
         
 # ---------- MAILING LISTS ----------# 
 # Arch
@@ -140,13 +142,14 @@ subscribe chugalug \
 # ----------      END      ----------#
 
 # ----------     HOOKS     ----------#
+reply-hook . "set signature=''"
+send-hook '! ~s [Rr]e:' 'set signature="~/.config/mutt/signature"'
 # ----------      END      ----------#
 
 # ---------- Miscellaneous ----------#
 # siggy sig
+unset sig_dashes
 set signature="~/.config/mutt/signature"
-reply-hook . "set signature=''"
-send-hook '! ~s [Rr]e:' 'set signature="~/.config/mutt/signature"'
 
 # yay colors 
 source ~/.config/mutt/colors/main
