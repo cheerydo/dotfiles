@@ -76,7 +76,7 @@ filetype plugin indent  on
 let g:netrw_liststyle=3
 
 " Special circumstances for reading mutt mails
-au FileType mail set fo=aw tw=80 wrap | +/^$/ | startinsert
+au FileType mail setlocal fo=tawcql tw=0 wm=0 wrap | +/^$/+1 | startinsert
 
 " Keymappings for your health
 nmap <space> <leader>

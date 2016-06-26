@@ -69,6 +69,8 @@
 
 (windmove-default-keybindings)
 
+(add-to-list 'auto-mode-alist '("/tmp/mutt*" . mail-mode))
+
 (load-theme 'jangotango t nil)
 
 (use-package evil
@@ -166,8 +168,6 @@
     (add-hook 'org-shiftleft-final-hook 'windmove-left)
     (add-hook 'org-shiftdown-final-hook 'windmove-down)
     (add-hook 'org-shiftright-final-hook 'windmove-right)))
-
-
  
 (use-package magit
   :ensure t

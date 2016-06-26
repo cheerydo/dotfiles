@@ -1,3 +1,5 @@
+# vim: set ft=conf
+#
 ncmpcpp_directory = "~/.ncmpcpp"
 
 mpd_host = "localhost"
@@ -6,17 +8,15 @@ mpd_music_dir = "/home/jared/music/"
 mpd_connection_timeout = "5"
 mpd_crossfade_time = "5"
 
-visualizer_in_stereo = "yes"
+visualizer_in_stereo = "no"
 visualizer_fifo_path = "/tmp/mpd.fifo"
 visualizer_sync_interval = "10"
 
-visualizer_type = wave 
+visualizer_type = spectrum
 visualizer_look = ●▮
 
 song_list_format = {%a - }{%t}|{$8%f$9}$R{$3(%l)$9}
-#song_list_format = %a
 song_status_format = "{{%a{ \"%b\"{ (%y)}} - }{%t}}|{%f}"
-#song_library_format = %t
 song_library_format = {%n - }{%t}|{%f}
 song_columns_list_format = (7f)[yellow]{l} (20)[cyan]{a} (50)[white]{t|f:Title} (20)[green]{b}
 
@@ -41,5 +41,6 @@ window_border_color = "green"
 active_window_border = "green"
 
 ask_before_clearing_playlists = no
+execute_on_song_change = "bash $HOME/.ncmpcpp/notify-ncmpcpp.sh"
 
 media_library_primary_tag = album_artist

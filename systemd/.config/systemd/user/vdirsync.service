@@ -3,6 +3,8 @@ Description=Start vdirsyncer for contacts and calendar
 After=network.target
 
 [Service]
+Environment="GPG_TTY=$(tty)"
+Environment="GPG_AGENT_INFO="
 Type=simple
 ExecStart=/sbin/vdirsyncer sync
 
