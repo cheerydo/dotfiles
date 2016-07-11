@@ -109,7 +109,7 @@ bindsym $mod+Shift+q kill
 
 # }}}
 # {{{ Custom modes
-mode "resize" {
+mode "RESIZE MODE" {
         bindsym h resize shrink width 10 px or 10 ppt
         bindsym j resize shrink height 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
@@ -123,20 +123,21 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym q mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "RESIZE"
 
-mode "launch" {
+mode "LAUNCH STUFF" {
     bindsym c exec chromium; mode "default"
     bindsym t exec thunar; mode "default"
     bindsym f exec firefox; mode "default"
+    bindsym q exec qutebrowser; mode "default"
     bindsym e exec emacsclient -c -n --alternate-editor=""; mode "default"
 
     bindsym Escape mode "default"
     bindsym q mode "default"
 }
-bindsym $mod+slash mode "launch"
+bindsym $mod+slash mode "LAUNCH"
 
-mode "music" {
+mode "MPD CONTROL" {
     bindsym k exec ponymix increase 10
     bindsym j exec ponymix decrease 10
     bindsym m exec ponymix toggle
@@ -148,7 +149,7 @@ mode "music" {
     bindsym Escape mode "default"
     bindsym q mode "default"
 }
-bindsym $mod+Mod1+m mode "music"
+bindsym $mod+Mod1+m mode "MPD CONTROL"
 # }}}
 # {{{ Keybindings
 bindsym $mod+Return exec termite
