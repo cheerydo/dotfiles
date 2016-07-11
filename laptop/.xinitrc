@@ -54,10 +54,6 @@ case "$2" in
         synclient HorizScrollDelta=-10 &
         synclient HorizTwoFingerScroll=1 &
         exec pekwm ;;
-    fwm)
-        compton -b &
-        xbindkeys &
-        exec frankenwm ;;
     cinn)
         exec cinnamon-session ;;
     i3|*) 
