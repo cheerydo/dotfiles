@@ -3,7 +3,7 @@
 
 if [[ ! -n $TMUX && "$HOST" != chicken && "$HOST" != potatoes ]]; then
     setterm -blength 0
-    eval $(keychain --agents ssh --eval)
+    eval $(keychain --agents ssh,gpg --eval FBB0702A)
     ssh-add ~/.ssh/{gitrepo,jserv,pbox,hserv}.id_rsa
     export GPG_TTY=$(tty)
     export GPG_AGENT_INFO=""
