@@ -21,12 +21,9 @@
       custom-safe-themes t)
 (fset 'yes-or-no-p 'y-or-n-p)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(backup-directory-alist (quote (("." . "~/.emacs.d/bak")))))
+(add-to-list 'auto-mode-alist '("/tmp/mutt*" . mail-mode))
+(add-to-list 'backup-directory-alist '("~/.emacs.d/bak"))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -69,7 +66,6 @@
 
 (windmove-default-keybindings)
 
-(add-to-list 'auto-mode-alist '("/tmp/mutt*" . mail-mode))
 
 (load-theme 'jangotango t nil)
 
@@ -87,6 +83,13 @@
 	(define-key evil-motion-state-map (kbd "C-f") nil)
 	(define-key evil-motion-state-map (kbd "C-u") 'evil-scroll-up))))
   (evil-mode t))
+
+(use-package key-chord
+  :ensure t
+  :init
+  (setq key-chord-two-keys-delay 0.5)
+  (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
+  (key-chord-mode t))
 
 (use-package helm
   :ensure t
@@ -110,7 +113,7 @@
   (helm-mode t))
   :bind (("C-c h" . helm-mini)
 	 ("C-h a" . helm-apropos)
-	 ("C-x C-b" . helm-buffers-list)
+ ("C-x C-b" . helm-buffers-list)
 	 ("C-x b" . helm-mini)
 	 ("M-y" . helm-show-kill-ring)
 	 ("M-x" . helm-M-x)
@@ -123,10 +126,10 @@
 	 ("C-x c SPC" . helm-all-mark-rings)))
 
 (use-package recentf
+
   :ensure t
   :init (recentf-mode t)
   :config (setq recentf-max-menu-items 15))
-
 
 (use-package elpy
   :ensure t
@@ -138,11 +141,10 @@
 (use-package flycheck
   :ensure t
   :pin melpa
-  :init (global-flycheck-mode))
-
-(when (require 'flycheck nil t)
-  (remove-hook 'elpy-modules 'elpy-module-flymake)
-  (add-hook 'elpy-module-hook 'flycheck-mode))
+  :init
+  (progn
+    (remove-hook 'elpy-modules 'elpy-module-flymake)
+    (add-hook 'elpy-module-hook 'flycheck-mode)))
 
 (use-package smart-mode-line
   :ensure t
