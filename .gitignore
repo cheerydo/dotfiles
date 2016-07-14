@@ -23,4 +23,5 @@ emacs/*
 !init.el
 !jangotango-theme.el
 *.swp
+.spectrwm.conf.orig
 *\#*
