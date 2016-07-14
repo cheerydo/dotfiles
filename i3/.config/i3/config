@@ -6,8 +6,29 @@ set $mod Mod4
 floating_modifier $mod
 font pango: Dina, Bold 9
 focus_follows_mouse no
-new_window pixel 1
+new_window pixel 2
 
+# }}}
+# {{{ Colors
+set $white    #ffffff
+set $blue     #2e9ef4
+set $lt_blue  #a6d3f5
+set $lt_blue2 #00fbff
+set $dk_blue  #285577
+set $red      #900000
+set $black    #333333
+set $black2   #0c0c0c
+set $gray     #888888
+set $gray2    #5f676a
+
+#class                  border    backgr.   text    indicator child_border
+client.focused          $lt_blue  $dk_blue  $white  $lt_blue2 $lt_blue
+client.focused_inactive $black    $gray2    $white  $gray2    $gray2
+client.unfocused        $black    $black    $gray   $black    $black
+client.urgent           $black    $red      $white  $red      $red
+client.placeholder      $black2   $black2   $white  $black2   $black2
+
+client.background       $white
 # }}}
 # {{{ i3 admin; startup; program specific settings;
 bindsym $mod+Mod1+l exec i3lock -i ~/pictures/blue.png
@@ -26,20 +47,22 @@ exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
 exec --no-startup-id keepassx
 exec --no-startup-id redshift-gtk
-exec --no-startup-id seafile-applet 
+exec --no-startup-id seafile-applet
 
 # Specific program configs
-for_window [class="Gimp"] floating enable
-for_window [class="Steam"] floating enable
-for_window [class="Thunar"] floating enable
-for_window [class="Keepassx"] floating enable
-for_window [title="Preferences"] floating enable
-for_window [window_role="pop-up"] floating enable
-for_window [window_role="task_dialog"] floating enable
-for_window [class="Seafile"] floating enable
-for_window [class="Skype"] floating enable
+for_window [class="Gimp"]               floating enable
+for_window [class="Steam"]              floating enable
+for_window [class="Thunar"]             floating enable
+for_window [class="Keepassx"]           floating enable
+for_window [title="Preferences"]        floating enable
+for_window [window_role="pop-up"]       floating enable
+for_window [window_role="task_dialog"]  floating enable
+for_window [class="Seafile"]            floating enable
+for_window [class="Skype"]              floating enable
 
-assign [class="Steam"] 6
+assign [class="Steam"]        6
+assign [class="Firefox"]      2
+assign [class="qutebrowser"]  2
 
 # }}}
 # {{{ Window binds
@@ -109,7 +132,7 @@ bindsym $mod+Shift+q kill
 
 # }}}
 # {{{ Custom modes
-mode "RESIZE MODE" {
+mode "Resize mode" {
         bindsym h resize shrink width 10 px or 10 ppt
         bindsym j resize shrink height 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
@@ -123,9 +146,9 @@ mode "RESIZE MODE" {
         bindsym Return mode "default"
         bindsym q mode "default"
 }
-bindsym $mod+r mode "RESIZE"
+bindsym $mod+r mode "Resize mode"
 
-mode "LAUNCH STUFF" {
+mode "Launch stuff" {
     bindsym c exec chromium; mode "default"
     bindsym t exec thunar; mode "default"
     bindsym f exec firefox; mode "default"
@@ -135,9 +158,9 @@ mode "LAUNCH STUFF" {
     bindsym Escape mode "default"
     bindsym q mode "default"
 }
-bindsym $mod+slash mode "LAUNCH"
+bindsym $mod+slash mode "Launch stuff"
 
-mode "MPD CONTROL" {
+mode "MPD control" {
     bindsym k exec ponymix increase 10
     bindsym j exec ponymix decrease 10
     bindsym m exec ponymix toggle
@@ -149,7 +172,7 @@ mode "MPD CONTROL" {
     bindsym Escape mode "default"
     bindsym q mode "default"
 }
-bindsym $mod+Mod1+m mode "MPD CONTROL"
+bindsym $mod+Mod1+m mode "MPD control"
 # }}}
 # {{{ Keybindings
 bindsym $mod+Return exec termite
