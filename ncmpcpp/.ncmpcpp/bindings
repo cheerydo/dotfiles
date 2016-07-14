@@ -1,3 +1,18 @@
+def_key "a"
+  add_item_to_playlist
+
+def_key "A"
+  add_selected_items
+
+def_key "h"
+  previous_column
+
+def_key "h"
+  master_screen
+
+def_key "h"
+  volume_down
+
 def_key "j"
   scroll_down
 
@@ -13,17 +28,11 @@ def_key "l"
 def_key "l"
   volume_up
 
-def_key "h"
-  previous_column
+def_key "left"
+  scroll_up_album
 
-def_key "h"
-  master_screen
-
-def_key "h"
-  volume_down
-
-def_key "a"
-  add_item_to_playlist
+def_key "right"
+  scroll_down_album
 
 def_key "space"
   select_item
@@ -34,6 +43,3 @@ def_key "space"
 
 def_key "space"
   toggle_visualization_type
-
-def_key "A"
-  add_selected_items
