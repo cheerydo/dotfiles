@@ -30,7 +30,7 @@ emacs --daemon &
 
 case "$2" in
         ob)
-          setxkbmap -option shift:both_capslock -option ctrl:nocaps -option ctrl:lctrl_meta -option compose:ralt &
+          setxkbmap -option caps:super -option shift:both_capslock -option compose:ralt &
           xrandr --output HDMI-0 --right-of DVI-I-1 &
           xfsettingsd &
           volumeicon &
@@ -43,15 +43,14 @@ case "$2" in
         sp)
           nitrogen --restore &
           volumeicon &
-          xmodmap ~/.Xmodmap &
           xrandr --output HDMI-0 --right-of DVI-I-1
           exec spectrwm ;;
         i3)
           xfsettingsd &
           nitrogen --restore &
-          setxkbmap -option shift:both_capslock -option ctrl:nocaps -option ctrl:lctrl_meta -option compose:ralt &
+          setxkbmap -option caps:super -option shift:both_capslock -option compose:ralt &
           exec i3 ;;
         xf|*)
-          setxkbmap -option shift:both_capslock -option ctrl:nocaps -option ctrl:lctrl_meta -option compose:ralt &
+          setxkbmap -option caps:super -option shift:both_capslock -option compose:ralt &
           exec startxfce4 ;;
 esac
