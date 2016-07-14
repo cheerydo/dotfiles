@@ -7,10 +7,12 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-        colors = true
-        interval = 5
+    colors = true
+    interval = 5
 }
 
+order += "disk /"
+order += "disk /home"
 order += "load"
 order += "cpu_temperature 0"
 order += "ethernet enp0s25"
@@ -18,33 +20,45 @@ order += "path_exists VPN"
 order += "tztime local"
 
 volume master {
-		format = "♪: %volume"
-		format_muted = "♪: MUTE"
-		device = "default"
-		mixer = "Master"
-		mixer_idx = 0
+    format = "♪: %volume"
+    format_muted = "♪: MUTE"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
 }
 
 # This is for the desktop
 ethernet enp0s25 {
-        format_up = "I: %ip"
-        format_down = "I: down"
+    format_up = "I: %ip"
+    format_down = "I: down"
 }
 
 path_exists VPN {
-        # when launced from nm-applet
-        path = "/proc/sys/net/ipv4/conf/tun0"
+    # when launced from nm-applet
+    path = "/proc/sys/net/ipv4/conf/tun0"
 }
 
 tztime local {
-        format = "%A, %B %e -- %H:%M"
+    format = "%A, %B %e -- %H:%M"
 }
 
 load {
-        format = "☉  %1min %5min %15min"
+    format = "☉  %1min %5min %15min"
 }
 
 cpu_temperature 0 {
-		format = "CPU: %degrees° C"
-		path = "/sys/class/hwmon/hwmon0/temp1_input"
+    format = "CPU: %degrees° C"
+    path = "/sys/class/hwmon/hwmon0/temp1_input"
 }
+
+disk / {
+    format = "/  %used (%percentage_used_of_avail)"
+    prefix_type = "decimal"
+}
+
+disk /home {
+    format = "/home  %used (%percentage_used_of_avail)"
+    prefix_type = "decimal"
+} 
+
+# vim: set ft=conf sts=4:

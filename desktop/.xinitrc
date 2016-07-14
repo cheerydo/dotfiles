@@ -22,28 +22,36 @@ xset +fp /usr/share/fonts/misc &
 xset +fp /home/jared/.fonts &
 xset fp rehash &
 
-setxkbmap -option shift:both_capslock -option ctrl:nocaps -option ctrl:lctrl_meta -option compose:ralt &
 
 xrdb -load ~/.Xresources &
 xbindkeys &
 compton &
 emacs --daemon &
 
-#eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets)
-
 case "$2" in
         ob)
+          setxkbmap -option shift:both_capslock -option ctrl:nocaps -option ctrl:lctrl_meta -option compose:ralt &
+          xrandr --output HDMI-0 --right-of DVI-I-1 &
           xfsettingsd &
           volumeicon &
           exec openbox-session ;;
         pw)
+          xrandr --output HDMI-0 --right-of DVI-I-1 &
           exec pekwm ;;
         cin)
           exec cinnamon-session ;;
+        sp)
+          nitrogen --restore &
+          volumeicon &
+          xmodmap ~/.Xmodmap &
+          xrandr --output HDMI-0 --right-of DVI-I-1
+          exec spectrwm ;;
         i3)
           xfsettingsd &
           nitrogen --restore &
+          setxkbmap -option shift:both_capslock -option ctrl:nocaps -option ctrl:lctrl_meta -option compose:ralt &
           exec i3 ;;
         xf|*)
+          setxkbmap -option shift:both_capslock -option ctrl:nocaps -option ctrl:lctrl_meta -option compose:ralt &
           exec startxfce4 ;;
 esac
