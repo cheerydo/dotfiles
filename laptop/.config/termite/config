@@ -16,6 +16,7 @@ scrollback_lines = 1000
 search_wrap = true
 cursor_blink = off
 cursor_shape = block
+icon_name = terminal
 
 [hints]
 font = Dina Medium 8
@@ -25,33 +26,71 @@ roundness = 2.0
 [colors]
 foreground = #ffffff
 background = #292929
+background =  #303030
 
+# Original laptop colors
+## black
+#color0 = #000000
+#color8 = #555753
+## red
+#color1 = #ff6565
+#color9 = #ff8d8d
+## green
+#color2 = #93d44f
+#color10 = #c8e7a8
+### from laptop
+##color2 = #6fb126
+##color10 = #b6e354
+## yellow
+#color3 = #eab93d
+#color11 = #ffc123
+## blue
+#color4 = #204a87
+#color12 = #3465a4
+## magenta
+#color5 = #ce5c00
+#color13 = #f57900
+## cyan
+#color6 = #89b6e2
+#color14 = #46a4ff
+## white
+#color7 = #cccccc
+#color15 = #ffffff
+
+# Desktop colors
 # black
-color0 = #000000
-color8 = #555753
+color0 =  #1e1a1b
+color8 =  #403a3d
+
 # red
-color1 = #ff6565
-color9 = #ff8d8d
-# green
-color2 = #93d44f
-color10 = #c8e7a8
-## from laptop
-#color2 = #6fb126
-#color10 = #b6e354
+#color1 =  #9e7e8b
+color1 =  #ec7171
+color9 =  #da5189
+
+# green 
+color2  = #99e051
+color10 = #99e051
+
 # yellow
-color3 = #eab93d
-color11 = #ffc123
+#color3  = #d6c9a1
+#color11 = #debe5c
+color3  = #eafd51
+color11 = #eafd51
+
 # blue
-color4 = #204a87
-color12 = #3465a4
+color4  = #9dbdc9
+color12 = #71c2e0
+
 # magenta
-color5 = #ce5c00
-color13 = #f57900
+color5  = #ab5ac9
+color13 = #ab5ac9
+
 # cyan
-color6 = #89b6e2
-color14 = #46a4ff
+color6  = #a4afce
+color14 = #607fd9
+
 # white
-color7 = #cccccc
+color7  = #c0c0c0
 color15 = #ffffff
 
 # vim: ft=dosini cms=#%s

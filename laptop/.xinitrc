@@ -19,27 +19,15 @@ xset +fp /usr/share/fonts/local &
 xset +fp /home/jared/.fonts &
 xset fp rehash &
 setxkbmap -option shift:both_capslock -option ctrl:nocaps -option compose:ralt &
+
 if [[ -f ~/.Xresources ]]; then
   xrdb -load ~/.Xresources &
 fi
 
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets) &
-
 emacs --daemon &
-
 mpd &
 
 case "$2" in
-    spectrwm)
-        nitrogen --restore &
-        compton -b &
-        synclient VertScrollDelta=-108 &
-        synclient HorizScrollDelta=-10 &
-        synclient HorizTwoFingerScroll=1 &
-        xbindkeys &
-        stalonetray &
-        nm-applet &
-        exec spectrwm ;;
     rat)
         compton -b &
         xbindkeys &
