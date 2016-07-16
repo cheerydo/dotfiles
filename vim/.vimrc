@@ -27,7 +27,7 @@ set cursorline
 set incsearch
 set lazyredraw
 set modeline
-set number
+set relativenumber
 set nohlsearch
 set ruler
 set showmatch
