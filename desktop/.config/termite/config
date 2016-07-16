@@ -1,7 +1,7 @@
 [options]
 browser = /usr/bin/firefox
 resize_grip = false
-scroll_on_output = false 
+scroll_on_output = false
 scroll_on_keystroke = true
 audible_bell = false
 visible_bell = false
