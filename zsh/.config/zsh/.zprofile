@@ -3,11 +3,13 @@
 
 case $HOST in
   beans|rice|chili)
-    setterm -blength 0
-    eval $(keychain --agents ssh,gpg --eval FBB0702A)
-    ssh-add ~/.ssh/{gitrepo,jserv,pbox,hserv}.id_rsa
-    export GPG_TTY=$(tty)
-    export GPG_AGENT_INFO="" 
+    if [[ $TMUX == "" ]]; then
+      setterm -blength 0
+      eval $(keychain --agents ssh,gpg --eval FBB0702A)
+      ssh-add ~/.ssh/{gitrepo,jserv,pbox,hserv}.id_rsa
+      export GPG_TTY=$(tty)
+      export GPG_AGENT_INFO="" 
+    fi
     ;;
   potatoes)
     envfile="$HOME/.gnupg/gpg-agent.env"
