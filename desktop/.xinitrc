@@ -49,12 +49,12 @@ case "$2" in
           xrandr --output HDMI-0 --right-of DVI-I-1
           exec spectrwm
           ;;
-        i3)
+        xf)
+          exec startxfce4
+          ;;
+        i3|*)
           xfsettingsd &
           nitrogen --restore &
           exec i3
-          ;;
-        xf|*)
-          exec startxfce4
           ;;
 esac
