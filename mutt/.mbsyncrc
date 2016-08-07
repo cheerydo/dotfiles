@@ -1,5 +1,5 @@
 IMAPAccount fastmail
-Host mail.messagingengine.com
+Host imap.fastmail.com
 User jared@fastmail.com
 PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d ~/.config/mutt/fmail.gpg"
 SSLType IMAPS
