@@ -11,6 +11,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-markdown'
+Plug 'jamessan/vim-gnupg'
 call plug#end()
 
 " Homegrown is best grown colorscheme

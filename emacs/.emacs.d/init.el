@@ -21,7 +21,8 @@
       custom-safe-themes t)
 (fset 'yes-or-no-p 'y-or-n-p)
 
-(add-to-list 'auto-mode-alist '("/tmp/mutt*" . mail-mode))
+(add-to-list 'auto-mode-alist '("/tmp/mutt*\\'" . mail-mode))
+(add-to-list 'auto-mode-alist '("\\..*rc\\'" . conf-unix-mode))
 (add-to-list 'backup-directory-alist '("~/.emacs.d/bak"))
 
 (custom-set-faces
@@ -43,6 +44,17 @@
 ; Activate installed packages
 (package-initialize)
 
+; GUI settings
+(when window-system
+  (tooltip-mode -1)
+  (tool-bar-mode -1)
+  (menu-bar-mode 1)
+  (scroll-bar-mode -1))
+
+(windmove-default-keybindings)
+
+(load-theme 'jangotango t nil)
+
 ; Bootstrap use-package
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
@@ -56,18 +68,6 @@
 	     :config
 	     (auto-compile-on-load-mode t)
 	     (auto-compile-on-save-mode t))
-;
-; GUI settings
-(when window-system
-  (tooltip-mode -1)
-  (tool-bar-mode -1)
-  (menu-bar-mode 1)
-  (scroll-bar-mode -1))
-
-(windmove-default-keybindings)
-
-
-(load-theme 'jangotango t nil)
 
 (use-package evil
   :ensure t
@@ -113,7 +113,7 @@
   (helm-mode t))
   :bind (("C-c h" . helm-mini)
 	 ("C-h a" . helm-apropos)
- ("C-x C-b" . helm-buffers-list)
+	 ("C-x C-b" . helm-buffers-list)
 	 ("C-x b" . helm-mini)
 	 ("M-y" . helm-show-kill-ring)
 	 ("M-x" . helm-M-x)
@@ -126,7 +126,6 @@
 	 ("C-x c SPC" . helm-all-mark-rings)))
 
 (use-package recentf
-
   :ensure t
   :init (recentf-mode t)
   :config (setq recentf-max-menu-items 15))
