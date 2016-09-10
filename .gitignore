@@ -19,9 +19,18 @@ newsbeuter/.newsbeuter/*
 systemd/.config/systemd/user/default.target.wants
 vdir/.config/vdirsyncer/**
 !vdir/.config/vdirsyncer/config.def
-emacs/*
-!init.el
-!jangotango-theme.el
 *.swp
 .spectrwm.conf.orig
-*\#*
+
+# Emacs stuff
+.\#*
+*~
+\#*\#
+#.elc
+auto-save-list
+elpa/
+bak/
+snippets/
+url/
+recentf*
+helm-*
