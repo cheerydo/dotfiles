@@ -24,7 +24,6 @@ mailboxes =Inbox \
   =Crux \
   =OpenBSD-announce \
   =OpenBSD-misc \
-  =OpenBSD-tech \
   =Lobsters \
   =Drafts \
   =Dynamis \
@@ -138,8 +137,7 @@ subscribe crux \
 # OpenBSD
 subscribe advocacy \
   announce \
-  misc \
-  tech 
+  misc
 # Others
 subscribe chugalug \
   lobsters
@@ -159,7 +157,7 @@ set signature="~/.config/mutt/signature"
 source ~/.config/mutt/colors/main
 
 # Address book!
-set query_command="khard email %s"
+set query_command="khard email --parsable %s"
 bind editor <Tab> complete-query
 bind editor ^T complete
 set sort_alias=alias
