@@ -1,60 +1,36 @@
-;; package -- Summary
+;;; package -- Summary
 ;;; Commentary:
 ;;; Code:
 
-; General settings
-; Don't show default window
-(setq inhibit-startup-screen t
-      ; Suppress initial scratch message
-      initial-scratch-message nil
-      x-select-enable-clipboard t
-      x-select-enable-primary nil
-      mouse-yank-at-point t
-      ; Version control
-      vc-follow-symlinks t
-      vc-make-backup-files t
-      version-control t
-      delete-old-versions t
-      kept-new-versions 1
-      kept-old-versions 0
-      ; Don't ask me - i do want to load it!
-      custom-safe-themes t)
-(fset 'yes-or-no-p 'y-or-n-p)
-
-(add-to-list 'auto-mode-alist '("/tmp/mutt*\\'" . mail-mode))
-(add-to-list 'auto-mode-alist '("\\..*rc\\'" . conf-unix-mode))
-(add-to-list 'backup-directory-alist '("~/.emacs.d/bak"))
-
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" default))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(sml/filename ((t (:inherit sml/global :foreground "azure2" :weight bold)))))
-
-(require 'package)
-(add-to-list 'package-archives'("org" . "http://orgmode.org/elpa/"))
-(add-to-list 'package-archives'("melpa" . "https://melpa.org/packages/"))
-(add-to-list 'package-archives'("melpa-stable" . "https://stable.melpa.org/packages/"))
-
-;; Bootstrap use-package
-(setq package-enable-at-startup nil
-      load-prefer-newer t)
-
+ )
 ; Activate installed packages
 (package-initialize)
+
+(require 'package)
+(add-to-list 'package-archives'("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives'("org" . "http://orgmode.org/elpa/"))
 
 ; GUI settings
 (when window-system
   (tooltip-mode -1)
   (tool-bar-mode -1)
-  (menu-bar-mode 1)
+  (menu-bar-mode -1)
   (scroll-bar-mode -1))
 
-(windmove-default-keybindings)
-
-(load-theme 'jangotango t nil)
-
+(windmove-default-keybindings) 
 ; Bootstrap use-package
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
@@ -62,12 +38,50 @@
 (setq use-package-verbose t)
 (require 'use-package)
 
+(eval-when-compile
+  (require 'use-package))
+(require 'diminish)
+(require 'bind-key)
+
 ; auto-compile lisp code
 (use-package auto-compile
-             :ensure t
-	     :config
-	     (auto-compile-on-load-mode t)
-	     (auto-compile-on-save-mode t))
+  :ensure t
+  :config
+  (progn
+    (auto-compile-on-load-mode)
+    (auto-compile-on-save-mode)))
+(setq load-prefer-newer t)
+
+; General settings
+; Don't show default window
+(setq inhibit-startup-screen t
+; Suppress initial scratch message
+      initial-scratch-message nil
+      x-select-enable-clipboard t
+      x-select-enable-primary nil
+      mouse-yank-at-point t
+; Version control
+      vc-follow-symlinks t
+      delete-old-versions t
+      version-control t
+      vc-make-backup-files t
+      kept-new-versions 1
+      kept-old-versions 0
+; Don't ask me - i do want to load it!
+      column-number-mode t
+      ;custom-safe-themes t
+      tab-width 4)
+(fset 'yes-or-no-p 'y-or-n-p)
+
+(add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
+(add-to-list 'auto-mode-alist '("\\..*rc\\'" . conf-unix-mode))
+(add-to-list 'backup-directory-alist '("~/.emacs.d/bak"))
+
+; let's get that big beautiful theme rolling
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(if window-system
+    (load-theme 'base16-atelier-forest-light 1 nil))
+  ;(load-theme 'jangotango t nil))
 
 (use-package evil
   :ensure t
@@ -82,14 +96,9 @@
     '(progn
 	(define-key evil-motion-state-map (kbd "C-f") nil)
 	(define-key evil-motion-state-map (kbd "C-u") 'evil-scroll-up))))
-  (evil-mode t))
-
-(use-package key-chord
-  :ensure t
-  :init
-  (setq key-chord-two-keys-delay 0.5)
-  (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
-  (key-chord-mode t))
+  (evil-mode t)
+  :config 
+  (evil-set-initial-state 'deft-mode 'insert))
 
 (use-package helm
   :ensure t
@@ -98,13 +107,14 @@
   (progn
     (require 'helm-config)
     (setq helm-candidate-number-limit 100
-	helm-idle-delay 0.0
-	helm-input-idle-delay 0.01
-	helm-quick-update t
-	helm-M-x-requires-pattern nil
-        helm-mode-fuzzy-match t
-	helm-ff-file-name-history-use-recentf t
-	helm-ff-skip-boring-files t))
+          helm-idle-delay 0.0
+          helm-input-idle-delay 0.01
+          helm-quick-update t
+          helm-M-x-requires-pattern nil
+          ;helm-mode-fuzzy-match t
+          helm-M-x-fuzzy-match t
+          helm-ff-file-name-history-use-recentf t
+          helm-ff-skip-boring-files t))
   :config
   (progn
     (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
@@ -125,10 +135,27 @@
 	 ("C-x c Y" . helm-yas-create-snippet-on-region)
 	 ("C-x c SPC" . helm-all-mark-rings)))
 
+(use-package key-chord
+  :ensure t
+  :init
+  (setq key-chord-two-keys-delay 0.5)
+  (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
+  (key-chord-mode t))
+
 (use-package recentf
   :ensure t
-  :init (recentf-mode t)
-  :config (setq recentf-max-menu-items 15))
+  :config
+  (progn
+	(setq recentf-max-menu-items 20
+	      recentf-exclude (list "/elpa/.*\\'")))
+  (recentf-mode t))
+
+(use-package smart-mode-line
+  :ensure t
+  :init
+  (progn
+    (setq sml/theme 'respectful)
+    (sml/setup t)))
 
 (use-package elpy
   :ensure t
@@ -139,22 +166,20 @@
 
 (use-package flycheck
   :ensure t
-  :pin melpa
   :init
   (progn
     (remove-hook 'elpy-modules 'elpy-module-flymake)
     (add-hook 'elpy-module-hook 'flycheck-mode)))
 
-(use-package smart-mode-line
-  :ensure t
-  :pin melpa-stable
-  :init
-  (progn
-    (setq sml/theme 'respectful)
-    (sml/setup)))
+(defun my-autofill-mode ()
+  "My options for setting auto-fill-mode and fill-column for specific modes."
+  (interactive)
+  (setq fill-column 80)
+  (auto-fill-mode t))
 
 (use-package org
   :ensure t
+  :pin org
   :bind (("C-c l" . org-store-link)
 	 ("C-c c" . org-capture)
 	 ("C-c a" . org-agenda)
@@ -162,14 +187,42 @@
   :config
   (progn
     (setq org-insert-mode-line-in-empty-file t
-	  org-startup-indented t
+          org-startup-indented t
+          org-log-done t
+	  org-return-follows-link t
+	  org-hierarchical-todo-statistics nil
+	  org-checkbox-hierarchical-statistics nil
+	  org-completion-use-helm t
+	  org-M-RET-may-split-line nil
 	  org-agenda-files (quote ("~/Seafile/My Library/Org/notes.org")))
-    ;; Make windmove work in org-mode:
+    ; Make windmove work in org-mode
     (add-hook 'org-shiftup-final-hook 'windmove-up)
     (add-hook 'org-shiftleft-final-hook 'windmove-left)
     (add-hook 'org-shiftdown-final-hook 'windmove-down)
-    (add-hook 'org-shiftright-final-hook 'windmove-right)))
- 
+    (add-hook 'org-shiftright-final-hook 'windmove-right)
+    (add-hook 'org-mode-hook 'my-autofill-mode)
+    (setq org-todo-keyword-faces
+	  '(("IN_PROGRESS" . "light green")
+	    ("WAITING" . "indian red")))
+    (setq org-default-notes-file
+	  (concat org-directory "/capture.org"))
+    (setq org-refile-targets '((nil :maxlevel . 9)
+			       (org-agenda-files :maxlevel . 9)))
+    (setq org-outline-path-complete-in-steps nil)
+    (setq org-refile-use-outline-path t)))
+
+(use-package deft
+  :ensure t
+  :init
+  (progn
+    (setq deft-default-extensions "org"
+	  deft-extensions '("org")
+	  deft-directory "~/org/"
+	  deft-recursive t
+	  deft-use-filename-as-title t)
+    (global-set-key [f4] 'deft)
+    (global-set-key [f5] 'deft-find-file)))
+
 (use-package magit
   :ensure t
   :bind (("C-x g" . magit-status)))
@@ -177,7 +230,7 @@
 (provide 'init)
 ;;; init.el ends here
 
-;;; Local Variables:
+ ;;; Local Variables:
 ;;; no-byte-compile: t
 ;;; byte-compile-warnings: (not free-vars)
 ;;; End:
