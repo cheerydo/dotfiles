@@ -180,8 +180,8 @@ mode "passthrough" {
 bindsym Mod1+Multi_key mode "passthrough"
 # }}}
 # {{{ Keybindings
-bindsym Mod4+space exec termite
-bindsym $mod+Shift+Return exec urxvt
+bindsym Mod4+Return exec termite
+bindsym Mod4+Shift+Return exec urxvt
 bindsym $mod+bracketleft exec rofi -show run
 bindsym $mod+bracketright exec rofi -show window
 bindsym $mod+Shift+p exec /home/jared/bin/passmenu
@@ -195,5 +195,4 @@ bindsym XF86AudioPrev exec mpc prev
 
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-
 # }}}
