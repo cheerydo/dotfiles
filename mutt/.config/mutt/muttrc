@@ -50,8 +50,8 @@ set reply_to
 set edit_headers
 set header_cache="~/.config/mutt/cache/headers"
 set message_cachedir="~/.config/mutt/cache"
-set read_inc=500
-set write_inc=500
+set read_inc=100
+set write_inc=100
 # ----------   END   ----------#
 
 

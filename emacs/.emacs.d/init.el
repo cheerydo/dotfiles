@@ -15,7 +15,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+)
+
 ; Activate installed packages
 (package-initialize)
 
@@ -69,8 +70,10 @@
       kept-old-versions 0
 ; Don't ask me - i do want to load it!
       column-number-mode t
-      ;custom-safe-themes t
-      tab-width 4)
+;custom-safe-themes t
+      tab-width 4
+;always spaces
+	  indent-tabs-mode nil)
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
@@ -79,9 +82,12 @@
 
 ; let's get that big beautiful theme rolling
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-(if window-system
-    (load-theme 'base16-atelier-forest-light 1 nil))
-  ;(load-theme 'jangotango t nil))
+;(if window-system
+;    (load-theme 'base16-atelier-forest-light 1 nil)
+(use-package flatui-theme
+  :ensure t
+  :init
+  (load-theme 'flatui t))
 
 (use-package evil
   :ensure t
@@ -94,8 +100,8 @@
     (define-key global-map (kbd "C-u") 'kill-whole-line)
     (eval-after-load 'evil-maps
     '(progn
-	(define-key evil-motion-state-map (kbd "C-f") nil)
-	(define-key evil-motion-state-map (kbd "C-u") 'evil-scroll-up))))
+    (define-key evil-motion-state-map (kbd "C-f") nil)
+    (define-key evil-motion-state-map (kbd "C-u") 'evil-scroll-up))))
   (evil-mode t)
   :config 
   (evil-set-initial-state 'deft-mode 'insert))
@@ -122,18 +128,33 @@
     (define-key helm-map (kbd "C-z") 'helm-select-action)
   (helm-mode t))
   :bind (("C-c h" . helm-mini)
-	 ("C-h a" . helm-apropos)
-	 ("C-x C-b" . helm-buffers-list)
-	 ("C-x b" . helm-mini)
-	 ("M-y" . helm-show-kill-ring)
-	 ("M-x" . helm-M-x)
-	 ("C-x C-f" . helm-find-files)
-	 ("C-x c l" . helm-locate)
-	 ("C-x c o" . helm-occur)
-	 ("C-x c s" . helm-swoop)
-	 ("C-x c y" . helm-yas-complete)
-	 ("C-x c Y" . helm-yas-create-snippet-on-region)
-	 ("C-x c SPC" . helm-all-mark-rings)))
+         ("C-h a" . helm-apropos)
+         ("C-x C-b" . helm-buffers-list)
+         ;("C-x b" . helm-mini)
+         ("M-y" . helm-show-kill-ring)
+         ;("M-x" . helm-M-x)
+         ;("C-x C-f" . helm-find-files)
+         ;("C-x c l" . helm-locate)
+         ("C-x c o" . helm-occur)
+         ("C-x c s" . helm-swoop)
+         ("C-x c y" . helm-yas-complete)
+         ("C-x c Y" . helm-yas-create-snippet-on-region)
+         ("C-x c SPC" . helm-all-mark-rings)))
+
+(use-package ivy
+  :ensure t
+  :bind (("C-x C-f" . counsel-find-file)
+         ("M-x" . counsel-M-x)
+         ("C-h f" . counsel-describe-function)
+         ("C-h v" . counsel-describe-variable)
+         ("C-x c l" . counsel-locate)
+         ("C-s" . swiper)
+         ("C-x b" . ivy-switch-buffer)))
+  :config
+  (progn
+    (ivy-mode t)
+    (setq ivy-use-virtual-buffers t
+      ivy-count-format "(%d/%d) "))
 
 (use-package key-chord
   :ensure t
@@ -146,8 +167,8 @@
   :ensure t
   :config
   (progn
-	(setq recentf-max-menu-items 20
-	      recentf-exclude (list "/elpa/.*\\'")))
+    (setq recentf-max-menu-items 20
+      recentf-exclude (list "/elpa/.*\\'")))
   (recentf-mode t))
 
 (use-package smart-mode-line
@@ -181,20 +202,20 @@
   :ensure t
   :pin org
   :bind (("C-c l" . org-store-link)
-	 ("C-c c" . org-capture)
-	 ("C-c a" . org-agenda)
-	 ("C-c b" . org-iswitchb))
+         ("C-c c" . org-capture)
+         ("C-c a" . org-agenda)
+         ("C-c b" . org-iswitchb))
   :config
   (progn
     (setq org-insert-mode-line-in-empty-file t
           org-startup-indented t
           org-log-done t
-	  org-return-follows-link t
-	  org-hierarchical-todo-statistics nil
-	  org-checkbox-hierarchical-statistics nil
-	  org-completion-use-helm t
-	  org-M-RET-may-split-line nil
-	  org-agenda-files (quote ("~/Seafile/My Library/Org/notes.org")))
+          org-return-follows-link t
+          org-hierarchical-todo-statistics nil
+          org-checkbox-hierarchical-statistics nil
+          org-completion-use-helm t
+          org-M-RET-may-split-line nil
+          org-agenda-files (quote ("~/Seafile/My Library/Org/notes.org")))
     ; Make windmove work in org-mode
     (add-hook 'org-shiftup-final-hook 'windmove-up)
     (add-hook 'org-shiftleft-final-hook 'windmove-left)
@@ -202,12 +223,12 @@
     (add-hook 'org-shiftright-final-hook 'windmove-right)
     (add-hook 'org-mode-hook 'my-autofill-mode)
     (setq org-todo-keyword-faces
-	  '(("IN_PROGRESS" . "light green")
-	    ("WAITING" . "indian red")))
+          '(("IN_PROGRESS" . "light green")
+            ("WAITING" . "indian red")))
     (setq org-default-notes-file
-	  (concat org-directory "/capture.org"))
+          (concat org-directory "/capture.org"))
     (setq org-refile-targets '((nil :maxlevel . 9)
-			       (org-agenda-files :maxlevel . 9)))
+                               (org-agenda-files :maxlevel . 9)))
     (setq org-outline-path-complete-in-steps nil)
     (setq org-refile-use-outline-path t)))
 
@@ -216,10 +237,10 @@
   :init
   (progn
     (setq deft-default-extensions "org"
-	  deft-extensions '("org")
-	  deft-directory "~/org/"
-	  deft-recursive t
-	  deft-use-filename-as-title t)
+          deft-extensions '("org")
+          deft-directory "~/Seafile/My Library/Org"
+          deft-recursive t
+          deft-use-filename-as-title t)
     (global-set-key [f4] 'deft)
     (global-set-key [f5] 'deft-find-file)))
 
