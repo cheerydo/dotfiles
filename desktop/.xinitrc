@@ -36,8 +36,9 @@ case "$2" in
     ;;
   i3|*)
 #    xfsettingsd &
-    xrandr --output DVI-I-1 --left-of HDMI-0
+    #xrandr --output DVI-I-1 --right-of HDMI-0
     nitrogen --restore &
+    xrandr --output HDMI-0 --off
     exec i3
     ;;
 esac

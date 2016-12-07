@@ -9,7 +9,10 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" default))))
+    ("a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "15348febfa2266c4def59a08ef2846f6032c0797f001d7b9148f30ace0d08bcf" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" default)))
+ '(package-selected-packages
+   (quote
+    (jedi flatui-theme doremi material-theme xterm-color use-package swiper smart-mode-line sicp powerline-evil org magit key-chord helm flycheck elpy deft base16-theme auto-compile ample-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -21,8 +24,11 @@
 (package-initialize)
 
 (require 'package)
-(add-to-list 'package-archives'("melpa" . "https://melpa.org/packages/"))
-(add-to-list 'package-archives'("org" . "http://orgmode.org/elpa/"))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+
+; Activate installed packages
+(package-initialize)
 
 ; GUI settings
 (when window-system
@@ -82,12 +88,6 @@
 
 ; let's get that big beautiful theme rolling
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-;(if window-system
-;    (load-theme 'base16-atelier-forest-light 1 nil)
-(use-package flatui-theme
-  :ensure t
-  :init
-  (load-theme 'flatui t))
 
 (use-package evil
   :ensure t
@@ -171,19 +171,10 @@
       recentf-exclude (list "/elpa/.*\\'")))
   (recentf-mode t))
 
-(use-package smart-mode-line
-  :ensure t
-  :init
-  (progn
-    (setq sml/theme 'respectful)
-    (sml/setup t)))
-
 (use-package elpy
   :ensure t
   :config
-  (progn
-    (elpy-enable)
-    (setq elpy-rpc-backend "jedi")))
+  (elpy-enable))
 
 (use-package flycheck
   :ensure t
@@ -247,6 +238,19 @@
 (use-package magit
   :ensure t
   :bind (("C-x g" . magit-status)))
+
+(use-package flatui-theme
+  :ensure t
+  :init
+  (progn
+	(load-theme 'flatui)))
+
+(use-package smart-mode-line
+  :ensure t
+  :init
+  (progn
+    (setq sml/theme 'light)
+    (sml/setup t)))
 
 (provide 'init)
 ;;; init.el ends here

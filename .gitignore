@@ -34,3 +34,5 @@ snippets/
 url/
 recentf*
 helm-*
+session.*
+emacs/.emacs.d/bookmarks

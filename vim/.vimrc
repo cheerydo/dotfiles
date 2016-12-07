@@ -81,7 +81,8 @@ au FileType mail setlocal fo=tawcql tw=0 wm=0 wrap | +/^$/+1 | startinsert
 
 " Keymappings for your health
 nmap <space> <leader>
-inoremap jj <Esc>
+" Puts cursor at last used insert position after exiting insert mode
+inoremap jj <Esc>'^
 nnoremap E $
 nnoremap $ <nop>
 nnoremap <Leader>w :w<CR>
