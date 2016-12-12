@@ -181,6 +181,19 @@ mode "passthrough" {
     bindsym $mod+Shift+BackSpace mode "default"
 }
 bindsym $mod+Shift+BackSpace mode "passthrough"
+
+set $mode_admin "System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown"
+mode $mode_admin {
+    bindsym l exec --no-startup-id i3exit lock; mode "default"
+    bindsym e exec --no-startup-id i3exit logout; mode "default"
+    bindsym s exec --no-startup-id i3exit suspend; mode "default"
+    bindsym r exec --no-startup-id i3exit reboot; mode "default"
+    bindsym Shift+s exec --no-startup-id i3exit shutdown; mode "default"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Pause mode $mode_admin
 # }}}
 # {{{ Specific program settings
 for_window [class="Gimp"]               floating enable
@@ -200,7 +213,6 @@ for_window [title="^Steam Keyboard$"]   floating enable
 for_window [title="^Application Finder"] floating enable
 
 for_window [class="^Pavucontrol$"]      floating enable
-for_window [class="Thunar"]             floating enable
 for_window [class="Keepassx$"]          floating enable
 for_window [window_role="pop-up"]       floating enable
 for_window [window_role="task_dialog"]  floating enable
