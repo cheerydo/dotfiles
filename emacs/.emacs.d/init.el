@@ -2,20 +2,9 @@
 ;;; Commentary:
 ;;; Code:
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (jedi flatui-theme doremi material-theme xterm-color use-package swiper smart-mode-line sicp powerline-evil org magit key-chord helm flycheck elpy deft base16-theme auto-compile ample-theme))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
-)
+; Don't have the ugly custom-set-variables in this file
+(setq custom-file "~/.emacs.d/custom-vars.el")
+(load custom-file)
 
 ; Activate installed packages
 (package-initialize)
@@ -26,6 +15,12 @@
 
 ; Activate installed packages
 (package-initialize)
+
+(use-package flatui-theme
+  :ensure t
+  :init
+  (progn
+    (load-theme 'flatui 1)))
 
 ; GUI settings
 (when window-system
@@ -231,7 +226,7 @@
   (progn
     (setq deft-default-extensions "org"
           deft-extensions '("org")
-          deft-directory "~/Seafile/My Library/Org"
+          deft-directory "~/Seafile/My Library"
           deft-recursive t
           deft-use-filename-as-title t)
     (global-set-key [f4] 'deft)
@@ -241,11 +236,9 @@
   :ensure t
   :bind (("C-x g" . magit-status)))
 
-(use-package flatui-theme
+(use-package ranger
   :ensure t
-  :init
-  (progn
-    (load-theme 'flatui)))
+  :bind (("C-x d" . ranger)))
 
 (use-package smart-mode-line
   :ensure t

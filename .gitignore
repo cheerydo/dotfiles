@@ -36,3 +36,4 @@ recentf*
 helm-*
 session.*
 emacs/.emacs.d/bookmarks
+emacs/.emacs.d/custom-vars.el
