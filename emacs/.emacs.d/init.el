@@ -7,9 +7,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   (quote
-    ("a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "15348febfa2266c4def59a08ef2846f6032c0797f001d7b9148f30ace0d08bcf" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" default)))
  '(package-selected-packages
    (quote
     (jedi flatui-theme doremi material-theme xterm-color use-package swiper smart-mode-line sicp powerline-evil org magit key-chord helm flycheck elpy deft base16-theme auto-compile ample-theme))))
@@ -142,6 +139,16 @@
          ("C-x c SPC" . helm-all-mark-rings)))
 
 (use-package ivy
+  :diminish ivy-mode
+  :ensure t
+  :config
+  (progn
+    (setq ivy-use-virtual-buffers t
+      ivy-height 15
+      ivy-count-format "(%d/%d) ")
+    (ivy-mode t)))
+
+(use-package counsel
   :ensure t
   :bind (("C-x C-f" . counsel-find-file)
          ("M-x" . counsel-M-x)
@@ -150,11 +157,6 @@
          ("C-x c l" . counsel-locate)
          ("C-s" . swiper)
          ("C-x b" . ivy-switch-buffer)))
-  :config
-  (progn
-    (ivy-mode t)
-    (setq ivy-use-virtual-buffers t
-      ivy-count-format "(%d/%d) "))
 
 (use-package key-chord
   :ensure t
@@ -243,7 +245,7 @@
   :ensure t
   :init
   (progn
-	(load-theme 'flatui)))
+    (load-theme 'flatui)))
 
 (use-package smart-mode-line
   :ensure t
@@ -255,7 +257,7 @@
 (provide 'init)
 ;;; init.el ends here
 
- ;;; Local Variables:
+;;; Local Variables:
 ;;; no-byte-compile: t
 ;;; byte-compile-warnings: (not free-vars)
 ;;; End:
