@@ -84,4 +84,4 @@ bindkey -M vicmd "^[[3~" vi-delete-char
 bindkey          "^[[3~" delete-char 
 
 # Prompt!
-PROMPT='[%m](%5~) ──── '
+PROMPT='(%5~) ──── '

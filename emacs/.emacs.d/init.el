@@ -105,12 +105,11 @@
   (progn
     (require 'helm-config)
     (setq helm-candidate-number-limit 100
-          helm-idle-delay 0.0
+	  helm-idle-delay 0.0
           helm-input-idle-delay 0.01
           helm-quick-update t
           helm-M-x-requires-pattern nil
-          ;helm-mode-fuzzy-match t
-          helm-M-x-fuzzy-match t
+          helm-mode-fuzzy-match t
           helm-ff-file-name-history-use-recentf t
           helm-ff-skip-boring-files t))
   :config

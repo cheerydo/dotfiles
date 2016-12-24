@@ -9,6 +9,7 @@ Plug 'itchyny/calendar.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'vimperator/vimperator.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-markdown'
 Plug 'jamessan/vim-gnupg'
@@ -97,7 +98,6 @@ set pastetoggle=<F4>
 " Window nav with resize
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
-
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-w>h :vertical res -5<CR>
