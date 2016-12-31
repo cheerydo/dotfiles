@@ -16,12 +16,6 @@
 ; Activate installed packages
 (package-initialize)
 
-(use-package flatui-theme
-  :ensure t
-  :init
-  (progn
-    (load-theme 'flatui 1)))
-
 ; GUI settings
 (when window-system
   (tooltip-mode -1)
@@ -52,31 +46,25 @@
 (setq load-prefer-newer t)
 
 ; General settings
-; Don't show default window
 (setq inhibit-startup-screen t
-; Suppress initial scratch message
       initial-scratch-message nil
       x-select-enable-clipboard t
       x-select-enable-primary nil
       mouse-yank-at-point t
-; Version control
       vc-follow-symlinks t
       delete-old-versions t
-      version-control t
       vc-make-backup-files t
-      kept-new-versions 1
-      kept-old-versions 0
-; Don't ask me - i do want to load it!
+      kept-new-versions 2
+      kept-old-versions 1
+      version-control t
       column-number-mode t
-;custom-safe-themes t
       tab-width 4
-;always spaces
-	  indent-tabs-mode nil)
+      indent-tabs-mode nil)
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
 (add-to-list 'auto-mode-alist '("\\..*rc\\'" . conf-unix-mode))
-(add-to-list 'backup-directory-alist '("~/.emacs.d/bak"))
+(add-to-list 'backup-directory-alist '("~/.emacs.d/.bak"))
 
 ; let's get that big beautiful theme rolling
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
@@ -239,11 +227,16 @@
   :ensure t
   :bind (("C-x d" . ranger)))
 
+(use-package flatui-theme
+  :ensure t
+  :config
+  (load-theme 'flatui 1))
+
 (use-package smart-mode-line
   :ensure t
   :init
   (progn
-    (setq sml/theme 'light)
+    (setq sml/theme 'respectful)
     (sml/setup t)))
 
 (provide 'init)
