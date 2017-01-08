@@ -25,5 +25,6 @@ case $HOST in
 esac
 
 if [[ $HOST == "rice" ]]; then
+  source $ZDOTDIR/.zshrc
   [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
 fi
