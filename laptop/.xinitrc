@@ -14,10 +14,7 @@ fi
 xset b off
 xset s off
 xset -dpms
-xset fp+ /usr/share/fonts/local
-xset fp+ /home/jared/.fonts
-xset fp rehash
-setxkbmap -option shift:both_capslock -option ctrl:nocaps -option compose:ralt
+setxkbmap -option shift:both_capslock -option ctrl:nocaps -option ctrl:swap_lwin_lctl
 
 if [[ -f ~/.Xresources ]]; then
   xrdb -load ~/.Xresources
@@ -26,29 +23,7 @@ fi
 emacs --daemon &
 #mpd &
 
-case "$2" in
-    rat)
-        compton -b
-        xbindkeys
-        synclient VertScrollDelta=-108
-        synclient HorizScrollDelta=-10
-        synclient HorizTwoFingerScroll=1
-        exec ratpoison ;;
-    pekwm)
-        compton -b
-        xbindkeys
-        synclient VertScrollDelta=-108
-        synclient HorizScrollDelta=-10
-        synclient HorizTwoFingerScroll=1
-        exec pekwm ;;
-    cinn)
-        exec cinnamon-session ;;
-    i3|*) 
-        nitrogen --restore
-        compton -b
-        xbindkeys
-        synclient VertScrollDelta=-108
-        synclient HorizScrollDelta=-10
-        synclient HorizTwoFingerScroll=1
-        exec i3 ;;
-esac
+compton -b
+nitrogen --restore
+xsetroot -mod 16 16 -fg '#343d46' -bg '#2b303b'
+exec i3
