@@ -1,4 +1,5 @@
 alias mutt='mutt -F ~/.config/mutt/muttrc'
+alias imutt='mutt -F ~/.config/mutt/muttrc.imap'
 alias cm='mbsync -a'
 
 alias p='pwd'
