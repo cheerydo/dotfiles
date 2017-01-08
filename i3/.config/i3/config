@@ -11,7 +11,7 @@ new_window pixel 1
 # {{{Startup programs
 exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
-exec --no-startup-id keepassxc
+exec --no-startup-id keepassx
 exec --no-startup-id redshift-gtk
 exec --no-startup-id seafile-applet
 exec --no-startup-id caffeine
@@ -193,7 +193,7 @@ mode $mode_admin {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+Pause mode $mode_admin
+bindsym $mod+backslash mode $mode_admin
 # }}}
 # {{{ Specific program settings
 for_window [class="Gimp"]               floating enable
