@@ -25,6 +25,7 @@ xset fp rehash
 xrdb -load ~/.Xresources
 compton &
 emacs --daemon &
+mpd &
 
 setxkbmap -option shift:both_capslock -option ctrl:nocaps -option ctrl:swap_lwin_lctl
 
