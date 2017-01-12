@@ -15,7 +15,6 @@ fi
 xset b off &
 xset s off &
 xset -dpms &
-xset m 5 7 &
 
 xset +fp /usr/share/fonts/local
 xset +fp /usr/share/fonts/misc
