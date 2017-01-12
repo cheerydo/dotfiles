@@ -1,4 +1,5 @@
 # -*-muttrc-*-
+# vim: ft=muttrc
 #
 # Command formats for gpg.
 # 
@@ -32,7 +33,6 @@ set pgp_sign_as=FBB0702A
 set pgp_timeout=3600
 set pgp_good_sign="^gpgv?: Good signature from "
 
-set crypt_verify_sig="yes"
 set crypt_replysign="yes"
 set crypt_replyencrypt="yes"
 set crypt_replysignencrypted="yes"
