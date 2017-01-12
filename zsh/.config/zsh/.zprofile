@@ -5,7 +5,11 @@ case $HOST in
   beans|rice|chili)
     if [[ $TMUX == "" ]]; then
       setterm -blength 0
-      eval $(keychain --agents ssh --eval)
+      if [[ $HOST == "beans" ]]; then
+        eval $(keychain --agents ssh,gpg --eval FBB0702A)
+      else
+        eval $(keychain --agents ssh --eval)
+      fi
       ssh-add ~/.ssh/{gitrepo,jserv,pbox,hserv}.id_rsa
       export GPG_TTY=$(tty)
       export GPG_AGENT_INFO="" 
