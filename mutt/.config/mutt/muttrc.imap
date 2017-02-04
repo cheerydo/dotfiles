@@ -1,14 +1,12 @@
 # ---------- Internals ----------#
 set from="Jared Hamilton <jared@fastmail.com>"
-set folder=~/mail
 set imap_user=jared@fastmail.com
-set imap_pass=cmtrvrkpbejvcg7z
-set my_imap_server=imap.fastmail.com
-set imap_check_subscribed
+set imap_pass=`gpg -d -q --no-tty ~/.config/mutt/fmail_imap.gpg`
+set my_server=imap.fastmail.com
 
 # set some folder mappings
-set folder=imaps://$my_imap_server:993/
-set spoolfile="="
+set folder=imaps://$my_server/
+set spoolfile="=INBOX"
 set postponed="=Drafts"
 set record="=Sent Items"
 set trash="=Trash"
@@ -25,6 +23,8 @@ set header_cache="~/.config/mutt/cache/headers"
 set message_cachedir="~/.config/mutt/cache"
 set read_inc=200
 set write_inc=200
+set imap_check_subscribed
+unset imap_list_subscribed
 # ----------   END   ----------#
 
 
