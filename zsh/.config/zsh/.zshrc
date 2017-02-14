@@ -44,16 +44,24 @@ if [[ -f $ZDOTDIR/aliases.main ]]; then
   . $ZDOTDIR/aliases.main
 fi
 
-if [[ $HOST == "chicken" ]]; then
-  . $ZDOTDIR/aliases.obsd
-  eval $(gdircolors $ZDOTDIR/.dircolors)
-elif [[ $HOST == "potatoes" ]]; then
-  . $ZDOTDIR/aliases.debian
-  eval $(dircolors $ZDOTDIR/.dircolors)
-else
-  . $ZDOTDIR/aliases.arch
-  eval $(dircolors $ZDOTDIR/.dircolors)
-fi
+case "$HOST" in
+  chicken)
+    source $ZDOTDIR/aliases.obsd
+    eval $(gdircolors $ZDOTDIR/.dircolors)
+    ;;
+  potatoes)
+    source $ZDOTDIR/aliases.debian
+    eval $(dircolors $ZDOTDIR/.dircolors)
+    ;;
+  beans|rice)
+    source $ZDOTDIR/aliases.arch
+    eval $(dircolors $ZDOTDIR/.dircolors)
+    ;;
+  chili)
+    source $ZDOTDIR/aliases.crux
+    eval $(dircolors $ZDOTDIR/.dircolors)
+    ;;
+esac
 
 case $TERM in
   *termite)
@@ -76,4 +84,4 @@ bindkey -M vicmd "^[[3~" vi-delete-char
 bindkey          "^[[3~" delete-char 
 
 # Prompt!
-PROMPT='[%m](%5~) ──── '
+PROMPT='(%5~) ──── '

@@ -9,8 +9,10 @@ Plug 'itchyny/calendar.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'vimperator/vimperator.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-markdown'
+Plug 'jamessan/vim-gnupg'
 call plug#end()
 
 " Homegrown is best grown colorscheme
@@ -27,7 +29,7 @@ set cursorline
 set incsearch
 set lazyredraw
 set modeline
-set number
+set relativenumber
 set nohlsearch
 set ruler
 set showmatch
@@ -76,11 +78,12 @@ filetype plugin indent  on
 let g:netrw_liststyle=3
 
 " Special circumstances for reading mutt mails
-au FileType mail set fo=aw tw=80 wrap | +/^$/ | startinsert
+au FileType mail setlocal fo=tawcql tw=0 wm=0 wrap | +/^$/+1 | startinsert
 
 " Keymappings for your health
 nmap <space> <leader>
-inoremap jj <Esc>
+" Puts cursor at last used insert position after exiting insert mode
+inoremap jj <Esc>'^
 nnoremap E $
 nnoremap $ <nop>
 nnoremap <Leader>w :w<CR>
@@ -95,7 +98,6 @@ set pastetoggle=<F4>
 " Window nav with resize
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
-
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-w>h :vertical res -5<CR>
@@ -108,8 +110,8 @@ nnoremap <Leader>sv :vne<CR>
 nnoremap <Leader>sh :new<CR>
 
 " Tab navigation
-nnoremap <Leader>m :tabnext<CR>
-nnoremap <Leader>n :tabprevious<CR>
+nnoremap <Leader>, :tabnext<CR>
+nnoremap <Leader>. :tabprevious<CR>
 nnoremap <Leader>b :tabedit<Space>
 nnoremap <Leader>B :tabnew<CR>
 nnoremap <Leader>x :tabclose<CR>

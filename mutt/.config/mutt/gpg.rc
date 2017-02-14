@@ -1,10 +1,8 @@
 # -*-muttrc-*-
+# vim: ft=muttrc
 #
 # Command formats for gpg.
 # 
-# This version uses gpg-2comp from 
-#   http://70t.de/download/gpg-2comp.tar.gz
-#
 # $Id$
 #
 # %p    The empty string when no passphrase is needed,
@@ -35,7 +33,6 @@ set pgp_sign_as=FBB0702A
 set pgp_timeout=3600
 set pgp_good_sign="^gpgv?: Good signature from "
 
-set crypt_verify_sig="yes"
 set crypt_replysign="yes"
 set crypt_replyencrypt="yes"
 set crypt_replysignencrypted="yes"

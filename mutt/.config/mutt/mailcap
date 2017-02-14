@@ -1,8 +1,7 @@
-#text/html; chromium %s; test=test -n "$DISPLAY"; needsterminal;
-text/html; firefox %s; test=test -n "$DISPLAY"; needsterminal;
+#text/html; chromium %s; test=test -n "$DISPLAY"; needsterminal
+text/html; firefox %s; test=test -n "$DISPLAY"; needsterminal
 text/html; elinks -dump ; copiousoutput
 application/msword; lowriter %s ; copiousoutput
 application/vnd.oasis.opendocument.text; lowriter %s
 application/pdf; zathura %s &; copiousoutput
-image/jpeg; feh %s;
-image/png; feh %s;
+image/*; feh %s

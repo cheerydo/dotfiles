@@ -18,14 +18,12 @@ mailboxes =Inbox \
   =Arch/\.Arch-dev \
   =Arch/\.Arch-projects \
   =Arch/\.Aur-general \
-  =Arch/\.Pacman-dev \
   =Archive \
   =Chugalug \
   =Church \
   =Crux \
   =OpenBSD-announce \
   =OpenBSD-misc \
-  =OpenBSD-tech \
   =Lobsters \
   =Drafts \
   =Dynamis \
@@ -34,11 +32,13 @@ mailboxes =Inbox \
   =Important/\.School\ loans \
   =Jessica \
   =Jobs \
-  =Junk\ Mail \
   =Lee \
   =Personal \
   =Queue \
   =Receipts \
+  =Learn\ Spam \
+  =Learn\ Not\ Spam \
+  =Junk\ Mail \
   =Sent\ Items \
   =Trash \
   =mailbak
@@ -50,19 +50,20 @@ set reply_to
 set edit_headers
 set header_cache="~/.config/mutt/cache/headers"
 set message_cachedir="~/.config/mutt/cache"
-set read_inc=100
+set read_inc=1000
 set write_inc=100
 # ----------   END   ----------#
 
 
 # -----------  PGP  -----------#
 source ~/.config/mutt/gpg.rc
+# ----------   END   ----------#
 
 # ---------- APPEARANCE ---------#
 # --------------&----------------#
 # ----------  KEYBINDS  ---------#
 # some aesthetics
-set editor=vim
+set editor="emacsclient -nw"
 set sort=threads
 set sort_aux=reverse-last-date-received
 unset collapse_unread
@@ -87,12 +88,20 @@ set mailcap_path="~/.config/mutt/mailcap"
 auto_view text/html
 
 ## sidebar stuff
-set sidebar_visible=no
+set sidebar_divider_char=" |"
+set sidebar_indent_string=" "
+set sidebar_visible=yes
 set sidebar_width=25
-set sidebar_delim=" |"
+set sidebar_delim_chars="/."
+set sidebar_format="%B%*  %?N?%N/?%S"
 color sidebar_new brightdefault default 
-set sidebar_shortpath=yes
-set sidebar_folderindent=yes
+set sidebar_short_path=yes
+set sidebar_folder_indent=yes
+set sidebar_next_new_wrap=yes
+
+set mail_check_stats=yes
+set mail_check_stats_interval=30
+
 # Default index_format
 folder-hook "Sent*" 'set index_format="%3C %Z  |  %(!%m/%d)   %-35.35F   %?M?[+](%2.M messages)? %s"'
 folder-hook ! "Sent*" 'set index_format="%3C %Z  |  %(!%m/%d)   %-35.35F   %?M?[+](%2.M messages)? %s"'
@@ -111,6 +120,7 @@ reply-hook . my_hdr Bcc: jared@fastmail.com
 
 # keybinds!
 source ~/.config/mutt/keys
+# ----------   END   ----------#
         
 # ---------- MAILING LISTS ----------# 
 # Arch
@@ -127,29 +137,29 @@ subscribe crux \
 # OpenBSD
 subscribe advocacy \
   announce \
-  misc \
-  tech 
+  misc
 # Others
 subscribe chugalug \
   lobsters
 # ----------      END      ----------#
 
 # ----------     HOOKS     ----------#
+reply-hook . "set signature=''"
+send-hook '! ~s [Rr]e:' 'set signature="~/.config/mutt/signature"'
 # ----------      END      ----------#
 
 # ---------- Miscellaneous ----------#
 # siggy sig
+unset sig_dashes
 set signature="~/.config/mutt/signature"
-reply-hook . "set signature=''"
-send-hook '! ~s [Rr]e:' 'set signature="~/.config/mutt/signature"'
 
 # yay colors 
 source ~/.config/mutt/colors/main
 
 # Address book!
-#set query_command="abook --mutt-query '%s'"
-set query_command="pc_query -m '%s'"
+set query_command="khard email --parsable %s"
 bind editor <Tab> complete-query
+bind editor ^T complete
 set sort_alias=alias
 set reverse_alias=yes
 

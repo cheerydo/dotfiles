@@ -6,6 +6,7 @@ mpd/*
 ncmpcpp/.ncmpcpp/error.log
 ncmpcpp/.ncmpcpp/artists
 ncmpcpp/.ncmpcpp/config.def
+ncmpcpp/.ncmpcpp/bindings.def
 mutt/.config/mutt/cache/**
 mutt/.config/mutt/certificates
 mutt/.config/mutt/id
@@ -16,5 +17,23 @@ vim/.vim/*
 newsbeuter/.newsbeuter/*
 !newsbeuter/.newsbeuter/config
 systemd/.config/systemd/user/default.target.wants
-emacs/.emacs.d/*
-!init.el
+vdir/.config/vdirsyncer/**
+!vdir/.config/vdirsyncer/config.def
+*.swp
+.spectrwm.conf.orig
+
+# Emacs stuff
+.\#*
+*~
+\#*\#
+#.elc
+auto-save-list
+elpa/
+bak/
+snippets/
+url/
+recentf*
+helm-*
+session.*
+emacs/.emacs.d/bookmarks
+emacs/.emacs.d/custom-vars.el

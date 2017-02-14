@@ -1,11 +1,11 @@
 ## Kindly inspired from 
 ## http://nongeekshandbook.blogspot.ie/2009/03/mutt-color-configuration.html 
 ## Colors for index
-color index brightcyan default ~N # new messages
+color index brightblue default ~N # new messages
 color index brightred default ~O # old
 color index brightyellow default ~F #flagged
 color index green default ~T #tagged
-color index brightred default ~D # deleted
+color index red default ~D # deleted
 
 ## Highlight definitions
 ## URLs
@@ -50,7 +50,7 @@ color header yellow default "^X-SpamProbe:"
 color header red default "^X-SpamProbe: SPAM"
 
 ## Coloring quoted text - coloring the first 7 levels:
-color quoted cyan default
+color quoted blue default
 color quoted1 yellow default
 color quoted2 red default
 color quoted3 green default
@@ -61,13 +61,13 @@ color quoted7 green default
 
 ## Default color definitions
 color signature brightmagenta default
-color indicator brightblue brightdefault
+color indicator brightcyan color237
 color attachment brightdefault default
 color error red default
 color message default default
 color search brightwhite magenta
 color status brightblue default
-color tree brightblue default
+color tree default default
 color normal default default
 color tilde default default
 color bold brightyellow default
@@ -76,7 +76,7 @@ color markers brightcyan default
 
 mono bold bold
 mono underline underline
-mono indicator reverse
+#mono indicator reverse
 mono index bold ~N
 mono index bold ~F
 mono index bold ~T

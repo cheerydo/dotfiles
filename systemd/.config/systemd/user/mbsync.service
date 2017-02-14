@@ -2,6 +2,8 @@
 Description=Start mbsync for mailbox
 
 [Service]
+Environment="GPG_TTY=$(tty)"
+Environment="GPG_AGENT_INFO="
 Type=simple
 ExecStart=/usr/bin/mbsync -a -q
 ExecStartPost=/sbin/notmuch new --quiet

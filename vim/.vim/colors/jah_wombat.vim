@@ -1,5 +1,6 @@
 " Colorscheme kindly inspired from eclm_wombat by
 " Alex Duller. Thanks man.
+
 hi clear
 set background=dark
 
@@ -33,23 +34,15 @@ hi SpecialKey       guifg=#808080 guibg=#343434 gui=none
 hi Error            guifg=#c41df5 guibg=#232323 gui=none
 
 " Syntax highlighting
-" hi Comment          guifg=#5b4794 gui=italic
 hi Comment          guifg=#99968b gui=italic
 hi Todo             guifg=#8f8f8f gui=italic
-" hi Constant         guifg=#6e9cbe gui=none
-" hi String           guifg=#1aff1a gui=italic
+hi Constant         guifg=#6e9cbe gui=none
 hi String           guifg=#53ed90 gui=italic
-" hi Identifier       guifg=#c9ceff gui=none
 hi Identifier       guifg=#6bf5ff gui=none
 hi Function         guifg=#ffa319 gui=none
-" hi Function         guifg=#39c3ed gui=none
 hi Type             guifg=#ffffff gui=bold
 hi Statement        guifg=#92a1ea gui=none
-" hi Statement        guifg=#8fffff gui=none
 hi Keyword          guifg=#69a1ff gui=none
-" hi Keyword          guifg=#000000 gui=none
 hi PreProc          guifg=#8ac6f2 gui=none
-" hi Number           guifg=#99968b gui=none
 hi Number           guifg=#72d472 gui=none
 hi Special          guifg=#e7f6da gui=none
-" hi Special          guifg=#9aff42 gui=none

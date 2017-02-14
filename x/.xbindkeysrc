@@ -1,5 +1,0 @@
-"systemctl suspend"
-  Alt + End
-
-"scrot -m -e 'mv $f ~/pictures/screens/'"
-  Print

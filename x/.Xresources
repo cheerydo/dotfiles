@@ -67,7 +67,7 @@
 ! fontconfigs and copy/paste with url launching
 !URxvt.font: 		xft:Inconsolata-zi4:size=12
 !*font:                  -*-termsyn-medium-*-*-*-15-*-*-*-*-*-*-*
-Emacs.font: 		Fira Mono 10
+Emacs.font: 		Roboto Mono 10
 *font:                  -*-dina-medium-r-*-*-13-*-*-*-*-*-*-*
 *perl-ext-common:       default,clipboard,url-select,keyboard-select
 *keysym.M-Escape:       perl:keyboard-select:activate
@@ -79,7 +79,7 @@ Emacs.font: 		Fira Mono 10
 *url-select.autocopy:   1
 *url-select.button:     1
 *url-select.underline:  1
-*url-select.launcher:   /usr/bin/chromium
+*url-select.launcher:   /usr/bin/firefox
 *colorUL:               #4682B4
 *iso14755:              0
 *scrollBar: 	        0
@@ -98,8 +98,15 @@ dzen2.foreground:       rgb:ff/ff/ff
 dzen2.background:       rgb:00/00/00
 
 rofi.font:              Fira Mono 10
-rofi.key-window:        SuperL+bracketleft
-rofi.key-run:           SuperL+p
+!rofi.window-format:     {t:-16} ({c})
+!rofi.font:              Terminus 10
+rofi.color-enabled:     1
+rofi.color-normal:      #303030, #FFFFFF, #4A4A4A, #5294E2, #FFFFFF 
+rofi.color-window:      #303030, #303030
+rofi.color-urgent:      #303030, #DC322F, #4A4A4A, #5294E2, #DC322F 
+rofi.color-active:      #303030, #C2CAD0, #4A4A4A, #5294E2, #FFFFFF 
+rofi.separator-style:   solid
+!rofi.width:             -90
 rofi.terminal:          /sbin/termite
 
 Emacs.toolBar:          0

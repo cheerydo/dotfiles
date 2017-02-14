@@ -1,7 +1,7 @@
 [options]
 browser = /usr/bin/firefox
 resize_grip = false
-scroll_on_output = false 
+scroll_on_output = false
 scroll_on_keystroke = true
 audible_bell = false
 visible_bell = false
@@ -10,14 +10,16 @@ allow_bold = true
 dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
-#font = Dina Medium 10
-#font = Inconsolatazi4 12
-font = Fira Mono 10
+#font = Inconsolatazi4 11
+#font = Fira Mono 10
+font = Source Code Pro 10
+#font = Hack 10
 scrollback_lines = 1000
 search_wrap = true
 cursor_blink = off
 cursor_shape = block
 icon_name = terminal
+geometry = 900x600
 
 [hints]
 font = Dina Medium 8
@@ -26,76 +28,43 @@ roundness = 2.0
 
 [colors]
 foreground = #FFFFFF
-background = #303030
+#background =  #262425
+background =  #303030
 
-## These were custom colors until 11 29 15
-## black
-#color0 = #000000
-#color8 = #555753
-## red
-#color1 = #ff6565
-#color9 = #ff8d8d
-## green
-#color2 = #99e051
-#color10 = #c2e0a3
-## yellow
-#color3 = #eafd51
-#color11 = #f6fdbd
-## blue
-#color4 = #204a87
-#color12 = #3465a4
-## magenta
-#color5 = #ce5c00
-#color13 = #f57900
-## cyan
-#color6 = #89b6e2
-#color14 = #46a4ff
-## white
-#color7 = #cccccc
-#color15 = #ffffff
-
-# special from newly minted Xresources on 11 29 15
-foreground = #ffffff
-background = #303030
 # black
-color0 = #000000
-color8 = #000000
-#color8 = #555753
+color0 =  #1e1a1b
+#color8 =  #403a3d
+color8 =  #FFFFFF
+
 # red
-color1 = #ec7171
-color9 = #ec7171
-#color9 = #b8cfee
-# BELOW HERE ARE NEWNEW
-# green
-color2 = #99e051
+#color1 =  #9e7e8b
+color1 =  #ec7171
+color9 =  #da5189
+
+# green 
+color2  = #99e051
 color10 = #99e051
-#color10 = #c2e0a3
+
 # yellow
-color3 = #eafd51
+#color3  = #d6c9a1
+#color11 = #debe5c
+color3  = #eafd51
 color11 = #eafd51
-#color11 = #f6fdbd
-# BELOW HERE ARE OLDNEW 
-## green
-#color2 = #b0e07f
-#color10 = #d4e0c9
-## yellow
-#color3 = #cfe04e
-#color11 = #f2fd9a
+
 # blue
-color4 = #2e6dc8
-color12 = #2e6dc8
-#color12 = #88a2c8
+color4  = #9dbdc9
+color12 = #71c2e0
+
 # magenta
-color5 = #ab5ac9
+color5  = #ab5ac9
 color13 = #ab5ac9
-#color13 = #c0a7c9
+
 # cyan
-color6 = #4bd8e2
-color14 = #4bd8e2
-#color14 = #99dde2
+color6  = #a4afce
+color14 = #607fd9
+
 # white
-color7 = #cdcdcd
-color15 = #cdcdcd
-#color15 = #ffffff
+color7  = #c0c0c0
+color15 = #ffffff
 
 # vim: ft=dosini cms=#%s

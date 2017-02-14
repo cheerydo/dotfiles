@@ -1,4 +1,3 @@
-" vim: set ft=vim:
 set runtimepath=$HOME/.config/vimperator
 colorscheme jah
 
@@ -29,7 +28,7 @@ set status+=ssl
 set complete=slh
 set wildmode=list:full
 
-" Baby says I gotsta have muh privacy
+ Baby says I gotsta have muh privacy
 set! browser.pocket.enabled=false
 set! browser.readinglist.enabled=false
 set! browser.readinglist.sidebarEverOpened=false
@@ -51,34 +50,40 @@ set! plugins.click_to_play=true
 set! privacy.trackingprotection.enabled=true
 set! reader.parse-on-load.enabled=false
 set! toolkit.telemetry.enabled=false
-"
+
 "" Disable WebRTC, Firefox Hello, and EME
 set! media.peerconnection.enabled=false
 set! media.peerconnection.turn.disable=true
 set! media.peerconnection.use_document_iceservers=false
-set! media.peerconnection.video.enabled=false
+set! media.peerconnection.video.enabled=true
 set! media.peerconnection.identity.timeout=0
-set! loop.enabled=true
-set! media.gmp-eme-adobe.enabled=false
-set! media.eme.enabled=false
+set! loop.enabled=false
 
-" Force safe ssl
-" and disable broken DH primes
+" Force safe ssl and disable broken DH primes
 set! security.ssl.treat_unsafe_negotiation_as_broken=true
-set! security.ssl.require_safe_negotiation=true
+set! security.ssl.require_safe_negotiation=false
 set! security.ssl3.dhe_rsa_aes_128_sha=false
 set! security.ssl3.dhe_rsa_aes_256_sha=false
 
 " Disable all autoplay. Please
 set! media.autoplay.enabled=true
+set! media.eme.enabled=false
+set! media.gmp-eme-adobe.enabled=false
 set! media.gstreamer.enabled=false
-set! media.webm.enabled=false
+set! media.webm.enabled=true
 set! media.opus.enabled=false
 set! media.wave.enabled=false
 set! media.ogg.enabled=false
+
+" Graphics settings
+"set! layers.acceleration.force-enabled=true
+"set! layers.offmainthreadcomposition.enabled=true
 
 " Key maps
 nmap <c-b> :ignorekeys<cr> :sbar<Space>Bookmarks<cr>
 
 " Ublock origin fix
 "style -name ublock * #nav-bar * { visibility: visible; }
+
+" fix for gtk woes
+set! gfx.font_rendering.fontconfig.fontlist.enabled=false

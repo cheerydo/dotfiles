@@ -4,20 +4,25 @@ macro generic,pager,index <f1> \
   "Show Mutt documentation."
 
 macro pager,index b \
-  '<enter-command>toggle sidebar_visible<enter>'
+  '<enter-command>toggle sidebar_visible<enter>' \
+  "Toggle sidebar visibility"
 
 # Refreshing mail if I'm feeling impatient
-macro index \& '!mbsync -a && notmuch new<enter>'
+macro index \& '!mbsync -a && notmuch new<enter>' \
+  "Check for new mail and update notmuch database"
 
 # Mailbox navigation
-macro index gt 'c=Trash<enter>'
-macro index gh 'c=Inbox<enter>'
-macro index gs 'c=Sent Items<enter>'
+macro index gt 'c=Trash<enter>' \
+  "View Trash mailbox"
+macro index gh 'c=Inbox<enter>' \
+  "View Inbox mailbox"
+macro index gs 'c=Sent Items<enter>' \
+  "View Sent Items mailbox"
 
 # Addressbook at fastmail integration
 macro index,pager a \
-  "<pipe-message>pycard-import<enter>" \
-  "add sender address to pycardsyncer"
+  "<pipe-message>khard add-email<enter>" \
+  "Add sender address to khard"
 
 # this monstrosity is for notmuch searching
 macro index <F8> \
