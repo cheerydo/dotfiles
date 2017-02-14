@@ -6,9 +6,6 @@
 (setq custom-file "~/.emacs.d/custom-vars.el")
 (load custom-file)
 
-; Activate installed packages
-(package-initialize)
-
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
@@ -16,23 +13,12 @@
 ; Activate installed packages
 (package-initialize)
 
-; GUI settings
-(when window-system
-  (tooltip-mode -1)
-  (tool-bar-mode -1)
-  (menu-bar-mode -1)
-  (scroll-bar-mode -1))
-
-(windmove-default-keybindings) 
 ; Bootstrap use-package
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
 (setq use-package-verbose t)
 (require 'use-package)
-
-(eval-when-compile
-  (require 'use-package))
 (require 'diminish)
 (require 'bind-key)
 
@@ -44,6 +30,15 @@
     (auto-compile-on-load-mode)
     (auto-compile-on-save-mode)))
 (setq load-prefer-newer t)
+
+; GUI settings
+(when window-system
+  (tooltip-mode -1)
+  (tool-bar-mode -1)
+  (menu-bar-mode t)
+  (scroll-bar-mode -1))
+
+(windmove-default-keybindings) 
 
 ; General settings
 (setq inhibit-startup-screen t
@@ -59,7 +54,10 @@
       version-control t
       column-number-mode t
       tab-width 4
-      indent-tabs-mode nil)
+      indent-tabs-mode nil
+      gc-cons-threshold 20000000
+      echo-keystrokes 0.3
+      confirm-kill-emacs 'yes-or-no-p)
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
