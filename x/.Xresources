@@ -3,6 +3,7 @@
 !*foreground:            #ffffff
 !! Black (not tango) + DarkGrey
 !*color0:                #000000
+
 !*color8:                #555753
 !! DarkRed + Red
 !*color1:                #ff6565
@@ -67,7 +68,6 @@
 ! fontconfigs and copy/paste with url launching
 !URxvt.font: 		xft:Inconsolata-zi4:size=12
 !*font:                  -*-termsyn-medium-*-*-*-15-*-*-*-*-*-*-*
-Emacs.font: 		Roboto Mono 10
 *font:                  -*-dina-medium-r-*-*-13-*-*-*-*-*-*-*
 *perl-ext-common:       default,clipboard,url-select,keyboard-select
 *keysym.M-Escape:       perl:keyboard-select:activate
@@ -109,6 +109,7 @@ rofi.separator-style:   solid
 !rofi.width:             -90
 rofi.terminal:          /sbin/termite
 
+Emacs.font: 		Source Code Pro 10
 Emacs.toolBar:          0
 Emacs.verticalScrollBars: off
 Emacs.menuBar:          0

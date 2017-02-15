@@ -21,10 +21,6 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=$ZDOTDIR/.zsh_history
 
-# Add other paths
-typeset -U path
-path=(~/bin /sbin /usr/sbin $path)
-
 # Keybindings - vim for the win
 bindkey -v
 vimode=i
