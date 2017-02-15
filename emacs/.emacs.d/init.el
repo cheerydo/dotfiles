@@ -11,7 +11,6 @@
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 
 ; Activate installed packages
-
 (package-initialize)
 
 ; Bootstrap use-package
