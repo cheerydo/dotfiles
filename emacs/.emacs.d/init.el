@@ -7,8 +7,10 @@
 (load custom-file)
 
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+(setq package-enable-at-startup nil
+      load-prefer-newer t)
 
 ; Activate installed packages
 (package-initialize)
@@ -31,11 +33,12 @@
       vc-follow-symlinks t
       delete-old-versions t
       vc-make-backup-files t
-      kept-new-versions 2
-      kept-old-versions 1
+      kept-new-versions 1
+      kept-old-versions 0
       version-control t
       delete-old-versions t
       column-number-mode t
+      line-spacing '0.25
       tab-width 4
       indent-tabs-mode nil
       gc-cons-threshold 20000000
@@ -50,8 +53,9 @@
   (tooltip-mode -1)
   (tool-bar-mode -1)
   (menu-bar-mode t)
+  (column-number-mode t)
   (scroll-bar-mode -1))
-(windmove-default-keybindings) 
+(windmove-default-keybindings)
 
 (add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
 (add-to-list 'auto-mode-alist '("\\..*rc\\'" . conf-unix-mode))
@@ -67,7 +71,6 @@
   (progn
     (auto-compile-on-load-mode)
     (auto-compile-on-save-mode)))
-(setq load-prefer-newer t)
 
 (use-package evil
   :ensure t
@@ -80,8 +83,8 @@
     (define-key global-map (kbd "C-u") 'kill-whole-line)
     (eval-after-load 'evil-maps
     '(progn
-    (define-key evil-motion-state-map (kbd "C-f") nil)
-    (define-key evil-motion-state-map (kbd "C-u") 'evil-scroll-up))))
+        (define-key evil-motion-state-map (kbd "C-f") nil)
+        (define-key evil-motion-state-map (kbd "C-u") 'evil-scroll-up))))
   (evil-mode t)
   :config 
   (evil-set-initial-state 'deft-mode 'insert))
@@ -106,7 +109,7 @@
     (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)
     (define-key helm-map (kbd "C-z") 'helm-select-action)
   (helm-mode t))
-  :bind (("C-c h" . helm-mini)
+  :bind (("C-c m" . helm-mini)
          ("C-h a" . helm-apropos)
          ("C-x C-b" . helm-buffers-list)
          ;("C-x b" . helm-mini)
@@ -133,11 +136,7 @@
     (ivy-mode t)))
 
 (use-package ivy-hydra
-  :ensure t
-  :init
-  (ivy-set-actions
-    'counsel-find-file
-    '(("j" find-file-other-window "other"))))
+  :ensure t)
 
 (use-package swiper
   :ensure t
@@ -155,6 +154,10 @@
          ("C-x l" . counsel-locate)
          ("C-c i r" . counsel-recentf)
          ("C-c h i" . counsel-imenu))
+  :init
+  (ivy-set-actions
+   'counsel-find-file
+   '(("j" find-file-other-window "other"))))
 
 (use-package key-chord
   :ensure t
@@ -167,11 +170,11 @@
 
 (use-package recentf
   :ensure t
-  :config
+  :init
   (progn
-    (setq recentf-max-menu-items 20
-      recentf-exclude (list "/elpa/.*\\'")))
-  (recentf-mode t))
+    (recentf-mode t)
+    (setq recentf-max-menu-items 50)
+    (add-to-list 'recentf-exclude "/elpa/")))
 
 (use-package elpy
   :ensure t
@@ -233,11 +236,11 @@
 
 (use-package deft
   :ensure t
-  :init
+  :config
   (progn
     (setq deft-default-extensions "org"
           deft-extensions '("org")
-          deft-directory "~/Seafile/My Library"
+          deft-directory "~/wiki"
           deft-recursive t
           deft-use-filename-as-title t)
     (global-set-key [f4] 'deft)
@@ -245,7 +248,7 @@
 
 (use-package magit
   :ensure t
-  :bind (("C-x g" . magit-status)))
+  :bind(("C-x g" . magit-status)))
 
 (use-package ranger
   :ensure t
