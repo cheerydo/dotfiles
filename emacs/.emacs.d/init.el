@@ -45,6 +45,8 @@
       echo-keystrokes 0.3
       confirm-kill-emacs 'yes-or-no-p
       visible-bell 1)
+(setq backup-directory-alist
+      '(("." . "~/.emacs.d/bak")))
 (fset 'yes-or-no-p 'y-or-n-p)
 (show-paren-mode t)
 
