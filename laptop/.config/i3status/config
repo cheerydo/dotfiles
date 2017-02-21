@@ -13,6 +13,8 @@ general {
 
 order += "wireless wlp7s0"
 order += "path_exists VPN"
+order += "disk /"
+order += "disk /home"
 order += "cpu_temperature 0"
 order += "load"
 order += "battery 0"
@@ -62,4 +64,14 @@ battery 0 {
         format_down = "No battery"
         path = "/sys/class/power_supply/BAT%d/uevent"
         low_threshold = 10
+}
+
+disk / {
+        prefix_type = custom
+        format = "root [%used/%total]"
+}
+
+disk /home {
+        prefix_type = custom
+        format = "home [%used/%total]"
 }
