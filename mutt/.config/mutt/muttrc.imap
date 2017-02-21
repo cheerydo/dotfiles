@@ -1,14 +1,12 @@
 # ---------- Internals ----------#
 set from="Jared Hamilton <jared@fastmail.com>"
-set folder=~/mail
 set imap_user=jared@fastmail.com
-set imap_pass=cmtrvrkpbejvcg7z
-set my_imap_server=imap.fastmail.com
-set imap_check_subscribed
+set imap_pass=`gpg -d -q --no-tty ~/.config/mutt/fmail_imap.gpg`
+set my_server=imap.fastmail.com
 
 # set some folder mappings
-set folder=imaps://$my_imap_server:993/
-set spoolfile="="
+set folder=imaps://$my_server/
+set spoolfile="=INBOX"
 set postponed="=Drafts"
 set record="=Sent Items"
 set trash="=Trash"
@@ -25,6 +23,8 @@ set header_cache="~/.config/mutt/cache/headers"
 set message_cachedir="~/.config/mutt/cache"
 set read_inc=200
 set write_inc=200
+set imap_check_subscribed
+set imap_list_subscribed
 # ----------   END   ----------#
 
 
@@ -61,19 +61,19 @@ set mailcap_path="~/.config/mutt/mailcap"
 auto_view text/html
 
 ## sidebar stuff
+set mail_check_stats_interval=30
+set mail_check_stats=yes
+
 set sidebar_divider_char=" |"
 set sidebar_folder_indent=yes
 set sidebar_indent_string=" "
 set sidebar_visible=yes
 set sidebar_width=25
 set sidebar_delim_chars="/."
-set sidebar_format="%B%*  %?N?%N/?%S"
+set sidebar_format="%B%* %?N?%N/?%S"
 color sidebar_new brightdefault default 
 set sidebar_short_path=yes
 set sidebar_next_new_wrap=yes
-
-set mail_check_stats=yes
-set mail_check_stats_interval=30
 
 # Default index_format
 folder-hook "Sent*" 'set index_format="%3C %Z  |  %(!%m/%d)   %-35.35F   %?M?[+](%2.M messages)? %s"'
