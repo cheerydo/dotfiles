@@ -43,8 +43,7 @@
       indent-tabs-mode nil
       gc-cons-threshold 20000000
       echo-keystrokes 0.3
-      confirm-kill-emacs 'yes-or-no-p
-      visible-bell 1)
+      confirm-kill-emacs 'yes-or-no-p)
 (setq backup-directory-alist
       '(("." . "~/.emacs.d/bak")))
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -79,6 +78,7 @@
   :init
   (progn
     (setq evil-default-cursor t)
+    (setq evil-want-C-i-jump nil)
     (define-key global-map (kbd "C-f") 'universal-argument)
     (define-key universal-argument-map (kbd "C-u") nil)
     (define-key universal-argument-map (kbd "C-f") 'universal-argument-more)
@@ -151,7 +151,7 @@
          ("C-x C-f" . counsel-find-file)
          ("C-h f" . counsel-describe-function)
          ("C-h v" . counsel-describe-variable)
-         ("C-h i" . counsel-info-lookup-symbol)
+         ;("C-h i" . counsel-info-lookup-symbol)
          ("C-h u" . counsel-unicode-char)
          ("C-x l" . counsel-locate)
          ("C-c i r" . counsel-recentf)
@@ -160,6 +160,11 @@
   (ivy-set-actions
    'counsel-find-file
    '(("j" find-file-other-window "other"))))
+
+(use-package company
+  :ensure t
+  :init
+  (add-hook 'after-elpy-hook 'company-mode))
 
 (use-package key-chord
   :ensure t
@@ -173,8 +178,9 @@
 (use-package recentf
   :ensure t
   :init
+  (recentf-mode t)
+  :config
   (progn
-    (recentf-mode t)
     (setq recentf-max-menu-items 50)
     (add-to-list 'recentf-exclude "/elpa/")))
 
@@ -226,15 +232,14 @@
 	  '(("IN_PROGRESS" . "medium blue")
 	    ("WAITING" . "tomato")))
     (setq org-default-notes-file (concat org-directory "/capture.org"))
-    (setq org-refile-targets '((nil :maxlevel . 9)
-			       (org-agenda-files :maxlevel . 9)))
+    (setq org-refile-targets '((org-agenda-files :maxlevel . 3)))
     (setq org-capture-templates
           '(("t" "Todo" entry (file+headline org-default-notes-file "Refile")
              "* TODO %?")
             ("n" "Notes" entry (file+headline org-default-notes-file "Refile")
              "* %?")))
     (setq org-outline-path-complete-in-steps nil)
-    (setq org-refile-use-outline-path t)))
+    (setq org-refile-use-outline-path 'file)))
 
 (use-package deft
   :ensure t
@@ -250,11 +255,14 @@
 
 (use-package magit
   :ensure t
-  :bind(("C-x g" . magit-status)))
+  :bind(("C-x g" . magit-status))
+  :config (setq magit-completing-read-function 'ivy-completing-read))
 
 (use-package ranger
   :ensure t
-  :bind (("C-x d" . ranger)))
+  :bind (("C-x d" . ranger))
+  :init (ranger-override-dired-mode t)
+  :config (setq ranger-show-dotfiles t))
 
 (use-package flatui-theme
   :ensure t
