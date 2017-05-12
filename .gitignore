@@ -6,7 +6,7 @@
 .newsbeuter
 mpd*
 !mpd.conf
-**/artists/
+**/artists
 error.log
 **/.vim
 
