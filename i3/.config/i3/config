@@ -185,10 +185,10 @@ bindsym $mod+Shift+BackSpace mode "passthrough"
 
 set $mode_admin "System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown"
 mode $mode_admin {
-    bindsym l exec --no-startup-id i3exit lock; mode "default"
-    bindsym e exec --no-startup-id i3exit logout; mode "default"
-    bindsym s exec --no-startup-id i3exit suspend; mode "default"
-    bindsym r exec --no-startup-id i3exit reboot; mode "default"
+    bindsym l exec --no-startup-id /home/jared/bin/i3exit lock; mode "default"
+    bindsym e exec --no-startup-id /home/jared/bin/i3exit logout; mode "default"
+    bindsym s exec --no-startup-id /home/jared/bin/i3exit suspend; mode "default"
+    bindsym r exec --no-startup-id /home/jared/bin/i3exit reboot; mode "default"
     bindsym Shift+s exec --no-startup-id i3exit shutdown; mode "default"
 
     bindsym Return mode "default"
