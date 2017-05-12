@@ -1,26 +1,14 @@
-**/*history
-**/*logout
-mpd/*
+**/cache
+.zcompdump*
+.zsh_history
+**/status
+**/vdirsyncer/config
+.newsbeuter
+mpd*
 !mpd.conf
-**/.zcomp*
-ncmpcpp/.ncmpcpp/error.log
-ncmpcpp/.ncmpcpp/artists
-ncmpcpp/.ncmpcpp/config.def
-ncmpcpp/.ncmpcpp/bindings.def
-mutt/.config/mutt/cache/**
-mutt/.config/mutt/certificates
-mutt/.config/mutt/id
-mutt/.config/mutt/addresses
-vim/.vim/*
-!vim/.vim/colors
-!vim/.vim/ftplugin
-newsbeuter/.newsbeuter/*
-!newsbeuter/.newsbeuter/config
-systemd/.config/systemd/user/default.target.wants
-vdir/.config/vdirsyncer/**
-!vdir/.config/vdirsyncer/config.def
-*.swp
-.spectrwm.conf.orig
+**/artists/
+error.log
+**/.vim
 
 # Emacs stuff
 .\#*
@@ -35,5 +23,5 @@ url/
 recentf*
 helm-*
 session.*
-emacs/.emacs.d/bookmarks
-emacs/.emacs.d/custom-vars.el
+**/.emacs.d/bookmarks
+custom-vars.el

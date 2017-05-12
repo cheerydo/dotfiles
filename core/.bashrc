@@ -5,10 +5,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='[\u@\h \W]\$ '
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+export PS1='[\u@\h:\w]\$ '
+set -o vi
+
+export XDG_CONFIG_HOME="$HOME/.config"
 
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then

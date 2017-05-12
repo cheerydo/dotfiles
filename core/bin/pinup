@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+title=$(zenity --entry --text 'Input title')
+echo "api.pinboard.com/add?url=google.com&description=$title"
+
+exit 0
