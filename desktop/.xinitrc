@@ -33,6 +33,7 @@ case "$2" in
     exec startxfce4
     ;;
   i3|*)
+    xrandr --output DVI-I-1 --left-of HDMI-0
     nitrogen --restore &
     exec i3
     ;;
