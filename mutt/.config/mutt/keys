@@ -1,15 +1,17 @@
 # Main keys
 bind index,pager,generic,attach h       exit
-bind index,pager    H      display-toggle-weed
-bind index,pager    \Cl    next-entry
-bind index,pager    \Ch    previous-entry
-bind index,pager    \Cp    sidebar-prev
-bind index,pager    \Cn    sidebar-next
-bind index,pager    \Co    sidebar-open
-bind index,pager    <Esc>k extract-keys
-bind index,pager    <Esc>p print-message
+bind index,pager   H       display-toggle-weed
+bind index,pager   \Cl     next-entry
+bind index,pager   \Ch     previous-entry
+bind index,pager   \Cp     sidebar-prev
+bind index,pager   \Cn     sidebar-next
+bind index,pager   \Co     sidebar-open
+bind index,pager   <Esc>k  extract-keys
+bind index,pager   <Esc>p  print-message
+bind index,pager   <Esc>w  what-key
 
 # Index keys
+bind index    `         purge-message
 bind index    -         collapse-all
 bind index    B         bounce-message
 bind index    J         next-unread
