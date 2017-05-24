@@ -23,6 +23,7 @@ set header_cache="~/.config/mutt/cache/headers"
 set message_cachedir="~/.config/mutt/cache"
 set read_inc=200
 set write_inc=200
+unmailboxes *
 set imap_check_subscribed
 set imap_list_subscribed
 # ----------   END   ----------#

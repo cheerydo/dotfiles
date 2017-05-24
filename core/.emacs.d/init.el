@@ -264,10 +264,11 @@
   :init (ranger-override-dired-mode t)
   :config (setq ranger-show-dotfiles t))
 
-;(use-package flatui-theme
-;  :ensure t
+(use-package flatui-theme
+  :ensure t)
 ;  :config
 ;  (load-theme 'flatui))
+
 (use-package moe-theme
   :ensure t
   :config

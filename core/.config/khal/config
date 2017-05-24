@@ -1,19 +1,19 @@
 #/etc/khal/khal.conf.sample
 [calendars]
 [[home]]
-path = ~/cal/home
+path = ~/.calendar/home
 color = light blue
 
 [[church]]
-path = ~/cal/church
+path = ~/.calendar/church
 color = light green
 
 [[jess]]
-path = ~/cal/jess
+path = ~/.calendar/jess
 color = yellow
 
 [sqlite]
-path = ~/cal/khal.db
+path = ~/.calendar/khal.db
 
 [default]
 default_calendar = home
