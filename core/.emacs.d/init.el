@@ -137,8 +137,12 @@
       ivy-count-format "(%d/%d) ")
     (ivy-mode t)))
 
-(use-package ivy-hydra
-  :ensure t)
+(use-package hydra
+  :ensure t
+  :init
+  (progn
+    (use-package ivy-hydra
+        :ensure t)))
 
 (use-package swiper
   :ensure t
@@ -232,6 +236,7 @@
 	  '(("IN_PROGRESS" . "medium blue")
 	    ("WAITING" . "tomato")))
     (setq org-default-notes-file (concat org-directory "/capture.org"))
+<<<<<<< Updated upstream:core/.emacs.d/init.el
     (setq org-refile-targets '((org-agenda-files :maxlevel . 3)))
     (setq org-capture-templates
           '(("t" "Todo" entry (file+headline org-default-notes-file "Refile")
