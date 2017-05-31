@@ -6,7 +6,7 @@ case $HOST in
     if [[ $TMUX == "" ]]; then
       setterm -blength 0
       eval $(keychain --agents ssh,gpg --eval FBB0702A)
-      ssh-add ~/.ssh/{gitrepo,privgit,salt,beer,jserv,hserv,pbox}
+      ssh-add ~/.ssh/{gitrepo,hrepo,salt,beer,jserv,hserv,pbox}
       export GPG_TTY=$(tty)
       export GPG_AGENT_INFO="" 
     fi
