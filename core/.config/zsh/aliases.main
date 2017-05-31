@@ -1,3 +1,5 @@
+# -*- mode: sh -*-
+
 alias mutt='mutt -F ~/.config/mutt/muttrc'
 alias imutt='mutt -F ~/.config/mutt/muttrc.imap'
 alias cm='mbsync -a'
@@ -22,15 +24,17 @@ alias lsl='ls --group-directories-first -AlhXF'
 alias paste="curl -F 'f:1=<-' ix.io"
 alias curlup='curl -F c=@- https://ptpb.pw'
 
-alias gis='git status'
-alias gic='git commit'
-alias gip='git push'
-alias gipall='git push && git push jserv master'
-alias gia='git add'
-alias gil='git log'
-alias gid='git diff'
-alias gch='git checkout'
-alias gib='git branch -v'
+alias g='git'
+alias gs='git status'
+alias gc='git commit'
+alias gp='git push'
+alias gpall='git push && git push hserv master'
+alias ga='git add'
+alias gl='git log'
+alias gd='git diff'
+alias gh='git checkout'
+alias gb='git branch -v'
+alias gr='git remote -v'
 
 alias fresh='killall -SIGUSR1'
 

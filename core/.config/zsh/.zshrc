@@ -47,10 +47,12 @@ case "$HOST" in
     ;;
   potatoes)
     source $ZDOTDIR/aliases.debian
+    source $ZDOTDIR/aliases.systemd
     eval $(dircolors $ZDOTDIR/.dircolors)
     ;;
   beans|rice)
     source $ZDOTDIR/aliases.arch
+    source $ZDOTDIR/aliases.systemd
     eval $(dircolors $ZDOTDIR/.dircolors)
     ;;
   chili)

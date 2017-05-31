@@ -1,0 +1,52 @@
+# -*- mode: sh -*-
+
+alias enable='sudo systemctl enable'
+alias disable='sudo systemctl disable'
+alias list='systemctl list-units --no-legend'
+alias flist='systemctl list-unit-files --no-legend'
+alias ulist='userctl list-units --no-legend'
+alias uflist='userctl list-unit-files --no-legend'
+
+alias y='systemctl'
+alias u='systemctl --user'
+alias userctl='systemctl --user'
+
+start () {
+  sudo systemctl start "$@"
+  _status "$@"
+}
+
+stop () {
+  sudo systemctl stop "$@"
+  _status "$@"
+}
+
+restart () {
+  sudo systemctl restart "$@"
+  _status "$@"
+}
+
+_status () {
+  sudo SYSTEMD_PAGER='cat' systemctl status -a "$@"
+}
+
+ustart () {
+  sudo systemctl ustart "$@"
+  status "$@"
+}
+
+ustop () {
+  sudo systemctl ustop "$@"
+  status "$@"
+}
+
+urestart () {
+  sudo systemctl urestart "$@"
+  status "$@"
+}
+
+status () {
+  SYSTEMD_PAGER='cat' systemctl status -a "$@"
+}
+
+# vim: ft=zsh
