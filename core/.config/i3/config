@@ -149,11 +149,12 @@ mode "Resize mode" {
 }
 bindsym $mod+r mode "Resize mode"
 
-mode "Launch stuff" {
+set $mode_launch "Launch stuff [f]irefox [e]macs q[u]tebrowser [s]potify [a]ppfinder [t]hunar"
+mode $mode_launch {
     bindsym c exec chromium; mode "default"
     bindsym t exec thunar; mode "default"
     bindsym f exec firefox; mode "default"
-    bindsym q exec qutebrowser; mode "default"
+    bindsym u exec qutebrowser; mode "default"
     bindsym s exec spotify; mode "default"
     bindsym a exec xfce4-appfinder; mode "default"
     bindsym e exec emacsclient -c -n --alternate-editor=""; mode "default"
@@ -162,7 +163,7 @@ mode "Launch stuff" {
     bindsym Escape mode "default"
     bindsym q mode "default"
 }
-bindsym $mod+slash mode "Launch stuff"
+bindsym $mod+slash mode $mode_launch
 
 mode "MPD control" {
     bindsym k exec ponymix increase 10

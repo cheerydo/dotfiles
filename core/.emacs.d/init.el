@@ -53,7 +53,7 @@
 (when window-system
   (tooltip-mode -1)
   (tool-bar-mode -1)
-  (menu-bar-mode t)
+  (menu-bar-mode -1)
   (column-number-mode t)
   (scroll-bar-mode -1))
 (windmove-default-keybindings)
