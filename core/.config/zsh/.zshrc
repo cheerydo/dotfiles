@@ -82,7 +82,7 @@ bindkey -M vicmd "^[[3~" vi-delete-char
 bindkey          "^[[3~" delete-char 
 
 # Prompt!
-if [[ $HOST != "beans" ]]; then
+if [[ $HOST != "beans" ]] && [[ $HOST != "rice" ]]; then
   PROMPT='[%m](%5~) ──── '
 else
   PROMPT='(%5~) ──── '
