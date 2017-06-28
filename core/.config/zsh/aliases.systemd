@@ -1,5 +1,9 @@
 # -*- mode: sh -*-
 
+alias y='systemctl'
+alias u='systemctl --user'
+alias userctl='systemctl --user'
+
 alias enable='sudo systemctl enable'
 alias disable='sudo systemctl disable'
 alias list='systemctl list-units --no-legend'
@@ -7,9 +11,9 @@ alias flist='systemctl list-unit-files --no-legend'
 alias ulist='userctl list-units --no-legend'
 alias uflist='userctl list-unit-files --no-legend'
 
-alias y='systemctl'
-alias u='systemctl --user'
-alias userctl='systemctl --user'
+alias shh='systemctl poweroff'
+alias sleep='systemctl suspend'
+alias res='systemctl reboot'
 
 start () {
   sudo systemctl start "$@"

@@ -13,24 +13,16 @@ alias pown='pacman -Qo'
 alias pfl='pkgfile'
 alias try='sudo pacman -S --asdeps'
 
-alias sm='systemctl'
-alias smu='systemctl --user'
-alias sms='systemctl status'
-alias smus='systemctl --user status'
-alias shh='systemctl poweroff'
-alias sleep='systemctl suspend'
-alias res='systemctl reboot'
-
-alias pbox='ssh tornainbow@tor-server'
-alias hserv='ssh debian-server'
-alias jserv='ssh obsd-server'
-alias pserv='ssh -X beer.hamit.lan'
-alias tor='scp ~/down/*.torrent tornainbow@tor-server:~/private/rtorrent/watch && mv ~/down/*.torrent ~/doc/torbak'
-alias startvpn='sudo openvpn /etc/openvpn/client.conf'
 
 if [[ $HOST == "beans" ]]; then
   alias work='~/.screenlayout/work.sh'
   alias play='~/.screenlayout/main.sh'
+  alias pbox='ssh tornainbow@tor-server'
+  alias hserv='ssh debian-server'
+  alias jserv='ssh obsd-server'
+  alias pserv='ssh -X beer.hamit.lan'
+  alias tor='scp ~/down/*.torrent tornainbow@tor-server:~/private/rtorrent/watch && mv ~/down/*.torrent ~/doc/torbak'
+  alias startvpn='sudo openvpn /etc/openvpn/client.conf'
 fi
 
 # vim: set ft=zsh:
