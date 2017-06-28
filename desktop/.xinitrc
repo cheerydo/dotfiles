@@ -22,8 +22,8 @@ xset +fp /home/jared/.fonts
 xset fp rehash
 
 xrdb -load ~/.Xresources
-compton &
 emacs --daemon &
+compton &
 mpd &
 
 setxkbmap -option shift:both_capslock -option ctrl:nocaps -option ctrl:swap_lwin_lctl
@@ -33,7 +33,7 @@ case "$2" in
     exec startxfce4
     ;;
   i3|*)
-    xrandr --output DVI-I-1 --left-of HDMI-0
+    xrandr --output DVI-I-1 --left-of HDMI-0 &
     nitrogen --restore &
     exec i3
     ;;
