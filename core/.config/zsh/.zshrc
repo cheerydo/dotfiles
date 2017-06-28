@@ -45,7 +45,7 @@ case "$HOST" in
     source $ZDOTDIR/aliases.obsd
     eval $(gdircolors $ZDOTDIR/.dircolors)
     ;;
-  potatoes)
+  potatoes|beer)
     source $ZDOTDIR/aliases.debian
     source $ZDOTDIR/aliases.systemd
     eval $(dircolors $ZDOTDIR/.dircolors)
@@ -82,4 +82,8 @@ bindkey -M vicmd "^[[3~" vi-delete-char
 bindkey          "^[[3~" delete-char 
 
 # Prompt!
-PROMPT='(%5~) ──── '
+if [[ $HOST != "beans" ]] && [[ $HOST != "rice" ]]; then
+  PROMPT='[%m](%5~) ──── '
+else
+  PROMPT='(%5~) ──── '
+fi

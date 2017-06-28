@@ -3,4 +3,7 @@ alias agrem='sudo apt-get --purge autoremove'
 alias agreps='apt-cache search'
 alias agup='sudo apt-get update && sudo apt-get upgrade'
 
+alias tvbot='filebot --format "{n} - {s00e00.lower()}" --db TheTVDB -rename'
+alias mvbot='filebot --db TheMovieDB -rename'
+
 # vim: ft=zsh
