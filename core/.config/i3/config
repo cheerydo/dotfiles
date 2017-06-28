@@ -15,7 +15,8 @@ exec --no-startup-id sh -c "sleep 10 && keepassxc"
 exec --no-startup-id redshift-gtk
 exec --no-startup-id seafile-applet
 exec --no-startup-id caffeine
-exec --no-started-id clipit
+exec --no-startup-id parcellite
+exec --no-startup-id nvidia-settings --load-config-only
 
 # Start the bar up
 bar {
@@ -220,5 +221,6 @@ for_window [window_role="pop-up"]       floating enable
 for_window [window_role="task_dialog"]  floating enable
 for_window [class="Seafile"]            floating enable
 for_window [class="Skype"]              floating enable
+for_window [class="Xsane"]              floating enable
 
 # }}}
