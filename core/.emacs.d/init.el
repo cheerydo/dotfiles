@@ -236,7 +236,6 @@
 	  '(("IN_PROGRESS" . "medium blue")
 	    ("WAITING" . "tomato")))
     (setq org-default-notes-file (concat org-directory "/capture.org"))
-<<<<<<< Updated upstream:core/.emacs.d/init.el
     (setq org-refile-targets '((org-agenda-files :maxlevel . 3)))
     (setq org-capture-templates
           '(("t" "Todo" entry (file+headline org-default-notes-file "Refile")
