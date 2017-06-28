@@ -9,6 +9,7 @@ bind index,pager   \Co     sidebar-open
 bind index,pager   <Esc>k  extract-keys
 bind index,pager   <Esc>p  print-message
 bind index,pager   <Esc>w  what-key
+bind index,pager   g       noop
 
 # Index keys
 bind index    `         purge-message
