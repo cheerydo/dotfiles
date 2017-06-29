@@ -1,7 +1,7 @@
-alias agin='sudo apt-get install'
-alias agrem='sudo apt-get --purge autoremove'
-alias agreps='apt-cache search'
-alias agup='sudo apt-get update && sudo apt-get upgrade'
+alias agin='sudo apt install'
+alias agrem='sudo apt autoremove'
+alias agreps='apt search'
+alias agup='sudo apt update && sudo apt upgrade'
 
 alias tvbot='filebot --format "{n} - {s00e00.lower()}" --db TheTVDB -rename'
 alias mvbot='filebot --db TheMovieDB -rename'
