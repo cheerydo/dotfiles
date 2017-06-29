@@ -65,8 +65,10 @@ case $TERM in
   *termite)
   precmd () {
     vcs_info
-    print -Pn "\e]0;termite\a"
+    [[ $HOST != "potatoes" ]] && print -Pn "e\]0;termite\a"
+    [[ $HOST != "chicken" ]] && print -Pn "e\]0;termite\a"
   }
+
   preexec () {
     print -Pn "\e]0; $1\a"
   }
