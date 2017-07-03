@@ -84,46 +84,15 @@
     (define-key universal-argument-map (kbd "C-f") 'universal-argument-more)
     (define-key global-map (kbd "C-u") 'kill-whole-line)
     (eval-after-load 'evil-maps
-    '(progn
-        (define-key evil-motion-state-map (kbd "C-f") nil)
-        (define-key evil-motion-state-map (kbd "C-u") 'evil-scroll-up))))
+      '(progn
+	 (define-key evil-motion-state-map (kbd "C-f") nil)
+	 (define-key evil-motion-state-map (kbd "C-u") 'evil-scroll-up))))
   (evil-mode t)
   :config 
   (evil-set-initial-state 'deft-mode 'insert))
 
-(use-package helm
-  :ensure t
-  :diminish helm-mode
-  :init
-  (progn
-    (require 'helm-config)
-    (setq helm-candidate-number-limit 100
-	  helm-idle-delay 0.0
-          helm-input-idle-delay 0.01
-          helm-quick-update t
-          helm-M-x-requires-pattern nil
-          helm-mode-fuzzy-match t
-          helm-ff-file-name-history-use-recentf t
-          helm-ff-skip-boring-files t))
-  :config
-  (progn
-    (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
-    (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)
-    (define-key helm-map (kbd "C-z") 'helm-select-action)
-  (helm-mode t))
-  :bind (("C-c m" . helm-mini)
-         ("C-h a" . helm-apropos)
-         ("C-x C-b" . helm-buffers-list)
-         ;("C-x b" . helm-mini)
-         ("M-y" . helm-show-kill-ring)
-         ;("M-x" . helm-M-x)
-         ;("C-x C-f" . helm-find-files)
-         ;("C-x c l" . helm-locate)
-         ("C-x c o" . helm-occur)
-         ("C-x c s" . helm-swoop)
-         ("C-x c y" . helm-yas-complete)
-         ("C-x c Y" . helm-yas-create-snippet-on-region)
-         ("C-x c SPC" . helm-all-mark-rings)))
+(use-package evil-magit
+  :ensure t)
 
 (use-package ivy
   :ensure t
