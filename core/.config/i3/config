@@ -181,9 +181,9 @@ mode "MPD control" {
 bindsym $mod+Control+m mode "MPD control"
 
 mode "passthrough" {
-    bindsym $mod+Shift+BackSpace mode "default"
+    bindsym $mod+z mode "default"
 }
-bindsym $mod+Shift+BackSpace mode "passthrough"
+bindsym $mod+z mode "passthrough"
 
 set $mode_admin "System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown"
 mode $mode_admin {
