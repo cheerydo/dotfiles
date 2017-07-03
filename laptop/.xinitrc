@@ -11,20 +11,24 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-xset b off
-xset s off
-xset -dpms
-setxkbmap -option shift:both_capslock -option ctrl:nocaps -option ctrl:swap_lwin_lctl
+xset b off &
+xset s off &
+xset -dpms &
+setxkbmap -option shift:both_capslock -option ctrl:nocaps -option ctrl:swap_lwin_lctl &
 
 if [[ -f ~/.Xresources ]]; then
-  xrdb -load ~/.Xresources
+  xrdb -load ~/.Xresources &
+fi
+
+if [[ -f ~/.Xmodmap ]]; then
+  xmodmap ~/.Xmodmap
 fi
 
 emacs --daemon &
 #mpd &
 
-compton -b
-nitrogen --restore
-xsetroot -mod 16 16 -fg '#343d46' -bg '#2b303b'
+compton -b &
+nitrogen --restore &
+xsetroot -mod 16 16 -fg '#343d46' -bg '#2b303b' &
 
 exec i3
