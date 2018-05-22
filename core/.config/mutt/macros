@@ -11,6 +11,9 @@ macro pager,index b \
 macro index \& '!mbsync -a && notmuch new<enter>' \
   "Check for new mail and update notmuch database"
 
+# Open in text/html in firefox
+macro index,pager V "<view-attachments><search>html<enter><view-mailcap><exit>"
+
 # Mailbox navigation
 macro index gt 'c=Trash<enter>' \
   "View Trash mailbox"
