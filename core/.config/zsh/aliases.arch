@@ -1,3 +1,4 @@
+# Pacman shortcuts
 alias sup='sudo pacman -Syu'
 alias psup='pacaur -Syu'
 alias pin='sudo pacman -S'
@@ -13,16 +14,18 @@ alias pown='pacman -Qo'
 alias pfl='pkgfile'
 alias try='sudo pacman -S --asdeps'
 
+# SSH shortcuts
 alias pbox='ssh tornainbow@tor-server'
 alias hserv='ssh debian-server'
-alias jserv='ssh ub-server'
 alias pserv='ssh beer.hamit.lan'
 alias vserv='ssh pumpkin'
+alias bserv='ssh peas'
 alias tor='scp ~/down/*.torrent tornainbow@tor-server:~/private/rtorrent/watch && mv ~/down/*.torrent ~/doc/torbak'
 
 if [[ $HOST == "beans" ]]; then
   alias work='~/.screenlayout/work.sh'
   alias play='~/.screenlayout/main.sh'
+  alias custom='repose -vf custom -r /var/cache/pacman/custom'
 fi
 
 # vim: set ft=zsh:

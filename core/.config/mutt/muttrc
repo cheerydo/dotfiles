@@ -14,27 +14,12 @@ folder-hook Trash 'unset trash'
 
 # Mailboxen
 mailboxes =Inbox \
-  =Arch \
-  =Arch/\.Arch-dev \
-  =Arch/\.Arch-projects \
-  =Arch/\.Arch-devops \
   =Archive \
-  =Chugalug \
   =Church \
-  =Crux \
-  =OpenBSD-announce \
   =Lobsters \
   =Drafts \
-  =edX \
-  =Important \
-  =Important/\.School\ loans \
   =Jessica \
-  =Jobs \
-  =Lee \
-  =Personal \
   =Queue \
-  =Receipts \
-  =Python\ course \
   =Learn\ Spam \
   =Learn\ Not\ Spam \
   =Junk\ Mail \

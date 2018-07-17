@@ -11,7 +11,6 @@ new_window pixel 1
 # {{{Startup programs
 exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
-#exec --no-startup-id sh -c "sleep 10 && keepassxc"
 exec --no-startup-id redshift-gtk
 exec --no-startup-id seafile-applet
 exec --no-startup-id caffeine
@@ -20,6 +19,7 @@ exec --no-startup-id nvidia-settings --load-config-only
 
 # Start the bar up
 bar {
+    tray_output primary
     position top
     status_command i3status
 }
@@ -150,13 +150,12 @@ mode "Resize mode" {
 }
 bindsym $mod+r mode "Resize mode"
 
-set $mode_launch "Launch stuff [f]irefox [e]macs q[u]tebrowser [s]potify [a]ppfinder [t]hunar"
+set $mode_launch "Launch stuff [f]irefox [e]macs q[u]tebrowser [c]antata [a]ppfinder [t]hunar"
 mode $mode_launch {
-    bindsym c exec chromium; mode "default"
     bindsym t exec thunar; mode "default"
     bindsym f exec firefox; mode "default"
     bindsym u exec qutebrowser; mode "default"
-    bindsym s exec spotify; mode "default"
+    bindsym c exec cantata; mode "default"
     bindsym a exec xfce4-appfinder; mode "default"
     bindsym e exec emacsclient -c -n --alternate-editor=""; mode "default"
     bindsym k exec keepassxc; mode "default"

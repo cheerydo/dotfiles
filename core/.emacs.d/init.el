@@ -7,8 +7,8 @@
 (load custom-file)
 
 (require 'package)
-(setq package-archives '(("melpa" . "http://melpa.org/packages/")
-                         ("org" . "http://orgmode.org/elpa/")))
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+			 ("org" . "https://orgmode.org/elpa/")))
 (setq package-enable-at-startup nil
       load-prefer-newer t)
 
@@ -217,6 +217,15 @@
              "* %?")))
     (setq org-outline-path-complete-in-steps nil)
     (setq org-refile-use-outline-path 'file)))
+
+(use-package org
+  :ensure t
+  :after org
+  :config
+  (add-hook 'org-mode-hook 'evil-org-mode)
+  (add-hook 'evil-org-mode-hook
+	    (lambda ()
+	      (evil-org-set-key-theme))))
 
 (use-package deft
   :ensure t
