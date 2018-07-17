@@ -16,15 +16,9 @@ case $HOST in
       eval $(keychain --agents ssh,gpg --eval FBB0702A {pbox,hserv,jserv,gitrepo}.id_rsa)
     fi
     ;;
-  #potatoes)
-  #  envfile="$HOME/.gnupg/gpg-agent.env"
-  #  if [[ -e "$envfile" ]] && kill -0 $(grep GPG_AGENT_INFO "$envfile" | cut -d: -f 2) 2>/dev/null; then
-  #      eval "$(cat "$envfile")"
-  #  else
-  #      eval "$(gpg-agent --daemon --write-env-file "$envfile")"
-  #  fi
-  #  export GPG_AGENT_INFO  # the env file does not contain the export statement
-  #  ;;
+  beer|potatoes)
+    [[ -e /var/run/reboot-required ]] && echo -e "\n\t ***System Reboot Required***\t\n"
+    ;;
   chicken|*)
     ;;
 esac
