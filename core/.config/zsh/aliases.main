@@ -40,4 +40,6 @@ alias fresh='killall -SIGUSR1'
 alias w32='WINEARCH=wine32 WINEPREFIX=~/win32'
 alias nh='telnet nethack.alt.org'
 
+alias sudo='sudo -E'
+
 # vim: ft=zsh
