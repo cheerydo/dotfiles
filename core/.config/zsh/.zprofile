@@ -5,7 +5,7 @@ case $HOST in
   beans|chili)
     if [[ $TMUX == "" ]]; then
       setterm -blength 0
-      eval $(keychain --agents ssh,gpg --eval FBB0702A pbox hserv salt beer jserv pumpkin gitrepo hrepo)
+      eval $(keychain --agents ssh,gpg --eval FBB0702A beans gitrepo hrepo)
       #export GPG_TTY=$(tty)
       #export GPG_AGENT_INFO="" 
     fi
@@ -28,8 +28,3 @@ case $HOST in
   chicken|*)
     ;;
 esac
-
-if [[ $HOST == "rice" ]]; then
-  source $ZDOTDIR/.zshrc
-  [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
-fi

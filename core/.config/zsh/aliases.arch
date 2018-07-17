@@ -18,10 +18,11 @@ if [[ $HOST == "beans" ]]; then
   alias work='~/.screenlayout/work.sh'
   alias play='~/.screenlayout/main.sh'
   alias pserv='ssh -X beer.hamit.lan'
+  alias custom='repose -vf custom -r /var/cache/pacman/custom'
 fi
 
 alias pbox='ssh tornainbow@tor-server'
 alias hserv='ssh debian-server'
-alias jserv='ssh obsd-server'
+alias bserv='ssh peas'
 alias tor='scp ~/down/*.torrent tornainbow@tor-server:~/private/rtorrent/watch && mv ~/down/*.torrent ~/doc/torbak'
 # vim: set ft=zsh:

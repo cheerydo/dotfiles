@@ -22,8 +22,7 @@ SAVEHIST=10000
 HISTFILE=$ZDOTDIR/.zsh_history
 
 # Keybindings - vim for the win
-bindkey -v
-vimode=i
+bindkey -e
 bindkey '^R' history-incremental-search-backward
 bindkey ' ' magic-space
 
