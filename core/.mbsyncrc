@@ -12,6 +12,7 @@ Account fastmail
 MaildirStore fastmail-local
 Path ~/mail/
 Inbox ~/mail/Inbox
+SubFolders Verbatim
 
 Channel fastmail
 Master :fastmail-remote:
