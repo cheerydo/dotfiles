@@ -23,17 +23,19 @@ xset fp rehash
 
 xrdb -load ~/.Xresources
 emacs --daemon &
-compton &
 mpd &
 
-setxkbmap -option shift:both_capslock -option ctrl:nocaps -option ctrl:swap_lwin_lctl
+xmodmap ~/.Xmodmap
 
 case "$2" in
   xf)
+    setxkbmap -option shift:both_capslock -option ctrl:nocaps
+    #compton -b &
     exec startxfce4
     ;;
   i3|*)
-    xrandr --output DVI-I-1 --left-of HDMI-0 &
+    setxkbmap -option shift:both_capslock -option ctrl:nocaps  -option altwin:swap_lalt_lwin
+    #compton &
     nitrogen --restore &
     exec i3
     ;;
