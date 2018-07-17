@@ -13,7 +13,8 @@ case $HOST in
   rice)
     if [[ $TMUX == "" ]]; then
       setterm -blength 0
-      eval $(keychain --agents ssh,gpg --eval FBB0702A {pbox,hserv,jserv,gitrepo}.id_rsa)
+      #eval $(keychain --agents ssh,gpg --eval FBB0702A {pbox,hserv,jserv,gitrepo}.id_rsa)
+      eval $(keychain --agents ssh,gpg --eval FBB0702A rice)
     fi
     ;;
   #potatoes)
@@ -28,8 +29,8 @@ case $HOST in
   chicken|*)
     ;;
 esac
-
-if [[ $HOST == "rice" ]]; then
-  source $ZDOTDIR/.zshrc
-  [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
-fi
+#
+#if [[ $HOST == "rice" ]]; then
+#  source $ZDOTDIR/.zshrc
+#  [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+#fi

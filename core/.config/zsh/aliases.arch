@@ -13,15 +13,16 @@ alias pown='pacman -Qo'
 alias pfl='pkgfile'
 alias try='sudo pacman -S --asdeps'
 
+alias pbox='ssh tornainbow@tor-server'
+alias hserv='ssh debian-server'
+alias jserv='ssh ub-server'
+alias pserv='ssh beer.hamit.lan'
+alias vserv='ssh pumpkin'
+alias tor='scp ~/down/*.torrent tornainbow@tor-server:~/private/rtorrent/watch && mv ~/down/*.torrent ~/doc/torbak'
 
 if [[ $HOST == "beans" ]]; then
   alias work='~/.screenlayout/work.sh'
   alias play='~/.screenlayout/main.sh'
-  alias pserv='ssh -X beer.hamit.lan'
 fi
 
-alias pbox='ssh tornainbow@tor-server'
-alias hserv='ssh debian-server'
-alias jserv='ssh obsd-server'
-alias tor='scp ~/down/*.torrent tornainbow@tor-server:~/private/rtorrent/watch && mv ~/down/*.torrent ~/doc/torbak'
 # vim: set ft=zsh:

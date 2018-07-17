@@ -14,7 +14,7 @@ macro index \& '!mbsync -a && notmuch new<enter>' \
 # Mailbox navigation
 macro index gt 'c=Trash<enter>' \
   "View Trash mailbox"
-macro index gh 'c=Inbox<enter>' \
+macro index gh 'c=<enter>' \
   "View Inbox mailbox"
 macro index gs 'c=Sent Items<enter>' \
   "View Sent Items mailbox"

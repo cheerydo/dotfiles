@@ -2,7 +2,7 @@
 # vim: set fdm=marker fen:
 
 # {{{ General settings
-set $mod Mod1
+set $mod Mod4
 floating_modifier $mod
 font pango: Dina Bold 9
 focus_follows_mouse no
@@ -11,7 +11,7 @@ new_window pixel 1
 # {{{Startup programs
 exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
-exec --no-startup-id sh -c "sleep 10 && keepassxc"
+#exec --no-startup-id sh -c "sleep 10 && keepassxc"
 exec --no-startup-id redshift-gtk
 exec --no-startup-id seafile-applet
 exec --no-startup-id caffeine
@@ -91,7 +91,7 @@ bindsym $mod+Shift+q kill
 
 # }}}
 # {{{ Keybindings
-bindsym $mod+Mod4+l exec i3lock -i ~/pictures/blue.png
+bindsym $mod+Mod1+l exec i3lock -i ~/pictures/blue.png
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "zenity --question --title 'Alert' --text 'Really exit i3wm?' && i3-msg exit"
@@ -102,9 +102,9 @@ bindsym $mod+bracketleft exec rofi -show run
 bindsym $mod+bracketright exec rofi -show window
 bindsym $mod+Shift+p exec /home/jared/bin/passmenu
 
-bindsym XF86AudioMute exec --no-startup-id ponymix toggle && notify-send -a volume -t 50 "$((ponymix is-muted && echo 'Volume is muted') || echo 'Volume is unmuted')"
-bindsym XF86AudioLowerVolume exec --no-startup-id ponymix decrease 3 && notify-send -a volume -t 50 "$(ponymix get-volume)"
-bindsym XF86AudioRaiseVolume exec --no-startup-id ponymix increase 3 && notify-send -a volume -t 50 "$(ponymix get-volume)"
+#bindsym XF86AudioMute exec --no-startup-id ponymix toggle && notify-send -a volume -t 50 "$((ponymix is-muted && echo 'Volume is muted') || echo 'Volume is unmuted')"
+#bindsym XF86AudioLowerVolume exec --no-startup-id ponymix decrease 3 && notify-send -a volume -t 50 "$(ponymix get-volume)"
+#bindsym XF86AudioRaiseVolume exec --no-startup-id ponymix increase 3 && notify-send -a volume -t 50 "$(ponymix get-volume)"
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioPrev exec mpc prev

@@ -14,7 +14,7 @@ fi
 xset b off &
 xset s off &
 xset -dpms &
-setxkbmap -option shift:both_capslock -option ctrl:nocaps -option ctrl:swap_lwin_lctl &
+setxkbmap -option shift:both_capslock -option ctrl:swapcaps -option altwin:swap_lalt_lwin &
 
 if [[ -f ~/.Xresources ]]; then
   xrdb -load ~/.Xresources &
@@ -28,7 +28,7 @@ emacs --daemon &
 #mpd &
 
 compton -b &
-nitrogen --restore &
-xsetroot -mod 16 16 -fg '#343d46' -bg '#2b303b' &
+feh --randomize --bg-fill img/
+#hsetroot -center ~/img/dogsmoke.jpg
 
 exec i3

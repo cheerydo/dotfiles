@@ -3,6 +3,9 @@ set from="Jared Hamilton <jared@fastmail.com>"
 set imap_user=jared@fastmail.com
 set imap_pass=`gpg -d -q --no-tty ~/.config/mutt/fmail_imap.gpg`
 set my_server=imap.fastmail.com
+set sendmail=/usr/bin/msmtp
+set my_msmtp_pass=`gpg -d -q --no-tty ~/.config/mutt/fmail.gpg`
+
 
 # set some folder mappings
 set folder=imaps://$my_server/
@@ -63,7 +66,7 @@ auto_view text/html
 
 ## sidebar stuff
 set mail_check_stats_interval=30
-set mail_check_stats=yes
+set mail_check_stats
 
 set sidebar_divider_char=" |"
 set sidebar_folder_indent=yes
@@ -72,9 +75,9 @@ set sidebar_visible=yes
 set sidebar_width=25
 set sidebar_delim_chars="/."
 set sidebar_format="%B%* %?N?%N/?%S"
-color sidebar_new brightdefault default 
 set sidebar_short_path=yes
 set sidebar_next_new_wrap=yes
+color sidebar_new brightdefault default 
 
 # Default index_format
 folder-hook "Sent*" 'set index_format="%3C %Z  |  %(!%m/%d)   %-35.35F   %?M?[+](%2.M messages)? %s"'

@@ -62,15 +62,16 @@ case "$HOST" in
 esac
 
 case $TERM in
-  *termite)
+  xterm-*)
   precmd () {
-    vcs_info
-    [[ $HOST != "potatoes" ]] && print -Pn "e\]0;termite\a"
-    [[ $HOST != "chicken" ]] && print -Pn "e\]0;termite\a"
+    #vcs_info
+    #[[ $HOST != "potatoes" ]] && print -Pn "e\]0;termite\a"
+    #[[ $HOST != "chicken" ]] && print -Pn "e\]0;termite\a"
+    print -Pn "e\]0;termite\a"
   }
 
   preexec () {
-    print -Pn "\e]0; $1\a"
+    print -Pn "\e]0;$1\a"
   }
   ;;
 esac

@@ -21,8 +21,6 @@
   (package-install 'use-package))
 (setq use-package-verbose t)
 (require 'use-package)
-(require 'diminish)
-(require 'bind-key)
 
 ; General settings
 (setq inhibit-startup-screen t
@@ -64,6 +62,12 @@
 
 ; let's get that big beautiful theme rolling
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+
+(use-package diminish
+  :ensure t)
+
+(use-package bind-key
+  :ensure t)
 
 ; auto-compile lisp code
 (use-package auto-compile
@@ -137,7 +141,7 @@
 (use-package company
   :ensure t
   :init
-  (add-hook 'after-elpy-hook 'company-mode))
+  (add-hook 'elpy-mode-hook 'company-mode))
 
 (use-package key-chord
   :ensure t
@@ -159,7 +163,7 @@
 
 (use-package elpy
   :ensure t
-  :mode ("\\.py\\'" . elpy-mode)
+  ;;:mode ("\\.py\\'" . elpy-mode)
   :config
   (elpy-enable))
 

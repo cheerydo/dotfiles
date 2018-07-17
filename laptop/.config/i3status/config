@@ -11,7 +11,7 @@ general {
         interval = 5
 }
 
-order += "wireless wlp7s0"
+order += "wireless wlp3s0"
 order += "path_exists VPN"
 order += "disk /"
 order += "disk /home"
@@ -30,7 +30,7 @@ volume master {
 }
 
 # This is for the laptop
-wireless wlp7s0 {
+wireless wlp3s0 {
         format_up = "W: (%quality at %essid) %ip"
         format_down = "W: down"
 }
@@ -56,7 +56,7 @@ load {
 
 cpu_temperature 0 {
 		format = "CPU: %degrees° C"
-		path = "/sys/class/hwmon/hwmon0/temp1_input"
+		path = "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input"
 }
 
 battery 0 {
