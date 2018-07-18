@@ -2,7 +2,7 @@
 # ~/.zprofile
 
 case $HOST in
-  beans|chili|*)
+  beans|chili)
     if [[ $TMUX == "" ]]; then
       setterm -blength 0
       eval $(keychain --agents ssh,gpg --eval FBB0702A beans gitrepo hrepo)
