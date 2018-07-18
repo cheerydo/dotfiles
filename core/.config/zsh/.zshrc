@@ -73,7 +73,7 @@ case $TERM in
         esac
       fi
 
-      repo="[${repo##*/}]"
+      repo="${repo##*/}"
     fi
   }
 
