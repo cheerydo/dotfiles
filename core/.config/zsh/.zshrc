@@ -73,6 +73,7 @@ case $TERM in
         esac
       fi
 
+      branch="$(git symbolic-ref --short HEAD)"
       repo="${repo##*/}"
     fi
   }
@@ -93,7 +94,7 @@ bindkey          "^[[3~" delete-char
 
 # Prompt!
 if [[ $HOST != "beans" ]] && [[ $HOST != "rice" ]]; then
-  PROMPT='[%m](%5~) %F{green}${repo}%f ──── '
+  PROMPT='[%m](%5~) %F{green}${repo}%f:%F{green}${branch}%f ──── '
 else
-  PROMPT='(%5~) %F{green}${repo}%f ──── '
+  PROMPT='(%5~) %F{green}${repo}%f:%F{green}${branch}%f ──── '
 fi

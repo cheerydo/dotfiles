@@ -7,4 +7,11 @@ alias tvbot='filebot --format "{n} - {s00e00.lower()}" --db TheTVDB -rename'
 alias mvbot='filebot --db TheMovieDB -rename'
 . "/home/jared/.acme.sh/acme.sh.env"
 
+if [[ $HOST == "beer" ]]; then
+  alias pbox='ssh tornainbow@tor-server'
+  alias hserv='ssh debian-server'
+  alias vserv='ssh pumpkin'
+  alias bserv='ssh peas'
+fi 
+
 # vim: ft=zsh
