@@ -14,21 +14,20 @@ fi
 xset b off &
 xset s off &
 xset -dpms &
-setxkbmap -option shift:both_capslock -option ctrl:swapcaps -option altwin:swap_lalt_lwin &
+#setxkbmap -option shift:both_capslock -option ctrl:swapcaps -option altwin:swap_lalt_lwin &
+setxkbmap -option shift:both_capslock -option ctrl:swapcaps &
 
 if [[ -f ~/.Xresources ]]; then
   xrdb -load ~/.Xresources &
 fi
 
-if [[ -f ~/.Xmodmap ]]; then
-  xmodmap ~/.Xmodmap
-fi
+#if [[ -f ~/.Xmodmap ]]; then
+#  xmodmap ~/.Xmodmap
+#fi
 
 emacs --daemon &
-#mpd &
 
 compton -b &
 feh --randomize --bg-fill img/
-#hsetroot -center ~/img/dogsmoke.jpg
 
 exec i3

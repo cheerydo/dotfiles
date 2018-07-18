@@ -25,16 +25,14 @@ xrdb -load ~/.Xresources
 emacs --daemon &
 mpd &
 
-xmodmap ~/.Xmodmap
+setxkbmap -option shift:both_capslock -option ctrl:nocaps
 
 case "$2" in
   xf)
-    setxkbmap -option shift:both_capslock -option ctrl:nocaps
     #compton -b &
     exec startxfce4
     ;;
   i3|*)
-    setxkbmap -option shift:both_capslock -option ctrl:nocaps  -option altwin:swap_lalt_lwin
     #compton &
     nitrogen --restore &
     exec i3
