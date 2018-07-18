@@ -45,7 +45,7 @@ case "$HOST" in
     source $ZDOTDIR/aliases.obsd
     eval $(gdircolors $ZDOTDIR/.dircolors)
     ;;
-  potatoes|beer)
+  potatoes|beer|peas)
     source $ZDOTDIR/aliases.debian
     source $ZDOTDIR/aliases.systemd
     eval $(dircolors $ZDOTDIR/.dircolors)
