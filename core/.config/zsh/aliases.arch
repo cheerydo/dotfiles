@@ -20,7 +20,6 @@ alias hserv='ssh debian-server'
 alias pserv='ssh beer.hamit.lan'
 alias vserv='ssh pumpkin'
 alias bserv='ssh peas'
-alias tor='scp ~/down/*.torrent tornainbow@tor-server:~/private/rtorrent/watch && mv ~/down/*.torrent ~/doc/torbak'
 
 if [[ $HOST == "beans" ]]; then
   alias work='~/.screenlayout/work.sh'

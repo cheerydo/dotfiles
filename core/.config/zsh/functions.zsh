@@ -36,3 +36,8 @@ gen_xkcd_pass() {
         printf "$XKCD ($WORDS)" | awk '{x=$1;$1="";printf "%-36s %s\n", x, $0}'
     done | column
 }
+
+tor() {
+  scp ~/down/*.torrent tornainbow@tor-server:~/private/rtorrent/watch && \
+    mv ~/down/*.torrent ~/doc/torbak
+}
