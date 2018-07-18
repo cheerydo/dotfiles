@@ -26,3 +26,4 @@ session.*
 **/.emacs.d/bookmarks
 custom-vars.el
 jabber*
+htop*
