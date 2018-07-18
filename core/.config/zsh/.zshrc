@@ -64,9 +64,17 @@ case $TERM in
   xterm-*)
   precmd () {
     #vcs_info
-    #[[ $HOST != "potatoes" ]] && print -Pn "e\]0;termite\a"
-    #[[ $HOST != "chicken" ]] && print -Pn "e\]0;termite\a"
     print -Pn "e\]0;termite\a"
+
+    if repo=$(git rev-parse --show-toplevel 2> /dev/null); then
+      if [[ ! $repo ]]; then
+        case $(git rev-parse --is-bare-repository) in
+          'true') repo='bare'
+        esac
+      fi
+
+      repo="[${repo##*/}]"
+    fi
   }
 
   preexec () {
@@ -85,7 +93,7 @@ bindkey          "^[[3~" delete-char
 
 # Prompt!
 if [[ $HOST != "beans" ]] && [[ $HOST != "rice" ]]; then
-  PROMPT='[%m](%5~) ──── '
+  PROMPT='[%m](%5~) %F{green}${repo}%f ──── '
 else
-  PROMPT='(%5~) ──── '
+  PROMPT='(%5~) %F{green}${repo}%f ──── '
 fi
