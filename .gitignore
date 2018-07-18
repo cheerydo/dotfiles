@@ -9,6 +9,7 @@ mpd*
 **/artists
 error.log
 **/.vim
+*.swp
 
 # Emacs stuff
 .\#*
