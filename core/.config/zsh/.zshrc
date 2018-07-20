@@ -73,8 +73,9 @@ case $TERM in
         esac
       fi
 
-      branch="$(git symbolic-ref --short HEAD)"
       repo="${repo##*/}"
+      branch="$(git symbolic-ref --short HEAD)"
+      gitprompt=" %F{green}${repo}%f:%F{green}${branch}%f"
     fi
   }
 
@@ -94,7 +95,7 @@ bindkey          "^[[3~" delete-char
 
 # Prompt!
 if [[ $HOST != "beans" ]] && [[ $HOST != "rice" ]]; then
-  PROMPT='[%m](%5~) %F{green}${repo}%f:%F{green}${branch}%f ──── '
+  PROMPT='[%m](%5~)${gitprompt} ──── '
 else
-  PROMPT='(%5~) %F{green}${repo}%f:%F{green}${branch}%f ──── '
+  PROMPT='(%5~)${gitprompt} ──── '
 fi
