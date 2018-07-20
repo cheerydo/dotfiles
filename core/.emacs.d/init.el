@@ -205,6 +205,8 @@
           org-hierarchical-todo-statistics nil
           org-checkbox-hierarchical-statistics nil
           org-M-RET-may-split-line nil)
+    (setq org-todo-keywords
+	  '((sequence "TODO(t)" "IN_PROGRESS(i)" "WAITING(w)" "DONE(d)")))
     (setq org-todo-keyword-faces
 	  '(("IN_PROGRESS" . "medium blue")
 	    ("WAITING" . "tomato")))
