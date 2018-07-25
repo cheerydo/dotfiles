@@ -65,6 +65,7 @@ case $TERM in
   precmd () {
     #vcs_info
     print -Pn "e\]0;termite\a"
+    gitprompt=""
 
     if repo=$(git rev-parse --show-toplevel 2> /dev/null); then
       if [[ ! $repo ]]; then
