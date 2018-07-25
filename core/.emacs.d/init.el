@@ -8,7 +8,7 @@
 
 (require 'package)
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
-			 ("org" . "https://orgmode.org/elpa/")))
+			 ("org" . "https://orgmode.org/elpa/")
 			 ; Need this for undo-tree, without it evil won't install
 			 ("gnu" . "http://elpa.gnu.org/packages/")))
 (setq package-enable-at-startup nil
