@@ -5,7 +5,9 @@ alias agup='sudo apt update && sudo apt upgrade'
 
 alias tvbot='filebot --format "{n} - {s00e00.lower()}" --db TheTVDB -rename'
 alias mvbot='filebot --db TheMovieDB -rename'
-. "/home/jared/.acme.sh/acme.sh.env"
+if [[ $HOST == potatoes ]];
+  . "/home/jared/.acme.sh/acme.sh.env"
+fi
 
 if [[ $HOST == "beer" ]]; then
   alias pbox='ssh tornainbow@tor-server'
