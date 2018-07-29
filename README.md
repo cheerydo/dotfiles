@@ -5,4 +5,4 @@ Not entirely sure how to start this, but I use baraction.sh (in bin/), called fr
 #### SSH keys
 Welp, if you haven't used ssh keys for anything else, use them to push changes to git repo. Work in conjunction with keychain (from the gentoo brethren) for added sexy!
 
-## I should probably change this - and this
+## I should probably change this - and this - but not this
