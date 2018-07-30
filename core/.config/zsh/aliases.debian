@@ -5,7 +5,7 @@ alias agup='sudo apt update && sudo apt upgrade'
 
 alias tvbot='filebot --format "{n} - {s00e00.lower()}" --db TheTVDB -rename'
 alias mvbot='filebot --db TheMovieDB -rename'
-if [[ $HOST == potatoes ]];
+if [[ $HOST == potatoes ]]; then
   . "/home/jared/.acme.sh/acme.sh.env"
 fi
 
