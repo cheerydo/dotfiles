@@ -19,6 +19,6 @@ case $HOST in
     fi
     ;;
   beer|potatoes|peas)
-    [[ -e /var/run/reboot-required ]] && echo -e "\n\t ***System Reboot Required***\t\n"
+    [[ -e /var/run/reboot-required ]] && echo -e "\n\t***System Reboot Required***\t\n"
     ;;
 esac
