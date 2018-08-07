@@ -11,9 +11,9 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-xset b off &
-xset s off &
-xset -dpms &
+# sets beep off and mouse accel to 30/10 with a threshold of 0
+xset b off m 30/10 0
+
 #setxkbmap -option shift:both_capslock -option ctrl:swapcaps -option altwin:swap_lalt_lwin &
 setxkbmap -option shift:both_capslock -option ctrl:swapcaps &
 
