@@ -22,11 +22,6 @@ macro index gh 'c=<enter>' \
 macro index gs 'c=Sent Items<enter>' \
   "View Sent Items mailbox"
 
-# Addressbook at fastmail integration
-macro index,pager a \
-  "<pipe-message>khard add-email<enter>" \
-  "Add sender address to khard"
-
 # this monstrosity is for notmuch searching
 macro index <F8> \
   "<shell-escape>notmuch-mutt -r --prompt search<enter>\
