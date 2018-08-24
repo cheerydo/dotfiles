@@ -1,9 +1,0 @@
-#!/usr/bin/env sh
-
-I=0
-[ $(printf "$1" | grep -E '[0-9]+') ] && NUM="$1" || NUM="1"
-until [ "$I" -eq "$NUM" ]; do
-    I=$((I+1))
-    LC_CTYPE=C strings /dev/urandom | \
-        grep -o '[a-hjkmnp-z2-9-]' | head -n 16 | paste -s -d \\0 /dev/stdin
-done | column
