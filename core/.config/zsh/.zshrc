@@ -60,6 +60,8 @@ case "$HOST" in
     ;;
 esac
 
+source $ZDOTDIR/functions.zsh
+
 case $TERM in
   xterm-*)
   precmd () {
