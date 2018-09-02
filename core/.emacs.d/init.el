@@ -268,7 +268,8 @@
 (use-package eyebrowse
   :ensure t
   :init
-  (eyebrowse-mode t))
+  (eyebrowse-mode t)
+  (eyebrowse-setup-opinionated-keys))
 
 (use-package moe-theme
   :ensure t
