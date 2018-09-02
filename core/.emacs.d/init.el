@@ -93,12 +93,12 @@
       '(progn
 	 (define-key evil-motion-state-map (kbd "C-f") nil)
 	 (define-key evil-motion-state-map (kbd "C-u") 'evil-scroll-up))))
+  (evil-mode t)
   (progn
     (define-key evil-normal-state-map (kbd "` h") 'windmove-left)
     (define-key evil-normal-state-map (kbd "` j") 'windmove-down)
     (define-key evil-normal-state-map (kbd "` k") 'windmove-up)
     (define-key evil-normal-state-map (kbd "` l") 'windmove-right))
-  (evil-mode t)
   (use-package evil-magit
     :ensure t)
   :config 
