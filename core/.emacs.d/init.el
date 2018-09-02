@@ -147,14 +147,14 @@
 (use-package company
   :ensure t
   :init
-  (add-hook 'elpy-mode-hook 'company-mode))
+  (add-hook 'python-mode-hook 'company-mode))
 
 (use-package key-chord
   :ensure t
   :init
   (progn
      (setq key-chord-two-keys-delay 0.5)
-     (key-chord-define evil-insert-state-map "jj" 'evil-normal-state))
+     (key-chord-define evil-insert-state-map "fd" 'evil-normal-state))
   :config
   (key-chord-mode t))
 
@@ -167,18 +167,25 @@
     (setq recentf-max-menu-items 50)
     (add-to-list 'recentf-exclude "/elpa/")))
 
-(use-package elpy
-  :ensure t
-  ;;:mode ("\\.py\\'" . elpy-mode)
-  :config
-  (elpy-enable))
-
-(use-package flycheck
+;(use-package elpy
+;  :ensure t
+;  :init
+;  (elpy-enable))
+(use-package anaconda-mode
   :ensure t
   :init
-  (progn
-    (remove-hook 'elpy-modules 'elpy-module-flymake)
-    (add-hook 'elpy-module-hook 'flycheck-mode)))
+  (add-hook 'python-mode-hook 'anaconda-mode)
+  (use-package company-anaconda
+    :ensure t
+    :config
+    (add-to-list 'company-backends 'company-anaconda)))
+
+(use-package flycheck
+  :ensure t)
+;  :init
+;  (progn
+;    (remove-hook 'elpy-modules 'elpy-module-flymake)
+;    (add-hook 'elpy-module-hook 'flycheck-mode)))
 
 (defun my-autofill-mode ()
   "My options for setting auto-fill-mode and fill-column for specific modes."
