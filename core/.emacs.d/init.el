@@ -56,7 +56,7 @@
   (menu-bar-mode -1)
   (column-number-mode t)
   (scroll-bar-mode -1))
-(windmove-default-keybindings)
+;(windmove-default-keybindings)
 
 (add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
 (add-to-list 'auto-mode-alist '("\\..*rc\\'" . conf-unix-mode))
@@ -93,12 +93,16 @@
       '(progn
 	 (define-key evil-motion-state-map (kbd "C-f") nil)
 	 (define-key evil-motion-state-map (kbd "C-u") 'evil-scroll-up))))
+  (progn
+    (define-key evil-normal-state-map (kbd "` h") 'windmove-left)
+    (define-key evil-normal-state-map (kbd "` j") 'windmove-down)
+    (define-key evil-normal-state-map (kbd "` k") 'windmove-up)
+    (define-key evil-normal-state-map (kbd "` l") 'windmove-right))
   (evil-mode t)
+  (use-package evil-magit
+    :ensure t)
   :config 
   (evil-set-initial-state 'deft-mode 'insert))
-
-(use-package evil-magit
-  :ensure t)
 
 (use-package ivy
   :ensure t
