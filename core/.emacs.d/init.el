@@ -265,6 +265,11 @@
     (add-to-list 'company-backends 'company-ansible))
   (add-hook 'ansible-hook 'ansible::auto-decrypt-encrypt))
 
+(use-package eyebrowse
+  :ensure t
+  :init
+  (eyebrowse-mode t))
+
 (use-package moe-theme
   :ensure t
   :init
