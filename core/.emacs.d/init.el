@@ -242,18 +242,6 @@
 	    (lambda ()
 	      (evil-org-set-key-theme))))
 
-(use-package deft
-  :ensure t
-  :config
-  (progn
-    (setq deft-default-extensions "org"
-          deft-extensions '("org")
-          deft-directory "~/wiki"
-          deft-recursive t
-          deft-use-filename-as-title t)
-    (global-set-key [f4] 'deft)
-    (global-set-key [f5] 'deft-find-file)))
-
 (use-package magit
   :ensure t
   :bind(("C-x g" . magit-status))
