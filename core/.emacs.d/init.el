@@ -253,14 +253,21 @@
   :init (ranger-override-dired-mode t)
   :config (setq ranger-show-dotfiles t))
 
-(use-package flatui-theme
+(use-package yaml-mode
   :ensure t)
-;  :config
-;  (load-theme 'flatui))
+
+(use-package ansible
+  :ensure t
+  :init
+  (use-package company-ansible
+    :ensure t
+    :init
+    (add-to-list 'company-backends 'company-ansible))
+  (add-hook 'ansible-hook 'ansible::auto-decrypt-encrypt))
 
 (use-package moe-theme
   :ensure t
-  :config
+  :init
   (load-theme 'moe-dark))
 
 (use-package smart-mode-line
