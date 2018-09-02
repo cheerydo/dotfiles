@@ -12,9 +12,4 @@ if [[ "$HOST" == beans ]]; then
   export IOUP_TOKEN="$(<~/doc/iotoken)"
 fi
 
-if [[ "$HOST" == chicken ]]; then
-  export PKG_PATH="http://openbsd.mirrors.hoobly.com/$(uname -r)/packages/$(machine -a)/"
-  export TERM="screen-256color"
-fi
-
 ZDOTDIR=~/.config/zsh

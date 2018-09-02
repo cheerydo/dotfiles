@@ -40,10 +40,6 @@ if [[ -f $ZDOTDIR/aliases.main ]]; then
 fi
 
 case "$HOST" in
-  chicken)
-    source $ZDOTDIR/aliases.obsd
-    eval $(gdircolors $ZDOTDIR/.dircolors)
-    ;;
   potatoes|beer|peas)
     source $ZDOTDIR/aliases.debian
     source $ZDOTDIR/aliases.systemd
