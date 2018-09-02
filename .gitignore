@@ -26,5 +26,8 @@ helm-*
 session.*
 **/.emacs.d/bookmarks
 custom-vars.el
+eshell/
+anaconda-mode/
+
 jabber*
 htop*
