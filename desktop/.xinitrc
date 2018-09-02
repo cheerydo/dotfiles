@@ -14,7 +14,6 @@ fi
 # Some X stuff
 xset b off &
 xset s off &
-xset -dpms &
 
 xset +fp /usr/share/fonts/local
 xset +fp /usr/share/fonts/misc
@@ -30,6 +29,7 @@ setxkbmap -option shift:both_capslock -option ctrl:nocaps
 case "$2" in
   xf)
     #compton -b &
+    xset -dpms &
     exec startxfce4
     ;;
   i3|*)
