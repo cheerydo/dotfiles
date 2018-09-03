@@ -7,8 +7,8 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-        colors = true
-        interval = 5
+    colors = true
+    interval = 5
 }
 
 order += "wireless wlp3s0"
@@ -22,17 +22,17 @@ order += "volume master"
 order += "tztime local"
 
 volume master {
-		format = "♪: %volume"
-		format_muted = "♪: MUTE"
-		device = "default"
-		mixer = "Master"
-		mixer_idx = 0
+    format = "♪: %volume"
+    format_muted = "♪: MUTE"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
 }
 
 # This is for the laptop
 wireless wlp3s0 {
-        format_up = "W: (%quality at %essid) %ip"
-        format_down = "W: down"
+    format_up = "W: (%quality at %essid) %ip"
+    format_down = "W: down"
 }
 
 # This is for the desktop
@@ -42,36 +42,36 @@ wireless wlp3s0 {
 #}
 
 path_exists VPN {
-        # when launced from nm-applet
-        path = "/proc/sys/net/ipv4/conf/tun0"
+    # when launced from nm-applet
+    path = "/proc/sys/net/ipv4/conf/tun0"
 }
 
 tztime local {
-        format = "%A, %B %e -- %H:%M"
+    format = "%A, %B %e -- %H:%M"
 }
 
 load {
-        format = "%1min %5min %15min"
+    format = "%1min %5min %15min"
 }
 
 cpu_temperature 0 {
-		format = "CPU: %degrees° C"
-		path = "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input"
+    format = "CPU: %degrees° C"
+    path = "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input"
 }
 
 battery 0 {
-        format = "%status %percentage"
-        format_down = "No battery"
-        path = "/sys/class/power_supply/BAT%d/uevent"
-        low_threshold = 10
+    format = "%status %percentage"
+    format_down = "No battery"
+    path = "/sys/class/power_supply/BAT%d/uevent"
+    low_threshold = 10
 }
 
 disk / {
-        prefix_type = custom
-        format = "root [%used/%total]"
+    prefix_type = custom
+    format = "root [%used/%total]"
 }
 
 disk /home {
-        prefix_type = custom
-        format = "home [%used/%total]"
+    prefix_type = custom
+    format = "home [%used/%total]"
 }
