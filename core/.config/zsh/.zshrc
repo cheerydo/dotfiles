@@ -61,8 +61,6 @@ source $ZDOTDIR/functions.zsh
 case $TERM in
   xterm-*)
   precmd () {
-    #vcs_info
-    print -Pn "e\]0;termite\a"
     gitprompt=""
 
     if repo=$(git rev-parse --show-toplevel 2> /dev/null); then
@@ -76,10 +74,6 @@ case $TERM in
       branch="$(git symbolic-ref --short HEAD)"
       gitprompt=" %F{green}${repo}%f:%F{green}${branch}%f"
     fi
-  }
-
-  preexec () {
-    print -Pn "\e]0;$1\a"
   }
   ;;
 esac
