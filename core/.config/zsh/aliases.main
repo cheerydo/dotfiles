@@ -23,7 +23,6 @@ alias lsa='ls --group-directories-first -AhXF'
 alias lsl='ls --group-directories-first -AlhXF'
 alias paste="curl -F 'f:1=<-' ix.io"
 alias curlup='curl -F c=@- https://ptpb.pw'
-alias bc='bc -l'
 
 alias g='git'
 alias gs='git status -sb'
