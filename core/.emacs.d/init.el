@@ -167,10 +167,6 @@
     (setq recentf-max-menu-items 50)
     (add-to-list 'recentf-exclude "/elpa/")))
 
-;(use-package elpy
-;  :ensure t
-;  :init
-;  (elpy-enable))
 (use-package anaconda-mode
   :ensure t
   :init
