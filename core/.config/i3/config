@@ -157,7 +157,7 @@ mode $mode_launch {
     bindsym u exec qutebrowser; mode "default"
     bindsym c exec cantata; mode "default"
     bindsym a exec xfce4-appfinder; mode "default"
-    bindsym e exec emacsclient -c -n --alternate-editor=""; mode "default"
+    bindsym e exec emacsclient -c --alternate-editor=""; mode "default"
     bindsym k exec keepassxc; mode "default"
 
     bindsym Escape mode "default"
