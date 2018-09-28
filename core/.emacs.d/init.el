@@ -250,16 +250,20 @@
   :config (setq ranger-show-dotfiles t))
 
 (use-package yaml-mode
-  :ensure t)
+  :ensure t
+  :init
+  (add-hook 'yaml-mode-hook 'company-mode))
 
 (use-package ansible
   :ensure t
+  :bind (("C-c d" . ansible::decrypt-buffer)
+	     ("C-c e" . ansible::encrypt-buffer))
   :init
+  (add-hook 'yaml-mode-hook '(lambda () (ansible 1)))
   (use-package company-ansible
     :ensure t
     :init
-    (add-to-list 'company-backends 'company-ansible))
-  (add-hook 'ansible-hook 'ansible::auto-decrypt-encrypt))
+    (add-to-list 'company-backends 'company-ansible)))
 
 (use-package eyebrowse
   :ensure t
