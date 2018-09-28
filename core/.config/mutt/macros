@@ -17,7 +17,7 @@ macro index,pager V "<view-attachments><search>html<enter><view-mailcap><exit>"
 # Mailbox navigation
 macro index gt 'c=Trash<enter>' \
   "View Trash mailbox"
-macro index gh 'c=<enter>' \
+macro index gh 'c=Inbox<enter>' \
   "View Inbox mailbox"
 macro index gs 'c=Sent Items<enter>' \
   "View Sent Items mailbox"
