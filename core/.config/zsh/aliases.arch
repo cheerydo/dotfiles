@@ -1,6 +1,5 @@
 # Pacman shortcuts
 alias sup='sudo pacman -Syu'
-alias psup='pacaur -Syu'
 alias pin='sudo pacman -S'
 alias prem='sudo pacman -Rns'
 alias pchk='checkupdates'

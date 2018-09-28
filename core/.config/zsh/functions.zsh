@@ -41,3 +41,15 @@ tor() {
   scp ~/down/*.torrent tornainbow@tor-server:~/private/rtorrent/watch && \
     mv ~/down/*.torrent ~/doc/torbak
 }
+
+custom_compare () {
+  NOT_INSTALLED=$(comm -13 <(pacman -Qq | sort) <(pacman -Sql custom | sort))
+  printf "$NOT_INSTALLED"
+}
+
+custom_remove_unused () {
+  NOT_INSTALLED=$(comm -13 <(pacman -Qq | sort) <(pacman -Sql custom | sort))
+  repo-remove /var/cache/pacman/custom/custom.db.tar.gz "$NOT_INSTALLED"
+}
+
+
