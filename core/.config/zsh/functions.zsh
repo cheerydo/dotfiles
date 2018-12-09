@@ -39,7 +39,7 @@ gen_xkcd_pass() {
 
 tor() {
   scp ~/down/*.torrent tornainbow@tor-server:~/private/rtorrent/watch && \
-    mv ~/down/*.torrent ~/doc/torbak
+    mv ~/down/*.torrent ~/doc/torbak || rm ~/down/*.torrent
 }
 
 custom_compare () {
