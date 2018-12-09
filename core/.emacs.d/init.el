@@ -49,6 +49,10 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (show-paren-mode t)
 
+(when (eq system-type 'darwin)
+  (setq mac-command-modifier 'meta
+        mac-option-modifier 'super))
+
 ; GUI settings
 (when window-system
   (tooltip-mode -1)
@@ -56,14 +60,16 @@
   (menu-bar-mode -1)
   (column-number-mode t)
   (scroll-bar-mode -1))
-;(windmove-default-keybindings)
 
 (add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
 (add-to-list 'auto-mode-alist '("\\..*rc\\'" . conf-unix-mode))
 (add-to-list 'backup-directory-alist '("~/.emacs.d/.bak"))
 
-; let's get that big beautiful theme rolling
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(use-package exec-path-from-shell
+  :ensure t
+  :init
+  (when (memq window-system '(mac ns x))
+    (exec-path-from-shell-initialize)))
 
 (use-package diminish
   :ensure t)
@@ -100,21 +106,19 @@
     (define-key evil-normal-state-map (kbd "` k") 'windmove-up)
     (define-key evil-normal-state-map (kbd "` l") 'windmove-right))
   (use-package evil-magit
-    :ensure t)
-  :config 
-  (evil-set-initial-state 'deft-mode 'insert))
+    :ensure t))
 
 (use-package ivy
   :ensure t
   :diminish ivy-mode
   :bind (("C-c C-r" . ivy-resume)
          ("C-x b" . ivy-switch-buffer))
+  :init
+  (ivy-mode t)
   :config
-  (progn
-    (setq ivy-use-virtual-buffers t
-      ivy-height 15
-      ivy-count-format "(%d/%d) ")
-    (ivy-mode t)))
+  (setq ivy-use-virtual-buffers t
+        ivy-height 15
+        ivy-count-format "(%d/%d) "))
 
 (use-package hydra
   :ensure t
@@ -174,14 +178,12 @@
   (use-package company-anaconda
     :ensure t
     :config
-    (add-to-list 'company-backends 'company-anaconda)))
+    (add-to-list 'company-backends 'company-anaconda))
+  :config
+  (setq python-shell-interpreter "python3"))
 
 (use-package flycheck
   :ensure t)
-;  :init
-;  (progn
-;    (remove-hook 'elpy-modules 'elpy-module-flymake)
-;    (add-hook 'elpy-module-hook 'flycheck-mode)))
 
 (defun my-autofill-mode ()
   "My options for setting auto-fill-mode and fill-column for specific modes."
@@ -205,6 +207,16 @@
     (add-hook 'org-shiftleft-final-hook 'windmove-left)
     (add-hook 'org-shiftdown-final-hook 'windmove-down)
     (add-hook 'org-shiftright-final-hook 'windmove-right))
+  (use-package evil-org
+    :ensure t
+    :after org
+    :init
+    (add-hook 'org-mode-hook 'evil-org-mode)
+    (add-hook 'evil-org-mode-hook
+            (lambda ()
+            (evil-org-set-key-theme '(textobjects insert navigation additional shift todo heading))))
+    (require 'evil-org-agenda)
+    (evil-org-agenda-set-keys))
   :config
   (progn
     (setq org-insert-mode-line-in-empty-file t
@@ -214,29 +226,22 @@
           org-hierarchical-todo-statistics nil
           org-checkbox-hierarchical-statistics nil
           org-M-RET-may-split-line nil)
+    (setq org-html-preamble nil)
     (setq org-todo-keywords
 	  '((sequence "TODO(t)" "IN_PROGRESS(i)" "WAITING(w)" "DONE(d)")))
     (setq org-todo-keyword-faces
 	  '(("IN_PROGRESS" . "medium blue")
 	    ("WAITING" . "tomato")))
-    (setq org-default-notes-file (concat org-directory "/capture.org"))
-    (setq org-refile-targets '((org-agenda-files :maxlevel . 3)))
     (setq org-capture-templates
           '(("t" "Todo" entry (file+headline org-default-notes-file "Refile")
              "* TODO %?")
             ("n" "Notes" entry (file+headline org-default-notes-file "Refile")
              "* %?")))
-    (setq org-outline-path-complete-in-steps nil)
-    (setq org-refile-use-outline-path 'file)))
+    (setq org-agenda-files (list "~/org/")
+          org-refile-targets '((org-agenda-files :maxlevel . 9))
+          org-outline-path-complete-in-steps nil
+          org-refile-use-outline-path 'file)))
 
-(use-package org
-  :ensure t
-  :after org
-  :config
-  (add-hook 'org-mode-hook 'evil-org-mode)
-  (add-hook 'evil-org-mode-hook
-	    (lambda ()
-	      (evil-org-set-key-theme))))
 
 (use-package magit
   :ensure t
@@ -265,11 +270,23 @@
     :init
     (add-to-list 'company-backends 'company-ansible)))
 
+(use-package docker
+  :ensure t
+  :bind ("C-c d" . docker))
+
+(use-package dockerfile-mode
+  :ensure t
+  :config
+  (add-hook 'docker-mode-hook 'dockerfile-mode))
+
 (use-package eyebrowse
   :ensure t
   :init
+  (setq eyebrowse-keymap-prefix (kbd "C-x w"))
   (eyebrowse-mode t)
+  :config
   (eyebrowse-setup-opinionated-keys))
+
 
 (use-package moe-theme
   :ensure t
