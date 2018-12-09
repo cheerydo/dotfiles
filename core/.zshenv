@@ -6,7 +6,7 @@ export LESSHISTFILE="-"
 export LANG="en_US.UTF-8"
 export WINEPREFIX=~/win64
 export WINEARCH=win64
-export PATH=$PATH:~/bin:/usr/sbin/sbin
+export PATH=$PATH:~/bin:/usr/sbin
 
 if [[ "$HOST" == beans ]]; then
   export IOUP_TOKEN="$(<~/doc/iotoken)"
