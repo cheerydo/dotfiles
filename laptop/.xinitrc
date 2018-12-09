@@ -27,7 +27,7 @@ fi
 
 emacs --daemon &
 
-compton -b &
+#compton -b &
 feh --randomize --bg-fill img/
 
 exec i3
