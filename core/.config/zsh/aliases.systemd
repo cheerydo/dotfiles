@@ -30,6 +30,11 @@ restart () {
   _status "$@"
 }
 
+reload () {
+  sudo systemctl relaod "$@"
+  _status "$@"
+}
+
 _status () {
   sudo SYSTEMD_PAGER='cat' systemctl status -a "$@"
 }
@@ -46,6 +51,11 @@ ustop () {
 
 urestart () {
   sudo systemctl urestart "$@"
+  status "$@"
+}
+
+ureload () {
+  sudo systemctl relaod "$@"
   status "$@"
 }
 
