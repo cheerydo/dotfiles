@@ -60,21 +60,23 @@ source $ZDOTDIR/functions.zsh
 
 case $TERM in
   xterm-*)
-  precmd () {
-    gitprompt=""
+    precmd () {
+      print -Pn "\e]0;Termite [%~]\a"
 
-    if repo=$(git rev-parse --show-toplevel 2> /dev/null); then
-      if [[ ! $repo ]]; then
-        case $(git rev-parse --is-bare-repository) in
-          'true') repo='bare'
-        esac
+      gitprompt=""
+
+      if repo=$(git rev-parse --show-toplevel 2> /dev/null); then
+        if [[ ! $repo ]]; then
+          case $(git rev-parse --is-bare-repository) in
+            'true') repo='bare'
+          esac
+        fi
+
+        repo="${repo##*/}"
+        branch="$(git symbolic-ref --short HEAD)"
+        gitprompt=" %F{green}${repo}%f:%F{green}${branch}%f"
       fi
-
-      repo="${repo##*/}"
-      branch="$(git symbolic-ref --short HEAD)"
-      gitprompt=" %F{green}${repo}%f:%F{green}${branch}%f"
-    fi
-  }
+    }
   ;;
 esac
 
