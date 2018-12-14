@@ -62,7 +62,7 @@ case $TERM in
   xterm-*)
     precmd () {
       print -Pn "\e]0;Termite [%~]\a"
-
+  
       gitprompt=""
 
       if repo=$(git rev-parse --show-toplevel 2> /dev/null); then
